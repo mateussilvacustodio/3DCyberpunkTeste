@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Personagem : MonoBehaviour
 {
@@ -22,6 +24,13 @@ public class Personagem : MonoBehaviour
     [SerializeField] bool podeRodar;
     [SerializeField] Quaternion rotacaoAlvo;
     [SerializeField] bool irEmbora;
+    [SerializeField] float tempoPraParar;
+    [Header("Botões")]
+    public Button botaoSim;
+    public Button botaoNao;
+    [Header("Balão")]
+    [SerializeField] Animator balaoAnim;
+    [SerializeField] Balao balao;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,11 +56,25 @@ public class Personagem : MonoBehaviour
 
                     podeMover = true;
                     
+                } else if (!irEmbora) {
+
+                    //botaoSim.interactable = true;
+                    //botaoNao.interactable = true;
+                    balaoAnim.SetTrigger("Aparecer");
+
                 }
 
             }
 
         }
+
+        //tempoPraParar -= Time.deltaTime;
+
+        // if(tempoPraParar <= 0) {
+
+        //     pararEVirar();
+
+        // }
 
 
         if(Input.GetKeyDown(KeyCode.A)) {
@@ -69,12 +92,39 @@ public class Personagem : MonoBehaviour
             irEmbora = true;
 
         }
-
-        
-
-        
-
-        //transform.rotation *= Quaternion.Euler(0,2 * velocidadeRodar,0);
         
     }
+
+    void pararEVirar() {
+
+        podeMover = false;
+        rotacaoAlvo = transform.rotation * Quaternion.Euler(0,-90,0);
+        podeRodar = true;
+
+    }
+
+    public void VaiTeEmbora() {
+
+        botaoSim.interactable = false;
+        botaoNao.interactable = false;
+        irEmbora = true;
+        rotacaoAlvo = transform.rotation * Quaternion.Euler(0,90,0);
+        podeRodar = true;
+        balao.balaoTexto.text = "";
+        balao.corrotinaDigitar = null;
+        balaoAnim.SetTrigger("Sumir");
+        
+    }
+
+    void OnTriggerEnter (Collider collider) {
+
+        if(collider.gameObject.name == "Trigger") {
+
+            pararEVirar();
+
+        }
+
+    }
+
+    
 }
