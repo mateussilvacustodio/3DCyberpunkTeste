@@ -8,21 +8,44 @@ public class GameController : MonoBehaviour
     [SerializeField] float dinheiroValor;
     [SerializeField] Text dinheiroText;
     [Header("Personagens")]
-    [SerializeField] GameObject[] personagens;
-    [SerializeField] int personagemIndex;
+    public GameObject[] personagens;
+    public int personagemIndex;
+    public GameObject personagemInstancia;
     [Header("Botões")]
     [SerializeField] Button botaoSim;
     [SerializeField] Button botaoNao;
     // Start is called before the first frame update
     void Start()
     {
-        botaoSim.onClick.AddListener(personagens[personagemIndex].GetComponent<Personagem>().VaiTeEmbora);
-        botaoNao.onClick.AddListener(personagens[personagemIndex].GetComponent<Personagem>().VaiTeEmbora);
+        
+        personagemInstancia = Instantiate(personagens[personagemIndex]);
+        
+        botaoSim.onClick.AddListener(personagemInstancia.GetComponent<Personagem>().VaiTeEmbora);
+        botaoNao.onClick.AddListener(personagemInstancia.GetComponent<Personagem>().VaiTeEmbora);
     }
 
     // Update is called once per frame
     void Update()
     {
         dinheiroText.text = dinheiroValor.ToString("F0");
+    }
+
+    public void criarPersonagem() {
+
+        int aleatoria = Random.Range(0,personagens.Length);
+
+        while(aleatoria == personagemIndex) {
+
+            aleatoria = Random.Range(0,personagens.Length);
+
+        }
+
+        personagemInstancia = Instantiate(personagens[aleatoria]);
+        personagemIndex = aleatoria;
+        botaoSim.onClick.RemoveAllListeners();
+        botaoNao.onClick.RemoveAllListeners();
+        botaoSim.onClick.AddListener(personagemInstancia.GetComponent<Personagem>().VaiTeEmbora);
+        botaoNao.onClick.AddListener(personagemInstancia.GetComponent<Personagem>().VaiTeEmbora);
+
     }
 }

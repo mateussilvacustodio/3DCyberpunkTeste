@@ -31,10 +31,20 @@ public class Personagem : MonoBehaviour
     [Header("Balão")]
     [SerializeField] Animator balaoAnim;
     [SerializeField] Balao balao;
+    [Header("GameController")]
+    [SerializeField] GameController gameController;
     // Start is called before the first frame update
     void Start()
     {
-        rotacaoAlvo = transform.rotation * Quaternion.Euler(0,-90,0);
+        //rotacaoAlvo = transform.rotation * Quaternion.Euler(0,-90,0);
+        botaoSim = GameObject.Find("BotaoSim").GetComponent<Button>();
+        botaoNao = GameObject.Find("BotaoNao").GetComponent<Button>();
+        
+        balaoAnim = GameObject.Find("Balao").GetComponent<Animator>();
+        balao = GameObject.Find("Balao").GetComponent<Balao>();
+
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
+
     }
 
     // Update is called once per frame
@@ -60,6 +70,7 @@ public class Personagem : MonoBehaviour
 
                     //botaoSim.interactable = true;
                     //botaoNao.interactable = true;
+                    print("setar trigger");
                     balaoAnim.SetTrigger("Aparecer");
 
                 }
@@ -111,6 +122,7 @@ public class Personagem : MonoBehaviour
         rotacaoAlvo = transform.rotation * Quaternion.Euler(0,90,0);
         podeRodar = true;
         balao.balaoTexto.text = "";
+        balao.nomeTexto.text = "";
         balao.corrotinaDigitar = null;
         balaoAnim.SetTrigger("Sumir");
         
@@ -121,6 +133,11 @@ public class Personagem : MonoBehaviour
         if(collider.gameObject.name == "Trigger") {
 
             pararEVirar();
+
+        } else if(collider.gameObject.name == "Trigger2") {
+
+            gameController.criarPersonagem();
+            Destroy(this.gameObject);
 
         }
 

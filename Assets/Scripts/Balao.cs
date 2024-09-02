@@ -5,12 +5,17 @@ using UnityEngine.UI;
 
 public class Balao : MonoBehaviour
 {
+    [Header("Textos")]
     [SerializeField] GameObject balaoFala;
+    [SerializeField] GameObject nome;
     public Text balaoTexto;
+    public Text nomeTexto;
     public string texto;
     [SerializeField] float typeSpeed;
     public Coroutine corrotinaDigitar;
-    [SerializeField] Personagem personagem;
+    [Header("GameController")]
+    [SerializeField] GameController gameController;
+    //[SerializeField] Personagem personagem;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,18 +25,19 @@ public class Balao : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0)) {
+        if(Input.GetMouseButtonDown(0) && corrotinaDigitar != null) {
 
             StopCoroutine(corrotinaDigitar);
-            balaoTexto.text = personagem.pedido;
+            balaoTexto.text = gameController.personagemInstancia.GetComponent<Personagem>().pedido;
+            corrotinaDigitar = null;
 
         }
 
-        if(balaoTexto.text == personagem.pedido && !personagem.botaoSim.interactable && !personagem.botaoNao.interactable) {
+        if(balaoTexto.text == gameController.personagemInstancia.GetComponent<Personagem>().pedido && !gameController.personagemInstancia.GetComponent<Personagem>().botaoSim.interactable && !gameController.personagemInstancia.GetComponent<Personagem>().botaoNao.interactable) {
 
             print("Habilitar botoes");
-            personagem.botaoSim.interactable = true;
-            personagem.botaoNao.interactable = true;
+            gameController.personagemInstancia.GetComponent<Personagem>().botaoSim.interactable = true;
+            gameController.personagemInstancia.GetComponent<Personagem>().botaoNao.interactable = true;
 
         }
     }
@@ -39,13 +45,15 @@ public class Balao : MonoBehaviour
     void AparecerTexto() {
 
         balaoFala.SetActive(true);
+        nome.SetActive(true);
+        nomeTexto.text = gameController.personagemInstancia.name;
         corrotinaDigitar = StartCoroutine(Digitar());
 
     }
 
     IEnumerator Digitar() {
 
-        foreach (char letter in personagem.pedido.ToCharArray()) {
+        foreach (char letter in gameController.personagemInstancia.GetComponent<Personagem>().pedido.ToCharArray()) {
 
             balaoTexto.text += letter;
             yield return new WaitForSeconds(typeSpeed);
