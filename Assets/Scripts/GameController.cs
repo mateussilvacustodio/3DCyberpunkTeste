@@ -5,7 +5,11 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+    [Header("Recursos")]
     [SerializeField] float dinheiroValor;
+    [SerializeField] float Gangue1;
+    [SerializeField] float Gangue2;
+    [SerializeField] float Gangue3;
     [SerializeField] Text dinheiroText;
     [Header("Personagens")]
     public GameObject[] personagens;
@@ -27,7 +31,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        dinheiroText.text = dinheiroValor.ToString("F0");
+        //dinheiroText.text = dinheiroValor.ToString("F0");
     }
 
     public void criarPersonagem() {

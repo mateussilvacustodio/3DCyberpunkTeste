@@ -15,6 +15,9 @@ public class Balao : MonoBehaviour
     public Coroutine corrotinaDigitar;
     [Header("GameController")]
     [SerializeField] GameController gameController;
+    [Header("Botões")]
+    public Text botaoSimTexto;
+    public Text botaoNaoTexto;
     //[SerializeField] Personagem personagem;
     // Start is called before the first frame update
     void Start()
@@ -25,7 +28,7 @@ public class Balao : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0) && corrotinaDigitar != null) {
+        if(Input.GetMouseButtonUp(0) && corrotinaDigitar != null) {
 
             StopCoroutine(corrotinaDigitar);
             balaoTexto.text = gameController.personagemInstancia.GetComponent<Personagem>().pedido;
@@ -35,6 +38,9 @@ public class Balao : MonoBehaviour
 
         if(balaoTexto.text == gameController.personagemInstancia.GetComponent<Personagem>().pedido && !gameController.personagemInstancia.GetComponent<Personagem>().botaoSim.interactable && !gameController.personagemInstancia.GetComponent<Personagem>().botaoNao.interactable) {
 
+            botaoSimTexto.text = gameController.personagemInstancia.GetComponent<Personagem>().opcao1;
+            botaoNaoTexto.text = gameController.personagemInstancia.GetComponent<Personagem>().opcao2;
+            
             print("Habilitar botoes");
             gameController.personagemInstancia.GetComponent<Personagem>().botaoSim.interactable = true;
             gameController.personagemInstancia.GetComponent<Personagem>().botaoNao.interactable = true;

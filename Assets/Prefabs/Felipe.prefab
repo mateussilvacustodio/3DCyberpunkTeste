@@ -146,11 +146,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a91f6131870d88f4d801fb10081d85ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pedido: "Pedido do Felipe e um pedido longo para testar as falas. Esse pedido \xE9
-    o que est\xE1 no personagem"
-  opcao1: Felipe
-  opcao2: "N\xE3o"
-  ponteiro: {fileID: 0}
+  pedido: "Ol\xE1, fiquei sabendo que aqui eu poderia arrumar algu\xE9m com for\xE7a
+    bruta pra me livrar dos vagabundos que vivem roubando minha loja. Pode me ajudar?"
+  opcao1: "Voc\xEA veio ao lugar certo meu caro, vou te ajudar."
+  opcao2: "N\xE3o sei do que esta falando, vaza se n\xE3o quiser uma bala na cabe\xE7a."
+  ponteiroGangue1: {fileID: 0}
+  ponteiroGangue2: {fileID: 0}
+  ponteiroGangue3: {fileID: 0}
   dinheiro: {fileID: 0}
   mudadorDinheiro: 0
   mudadorImplantes: 0

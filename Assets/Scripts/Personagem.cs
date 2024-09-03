@@ -12,7 +12,9 @@ public class Personagem : MonoBehaviour
     public string opcao2;
     //
     [Header("Recursos")]
-    [SerializeField] GameObject ponteiro;
+    [SerializeField] GameObject ponteiroGangue1;
+    [SerializeField] GameObject ponteiroGangue2;
+    [SerializeField] GameObject ponteiroGangue3;
     [SerializeField] GameObject dinheiro;
     //[SerializeField] GameController gameController;
     public float mudadorDinheiro;
@@ -125,6 +127,8 @@ public class Personagem : MonoBehaviour
         balao.nomeTexto.text = "";
         balao.corrotinaDigitar = null;
         balaoAnim.SetTrigger("Sumir");
+        balao.botaoSimTexto.text = "";
+        balao.botaoNaoTexto.text = "";
         
     }
 

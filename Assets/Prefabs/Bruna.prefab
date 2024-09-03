@@ -146,10 +146,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a91f6131870d88f4d801fb10081d85ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pedido: Pedido da Bruna. Testando a aleatoriedade
-  opcao1: Sim
-  opcao2: "N\xE3o"
-  ponteiro: {fileID: 0}
+  pedido: "Boa tarde cidad\xE3o. Eu sei que voc\xEA t\xE1 envolvido com gente procurada
+    pela pol\xEDcia. Eu posso garantir que os seus neg\xF3cios continuem fora dos
+    radares\u2026 por um pre\xE7o."
+  opcao1: Fechado. Considere isso um incentivo para que continue a ignorar o que
+    precisa ser ignorado.
+  opcao2: "Prefiro apostar na minha sorte do que encher seu bolso. Vai procurar outro
+    ot\xE1rio."
+  ponteiroGangue1: {fileID: 0}
+  ponteiroGangue2: {fileID: 0}
+  ponteiroGangue3: {fileID: 0}
   dinheiro: {fileID: 0}
   mudadorDinheiro: 0
   mudadorImplantes: 0
