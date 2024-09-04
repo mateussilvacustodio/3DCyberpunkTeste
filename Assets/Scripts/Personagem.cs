@@ -12,13 +12,18 @@ public class Personagem : MonoBehaviour
     public string opcao2;
     //
     [Header("Recursos")]
-    [SerializeField] GameObject ponteiroGangue1;
-    [SerializeField] GameObject ponteiroGangue2;
-    [SerializeField] GameObject ponteiroGangue3;
-    [SerializeField] GameObject dinheiro;
-    //[SerializeField] GameController gameController;
-    public float mudadorDinheiro;
-    public float mudadorImplantes;
+    [SerializeField] bool ponteiroGangue1;
+    [SerializeField] float mudadorPonteiro1S;
+    [SerializeField] float mudadorPonteiro1N;
+    [SerializeField] bool ponteiroGangue2;
+    [SerializeField] float mudadorPonteiro2S;
+    [SerializeField] float mudadorPonteiro2N;
+    [SerializeField] bool ponteiroGangue3;
+    [SerializeField] float mudadorPonteiro3S;
+    [SerializeField] float mudadorPonteiro3N;
+    [SerializeField] bool dinheiro;
+    public float mudadorDinheiroS;
+    public float mudadorDinheiroN;
     [Header("Movimento")]
     [SerializeField] float velocidadeMover;
     [SerializeField] bool podeMover;
@@ -26,7 +31,6 @@ public class Personagem : MonoBehaviour
     [SerializeField] bool podeRodar;
     [SerializeField] Quaternion rotacaoAlvo;
     [SerializeField] bool irEmbora;
-    [SerializeField] float tempoPraParar;
     [Header("Botões")]
     public Button botaoSim;
     public Button botaoNao;
@@ -35,10 +39,8 @@ public class Personagem : MonoBehaviour
     [SerializeField] Balao balao;
     [Header("GameController")]
     [SerializeField] GameController gameController;
-    // Start is called before the first frame update
     void Start()
     {
-        //rotacaoAlvo = transform.rotation * Quaternion.Euler(0,-90,0);
         botaoSim = GameObject.Find("BotaoSim").GetComponent<Button>();
         botaoNao = GameObject.Find("BotaoNao").GetComponent<Button>();
         
@@ -48,8 +50,6 @@ public class Personagem : MonoBehaviour
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
 
     }
-
-    // Update is called once per frame
     void Update()
     {
         if(podeMover) {
@@ -80,31 +80,6 @@ public class Personagem : MonoBehaviour
             }
 
         }
-
-        //tempoPraParar -= Time.deltaTime;
-
-        // if(tempoPraParar <= 0) {
-
-        //     pararEVirar();
-
-        // }
-
-
-        if(Input.GetKeyDown(KeyCode.A)) {
-
-            podeMover = false;
-            rotacaoAlvo = transform.rotation * Quaternion.Euler(0,-90,0);
-            podeRodar = true;
-
-        }
-
-        if(Input.GetKeyDown(KeyCode.B)) {
-
-            rotacaoAlvo = transform.rotation * Quaternion.Euler(0,90,0);
-            podeRodar = true;
-            irEmbora = true;
-
-        }
         
     }
 
@@ -116,7 +91,26 @@ public class Personagem : MonoBehaviour
 
     }
 
-    public void VaiTeEmbora() {
+    public void concordo() {
+
+        if(ponteiroGangue1) {
+            gameController.Gangue1 += mudadorPonteiro1S;
+            gameController.comecarRodar1(-mudadorPonteiro1S);
+        }
+
+        if(ponteiroGangue2) {
+            gameController.Gangue2 += mudadorPonteiro2S;
+            gameController.comecarRodar2(-mudadorPonteiro2S);
+        }
+
+        if(ponteiroGangue3) {
+            gameController.Gangue3 += mudadorPonteiro3S;
+            gameController.comecarRodar3(-mudadorPonteiro3S);
+        }
+
+        if(dinheiro) {
+            gameController.dinheiroValor += mudadorDinheiroS;
+        }
 
         botaoSim.interactable = false;
         botaoNao.interactable = false;
@@ -129,7 +123,42 @@ public class Personagem : MonoBehaviour
         balaoAnim.SetTrigger("Sumir");
         balao.botaoSimTexto.text = "";
         balao.botaoNaoTexto.text = "";
-        
+
+    }
+
+    public void discordo() {
+
+        if(ponteiroGangue1) {
+            gameController.Gangue1 += mudadorPonteiro1N;
+            gameController.comecarRodar1(-mudadorPonteiro1N);
+        }
+
+        if(ponteiroGangue2) {
+            gameController.Gangue2 += mudadorPonteiro2N;
+            gameController.comecarRodar2(-mudadorPonteiro2N);
+        }
+
+        if(ponteiroGangue3) {
+            gameController.Gangue3 += mudadorPonteiro3N;
+            gameController.comecarRodar3(-mudadorPonteiro3N);
+        }
+
+        if(dinheiro) {
+            gameController.dinheiroValor += mudadorDinheiroN;
+        }
+
+        botaoSim.interactable = false;
+        botaoNao.interactable = false;
+        irEmbora = true;
+        rotacaoAlvo = transform.rotation * Quaternion.Euler(0,90,0);
+        podeRodar = true;
+        balao.balaoTexto.text = "";
+        balao.nomeTexto.text = "";
+        balao.corrotinaDigitar = null;
+        balaoAnim.SetTrigger("Sumir");
+        balao.botaoSimTexto.text = "";
+        balao.botaoNaoTexto.text = "";
+
     }
 
     void OnTriggerEnter (Collider collider) {

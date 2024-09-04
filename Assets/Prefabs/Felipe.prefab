@@ -150,19 +150,24 @@ MonoBehaviour:
     bruta pra me livrar dos vagabundos que vivem roubando minha loja. Pode me ajudar?"
   opcao1: "Voc\xEA veio ao lugar certo meu caro, vou te ajudar."
   opcao2: "N\xE3o sei do que esta falando, vaza se n\xE3o quiser uma bala na cabe\xE7a."
-  ponteiroGangue1: {fileID: 0}
-  ponteiroGangue2: {fileID: 0}
-  ponteiroGangue3: {fileID: 0}
-  dinheiro: {fileID: 0}
-  mudadorDinheiro: 0
-  mudadorImplantes: 0
+  ponteiroGangue1: 0
+  mudadorPonteiro1S: 0
+  mudadorPonteiro1N: 0
+  ponteiroGangue2: 1
+  mudadorPonteiro2S: -10
+  mudadorPonteiro2N: 5
+  ponteiroGangue3: 1
+  mudadorPonteiro3S: 5
+  mudadorPonteiro3N: 0
+  dinheiro: 1
+  mudadorDinheiroS: 50
+  mudadorDinheiroN: 0
   velocidadeMover: 0.5
   podeMover: 1
   velocidadeRodar: 9
   podeRodar: 0
   rotacaoAlvo: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
   irEmbora: 0
-  tempoPraParar: 1.25
   botaoSim: {fileID: 6266927420868397745, guid: d71edc9268e8cbf488c69f0f67f254c6, type: 3}
   botaoNao: {fileID: 2784498597061738169, guid: e7445b810b8a5264286cdfd2acd5bd68, type: 3}
   balaoAnim: {fileID: 2723482562388477236, guid: 6a544ff7b91e6ae4d98e49c60600136b, type: 3}
