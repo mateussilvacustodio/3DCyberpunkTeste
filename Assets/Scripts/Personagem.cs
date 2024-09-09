@@ -86,7 +86,7 @@ public class Personagem : MonoBehaviour
     void pararEVirar() {
 
         podeMover = false;
-        rotacaoAlvo = transform.rotation * Quaternion.Euler(0,-90,0);
+        rotacaoAlvo = transform.rotation * Quaternion.Euler(0,90,0);
         podeRodar = true;
 
     }
@@ -115,7 +115,7 @@ public class Personagem : MonoBehaviour
         botaoSim.interactable = false;
         botaoNao.interactable = false;
         irEmbora = true;
-        rotacaoAlvo = transform.rotation * Quaternion.Euler(0,90,0);
+        rotacaoAlvo = transform.rotation * Quaternion.Euler(0,-90,0);
         podeRodar = true;
         balao.balaoTexto.text = "";
         balao.nomeTexto.text = "";
@@ -150,7 +150,7 @@ public class Personagem : MonoBehaviour
         botaoSim.interactable = false;
         botaoNao.interactable = false;
         irEmbora = true;
-        rotacaoAlvo = transform.rotation * Quaternion.Euler(0,90,0);
+        rotacaoAlvo = transform.rotation * Quaternion.Euler(0,-90,0);
         podeRodar = true;
         balao.balaoTexto.text = "";
         balao.nomeTexto.text = "";
