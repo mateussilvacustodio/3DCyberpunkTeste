@@ -32,7 +32,6 @@ public class GameController : MonoBehaviour
     void Start()
     {
         
-        
         personagemInstancia = Instantiate(personagens[personagemIndex]);
         
         botaoSim.onClick.AddListener(personagemInstancia.GetComponent<Personagem>().concordo);
