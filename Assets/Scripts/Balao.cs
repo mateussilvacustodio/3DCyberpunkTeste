@@ -52,7 +52,7 @@ public class Balao : MonoBehaviour
 
         balaoFala.SetActive(true);
         nome.SetActive(true);
-        nomeTexto.text = gameController.personagemInstancia.name;
+        nomeTexto.text = gameController.personagemInstancia.GetComponent<Personagem>().nome;
         corrotinaDigitar = StartCoroutine(Digitar());
 
     }

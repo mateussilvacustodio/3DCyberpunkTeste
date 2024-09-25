@@ -1,29 +1,26 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Personagem : MonoBehaviour
 {
     [Header("Textos")]
+    public string nome;
     public string pedido;
     public string opcao1;
     public string opcao2;
     //
     [Header("Recursos")]
-    [SerializeField] bool ponteiroGangue1;
-    [SerializeField] float mudadorPonteiro1S;
-    [SerializeField] float mudadorPonteiro1N;
-    [SerializeField] bool ponteiroGangue2;
-    [SerializeField] float mudadorPonteiro2S;
-    [SerializeField] float mudadorPonteiro2N;
-    [SerializeField] bool ponteiroGangue3;
-    [SerializeField] float mudadorPonteiro3S;
-    [SerializeField] float mudadorPonteiro3N;
-    [SerializeField] bool dinheiro;
-    public float mudadorDinheiroS;
-    public float mudadorDinheiroN;
+        [Tooltip("NB, RR, GS, SZ, NX, Policia, dinheiro")]
+        public bool[] recursos;
+        [Tooltip("NB, RR, GS, SZ, NX, Policia, dinheiro")]
+        public float[] mudadoresSim;
+        [Tooltip("NB, RR, GS, SZ, NX, Policia, dinheiro")]
+        public float[] mudadoresNao;
     [Header("Movimento")]
     [SerializeField] float velocidadeMover;
     [SerializeField] bool podeMover;
@@ -93,25 +90,15 @@ public class Personagem : MonoBehaviour
 
     public void concordo() {
 
-        if(ponteiroGangue1) {
-            gameController.Gangue1 += mudadorPonteiro1S;
-            gameController.comecarRodar1(-mudadorPonteiro1S);
-        }
+        for (int i = 0; i < recursos.Length; i++)
+        {
+            if(recursos[i]) {
 
-        if(ponteiroGangue2) {
-            gameController.Gangue2 += mudadorPonteiro2S;
-            gameController.comecarRodar2(-mudadorPonteiro2S);
-        }
+                gameController.gangues[i] += mudadoresSim[i];
 
-        if(ponteiroGangue3) {
-            gameController.Gangue3 += mudadorPonteiro3S;
-            gameController.comecarRodar3(-mudadorPonteiro3S);
+            }
         }
-
-        if(dinheiro) {
-            gameController.dinheiroValor += mudadorDinheiroS;
-        }
-
+        
         botaoSim.interactable = false;
         botaoNao.interactable = false;
         irEmbora = true;
@@ -128,25 +115,15 @@ public class Personagem : MonoBehaviour
 
     public void discordo() {
 
-        if(ponteiroGangue1) {
-            gameController.Gangue1 += mudadorPonteiro1N;
-            gameController.comecarRodar1(-mudadorPonteiro1N);
-        }
+        for (int i = 0; i < recursos.Length; i++)
+        {
+            if(recursos[i]) {
 
-        if(ponteiroGangue2) {
-            gameController.Gangue2 += mudadorPonteiro2N;
-            gameController.comecarRodar2(-mudadorPonteiro2N);
-        }
+                gameController.gangues[i] += mudadoresNao[i];
 
-        if(ponteiroGangue3) {
-            gameController.Gangue3 += mudadorPonteiro3N;
-            gameController.comecarRodar3(-mudadorPonteiro3N);
+            }
         }
-
-        if(dinheiro) {
-            gameController.dinheiroValor += mudadorDinheiroN;
-        }
-
+        
         botaoSim.interactable = false;
         botaoNao.interactable = false;
         irEmbora = true;
