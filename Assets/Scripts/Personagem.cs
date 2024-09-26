@@ -13,6 +13,7 @@ public class Personagem : MonoBehaviour
     public string pedido;
     public string opcao1;
     public string opcao2;
+    public Color corGangue;
     //
     [Header("Recursos")]
         [Tooltip("NB, RR, GS, SZ, NX, Policia, dinheiro")]
@@ -146,8 +147,18 @@ public class Personagem : MonoBehaviour
 
         } else if(collider.gameObject.name == "Trigger2") {
 
-            gameController.criarPersonagem();
-            Destroy(this.gameObject);
+            gameController.quantidadeDePedidos++;
+            
+            if(gameController.quantidadeDePedidos < gameController.quantidadeDePedidosPorDia) {
+                
+                gameController.criarPersonagem();
+
+            } else {
+
+                gameController.quantidadeDePedidos = 0;
+                gameController.FimDoDia();
+
+            }
 
         }
 
