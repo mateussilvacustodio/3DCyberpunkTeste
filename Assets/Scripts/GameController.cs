@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class GameController : MonoBehaviour
         [SerializeField] Image[] barrasGangues;
         [SerializeField] Image[] barrasGangues2;
         [SerializeField] Text dinheiroText;
+        [SerializeField] string[] textoFimDeJogoGangues;
     [Header("Personagens")]
     public GameObject[] personagens;
     public int personagemIndex;
@@ -25,10 +27,11 @@ public class GameController : MonoBehaviour
     public float quantidadeDePedidos;
     public float quantidadeDePedidosPorDia;
     [SerializeField] GameObject painelFimDeDia;
-    // Start is called before the first frame update
+    [SerializeField] GameObject painelFimDeJogo;
+    [SerializeField] Text textoFimDeJogo;
+    [SerializeField] bool GameOver;
     void Start()
     {
-        
         personagemInstancia = Instantiate(personagens[personagemIndex]);
         
         botaoSim.onClick.AddListener(personagemInstancia.GetComponent<Personagem>().concordo);
@@ -52,7 +55,6 @@ public class GameController : MonoBehaviour
         {
             barrasGangues[i].fillAmount = gangues[i] / 100;
         }
-
         dinheiroText.text = gangues[6].ToString("F0");
 
     }
@@ -64,9 +66,7 @@ public class GameController : MonoBehaviour
         int aleatoria = Random.Range(0,personagens.Length);
 
         while(aleatoria == personagemIndex) {
-
             aleatoria = Random.Range(0,personagens.Length);
-
         }
 
         personagemInstancia = Instantiate(personagens[aleatoria]);
@@ -89,15 +89,37 @@ public class GameController : MonoBehaviour
 
     public void ProximoDia() {
 
-        painelFimDeDia.SetActive(false);
-        botaoTablet.interactable = true;
-
-        for (int i = 0; i < barrasGangues.Length; i++)
+        for (int i = 0; i < gangues.Length; i++)
         {
-            barrasGangues2[i].fillAmount = barrasGangues[i].fillAmount;
+            if(gangues[i] <= 0) {
+
+                GameOver = true;
+                textoFimDeJogo.text += "Você perdeu porque ficou sem " + textoFimDeJogoGangues[i] + "\n";
+            }
         }
 
-        criarPersonagem();
+        if(!GameOver) {
+
+            painelFimDeDia.SetActive(false);
+            botaoTablet.interactable = true;
+
+            for (int i = 0; i < barrasGangues.Length; i++)
+            {
+                barrasGangues2[i].fillAmount = barrasGangues[i].fillAmount;
+            }
+
+            criarPersonagem();
+
+        } else {
+            painelFimDeDia.SetActive(false);
+            painelFimDeJogo.SetActive(true);
+        }
+
+    }
+
+    public void Reiniciar() {
+
+        SceneManager.LoadScene(0);
 
     }
 
