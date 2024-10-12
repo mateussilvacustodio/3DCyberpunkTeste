@@ -168,10 +168,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nome: Armando
-  pedido: "Eae James. Fiquei sabendo de um carregamento ilegal da Redline Rebels,
-    mas n\xE3o tenho detalhes o suficiente pra publicar. Preciso de algu\xE9m que
-    consiga confirmar essa hist\xF3ria antes que ela desapare\xE7a. Voc\xEA tem os
-    contatos certos pra isso?"
+  pedido: "Eae James. Fiquei sabendo de um carregamento ilegal da <color=#FF0000>Redline
+    Rebels</color>, mas n\xE3o tenho detalhes o suficiente pra publicar. Preciso
+    de algu\xE9m que consiga confirmar essa hist\xF3ria antes que ela desapare\xE7a.
+    Voc\xEA tem os contatos certos pra isso?"
   opcao1: "Posso confirmar a informa\xE7\xE3o, mas isso vai te custar. Se for pra
     mexer com a Redline Rebels, vou precisar de uma boa remunera\xE7\xE3o"
   opcao2: "Confirmar uma hist\xF3ria dessas \xE9 um tiro no p\xE9, principalmente

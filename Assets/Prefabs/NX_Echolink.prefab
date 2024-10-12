@@ -168,9 +168,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nome: Echolink
-  pedido: "Oi James, preciso da sua ajuda. Eu invadi a rede do Setor Zero e consegui
-    algumas informa\xE7\xF5es valiosas, mas preciso que voc\xEA me ajude a apagar
-    meus rastros para eles n\xE3o virem atr\xE1s de mim. Voc\xEA consegue me ajudar?"
+  pedido: "Oi James, preciso da sua ajuda. Eu invadi a rede do <color=#005902>Setor
+    Zero</color> e consegui algumas informa\xE7\xF5es valiosas, mas preciso que voc\xEA
+    me ajude a apagar meus rastros para eles n\xE3o virem atr\xE1s de mim. Voc\xEA
+    consegue me ajudar?"
   opcao1: "Interessante. Se o que voc\xEA encontrou \xE9 realmente valioso, eu posso
     garantir que eles n\xE3o venham atr\xE1s de ti. Por um pre\xE7o, \xE9 claro"
   opcao2: "N\xE3o estou disposto a arriscar minha reputa\xE7\xE3o por algo que pode

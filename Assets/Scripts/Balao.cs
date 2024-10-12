@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,11 +9,12 @@ public class Balao : MonoBehaviour
     [Header("Textos")]
     [SerializeField] GameObject balaoFala;
     [SerializeField] GameObject nome;
-    public Text balaoTexto;
+    public TextMeshProUGUI balaoTexto;
     public Text nomeTexto;
     public string texto;
     [SerializeField] float typeSpeed;
     public Coroutine corrotinaDigitar;
+    bool dentroDaTag;
     [Header("GameController")]
     [SerializeField] GameController gameController;
     [Header("Botões")]
@@ -60,10 +62,30 @@ public class Balao : MonoBehaviour
 
     IEnumerator Digitar() {
 
+        
+
         foreach (char letter in gameController.personagemInstancia.GetComponent<Personagem>().pedido.ToCharArray()) {
 
+            if(letter == '<') {
+
+                dentroDaTag = true;
+
+            }
+            
             balaoTexto.text += letter;
-            yield return new WaitForSeconds(typeSpeed);
+
+            if(letter == '>') {
+
+                dentroDaTag = false;
+
+            }
+
+            if(!dentroDaTag) {
+
+                yield return new WaitForSeconds(typeSpeed);
+
+            }
+            
 
         }
 

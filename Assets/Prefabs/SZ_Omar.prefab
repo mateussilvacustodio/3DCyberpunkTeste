@@ -169,8 +169,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: Omar
   pedido: "Voc\xEA \xE9 o James n\xE9? Fiquei sabendo que voc\xEA vende informa\xE7\xF5es.
-    T\xF4 precisando encontrar o chefe do Ghost Circuit. O motivo? N\xE3o \xE9 da
-    sua conta"
+    T\xF4 precisando encontrar o chefe do <color=#FF26B6>Ghost Circuit</color>. O
+    motivo? N\xE3o \xE9 da sua conta"
   opcao1: "Vou te enviar a localiza\xE7\xE3o dele. Espero que eu seja bem remunerado
     por isso"
   opcao2: "J\xE1 que o motivo n\xE3o \xE9 da minha conta, essa informa\xE7\xE3o tamb\xE9m

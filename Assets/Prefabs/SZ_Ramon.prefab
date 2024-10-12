@@ -168,9 +168,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nome: "Ram\xF3n"
-  pedido: "E a\xED, James. Preciso de alguns dados sobre os Nano Blades. Estou montando
-    um relat\xF3rio sobre eles para uma mat\xE9ria quente. Tenho uns cr\xE9ditos
-    aqui que podem facilitar a sua colabora\xE7\xE3o. Topa ajudar?"
+  pedido: "E a\xED, James. Preciso de alguns dados sobre os <color=#ECD400>Nano Blades</color>.
+    Estou montando um relat\xF3rio sobre eles para uma mat\xE9ria quente. Tenho uns
+    cr\xE9ditos aqui que podem facilitar a sua colabora\xE7\xE3o. Topa ajudar?"
   opcao1: "Vou enviar as informa\xE7\xF5es que voc\xEA precisa. S\xF3 n\xE3o esquece
     de fazer a sua parte do acordo"
   opcao2: "Desculpe, n\xE3o posso ajudar com isso agora. Talvez da pr\xF3xima vez"

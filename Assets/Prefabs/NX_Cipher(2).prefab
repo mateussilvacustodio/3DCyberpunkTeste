@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nome: Cipher(2)
-  pedido: "Preciso de um favor. Tenho uma informa\xE7\xE3o crucial sobre a pol\xEDcia,
+  pedido: "Preciso de um favor. Tenho uma informa\xE7\xE3o crucial sobre a <color=#000759>pol\xEDcia</color>,
     mas para libera-la para voc\xEA, preciso de ajuda pra invadir o sistema deles.
     Topa ajudar?"
   opcao1: "Conte comigo, mas saiba que isso ter\xE1 um custo alto"

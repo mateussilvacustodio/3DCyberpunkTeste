@@ -169,9 +169,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: Whisperwing
   pedido: "Ouvi dizer que voc\xEA tem acesso a hardware raro. Eu estou trabalhando
-    em uma invas\xE3o profunda na rede da pol\xEDcia, mas meus sistemas est\xE3o
-    no limite. Preciso de uma nova placa neural com mais pot\xEAncia e uma boa camada
-    de prote\xE7\xE3o. Voc\xEA consegue isso pra mim?"
+    em uma invas\xE3o profunda na rede da <color=#000759>pol\xEDcia</color>, mas
+    meus sistemas est\xE3o no limite. Preciso de uma nova placa neural com mais pot\xEAncia
+    e uma boa camada de prote\xE7\xE3o. Voc\xEA consegue isso pra mim?"
   opcao1: "Posso arranjar o que voc\xEA precisa, mas n\xE3o vou fazer isso por simples
     cr\xE9ditos. Quero as informa\xE7\xF5es valiosas que voc\xEA conseguir sobre
     a pol\xEDcia"
