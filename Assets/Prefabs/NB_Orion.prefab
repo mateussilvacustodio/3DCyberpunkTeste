@@ -170,8 +170,8 @@ MonoBehaviour:
   nome: "\xD3rion"
   pedido: "James, acho que voc\xEA \xE9 a pessoa pra me ajudar a vender a minha mercadoria
     das drogas mais incr\xEDveis que voc\xEA j\xE1 viu, o que que c\xEA me diz?"
-  opcao1: Caralho, to nessa, parceiro
-  opcao2: Nem por um caralho que eu vou vender essa merda, Orion
+  opcao1: Caralho, to nessa, parceiro.
+  opcao2: Nem por um caralho que eu vou vender essa merda, Orion.
   corGangue: {r: 0.9254902, g: 0.8352941, b: 0, a: 1}
   recursos: 01000000000000
   mudadoresSim:

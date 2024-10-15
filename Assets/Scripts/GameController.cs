@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour
         [SerializeField] string[] textoFimDeJogoGangues;
     [Header("Personagens")]
     public GameObject[] personagens;
+    [SerializeField] List<int> indicesDisponiveis = new List<int>(); 
     public int personagemIndex;
     public GameObject personagemInstancia;
     [Header("Botões")]
@@ -27,15 +28,17 @@ public class GameController : MonoBehaviour
     public float quantidadeDePedidos;
     public float quantidadeDePedidosPorDia;
     [SerializeField] GameObject painelFimDeDia;
+    [SerializeField] Text textoFimDoDia;
     [SerializeField] GameObject painelFimDeJogo;
+    [SerializeField] Text fimDeJogo;
     [SerializeField] Text textoFimDeJogo;
     [SerializeField] bool GameOver;
     void Start()
     {
-        personagemInstancia = Instantiate(personagens[personagemIndex]);
+        // personagemInstancia = Instantiate(personagens[personagemIndex]);
         
-        botaoSim.onClick.AddListener(personagemInstancia.GetComponent<Personagem>().concordo);
-        botaoNao.onClick.AddListener(personagemInstancia.GetComponent<Personagem>().discordo);
+        // botaoSim.onClick.AddListener(personagemInstancia.GetComponent<Personagem>().concordo);
+        // botaoNao.onClick.AddListener(personagemInstancia.GetComponent<Personagem>().discordo);        
 
         for (int i = 0; i < barrasGangues.Length; i++)
         {
@@ -46,9 +49,16 @@ public class GameController : MonoBehaviour
         {
             barrasGangues2[i].fillAmount = barrasGangues[i].fillAmount;
         }
+
+        for (int i = 0; i < personagens.Length; i++) {
+
+            indicesDisponiveis.Add(i);
+
+        }
+
+        criarPersonagem();
     }
 
-    // Update is called once per frame
     void Update()
     {
         for (int i = 0; i < barrasGangues.Length; i++)
@@ -61,20 +71,35 @@ public class GameController : MonoBehaviour
 
     public void criarPersonagem() {
 
-        Destroy(personagemInstancia);
+        if(personagemInstancia != null) {
+            
+            Destroy(personagemInstancia);
+
+        }       
         
-        int aleatoria = Random.Range(0,personagens.Length);
+        int aleatoria = Random.Range(0,indicesDisponiveis.Count);
 
-        while(aleatoria == personagemIndex) {
-            aleatoria = Random.Range(0,personagens.Length);
-        }
+        // while(aleatoria == personagemIndex) {
+        //     aleatoria = Random.Range(0,personagens.Length);
+        // }
 
-        personagemInstancia = Instantiate(personagens[aleatoria]);
+        personagemInstancia = Instantiate(personagens[indicesDisponiveis[aleatoria]]);
         personagemIndex = aleatoria;
         botaoSim.onClick.RemoveAllListeners();
         botaoNao.onClick.RemoveAllListeners();
         botaoSim.onClick.AddListener(personagemInstancia.GetComponent<Personagem>().concordo);
         botaoNao.onClick.AddListener(personagemInstancia.GetComponent<Personagem>().discordo);
+
+        indicesDisponiveis.RemoveAt(aleatoria);
+
+        if(indicesDisponiveis.Count == 0) {
+
+            for (int i = 0; i < personagens.Length; i++) {
+
+            indicesDisponiveis.Add(i);
+            }
+
+        }
 
     }
 
@@ -83,6 +108,8 @@ public class GameController : MonoBehaviour
         botaoTablet.interactable = false;
         tabletScript.FecharTablet();
         dia++;
+        float DiaImpresso = dia - 1;
+        textoFimDoDia.text = "Fim do dia " + DiaImpresso.ToString();
         painelFimDeDia.SetActive(true);
 
     }
@@ -112,6 +139,8 @@ public class GameController : MonoBehaviour
 
         } else {
             painelFimDeDia.SetActive(false);
+            float DiaImpresso = dia - 1;
+            fimDeJogo.text = "Fim de jogo no dia " + DiaImpresso.ToString();
             painelFimDeJogo.SetActive(true);
         }
 

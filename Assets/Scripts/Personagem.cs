@@ -70,7 +70,7 @@ public class Personagem : MonoBehaviour
 
                     //botaoSim.interactable = true;
                     //botaoNao.interactable = true;
-                    print("setar trigger");
+                    //print("setar trigger");
                     balaoAnim.SetTrigger("Aparecer");
 
                 }

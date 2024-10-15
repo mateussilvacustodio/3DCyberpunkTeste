@@ -173,7 +173,7 @@ MonoBehaviour:
   opcao1: "Eu posso te dar o que voc\xEA quer, mas preciso de algo em troca. Quem
     sabe uma garantia de que a pol\xEDcia n\xE3o vai atrapalhar meus neg\xF3cios?"
   opcao2: "Informa\xE7\xE3o \xE9 poder e eu n\xE3o dou poder de gra\xE7a. V\xE1 procurar
-    em outro lugar"
+    em outro lugar."
   corGangue: {r: 0, g: 0.027873695, b: 0.34901962, a: 1}
   recursos: 01000000000100
   mudadoresSim:

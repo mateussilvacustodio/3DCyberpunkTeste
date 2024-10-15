@@ -170,8 +170,8 @@ MonoBehaviour:
   nome: Mira
   pedido: James, bonito como sempre hein gato. Eu preciso de um cortador a laser.
     Nossa gangue vai dar um golpe na joalheria do centro. Tem como ajudar, docinho?
-  opcao1: "A joalheria \xE9 um golpe ousado, vou ver o que consigo te arrumar"
-  opcao2: "Nem fudendo que eu vou ajudar voc\xEAs a se matarem, t\xF4 fora dessa"
+  opcao1: "A joalheria \xE9 um golpe ousado, vou ver o que consigo te arrumar."
+  opcao2: "Nem fudendo que eu vou ajudar voc\xEAs a se matarem, t\xF4 fora dessa."
   corGangue: {r: 1, g: 0, b: 0, a: 1}
   recursos: 00010000000001
   mudadoresSim:

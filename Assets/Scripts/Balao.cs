@@ -43,7 +43,7 @@ public class Balao : MonoBehaviour
             botaoSimTexto.text = gameController.personagemInstancia.GetComponent<Personagem>().opcao1;
             botaoNaoTexto.text = gameController.personagemInstancia.GetComponent<Personagem>().opcao2;
             
-            print("Habilitar botoes");
+            //print("Habilitar botoes");
             gameController.personagemInstancia.GetComponent<Personagem>().botaoSim.interactable = true;
             gameController.personagemInstancia.GetComponent<Personagem>().botaoNao.interactable = true;
 

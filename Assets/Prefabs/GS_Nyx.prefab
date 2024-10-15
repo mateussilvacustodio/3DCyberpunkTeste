@@ -170,8 +170,8 @@ MonoBehaviour:
   nome: Nyx
   pedido: "James, hahaha. Acabei de detonar um cara no murro, gra\xE7as \xE0s belezinhas
     dos amplificadores que voc\xEA me vendeu, me diz que voc\xEA tem mais a\xED."
-  opcao1: "Eu tenho, s\xF3 n\xE3o vai ficar viciado nessa merda"
-  opcao2: "Eu n\xE3o tenho, sinto muito cara"
+  opcao1: "Eu tenho, s\xF3 n\xE3o vai ficar viciado nessa merda."
+  opcao2: "Eu n\xE3o tenho, sinto muito cara."
   corGangue: {r: 1, g: 0.1462264, b: 0.7121037, a: 1}
   recursos: 00000100000001
   mudadoresSim:

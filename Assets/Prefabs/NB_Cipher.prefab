@@ -169,9 +169,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: Cipher
   pedido: "Caralho James, maninho voc\xEA tem que me arrumar um comprador pra todo
-    esse p\xF3. Irm\xE3o, o cybertranse bate na hora parceiro"
-  opcao1: "Porra, esse \xE9 do bom, vai vender f\xE1cil"
-  opcao2: "Cara, eu n\xE3o posso te ajudar. Tu t\xE1 sozinho nessa"
+    esse p\xF3. Irm\xE3o, o cybertranse bate na hora parceiro."
+  opcao1: "Porra, esse \xE9 do bom, vai vender f\xE1cil."
+  opcao2: "Cara, eu n\xE3o posso te ajudar. Tu t\xE1 sozinho nessa."
   corGangue: {r: 0.9245283, g: 0.8320037, b: 0, a: 1}
   recursos: 01000000000001
   mudadoresSim:

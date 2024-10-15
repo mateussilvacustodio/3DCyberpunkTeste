@@ -173,10 +173,10 @@ MonoBehaviour:
     de algu\xE9m que consiga confirmar essa hist\xF3ria antes que ela desapare\xE7a.
     Voc\xEA tem os contatos certos pra isso?"
   opcao1: "Posso confirmar a informa\xE7\xE3o, mas isso vai te custar. Se for pra
-    mexer com a Redline Rebels, vou precisar de uma boa remunera\xE7\xE3o"
+    mexer com a Redline Rebels, vou precisar de uma boa remunera\xE7\xE3o."
   opcao2: "Confirmar uma hist\xF3ria dessas \xE9 um tiro no p\xE9, principalmente
     se tratando dos Redline Rebels. N\xE3o quero chamar aten\xE7\xE3o pro meu lado.
-    Procura outro"
+    Procura outro."
   corGangue: {r: 0, g: 0.3490566, b: 0.008797769, a: 1}
   recursos: 00010001000001
   mudadoresSim:

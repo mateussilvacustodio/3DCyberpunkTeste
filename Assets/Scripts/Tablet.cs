@@ -10,6 +10,7 @@ public class Tablet : MonoBehaviour
     [SerializeField] GameObject painelTablet;
     [SerializeField] Text diaAtual;
     [SerializeField] GameController gameController;
+    [SerializeField] Animator tabletAnim;
     // Start is called before the first frame update
     void Update() {
 
@@ -26,6 +27,18 @@ public class Tablet : MonoBehaviour
     public void FecharTablet() {
 
         painelTablet.SetActive(false);
+
+    }
+
+    public void CrescerTablet() {
+
+        tabletAnim.SetBool("Crescer", true);
+
+    }
+
+    public void DiminuirTablet() {
+
+        tabletAnim.SetBool("Crescer", false);
 
     }
 }

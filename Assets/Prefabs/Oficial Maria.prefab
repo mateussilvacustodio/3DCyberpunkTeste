@@ -172,9 +172,9 @@ MonoBehaviour:
     t\xE1 envolvido com o <color=#FF5000>Nexos</color>. Voc\xEA vai me dizer o que
     sabe ou faremos isso da maneira dif\xEDcil?"
   opcao1: "Eu posso te dar uma dire\xE7\xE3o, mas voc\xEA sabe como isso funciona.
-    Se te der o que quer, vou precisar de algo em troca"
+    Se te der o que quer, vou precisar de algo em troca."
   opcao2: "Nexos? Eu n\xE3o mexo com esses caras. Se n\xE3o tiver mais nada pra falar,
-    vaza"
+    vaza."
   corGangue: {r: 0, g: 0.027873695, b: 0.34901962, a: 1}
   recursos: 00000000010101
   mudadoresSim:

@@ -17,81 +17,9 @@ ModelImporter:
     removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
-    rigImportWarnings: "Avatar Rig Configuration mis-match. Inbetween bone rotation
-      in configuration does not match rotation in animation file:\n\t'DEF-upper_arm.L.001'
-      : rotation error = 0.066603 deg\n\t'DEF-forearm.L.001' : rotation error = 5.769171
-      deg\n\t'DEF-upper_arm.R.001' : rotation error = 1.382334 deg\n\t'DEF-forearm.R.001'
-      : rotation error = 6.166451 deg\n"
+    rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'rig|rigAction' has import animation warnings
-      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
-      to improve retargeting quality.\n\t'DEF-thigh.L' has scale animation that will
-      be discarded.\n\t'DEF-thigh.L.001' is inbetween humanoid transforms and has
-      rotation animation that will be discarded.\n\t'DEF-shin.L' has scale animation
-      that will be discarded.\n\t'DEF-shin.L.001' is inbetween humanoid transforms
-      and has rotation animation that will be discarded.\n\t'DEF-foot.L' has scale
-      animation that will be discarded.\n\t'DEF-toe.L' has scale animation that will
-      be discarded.\n\t'DEF-thigh.R' has scale animation that will be discarded.\n\t'DEF-thigh.R.001'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'DEF-thigh.R.001'
-      has scale animation that will be discarded.\n\t'DEF-shin.R' has scale animation
-      that will be discarded.\n\t'DEF-shin.R.001' is inbetween humanoid transforms
-      and has rotation animation that will be discarded.\n\t'DEF-shin.R.001' has
-      scale animation that will be discarded.\n\t'DEF-foot.R' has scale animation
-      that will be discarded.\n\t'DEF-toe.R' has scale animation that will be discarded.\n\t'DEF-upper_arm.L'
-      has scale animation that will be discarded.\n\t'DEF-upper_arm.L.001' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n\t'DEF-forearm.L'
-      has scale animation that will be discarded.\n\t'DEF-forearm.L.001' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n\t'DEF-forearm.L.001'
-      has scale animation that will be discarded.\n\t'DEF-hand.L' has scale animation
-      that will be discarded.\n\t'ORG-palm.01.L' is inbetween humanoid transforms
-      and has rotation animation that will be discarded.\n\t'ORG-palm.01.L' has scale
-      animation that will be discarded.\n\t'DEF-f_index.01.L' has translation animation
-      that will be discarded.\n\t'DEF-f_index.01.L' has scale animation that will
-      be discarded.\n\t'DEF-f_index.02.L' has scale animation that will be discarded.\n\t'DEF-f_index.03.L'
-      has scale animation that will be discarded.\n\t'DEF-thumb.01.L' has translation
-      animation that will be discarded.\n\t'DEF-thumb.01.L' has scale animation that
-      will be discarded.\n\t'DEF-thumb.02.L' has scale animation that will be discarded.\n\t'DEF-thumb.03.L'
-      has scale animation that will be discarded.\n\t'ORG-palm.02.L' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n\t'ORG-palm.02.L'
-      has scale animation that will be discarded.\n\t'DEF-f_middle.01.L' has translation
-      animation that will be discarded.\n\t'DEF-f_middle.01.L' has scale animation
-      that will be discarded.\n\t'DEF-f_middle.02.L' has scale animation that will
-      be discarded.\n\t'DEF-f_middle.03.L' has scale animation that will be discarded.\n\t'ORG-palm.03.L'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ORG-palm.03.L'
-      has scale animation that will be discarded.\n\t'DEF-f_ring.01.L' has translation
-      animation that will be discarded.\n\t'DEF-f_ring.01.L' has scale animation
-      that will be discarded.\n\t'DEF-f_ring.02.L' has scale animation that will
-      be discarded.\n\t'DEF-f_ring.03.L' has scale animation that will be discarded.\n\t'ORG-palm.04.L'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ORG-palm.04.L'
-      has scale animation that will be discarded.\n\t'DEF-f_pinky.01.L' has scale
-      animation that will be discarded.\n\t'DEF-f_pinky.02.L' has scale animation
-      that will be discarded.\n\t'DEF-f_pinky.03.L' has scale animation that will
-      be discarded.\n\t'DEF-upper_arm.R' has scale animation that will be discarded.\n\t'DEF-upper_arm.R.001'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'DEF-forearm.R'
-      has scale animation that will be discarded.\n\t'DEF-forearm.R.001' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n\t'DEF-forearm.R.001'
-      has scale animation that will be discarded.\n\t'DEF-hand.R' has scale animation
-      that will be discarded.\n\t'ORG-palm.01.R' is inbetween humanoid transforms
-      and has rotation animation that will be discarded.\n\t'ORG-palm.01.R' has scale
-      animation that will be discarded.\n\t'DEF-f_index.01.R' has scale animation
-      that will be discarded.\n\t'DEF-f_index.02.R' has scale animation that will
-      be discarded.\n\t'DEF-f_index.03.R' has scale animation that will be discarded.\n\t'DEF-thumb.01.R'
-      has scale animation that will be discarded.\n\t'DEF-thumb.02.R' has scale animation
-      that will be discarded.\n\t'DEF-thumb.03.R' has scale animation that will be
-      discarded.\n\t'ORG-palm.02.R' is inbetween humanoid transforms and has rotation
-      animation that will be discarded.\n\t'ORG-palm.02.R' has scale animation that
-      will be discarded.\n\t'DEF-f_middle.01.R' has scale animation that will be
-      discarded.\n\t'DEF-f_middle.02.R' has scale animation that will be discarded.\n\t'DEF-f_middle.03.R'
-      has scale animation that will be discarded.\n\t'ORG-palm.03.R' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n\t'ORG-palm.03.R'
-      has scale animation that will be discarded.\n\t'DEF-f_ring.01.R' has scale
-      animation that will be discarded.\n\t'DEF-f_ring.02.R' has scale animation
-      that will be discarded.\n\t'DEF-f_ring.03.R' has scale animation that will
-      be discarded.\n\t'ORG-palm.04.R' is inbetween humanoid transforms and has rotation
-      animation that will be discarded.\n\t'ORG-palm.04.R' has scale animation that
-      will be discarded.\n\t'DEF-f_pinky.01.R' has scale animation that will be discarded.\n\t'DEF-f_pinky.02.R'
-      has scale animation that will be discarded.\n\t'DEF-f_pinky.03.R' has scale
-      animation that will be discarded.\n"
+    animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -128,7 +56,14 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.8322981
+        functionName: parar
+        data: 
+        objectReferenceParameter: {fileID: 1801642169039044460, guid: b1dd38599fe757543b0ac54cda23f96e, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

@@ -169,9 +169,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: Victor
   pedido: "James, fudeu, eu preciso que voc\xEA me arrume 40 chips ou eu t\xF4 morto,
-    irm\xE3o"
-  opcao1: "Pode deixar, sua cabe\xE7a n\xE3o vai rolar hoje"
-  opcao2: "Cara foi mal, mas n\xE3o posso te ajudar"
+    irm\xE3o."
+  opcao1: "Pode deixar, sua cabe\xE7a n\xE3o vai rolar hoje."
+  opcao2: "Cara foi mal, mas n\xE3o posso te ajudar."
   corGangue: {r: 1, g: 0.14901961, b: 0.7137255, a: 1}
   recursos: 00000100000001
   mudadoresSim:

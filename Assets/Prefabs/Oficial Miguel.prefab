@@ -170,11 +170,11 @@ MonoBehaviour:
   nome: Oficial Miguel
   pedido: "Boa tarde cidad\xE3o. Eu sei que voc\xEA t\xE1 envolvido com gente procurada
     pela pol\xEDcia. Eu posso garantir que os seus neg\xF3cios continuem fora dos
-    radares\u2026 por um pre\xE7o"
+    radares\u2026 por um pre\xE7o."
   opcao1: Fechado. Considere isso um incentivo para que continue a ignorar o que
-    precisa ser ignorado
+    precisa ser ignorado.
   opcao2: "Prefiro apostar na minha sorte do que encher seu bolso. Vai procurar outro
-    ot\xE1rio"
+    ot\xE1rio."
   corGangue: {r: 0, g: 0.027873695, b: 0.34901962, a: 1}
   recursos: 00000000000101
   mudadoresSim:

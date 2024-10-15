@@ -174,10 +174,10 @@ MonoBehaviour:
     e uma boa camada de prote\xE7\xE3o. Voc\xEA consegue isso pra mim?"
   opcao1: "Posso arranjar o que voc\xEA precisa, mas n\xE3o vou fazer isso por simples
     cr\xE9ditos. Quero as informa\xE7\xF5es valiosas que voc\xEA conseguir sobre
-    a pol\xEDcia"
+    a pol\xEDcia."
   opcao2: "Voc\xEA quer jogar com os grandes, mas n\xE3o parece preparada pra pagar
     o pre\xE7o. Hardware assim n\xE3o \xE9 barato, e eu n\xE3o vou arriscar minha
-    reputa\xE7\xE3o por algu\xE9m que pode n\xE3o sobreviver a essa invas\xE3o"
+    reputa\xE7\xE3o por algu\xE9m que pode n\xE3o sobreviver a essa invas\xE3o."
   corGangue: {r: 1, g: 0.31442907, b: 0, a: 1}
   recursos: 00000000010101
   mudadoresSim:

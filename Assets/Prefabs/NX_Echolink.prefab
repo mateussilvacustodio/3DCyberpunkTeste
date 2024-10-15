@@ -173,9 +173,9 @@ MonoBehaviour:
     me ajude a apagar meus rastros para eles n\xE3o virem atr\xE1s de mim. Voc\xEA
     consegue me ajudar?"
   opcao1: "Interessante. Se o que voc\xEA encontrou \xE9 realmente valioso, eu posso
-    garantir que eles n\xE3o venham atr\xE1s de ti. Por um pre\xE7o, \xE9 claro"
+    garantir que eles n\xE3o venham atr\xE1s de ti. Por um pre\xE7o, \xE9 claro."
   opcao2: "N\xE3o estou disposto a arriscar minha reputa\xE7\xE3o por algo que pode
-    me trazer problemas. Vou ter que recusar"
+    me trazer problemas. Vou ter que recusar."
   corGangue: {r: 1, g: 0.31442907, b: 0, a: 1}
   recursos: 00000001010001
   mudadoresSim:

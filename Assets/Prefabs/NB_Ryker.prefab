@@ -169,9 +169,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: Ryker
   pedido: "James, t\xE1 afim dessa mercadoria de Chips de NeuroDrogas? S\xF3 tem
-    as que v\xE3o te deixar com uma onda de 5 dias, meu amigo"
-  opcao1: Nossa, essas paradinhas valem ouro
-  opcao2: "Foi mal parceiro, t\xF4 sem grana agora"
+    as que v\xE3o te deixar com uma onda de 5 dias, meu amigo."
+  opcao1: Nossa, essas paradinhas valem ouro.
+  opcao2: "Foi mal parceiro, t\xF4 sem grana agora."
   corGangue: {r: 0.9254902, g: 0.8352941, b: 0, a: 1}
   recursos: 01000000000001
   mudadoresSim:

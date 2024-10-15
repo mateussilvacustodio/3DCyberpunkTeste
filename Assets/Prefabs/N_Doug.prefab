@@ -170,8 +170,8 @@ MonoBehaviour:
   nome: Doug
   pedido: "Ol\xE1, fiquei sabendo que aqui eu poderia arrumar algu\xE9m com for\xE7a
     bruta pra me livrar dos vagabundos que vivem roubando minha loja, pode me ajudar?"
-  opcao1: "Voc\xEA veio ao lugar certo meu caro, vou te ajudar"
-  opcao2: "N\xE3o sei do que esta falando, vaza se n\xE3o quiser uma bala na cabe\xE7a"
+  opcao1: "Voc\xEA veio ao lugar certo meu caro, vou te ajudar."
+  opcao2: "N\xE3o sei do que esta falando, vaza se n\xE3o quiser uma bala na cabe\xE7a."
   corGangue: {r: 0, g: 0, b: 0, a: 1}
   recursos: 01010000000001
   mudadoresSim:

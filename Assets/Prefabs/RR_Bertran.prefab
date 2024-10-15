@@ -170,8 +170,8 @@ MonoBehaviour:
   nome: Bertran
   pedido: "James, mi amigo, a quanto tempo, por acaso voc\xEA n\xE3o teria um rob\xF4
     MK V\xF3rtex a\xED, teria?"
-  opcao1: Pra sua sorte eu tenho sim
-  opcao2: "Infelizmente n\xE3o tenho cara"
+  opcao1: Pra sua sorte eu tenho sim.
+  opcao2: "Infelizmente n\xE3o tenho cara."
   corGangue: {r: 1, g: 0, b: 0, a: 1}
   recursos: 00010000000001
   mudadoresSim:
