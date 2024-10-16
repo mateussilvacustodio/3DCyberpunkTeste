@@ -33,6 +33,10 @@ public class GameController : MonoBehaviour
     [SerializeField] Text fimDeJogo;
     [SerializeField] Text textoFimDeJogo;
     [SerializeField] bool GameOver;
+    [Header("Cores")]
+    public Color corTeste;
+    public float R;
+    public float G;
     void Start()
     {
         // personagemInstancia = Instantiate(personagens[personagemIndex]);
@@ -66,6 +70,11 @@ public class GameController : MonoBehaviour
             barrasGangues[i].fillAmount = gangues[i] / 100;
         }
         dinheiroText.text = gangues[6].ToString("F0");
+
+        corTeste = new Color(R, G, 0f, 1f);
+        R = (100 - gangues[0]) / 50;
+        G = gangues[0] /  50;
+        barrasGangues[0].color = corTeste;
 
     }
 
