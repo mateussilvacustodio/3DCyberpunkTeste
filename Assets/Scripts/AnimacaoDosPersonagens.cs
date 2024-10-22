@@ -28,4 +28,10 @@ public class AnimacaoDosPersonagens : MonoBehaviour
         podeMoverTeste = false;
 
     }
+
+    public void andar() {
+
+        podeMoverTeste = true;
+
+    }
 }

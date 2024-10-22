@@ -11,6 +11,8 @@ public class GameController : MonoBehaviour
         public float[] gangues;
         [SerializeField] Image[] barrasGangues;
         [SerializeField] Image[] barrasGangues2;
+        [SerializeField] Text[] barrasGanguesPCT;
+        [SerializeField] Text[] barrasGanguesPCT2;
         [SerializeField] Text dinheiroText;
         [SerializeField] string[] textoFimDeJogoGangues;
     [Header("Personagens")]
@@ -38,21 +40,36 @@ public class GameController : MonoBehaviour
     public float R;
     public float G;
     void Start()
-    {
-        // personagemInstancia = Instantiate(personagens[personagemIndex]);
-        
-        // botaoSim.onClick.AddListener(personagemInstancia.GetComponent<Personagem>().concordo);
-        // botaoNao.onClick.AddListener(personagemInstancia.GetComponent<Personagem>().discordo);        
-
+    {   
         for (int i = 0; i < barrasGangues.Length; i++)
         {
             barrasGangues[i].fillAmount = gangues[i] / 100;
         }
-        
+        for (int i = 0; i < barrasGangues.Length; i++)
+        {
+            R = (100 - gangues[i]) / 50;
+            G = gangues[i] /  50;
+            corTeste = new Color(R, G, 0f, 1f);
+            barrasGangues[i].color = corTeste;    
+        }
+        for (int i = 0; i < barrasGangues.Length; i++)
+        {
+            barrasGanguesPCT[i].text = gangues[i].ToString() + "%";
+        }
+
         for (int i = 0; i < barrasGangues.Length; i++)
         {
             barrasGangues2[i].fillAmount = barrasGangues[i].fillAmount;
         }
+        for (int i = 0; i < barrasGangues.Length; i++)
+        {
+            barrasGangues2[i].color = barrasGangues[i].color;
+        }
+        for (int i = 0; i < barrasGangues.Length; i++)
+        {
+            barrasGanguesPCT2[i].text = barrasGanguesPCT[i].text;
+        }
+
 
         for (int i = 0; i < personagens.Length; i++) {
 
@@ -65,16 +82,24 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-        for (int i = 0; i < barrasGangues.Length; i++)
-        {
-            barrasGangues[i].fillAmount = gangues[i] / 100;
-        }
+        // for (int i = 0; i < barrasGangues.Length; i++)
+        // {
+        //     barrasGangues[i].fillAmount = gangues[i] / 100;
+        // }
         dinheiroText.text = gangues[6].ToString("F0");
 
-        corTeste = new Color(R, G, 0f, 1f);
-        R = (100 - gangues[0]) / 50;
-        G = gangues[0] /  50;
-        barrasGangues[0].color = corTeste;
+        // for (int i = 0; i < barrasGangues.Length; i++)
+        // {
+        //     R = (100 - gangues[i]) / 50;
+        //     G = gangues[i] /  50;
+        //     corTeste = new Color(R, G, 0f, 1f);
+        //     barrasGangues[i].color = corTeste;    
+        // }
+
+        // for (int i = 0; i < barrasGangues.Length; i++)
+        // {
+        //     barrasGanguesPCT[i].text = gangues[i].ToString() + "%";
+        // }
 
     }
 
@@ -87,10 +112,6 @@ public class GameController : MonoBehaviour
         }       
         
         int aleatoria = Random.Range(0,indicesDisponiveis.Count);
-
-        // while(aleatoria == personagemIndex) {
-        //     aleatoria = Random.Range(0,personagens.Length);
-        // }
 
         personagemInstancia = Instantiate(personagens[indicesDisponiveis[aleatoria]]);
         personagemIndex = aleatoria;
@@ -119,8 +140,39 @@ public class GameController : MonoBehaviour
         dia++;
         float DiaImpresso = dia - 1;
         textoFimDoDia.text = "Fim do dia " + DiaImpresso.ToString();
+        
+        for (int i = 0; i < barrasGangues.Length; i++)
+        {
+            barrasGangues[i].fillAmount = gangues[i] / 100;
+        }
+        dinheiroText.text = gangues[6].ToString("F0");
+        for (int i = 0; i < barrasGangues.Length; i++)
+        {
+            R = (100 - gangues[i]) / 50;
+            G = gangues[i] /  50;
+            corTeste = new Color(R, G, 0f, 1f);
+            barrasGangues[i].color = corTeste;    
+        }
+        for (int i = 0; i < barrasGangues.Length; i++)
+        {
+            barrasGanguesPCT[i].text = gangues[i].ToString() + "%";
+        }
+        
+        for (int i = 0; i < barrasGangues.Length; i++)
+        {
+            barrasGangues2[i].fillAmount = barrasGangues[i].fillAmount;
+        }
+        for (int i = 0; i < barrasGangues.Length; i++)
+        {
+            barrasGangues2[i].color = barrasGangues[i].color;
+        }
+        for (int i = 0; i < barrasGangues.Length; i++)
+        {
+            barrasGanguesPCT2[i].text = barrasGanguesPCT[i].text;
+        }
+        
         painelFimDeDia.SetActive(true);
-
+    
     }
 
     public void ProximoDia() {
@@ -138,11 +190,6 @@ public class GameController : MonoBehaviour
 
             painelFimDeDia.SetActive(false);
             botaoTablet.interactable = true;
-
-            for (int i = 0; i < barrasGangues.Length; i++)
-            {
-                barrasGangues2[i].fillAmount = barrasGangues[i].fillAmount;
-            }
 
             criarPersonagem();
 
