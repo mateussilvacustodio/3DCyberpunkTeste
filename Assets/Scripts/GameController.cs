@@ -27,6 +27,7 @@ public class GameController : MonoBehaviour
     [SerializeField] Tablet tabletScript;
     [Header("Pedidos")]
     public float dia;
+    [SerializeField] float diaMax;
     public float quantidadeDePedidos;
     public float quantidadeDePedidosPorDia;
     [SerializeField] GameObject painelFimDeDia;
@@ -35,6 +36,7 @@ public class GameController : MonoBehaviour
     [SerializeField] Text fimDeJogo;
     [SerializeField] Text textoFimDeJogo;
     [SerializeField] bool GameOver;
+    [SerializeField] GameObject painelVitoria;
     [Header("Cores")]
     public Color corTeste;
     public float R;
@@ -188,10 +190,18 @@ public class GameController : MonoBehaviour
 
         if(!GameOver) {
 
-            painelFimDeDia.SetActive(false);
-            botaoTablet.interactable = true;
+            if(dia < diaMax + 1) {
 
-            criarPersonagem();
+                painelFimDeDia.SetActive(false);
+                botaoTablet.interactable = true;
+                criarPersonagem();
+
+            } else {
+
+                painelFimDeDia.SetActive(false);
+                painelVitoria.SetActive(true);
+
+            }           
 
         } else {
             painelFimDeDia.SetActive(false);
