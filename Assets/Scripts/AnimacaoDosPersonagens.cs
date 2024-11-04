@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class AnimacaoDosPersonagens : MonoBehaviour
 {
-    [SerializeField] Animator bonecoAnimator;
-    [SerializeField] bool podeMoverTeste;
-    [SerializeField] float velocidadeMoverTeste;
+    //public bool podeMover;
+    //[SerializeField] float velocidadeMoverTeste;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,22 +15,30 @@ public class AnimacaoDosPersonagens : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(podeMoverTeste) {
+        // if(podeMoverTeste) {
 
-            transform.position += new Vector3(-10, 0, 0) * Time.deltaTime * velocidadeMoverTeste;
+        //     transform.position += new Vector3(-10, 0, 0) * Time.deltaTime * velocidadeMoverTeste;
 
-        }
+        // }
+        
     }
 
     public void parar() {
 
-        podeMoverTeste = false;
+        //podeMover = false;
+        print("Pare de Mover");
 
     }
 
     public void andar() {
 
-        podeMoverTeste = true;
+        //podeMover = true;
+
+    }
+
+    public void SetarTriggerBalao() {
+
+        //personagemScript.balaoAnim.SetTrigger("Aparecer");
 
     }
 }

@@ -25,15 +25,17 @@ public class Personagem : MonoBehaviour
     [Header("Movimento")]
     [SerializeField] float velocidadeMover;
     [SerializeField] bool podeMover;
-    [SerializeField] float velocidadeRodar;
-    [SerializeField] bool podeRodar;
-    [SerializeField] Quaternion rotacaoAlvo;
-    [SerializeField] bool irEmbora;
+    [SerializeField] Animator personagemAnim;
+    //[SerializeField] AnimacaoDosPersonagens animacaoDosPersonagensScript;
+    //[SerializeField] float velocidadeRodar;
+    //[SerializeField] bool podeRodar;
+    //[SerializeField] Quaternion rotacaoAlvo;
+    //[SerializeField] bool irEmbora;
     [Header("Botões")]
     public Button botaoSim;
     public Button botaoNao;
     [Header("Balão")]
-    [SerializeField] Animator balaoAnim;
+    public Animator balaoAnim;
     [SerializeField] Balao balao;
     [Header("GameController")]
     [SerializeField] GameController gameController;
@@ -54,40 +56,40 @@ public class Personagem : MonoBehaviour
             transform.position += new Vector3(-10, 0, 0) * Time.deltaTime * velocidadeMover;
         }
 
-        if(podeRodar) {
+        // if(podeRodar) {
 
-            transform.rotation = Quaternion.Lerp(transform.rotation, rotacaoAlvo, velocidadeRodar * Time.deltaTime);
+        //     transform.rotation = Quaternion.Lerp(transform.rotation, rotacaoAlvo, velocidadeRodar * Time.deltaTime);
 
-            if(Quaternion.Angle(transform.rotation, rotacaoAlvo) < 0.1f) {
+        //      if(Quaternion.Angle(transform.rotation, rotacaoAlvo) < 0.1f) {
 
-                transform.rotation = rotacaoAlvo;
-                podeRodar = false;
-                if(irEmbora) {
+        //          transform.rotation = rotacaoAlvo;
+        //          podeRodar = false;
+        //          if(irEmbora) {
 
-                    podeMover = true;
+        //              podeMover = true;
                     
-                } else if (!irEmbora) {
+        //          } else if (!irEmbora) {
 
-                    //botaoSim.interactable = true;
-                    //botaoNao.interactable = true;
-                    //print("setar trigger");
-                    balaoAnim.SetTrigger("Aparecer");
+        //              //botaoSim.interactable = true;
+        //              //botaoNao.interactable = true;
+        //              //print("setar trigger");
+        //              balaoAnim.SetTrigger("Aparecer");
 
-                }
+        //        }
 
-            }
+        //      }
 
-        }
+        // }
         
     }
 
-    void pararEVirar() {
+    // void pararEVirar() {
 
-        podeMover = false;
-        rotacaoAlvo = transform.rotation * Quaternion.Euler(0,-90,0);
-        podeRodar = true;
+    //     podeMover = false;
+    //     rotacaoAlvo = transform.rotation * Quaternion.Euler(0,-90,0);
+    //     podeRodar = true;
 
-    }
+    // }
 
     public void concordo() {
 
@@ -102,9 +104,10 @@ public class Personagem : MonoBehaviour
         
         botaoSim.interactable = false;
         botaoNao.interactable = false;
-        irEmbora = true;
-        rotacaoAlvo = transform.rotation * Quaternion.Euler(0,90,0);
-        podeRodar = true;
+        //irEmbora = true;
+        //rotacaoAlvo = transform.rotation * Quaternion.Euler(0,90,0);
+        //podeRodar = true;
+        personagemAnim.SetTrigger("IrEmbora");
         balao.balaoTexto.text = "";
         balao.nomeTexto.text = "";
         balao.corrotinaDigitar = null;
@@ -127,9 +130,10 @@ public class Personagem : MonoBehaviour
         
         botaoSim.interactable = false;
         botaoNao.interactable = false;
-        irEmbora = true;
-        rotacaoAlvo = transform.rotation * Quaternion.Euler(0,90,0);
-        podeRodar = true;
+        //irEmbora = true;
+        //rotacaoAlvo = transform.rotation * Quaternion.Euler(0,90,0);
+        //podeRodar = true;
+        personagemAnim.SetTrigger("IrEmbora");
         balao.balaoTexto.text = "";
         balao.nomeTexto.text = "";
         balao.corrotinaDigitar = null;
@@ -139,14 +143,35 @@ public class Personagem : MonoBehaviour
 
     }
 
+    public void parar() {
+
+        podeMover = false;
+
+    }
+
+    public void SetarTriggerBalao() {
+
+        balaoAnim.SetTrigger("Aparecer");
+
+    }
+
+    public void andar() {
+
+        podeMover = true;
+
+    }
+
     void OnTriggerEnter (Collider collider) {
 
-        if(collider.gameObject.name == "Trigger") {
+        // if(collider.gameObject.name == "Trigger") {
 
-            pararEVirar();
+        //     //pararEVirar();
 
-        } else if(collider.gameObject.name == "Trigger2") {
+        // } else 
+        
+        if(collider.gameObject.name == "Trigger2") {
 
+            print("Colidiu com trigger");
             gameController.quantidadeDePedidos++;
             
             if(gameController.quantidadeDePedidos < gameController.quantidadeDePedidosPorDia) {

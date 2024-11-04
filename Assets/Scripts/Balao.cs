@@ -60,9 +60,7 @@ public class Balao : MonoBehaviour
 
     }
 
-    IEnumerator Digitar() {
-
-        
+    IEnumerator Digitar() {        
 
         foreach (char letter in gameController.personagemInstancia.GetComponent<Personagem>().pedido.ToCharArray()) {
 

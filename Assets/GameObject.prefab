@@ -44,6 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f992781a70610eb439a8eef6897f76c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bonecoAnimator: {fileID: 0}
-  podeMoverTeste: 0
-  velocidadeMoverTeste: 0
+  podeMover: 1
