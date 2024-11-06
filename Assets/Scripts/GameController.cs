@@ -4,6 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+[System.Serializable]
+public class EventosFimDeDia {
+
+    public string textoDoEvento;
+    public int quantasGanguesAfeta;
+    public int[] gangueQueAfeta;
+    public float[] quantoAfetaNaGangue;
+
+}
+
 public class GameController : MonoBehaviour
 {
     [Header("Recursos")]
@@ -14,33 +24,35 @@ public class GameController : MonoBehaviour
         [SerializeField] Text[] barrasGanguesPCT;
         [SerializeField] Text[] barrasGanguesPCT2;
         [SerializeField] Text dinheiroText;
+        [SerializeField] List<EventosFimDeDia> ListaDeEventosFimDeDia = new List<EventosFimDeDia>();
         [SerializeField] string[] textoFimDeJogoGangues;
     [Header("Personagens")]
-    public GameObject[] personagens;
-    [SerializeField] List<int> indicesDisponiveis = new List<int>(); 
-    public int personagemIndex;
-    public GameObject personagemInstancia;
+        public GameObject[] personagens;
+        [SerializeField] List<int> indicesDisponiveis = new List<int>(); 
+        public int personagemIndex;
+        public GameObject personagemInstancia;
     [Header("Botões")]
-    [SerializeField] Button botaoSim;
-    [SerializeField] Button botaoNao;
-    public Button botaoTablet;
-    [SerializeField] Tablet tabletScript;
+        [SerializeField] Button botaoSim;
+        [SerializeField] Button botaoNao;
+        public Button botaoTablet;
+        [SerializeField] Tablet tabletScript;
     [Header("Pedidos")]
-    public float dia;
-    [SerializeField] float diaMax;
-    public float quantidadeDePedidos;
-    public float quantidadeDePedidosPorDia;
-    [SerializeField] GameObject painelFimDeDia;
-    [SerializeField] Text textoFimDoDia;
-    [SerializeField] GameObject painelFimDeJogo;
-    [SerializeField] Text fimDeJogo;
-    [SerializeField] Text textoFimDeJogo;
-    [SerializeField] bool GameOver;
-    [SerializeField] GameObject painelVitoria;
+        public float dia;
+        [SerializeField] float diaMax;
+        public float quantidadeDePedidos;
+        public float quantidadeDePedidosPorDia;
+        [SerializeField] GameObject painelFimDeDia;
+        [SerializeField] Text textoFimDoDia;
+        [SerializeField] Text textoEventoFimDoDia;
+        [SerializeField] GameObject painelFimDeJogo;
+        [SerializeField] Text fimDeJogo;
+        [SerializeField] Text textoFimDeJogo;
+        [SerializeField] bool GameOver;
+        [SerializeField] GameObject painelVitoria;
     [Header("Cores")]
-    public Color corTeste;
-    public float R;
-    public float G;
+        public Color corTeste;
+        public float R;
+        public float G;
     void Start()
     {   
         for (int i = 0; i < barrasGangues.Length; i++)
@@ -84,25 +96,7 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-        // for (int i = 0; i < barrasGangues.Length; i++)
-        // {
-        //     barrasGangues[i].fillAmount = gangues[i] / 100;
-        // }
         dinheiroText.text = gangues[6].ToString("F0");
-
-        // for (int i = 0; i < barrasGangues.Length; i++)
-        // {
-        //     R = (100 - gangues[i]) / 50;
-        //     G = gangues[i] /  50;
-        //     corTeste = new Color(R, G, 0f, 1f);
-        //     barrasGangues[i].color = corTeste;    
-        // }
-
-        // for (int i = 0; i < barrasGangues.Length; i++)
-        // {
-        //     barrasGanguesPCT[i].text = gangues[i].ToString() + "%";
-        // }
-
     }
 
     public void criarPersonagem() {
@@ -142,6 +136,29 @@ public class GameController : MonoBehaviour
         dia++;
         float DiaImpresso = dia - 1;
         textoFimDoDia.text = "Fim do dia " + DiaImpresso.ToString();
+
+        gangues[6] -= 100;
+
+        textoEventoFimDoDia.text = ListaDeEventosFimDeDia[1].textoDoEvento;
+
+        for (int i = 0; i < gangues.Length; i++)
+        {
+            
+            //print("Dentro do loop" + i);
+            for (int j = 0; j < ListaDeEventosFimDeDia[1].quantasGanguesAfeta; j++)
+            {
+                
+                //print("Dentro do segundo loop" + j);
+                
+                if(i == ListaDeEventosFimDeDia[1].gangueQueAfeta[j]) {
+
+                    //print("Afetar a gangue " + i + " com o mudador no valor de " + ListaDeEventosFimDeDia[1].quantoAfetaNaGangue[j]);
+                    gangues[i] += ListaDeEventosFimDeDia[1].quantoAfetaNaGangue[j];
+
+                }
+            }
+            
+        }
         
         for (int i = 0; i < barrasGangues.Length; i++)
         {
