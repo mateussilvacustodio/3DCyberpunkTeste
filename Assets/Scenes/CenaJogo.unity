@@ -2099,6 +2099,36 @@ MonoBehaviour:
     quantoAfetaNaGangue:
     - -5
     - -100
+  - textoDoEvento: "Um esquema da RedLineRebels foi frustrado por uma gangue de outro
+      distrito. Eles suspeitam que James vazou informa\xE7\xF5es."
+    quantasGanguesAfeta: 1
+    gangueQueAfeta: 01000000
+    quantoAfetaNaGangue:
+    - -15
+  - textoDoEvento: Uma gangue de outro distrito atacou James. Eles levaram algumas
+      mercadorias que estavam com ele.
+    quantasGanguesAfeta: 1
+    gangueQueAfeta: 06000000
+    quantoAfetaNaGangue:
+    - -500
+  - textoDoEvento: "Uma gangue rival come\xE7ou a espalhar rumores sobre James, afetando
+      sua reputa\xE7\xE3o na cidade."
+    quantasGanguesAfeta: 5
+    gangueQueAfeta: 0000000001000000020000000300000004000000
+    quantoAfetaNaGangue:
+    - -10
+    - -10
+    - -10
+    - -10
+    - -10
+  - textoDoEvento: "Um carregamento de armas que James estava vendendo foi confiscado
+      pela Pol\xEDcia durante uma batida."
+    quantasGanguesAfeta: 3
+    gangueQueAfeta: 010000000500000006000000
+    quantoAfetaNaGangue:
+    - -10
+    - -15
+    - -350
   textoFimDeJogoGangues:
   - "reputa\xE7\xE3o com a gangue Nano Blades"
   - "reputa\xE7\xE3o com a gangue Redline Rebels"
@@ -13102,7 +13132,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -22.49707, y: 11.0529785}
+  m_AnchoredPosition: {x: 1, y: 11.0529785}
   m_SizeDelta: {x: 45, y: 21.900024}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1140119316
@@ -13125,7 +13155,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ab0cd191e90efd647ac55993b21bc6da, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 919f62139fb727247929bf61180c2fff, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13806,7 +13836,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -22.49707, y: 11.0529785}
+  m_AnchoredPosition: {x: 1, y: 11.0529785}
   m_SizeDelta: {x: 45, y: 21.900024}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1412155122
@@ -13829,7 +13859,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ab0cd191e90efd647ac55993b21bc6da, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 919f62139fb727247929bf61180c2fff, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14148,7 +14178,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2733.745, y: -1452}
+  m_AnchoredPosition: {x: -2778, y: -1403}
   m_SizeDelta: {x: 586.13794, y: 109.901}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1497858834
@@ -14173,11 +14203,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 77
-    m_FontStyle: 0
+    m_FontSize: 80
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 6
-    m_MaxSize: 78
+    m_MaxSize: 300
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -15721,7 +15751,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 461, y: 309}
+  m_AnchoredPosition: {x: 550, y: 286}
   m_SizeDelta: {x: 3179.49, y: 1907.46}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1905413302
@@ -15744,7 +15774,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f1a11490c89c125429ca59a657154aa3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 74a2ed4109bec9e4885c2566391e46d6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17052,7 +17082,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 537, y: -298}
+  m_AnchoredPosition: {x: 560, y: -298}
   m_SizeDelta: {x: 590.23, y: 120.94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1533956781787702122
@@ -17140,7 +17170,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 537, y: -141}
+  m_AnchoredPosition: {x: 560, y: -141}
   m_SizeDelta: {x: 590.23, y: 125.91}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &2349395633418101613
@@ -17519,7 +17549,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 110, y: -77}
+  m_AnchoredPosition: {x: 134, y: -77}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &8358450452003342271

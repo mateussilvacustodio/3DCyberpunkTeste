@@ -138,27 +138,32 @@ public class GameController : MonoBehaviour
         textoFimDoDia.text = "Fim do dia " + DiaImpresso.ToString();
 
         gangues[6] -= 100;
-
-        textoEventoFimDoDia.text = ListaDeEventosFimDeDia[1].textoDoEvento;
+        int eventoAleatorio = Random.Range(0, ListaDeEventosFimDeDia.Count);
+        textoEventoFimDoDia.text = ListaDeEventosFimDeDia[eventoAleatorio].textoDoEvento;
+        
 
         for (int i = 0; i < gangues.Length; i++)
         {
             
             //print("Dentro do loop" + i);
-            for (int j = 0; j < ListaDeEventosFimDeDia[1].quantasGanguesAfeta; j++)
+            for (int j = 0; j < ListaDeEventosFimDeDia[eventoAleatorio].quantasGanguesAfeta; j++)
             {
                 
                 //print("Dentro do segundo loop" + j);
                 
-                if(i == ListaDeEventosFimDeDia[1].gangueQueAfeta[j]) {
+                if(i == ListaDeEventosFimDeDia[eventoAleatorio].gangueQueAfeta[j]) {
 
                     //print("Afetar a gangue " + i + " com o mudador no valor de " + ListaDeEventosFimDeDia[1].quantoAfetaNaGangue[j]);
-                    gangues[i] += ListaDeEventosFimDeDia[1].quantoAfetaNaGangue[j];
+                    gangues[i] += ListaDeEventosFimDeDia[eventoAleatorio].quantoAfetaNaGangue[j];
 
                 }
             }
             
         }
+
+        ListaDeEventosFimDeDia.RemoveAt(eventoAleatorio);
+
+
         
         for (int i = 0; i < barrasGangues.Length; i++)
         {
