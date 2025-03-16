@@ -178,6 +178,11 @@ MonoBehaviour:
   nome: Bertran
   pedido: "James, mi amigo, a quanto tempo. Por acaso voc\xEA n\xE3o teria um rob\xF4
     MK V\xF3rtex a\xED, teria?"
+  tipoPedido: 0
+  itemDoNPC:
+    nome: Robo
+    quant: 1
+    sprite: {fileID: 21300000, guid: 8138c14e5daeec346b163f0eaf42b7fe, type: 3}
   opcao1: Pra sua sorte eu tenho sim.
   opcao2: "Infelizmente n\xE3o tenho cara."
   corGangue: {r: 1, g: 0, b: 0, a: 1}
@@ -198,6 +203,7 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  inventarioScript: {fileID: 0}
   velocidadeMover: 0.5
   podeMover: 1
   personagemAnim: {fileID: 5820606725073172591}

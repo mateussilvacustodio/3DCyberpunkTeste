@@ -178,6 +178,11 @@ MonoBehaviour:
   nome: Richard
   pedido: "James, tranquilo? Voc\xEA pode me arrumar uma daquelas l\xE2minas de bra\xE7o
     fodonas?"
+  tipoPedido: 0
+  itemDoNPC:
+    nome: Capacete
+    quant: -1
+    sprite: {fileID: 21300000, guid: 4c78ecc7cee6b494cac6d166ea2ad032, type: 3}
   opcao1: Relaxa cara, eu consigo sim.
   opcao2: "Mano, n\xE3o vou poder ajudar."
   corGangue: {r: 1, g: 0.14901961, b: 0.7137255, a: 1}
@@ -198,6 +203,7 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  inventarioScript: {fileID: 0}
   velocidadeMover: 0.5
   podeMover: 1
   personagemAnim: {fileID: 9056291856612195721}

@@ -5,12 +5,17 @@ using Unity.VisualScripting;
 //using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
+
+public enum tipoPedido {inventario, mercenario, nenhum}
 
 public class Personagem : MonoBehaviour
 {
     [Header("Textos")]
     public string nome;
     public string pedido;
+    public tipoPedido tipoPedido;
+    public Item itemDoNPC;
     public string opcao1;
     public string opcao2;
     public Color corGangue;
@@ -22,6 +27,7 @@ public class Personagem : MonoBehaviour
         public float[] mudadoresSim;
         [Tooltip("NB, RR, GS, SZ, NX, Policia, dinheiro")]
         public float[] mudadoresNao;
+        [SerializeField] Inventario inventarioScript;
     [Header("Movimento")]
     [SerializeField] float velocidadeMover;
     [SerializeField] bool podeMover;
@@ -48,6 +54,7 @@ public class Personagem : MonoBehaviour
         balao = GameObject.Find("Balao").GetComponent<Balao>();
 
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
+        inventarioScript = Resources.FindObjectsOfTypeAll<Inventario>().FirstOrDefault(); //como o inventario começa desativado na cena, essa linha puxa ele mesmo desativado
 
     }
     void Update()
@@ -93,6 +100,12 @@ public class Personagem : MonoBehaviour
 
     public void concordo() {
 
+        if(tipoPedido.ToString() == "inventario"){
+
+            inventarioScript.GanharPerderItens(itemDoNPC);
+
+        }
+        
         for (int i = 0; i < recursos.Length; i++)
         {
             if(recursos[i]) {
@@ -171,7 +184,7 @@ public class Personagem : MonoBehaviour
         
         if(collider.gameObject.name == "Trigger2") {
 
-            print("Colidiu com trigger");
+            //print("Colidiu com trigger");
             gameController.quantidadeDePedidos++;
             
             if(gameController.quantidadeDePedidos < gameController.quantidadeDePedidosPorDia) {
