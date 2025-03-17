@@ -3282,6 +3282,9 @@ MonoBehaviour:
   G: 0
   inventario: {fileID: 677873535}
   HaEncomenda: 0
+  quantidadeEncomendas: 0
+  itensEncomendados: []
+  parametrosEncomendasGC: {fileID: 0}
 --- !u!4 &536325945
 Transform:
   m_ObjectHideFlags: 0
@@ -15998,8 +16001,9 @@ GameObject:
   - component: {fileID: 1268160034}
   - component: {fileID: 1268160033}
   - component: {fileID: 1268160032}
+  - component: {fileID: 1268160035}
   m_Layer: 5
-  m_Name: Encomendar
+  m_Name: Encomendar1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16065,17 +16069,17 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 2040786718}
+  m_TargetGraphic: {fileID: 1268160033}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 677873535}
         m_TargetAssemblyTypeName: Inventario, Assembly-CSharp
         m_MethodName: AvisoEncomenda
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1268160035}
+          m_ObjectArgumentAssemblyTypeName: ParametrosEncomendas, Assembly-CSharp
           m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
@@ -16119,6 +16123,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1268160030}
   m_CullTransparentMesh: 1
+--- !u!114 &1268160035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268160030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306edcf127813a54d820056bb1c47444, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parametrosItem:
+    nome: Equip Hacker
+    quant: 1
+    sprite: {fileID: 21300000, guid: e7ac1b35d882b7f48918cf5fda4266b8, type: 3}
 --- !u!1 &1319800302
 GameObject:
   m_ObjectHideFlags: 0
@@ -17101,6 +17121,7 @@ GameObject:
   - component: {fileID: 1490610485}
   - component: {fileID: 1490610484}
   - component: {fileID: 1490610483}
+  - component: {fileID: 1490610486}
   m_Layer: 5
   m_Name: Encomendar
   m_TagString: Untagged
@@ -17175,10 +17196,10 @@ MonoBehaviour:
       - m_Target: {fileID: 677873535}
         m_TargetAssemblyTypeName: Inventario, Assembly-CSharp
         m_MethodName: AvisoEncomenda
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1490610486}
+          m_ObjectArgumentAssemblyTypeName: ParametrosEncomendas, Assembly-CSharp
           m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
@@ -17222,6 +17243,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1490610481}
   m_CullTransparentMesh: 1
+--- !u!114 &1490610486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490610481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306edcf127813a54d820056bb1c47444, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parametrosItem:
+    nome: Robo
+    quant: 1
+    sprite: {fileID: 21300000, guid: 8138c14e5daeec346b163f0eaf42b7fe, type: 3}
 --- !u!1 &1497858832
 GameObject:
   m_ObjectHideFlags: 0
@@ -19919,6 +19956,7 @@ GameObject:
   - component: {fileID: 2040786719}
   - component: {fileID: 2040786718}
   - component: {fileID: 2040786717}
+  - component: {fileID: 2040786720}
   m_Layer: 5
   m_Name: Encomendar
   m_TagString: Untagged
@@ -19968,8 +20006,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.0024771802, g: 0.990566, b: 0, a: 1}
+    m_PressedColor: {r: 1, g: 0, b: 0, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -19993,10 +20031,10 @@ MonoBehaviour:
       - m_Target: {fileID: 677873535}
         m_TargetAssemblyTypeName: Inventario, Assembly-CSharp
         m_MethodName: AvisoEncomenda
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 2040786720}
+          m_ObjectArgumentAssemblyTypeName: ParametrosEncomendas, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -20040,6 +20078,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040786715}
   m_CullTransparentMesh: 1
+--- !u!114 &2040786720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040786715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306edcf127813a54d820056bb1c47444, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parametrosItem:
+    nome: "Lamina de bra\xE7o"
+    quant: 1
+    sprite: {fileID: 21300000, guid: 9082067575d36dc43b3eeeaee2f6a7ee, type: 3}
 --- !u!1 &2043487239
 GameObject:
   m_ObjectHideFlags: 0

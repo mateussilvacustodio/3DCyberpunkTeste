@@ -56,6 +56,8 @@ public class GameController : MonoBehaviour
     [Header("Inventario")]
         [SerializeField] Inventario inventario;
         public bool HaEncomenda;
+        public List<Item> itensEncomendados = new List<Item>();
+        public ParametrosEncomendas parametrosEncomendasGC;
     void Start()
     {   
         for (int i = 0; i < barrasGangues.Length; i++)

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ParametrosEncomendas : MonoBehaviour
 {
-    public int itemPraEncomendar;
-    public float custo;
+    public Item parametrosItem;
 
 }
