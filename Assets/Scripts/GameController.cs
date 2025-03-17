@@ -53,6 +53,9 @@ public class GameController : MonoBehaviour
         public Color corTeste;
         public float R;
         public float G;
+    [Header("Inventario")]
+        [SerializeField] Inventario inventario;
+        public bool HaEncomenda;
     void Start()
     {   
         for (int i = 0; i < barrasGangues.Length; i++)
@@ -145,15 +148,11 @@ public class GameController : MonoBehaviour
         for (int i = 0; i < gangues.Length; i++)
         {
             
-            //print("Dentro do loop" + i);
             for (int j = 0; j < ListaDeEventosFimDeDia[eventoAleatorio].quantasGanguesAfeta; j++)
             {
-                
-                //print("Dentro do segundo loop" + j);
-                
+                                
                 if(i == ListaDeEventosFimDeDia[eventoAleatorio].gangueQueAfeta[j]) {
 
-                    //print("Afetar a gangue " + i + " com o mudador no valor de " + ListaDeEventosFimDeDia[1].quantoAfetaNaGangue[j]);
                     gangues[i] += ListaDeEventosFimDeDia[eventoAleatorio].quantoAfetaNaGangue[j];
 
                 }
@@ -162,8 +161,6 @@ public class GameController : MonoBehaviour
         }
 
         ListaDeEventosFimDeDia.RemoveAt(eventoAleatorio);
-
-
         
         for (int i = 0; i < barrasGangues.Length; i++)
         {
@@ -194,6 +191,12 @@ public class GameController : MonoBehaviour
         {
             barrasGanguesPCT2[i].text = barrasGanguesPCT[i].text;
         }
+        
+        if(HaEncomenda) {
+
+            inventario.Encomendar();
+
+        }        
         
         painelFimDeDia.SetActive(true);
     

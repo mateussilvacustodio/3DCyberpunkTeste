@@ -45,6 +45,8 @@ public class Personagem : MonoBehaviour
     [SerializeField] Balao balao;
     [Header("GameController")]
     [SerializeField] GameController gameController;
+    [Header("Teste")]
+    public bool teste;
     void Start()
     {
         botaoSim = GameObject.Find("BotaoSim").GetComponent<Button>();

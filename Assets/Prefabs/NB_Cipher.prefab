@@ -178,6 +178,11 @@ MonoBehaviour:
   nome: Cipher
   pedido: "Caralho James, maninho, voc\xEA tem que me arrumar um comprador pra todo
     esse p\xF3. Irm\xE3o, o cybertranse bate na hora."
+  tipoPedido: 0
+  itemDoNPC:
+    nome: "P\xF3"
+    quant: 2
+    sprite: {fileID: 21300000, guid: adc03e7528ba0ff458ed93b7711d9fe7, type: 3}
   opcao1: "Porra, esse \xE9 do bom. Vai vender f\xE1cil."
   opcao2: "Cara eu n\xE3o posso te ajudar. Tu t\xE1 sozinho nessa."
   corGangue: {r: 0.9607843, g: 0.8156863, b: 0, a: 1}
@@ -198,6 +203,7 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  inventarioScript: {fileID: 0}
   velocidadeMover: 0.5
   podeMover: 1
   personagemAnim: {fileID: 2976886801892435726}
