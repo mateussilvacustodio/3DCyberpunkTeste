@@ -79,7 +79,7 @@ public class Inventario : MonoBehaviour
     public void AvisoEncomenda(ParametrosEncomendas PparametrosEncomendas) {
 
         gameController.HaEncomenda = true;
-        //gameController.gangues[6] -= PparametrosEncomendas.custo;
+        gameController.gangues[6] -= PparametrosEncomendas.custo;
         //gameController.parametrosEncomendasGC = PparametrosEncomendas;
         gameController.itensEncomendados.Add(PparametrosEncomendas.parametrosItem);
 
@@ -89,11 +89,11 @@ public class Inventario : MonoBehaviour
 
         for (int i = 0; i < gameController.itensEncomendados.Count; i++)
         {
-            print("Houve uma encomenda");
             GanharPerderItens(gameController.itensEncomendados[i]);    
         }
         
-        //itensPossuidos[parametrosEncomendas.itemPraEncomendar].quant += 1;
+        gameController.itensEncomendados.Clear(); //limpa todos os itens da lista
+
         AtualizarItens();
 
     }

@@ -179,6 +179,11 @@ MonoBehaviour:
   pedido: "Voc\xEA \xE9 o James n\xE9? Fiquei sabendo que voc\xEA vende informa\xE7\xF5es.
     T\xF4 precisando encontrar o chefe da Ghost Circuit. O motivo? N\xE3o \xE9 da
     sua conta."
+  tipoPedido: 2
+  itemDoNPC:
+    nome: 
+    quant: 0
+    sprite: {fileID: 0}
   opcao1: "Vou te enviar a localiza\xE7\xE3o dele. Espero que eu seja bem remunerado
     por isso."
   opcao2: "J\xE1 que o motivo n\xE3o \xE9 da minha conta, essa informa\xE7\xE3o tamb\xE9m
@@ -201,6 +206,7 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  inventarioScript: {fileID: 0}
   velocidadeMover: 0.5
   podeMover: 1
   personagemAnim: {fileID: 8553190991289987546}
@@ -209,3 +215,4 @@ MonoBehaviour:
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
   gameController: {fileID: 0}
+  teste: 0

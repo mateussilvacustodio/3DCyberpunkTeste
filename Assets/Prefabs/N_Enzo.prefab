@@ -173,6 +173,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: Enzo
   pedido: "Voc\xEA j\xE1 ouviu falar de Zombiestation?"
+  tipoPedido: 2
+  itemDoNPC:
+    nome: 
+    quant: 0
+    sprite: {fileID: 0}
   opcao1: Que?
   opcao2: "Isso \xE9 algum tipo de refer\xEAncia?"
   corGangue: {r: 0, g: 0, b: 0, a: 1}
@@ -193,6 +198,7 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  inventarioScript: {fileID: 0}
   velocidadeMover: 0.5
   podeMover: 1
   personagemAnim: {fileID: 7409760353888161393}
@@ -201,3 +207,4 @@ MonoBehaviour:
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
   gameController: {fileID: 0}
+  teste: 0

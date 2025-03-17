@@ -178,6 +178,11 @@ MonoBehaviour:
   nome: Oficial Angel
   pedido: "James n\xE9? Ouvi rumores sobre um grande assalto dos Nano Blades. Preciso
     de informa\xE7\xF5es sobre isso. O que voc\xEA sabe?"
+  tipoPedido: 2
+  itemDoNPC:
+    nome: 
+    quant: 0
+    sprite: {fileID: 0}
   opcao1: "Eu posso te dar o que voc\xEA quer, mas preciso de algo em troca. Quem
     sabe uma garantia de que a pol\xEDcia n\xE3o vai atrapalhar meus neg\xF3cios?"
   opcao2: "Informa\xE7\xE3o \xE9 poder e eu n\xE3o dou poder de gra\xE7a. V\xE1 procurar
@@ -200,6 +205,7 @@ MonoBehaviour:
   - 0
   - -15
   - 0
+  inventarioScript: {fileID: 0}
   velocidadeMover: 0.5
   podeMover: 1
   personagemAnim: {fileID: 7148809070062062990}
@@ -208,3 +214,4 @@ MonoBehaviour:
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
   gameController: {fileID: 0}
+  teste: 0

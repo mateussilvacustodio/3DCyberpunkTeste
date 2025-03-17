@@ -178,6 +178,11 @@ MonoBehaviour:
   nome: Blackout
   pedido: "James, tem um contato de algum trilha redes dos bons? Preciso invadir
     o sistema do ot\xE1rio que comeu minha mulher e fuder todo o neg\xF3cio dele."
+  tipoPedido: 2
+  itemDoNPC:
+    nome: 
+    quant: 0
+    sprite: {fileID: 0}
   opcao1: "Eu tenho sim parceiro, j\xE1 t\xF4 te mandando."
   opcao2: "N\xE3o joga essa merda pra cima de mim n\xE3o."
   corGangue: {r: 1, g: 0, b: 0, a: 1}
@@ -198,6 +203,7 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  inventarioScript: {fileID: 0}
   velocidadeMover: 0.5
   podeMover: 1
   personagemAnim: {fileID: 6926858207662738746}
@@ -206,3 +212,4 @@ MonoBehaviour:
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
   gameController: {fileID: 0}
+  teste: 0

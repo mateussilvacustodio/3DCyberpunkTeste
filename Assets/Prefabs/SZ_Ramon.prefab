@@ -178,6 +178,11 @@ MonoBehaviour:
   nome: Ramon
   pedido: "E a\xED, James. Preciso de alguns dados sobre os Nano Blades. Estou montando
     um relat\xF3rio sobre eles para uma mat\xE9ria quente. Topa ajudar?"
+  tipoPedido: 2
+  itemDoNPC:
+    nome: 
+    quant: 0
+    sprite: {fileID: 0}
   opcao1: "Vou enviar as informa\xE7\xF5es que voc\xEA precisa. S\xF3 n\xE3o esquece
     de fazer a sua parte do acordo."
   opcao2: "Desculpe, n\xE3o posso ajudar com isso agora. Talvez da pr\xF3xima."
@@ -199,6 +204,7 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  inventarioScript: {fileID: 0}
   velocidadeMover: 0.5
   podeMover: 1
   personagemAnim: {fileID: 5727048386475545727}
@@ -207,3 +213,4 @@ MonoBehaviour:
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
   gameController: {fileID: 0}
+  teste: 0

@@ -181,7 +181,7 @@ MonoBehaviour:
   tipoPedido: 0
   itemDoNPC:
     nome: Robo
-    quant: 1
+    quant: -1
     sprite: {fileID: 21300000, guid: 8138c14e5daeec346b163f0eaf42b7fe, type: 3}
   opcao1: Pra sua sorte eu tenho sim.
   opcao2: "Infelizmente n\xE3o tenho cara."
@@ -212,3 +212,4 @@ MonoBehaviour:
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
   gameController: {fileID: 0}
+  teste: 0

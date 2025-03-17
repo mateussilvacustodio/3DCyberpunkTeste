@@ -179,6 +179,11 @@ MonoBehaviour:
   pedido: "Oi James, preciso da sua ajuda. Invadi a rede do Setor Zero e consegui
     algumas informa\xE7\xF5es valiosas, mas preciso apagar meus rastros. Voc\xEA
     consegue me ajudar? "
+  tipoPedido: 2
+  itemDoNPC:
+    nome: 
+    quant: 0
+    sprite: {fileID: 0}
   opcao1: "Interessante. Se o que voc\xEA encontrou \xE9 realmente valioso, eu posso
     garantir que eles n\xE3o venham atr\xE1s de ti. Por um pre\xE7o, \xE9 claro."
   opcao2: "N\xE3o estou disposto a arriscar minha reputa\xE7\xE3o por algo que pode
@@ -201,6 +206,7 @@ MonoBehaviour:
   - -10
   - 0
   - 0
+  inventarioScript: {fileID: 0}
   velocidadeMover: 0.5
   podeMover: 1
   personagemAnim: {fileID: 1612217514791418524}
@@ -209,3 +215,4 @@ MonoBehaviour:
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
   gameController: {fileID: 0}
+  teste: 0
