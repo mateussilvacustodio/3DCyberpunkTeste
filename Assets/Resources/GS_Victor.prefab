@@ -178,11 +178,11 @@ MonoBehaviour:
   nome: Victor
   pedido: "James, fudeu. Eu preciso que voc\xEA me arrume 40 chips ou eu to morto
     irm\xE3o."
-  tipoPedido: 2
+  tipoPedido: 0
   itemDoNPC:
-    nome: 
-    quant: 0
-    sprite: {fileID: 0}
+    nome: Kit 40 Chips
+    quant: -1
+    sprite: {fileID: 21300000, guid: cee05b85a86a02a42a2934d683dfb3c8, type: 3}
   opcao1: "Pode deixar, sua cabe\xE7a n\xE3o vai rolar hoje."
   opcao2: "Cara, foi mal, mas n\xE3o posso te ajudar."
   corGangue: {r: 1, g: 0.14901961, b: 0.7137255, a: 1}

@@ -57,6 +57,7 @@ public class GameController : MonoBehaviour
         [SerializeField] Inventario inventario;
         public bool HaEncomenda;
         public List<Item> itensEncomendados = new List<Item>();
+        public List<GameObject> personagPraQuemDevo = new List<GameObject>();
         public ParametrosEncomendas parametrosEncomendasGC;
     void Start()
     {   
@@ -136,6 +137,14 @@ public class GameController : MonoBehaviour
 
     public void FimDoDia() {
 
+        if(HaEncomenda) {
+
+            inventario.Encomendar();
+            
+        }
+
+        inventario.PagarDivida();
+        
         botaoTablet.interactable = false;
         tabletScript.FecharTablet();
         dia++;
@@ -143,7 +152,8 @@ public class GameController : MonoBehaviour
         textoFimDoDia.text = "Fim do dia " + DiaImpresso.ToString();
 
         gangues[6] -= 100;
-        int eventoAleatorio = Random.Range(0, ListaDeEventosFimDeDia.Count);
+        //int eventoAleatorio = Random.Range(0, ListaDeEventosFimDeDia.Count);
+        int eventoAleatorio = 3;
         textoEventoFimDoDia.text = ListaDeEventosFimDeDia[eventoAleatorio].textoDoEvento;
         
 
@@ -192,26 +202,24 @@ public class GameController : MonoBehaviour
         for (int i = 0; i < barrasGangues.Length; i++)
         {
             barrasGanguesPCT2[i].text = barrasGanguesPCT[i].text;
-        }
-        
-        if(HaEncomenda) {
-
-            inventario.Encomendar();
-
-        }        
+        }     
         
         painelFimDeDia.SetActive(true);
     
     }
 
-    public void ProximoDia() {
-
-        for (int i = 0; i < gangues.Length; i++)
+    public void ProximoDia() {        
+        
+        inventario.textoEncomendaFimDoDia.text = "";
+        inventario.textoDevidosFimDoDia.text = "";
+        
+        for (int i = 0; i < gangues.Length; i++) //confere o valor de todas as gangues do jogo (incluindo o dinheiro)
         {
-            if(gangues[i] <= 0) {
+            if(gangues[i] <= 0) { //se alguma for menor que zero...
 
-                GameOver = true;
+                GameOver = true; //... o jogo acaba...
                 textoFimDeJogo.text += "Você perdeu porque ficou sem " + textoFimDeJogoGangues[i] + "\n";
+                //...e se o jogad ficar sem reputação com mais de uma gangue, mais e uma mensagem será exibida
             }
         }
 
