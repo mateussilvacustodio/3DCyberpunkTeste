@@ -33,22 +33,19 @@ public class Inventario : MonoBehaviour
 
     public void GanharPerderItens(Item itemRecebido) {
 
-        //bool itemEncontrado = false;
-
         for (int i = 0; i < itensPossuidos.Count; i++)
         {
                 
             if(itemRecebido.nome == itensPossuidos[i].nome){ //o codigo procura o item na lista pelo nome
 
                 itensPossuidos[i].quant += itemRecebido.quant; //e atualiza o valor dele
-                if(itensPossuidos[i].quant < 0) {
+                if(itensPossuidos[i].quant < 0) { //se após atualizar a quantiade ficar negativa, significa que voce ficou devendo itens para o personag
 
                     //print("Voce esta devendo item");
                     textoDevidosFimDoDia.text += "- Voce esta devendo: " + itensPossuidos[i].nome + "\n";
                     gameController.personagPraQuemDevo.Add(Resources.Load<GameObject>(gameController.personagemInstancia.name.Replace("(Clone)", "")));
+                    //a linha adiciona na list 'personagPraQuemDevo' o prefab da instancia do personagem. o 'Replace' tira a parte '(Clone)' do nome da inst pra busar na pasta de prefabs
                     itensPossuidos[i].quant = 0;
-                //a linha adiciona na list 'personagPraQuemDevo' o prefab da instancia do personagem. o 'Replace' tira a parte '(Clone)' do nome da inst pra busar na pasta de prefabs
-
                 }
                 //itemEncontrado = true;
 
@@ -57,13 +54,6 @@ public class Inventario : MonoBehaviour
 
         AtualizarItens();  
 
-        //if(!itemEncontrado) {
-
-            //  print("PenalidadeNoJogador");
-            //gameController.personagemInstancia.GetComponent<Personagem>().teste = true;
-
-
-        //}
     }
 
     public void AtualizarItens() {
