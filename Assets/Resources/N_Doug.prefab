@@ -4115,11 +4115,13 @@ MonoBehaviour:
   nome: Doug
   pedido: "Ol\xE1, fiquei sabendo que aqui eu poderia arrumar algu\xE9m com for\xE7a
     bruta pra me livrar dos vagabundos que vivem roubando minha loja, pode ajudar?"
-  tipoPedido: 2
+  tipoPedido: 1
   itemDoNPC:
     nome: 
     quant: 0
     sprite: {fileID: 0}
+  missaoMercenario: {fileID: 6907679401614571848, guid: 895109a1e195fd84a8c352282ed9f9e5, type: 3}
+  contentMercenario: {fileID: 0}
   opcao1: "Voc\xEA veio ao lugar certo, meu caro. Vou te ajudar."
   opcao2: "N\xE3o sei do que esta falando. Vaza se n\xE3o quiser uma bala na cabe\xE7a."
   corGangue: {r: 0, g: 0, b: 0, a: 1}
@@ -4141,6 +4143,7 @@ MonoBehaviour:
   - 0
   - 0
   inventarioScript: {fileID: 0}
+  mercenarioScript: {fileID: 0}
   velocidadeMover: 0.5
   podeMover: 1
   personagemAnim: {fileID: 8947716108279985710}

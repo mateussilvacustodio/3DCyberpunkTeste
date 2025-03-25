@@ -152,8 +152,8 @@ public class GameController : MonoBehaviour
         textoFimDoDia.text = "Fim do dia " + DiaImpresso.ToString();
 
         gangues[6] -= 100;
-        //int eventoAleatorio = Random.Range(0, ListaDeEventosFimDeDia.Count);
-        int eventoAleatorio = 3;
+        int eventoAleatorio = Random.Range(0, ListaDeEventosFimDeDia.Count);
+        //int eventoAleatorio = 3;
         textoEventoFimDoDia.text = ListaDeEventosFimDeDia[eventoAleatorio].textoDoEvento;
         
 

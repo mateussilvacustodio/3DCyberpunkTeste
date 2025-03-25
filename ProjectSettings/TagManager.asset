@@ -6,6 +6,10 @@ TagManager:
   tags:
   - NPC
   - Trigger
+  - ContentMercenario
+  - ListaDeMercenarios
+  - Scrollview
+  - ScrollBarMercenario
   layers:
   - Default
   - TransparentFX

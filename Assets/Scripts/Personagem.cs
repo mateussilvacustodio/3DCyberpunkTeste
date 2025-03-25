@@ -16,6 +16,8 @@ public class Personagem : MonoBehaviour
     public string pedido;
     public tipoPedido tipoPedido;
     public Item itemDoNPC;
+    public GameObject missaoMercenario;
+    public Transform contentMercenario;
     public string opcao1;
     public string opcao2;
     public Color corGangue;
@@ -28,6 +30,7 @@ public class Personagem : MonoBehaviour
         [Tooltip("NB, RR, GS, SZ, NX, Policia, dinheiro")]
         public float[] mudadoresNao;
         [SerializeField] Inventario inventarioScript;
+        [SerializeField] Mercenarios mercenarioScript;
     [Header("Movimento")]
     [SerializeField] float velocidadeMover;
     [SerializeField] bool podeMover;
@@ -40,6 +43,7 @@ public class Personagem : MonoBehaviour
     [Header("Botões")]
     public Button botaoSim;
     public Button botaoNao;
+    [SerializeField] GameObject botaoFimDoDia;
     [Header("Balão")]
     public Animator balaoAnim;
     [SerializeField] Balao balao;
@@ -57,6 +61,12 @@ public class Personagem : MonoBehaviour
 
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
         inventarioScript = Resources.FindObjectsOfTypeAll<Inventario>().FirstOrDefault(); //como o inventario começa desativado na cena, essa linha puxa ele mesmo desativado
+        contentMercenario = Resources.FindObjectsOfTypeAll<Transform>().FirstOrDefault(t => t.gameObject.CompareTag("ContentMercenario"));
+        mercenarioScript = Resources.FindObjectsOfTypeAll<Mercenarios>().FirstOrDefault();
+
+        botaoFimDoDia = Resources.FindObjectsOfTypeAll<GameObject>().FirstOrDefault(b => b.gameObject.name == "BotaoFimDoDia");
+        botaoFimDoDia.SetActive(false);
+
 
     }
     void Update()
@@ -105,6 +115,15 @@ public class Personagem : MonoBehaviour
         if(tipoPedido.ToString() == "inventario"){
 
             inventarioScript.GanharPerderItens(itemDoNPC);
+
+        }
+
+        if(tipoPedido.ToString() == "mercenario") {
+
+            //print("Voce aceitou o pedido que requer um mercenario");
+            GameObject novaMissao = Instantiate(missaoMercenario, contentMercenario);
+            mercenarioScript.pedidosAceitos.Add(novaMissao);
+            novaMissao.GetComponent<MissoesMercenario>().index = mercenarioScript.pedidosAceitos.Count - 1;
 
         }
         
@@ -196,7 +215,8 @@ public class Personagem : MonoBehaviour
             } else {
 
                 gameController.quantidadeDePedidos = 0;
-                gameController.FimDoDia();
+                //gameController.FimDoDia();
+                botaoFimDoDia.SetActive(true);
 
             }
 
