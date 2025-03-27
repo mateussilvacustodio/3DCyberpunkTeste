@@ -63,6 +63,14 @@ public class Personagem : MonoBehaviour
         inventarioScript = Resources.FindObjectsOfTypeAll<Inventario>().FirstOrDefault(); //como o inventario começa desativado na cena, essa linha puxa ele mesmo desativado
         contentMercenario = Resources.FindObjectsOfTypeAll<Transform>().FirstOrDefault(t => t.gameObject.CompareTag("ContentMercenario"));
         mercenarioScript = Resources.FindObjectsOfTypeAll<Mercenarios>().FirstOrDefault();
+        
+        if(missaoMercenario != null){
+            
+            //missaoMercenario.GetComponent<MissoesMercenario>().recursosMercenarios = recursos;
+            missaoMercenario.GetComponent<MissoesMercenario>().mudadoresMercenarios = mudadoresSim;
+
+        }
+        
 
         botaoFimDoDia = Resources.FindObjectsOfTypeAll<GameObject>().FirstOrDefault(b => b.gameObject.name == "BotaoFimDoDia");
         botaoFimDoDia.SetActive(false);

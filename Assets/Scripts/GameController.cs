@@ -59,6 +59,9 @@ public class GameController : MonoBehaviour
         public List<Item> itensEncomendados = new List<Item>();
         public List<GameObject> personagPraQuemDevo = new List<GameObject>();
         public ParametrosEncomendas parametrosEncomendasGC;
+    [Header("Mercenarios")]
+        [SerializeField] Mercenarios mercenarioScript;
+        [SerializeField] bool HaMissoesDeMercenario;
     void Start()
     {   
         for (int i = 0; i < barrasGangues.Length; i++)
@@ -142,8 +145,32 @@ public class GameController : MonoBehaviour
             inventario.Encomendar();
             
         }
-
         inventario.PagarDivida();
+
+        for (int i = 0; i < mercenarioScript.pedidosAceitos.Count; i++)
+        {
+            if(mercenarioScript.pedidosAceitos[i] != null) {
+
+                for (int j = 0; j < gangues.Length; j++)
+                {
+                    gangues[j] -= mercenarioScript.pedidosAceitos[i].GetComponent<MissoesMercenario>().mudadoresMercenarios[j] * 2;
+                }
+
+                mercenarioScript.textoFimDoDia.text += "A missão de " + mercenarioScript.pedidosAceitos[i].GetComponent<MissoesMercenario>().nomeNPC + " não foi executada \n";
+                Destroy(mercenarioScript.pedidosAceitos[i]);
+                
+            }
+        }
+
+        for (int i = 0; i < mercenarioScript.pedidosFalhos.Count; i++)
+        {
+            for (int j = 0; j < gangues.Length; j++)
+            {
+                gangues[j] -= mercenarioScript.pedidosFalhos[i].GetComponent<MissoesMercenario>().mudadoresMercenarios[j] * 2;
+            }
+
+            Destroy(mercenarioScript.pedidosFalhos[i]);
+        }
         
         botaoTablet.interactable = false;
         tabletScript.FecharTablet();
@@ -153,7 +180,7 @@ public class GameController : MonoBehaviour
 
         gangues[6] -= 100;
         int eventoAleatorio = Random.Range(0, ListaDeEventosFimDeDia.Count);
-        //int eventoAleatorio = 3;
+        //int eventoAleatorio = 0;
         textoEventoFimDoDia.text = ListaDeEventosFimDeDia[eventoAleatorio].textoDoEvento;
         
 
@@ -212,6 +239,7 @@ public class GameController : MonoBehaviour
         
         inventario.textoEncomendaFimDoDia.text = "";
         inventario.textoDevidosFimDoDia.text = "";
+        mercenarioScript.textoFimDoDia.text = "";
         
         for (int i = 0; i < gangues.Length; i++) //confere o valor de todas as gangues do jogo (incluindo o dinheiro)
         {
@@ -219,7 +247,7 @@ public class GameController : MonoBehaviour
 
                 GameOver = true; //... o jogo acaba...
                 textoFimDeJogo.text += "Você perdeu porque ficou sem " + textoFimDeJogoGangues[i] + "\n";
-                //...e se o jogad ficar sem reputação com mais de uma gangue, mais e uma mensagem será exibida
+                //...e se o jogad ficar sem reputação com mais de uma gangue, mais de uma mensagem será exibida
             }
         }
 

@@ -5,26 +5,18 @@ using UnityEngine.UI;
 
 public class ParametrosMercenarios : MonoBehaviour
 {
-    
+    [Header("Paramentros")]
+    [SerializeField] string nomeMercenario;
     [SerializeField] float forcaMercenario;
     [SerializeField] float inteligenciaMercenario;
     [SerializeField] float stealhMercenario;
 
     [SerializeField] Mercenarios mercenarioScript;
 
+    [Header("Paineis")]
     [SerializeField] GameObject ListaDeMercenarios;
     [SerializeField] ScrollRect scrollRectMercenario;
     [SerializeField] GameObject scrollbarMercenario;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void EscolherMercenario() {
 
@@ -32,8 +24,7 @@ public class ParametrosMercenarios : MonoBehaviour
         scrollRectMercenario.enabled = true;
         scrollbarMercenario.SetActive(true);
 
-        //comparar mercenario com missao
-        mercenarioScript.destruirMissaoAtual(forcaMercenario, inteligenciaMercenario, stealhMercenario);
+        mercenarioScript.destruirMissaoAtual(forcaMercenario, inteligenciaMercenario, stealhMercenario, nomeMercenario);
 
     }
 
