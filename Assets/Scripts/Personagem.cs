@@ -218,7 +218,7 @@ public class Personagem : MonoBehaviour
             
             if(gameController.quantidadeDePedidos < gameController.quantidadeDePedidosPorDia) {
                 
-                gameController.criarPersonagem();
+                gameController.CriarPersonagem2();
 
             } else {
 

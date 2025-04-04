@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 [System.Serializable]
 public class EventosFimDeDia {
@@ -28,9 +29,14 @@ public class GameController : MonoBehaviour
         [SerializeField] string[] textoFimDeJogoGangues;
     [Header("Personagens")]
         public GameObject[] personagens;
-        [SerializeField] List<int> indicesDisponiveis = new List<int>(); 
-        public int personagemIndex;
+        [SerializeField] List<int> indicesDisponiveis = new List<int>();
+        //public int personagemIndex;
         public GameObject personagemInstancia;
+        [SerializeField] List<GameObject> personagensTodos = new List<GameObject>();
+        [SerializeField] List<GameObject> personagensDisponiveis = new List<GameObject>();
+        [SerializeField] List<GameObject> personagensDoDia = new List<GameObject>();
+        [SerializeField] List<GameObject> personagensDiaSeguinte = new List<GameObject>();
+        //[SerializeField] List<GameObject> personagensNaoRepetir = new List<GameObject>();
     [Header("Botões")]
         [SerializeField] Button botaoSim;
         [SerializeField] Button botaoNao;
@@ -100,7 +106,11 @@ public class GameController : MonoBehaviour
 
         }
 
-        criarPersonagem();
+        //criarPersonagem1();
+
+        PreencherListaDoDiaAtual();
+        CriarPersonagem2();
+
     }
 
     void Update()
@@ -108,7 +118,7 @@ public class GameController : MonoBehaviour
         dinheiroText.text = gangues[6].ToString("F0");
     }
 
-    public void criarPersonagem() {
+    public void criarPersonagem1() {
 
         if(personagemInstancia != null) {
             
@@ -119,7 +129,7 @@ public class GameController : MonoBehaviour
         int aleatoria = Random.Range(0,indicesDisponiveis.Count);
 
         personagemInstancia = Instantiate(personagens[indicesDisponiveis[aleatoria]]);
-        personagemIndex = aleatoria;
+        //personagemIndex = aleatoria;
         botaoSim.onClick.RemoveAllListeners();
         botaoNao.onClick.RemoveAllListeners();
         botaoSim.onClick.AddListener(personagemInstancia.GetComponent<Personagem>().concordo);
@@ -132,6 +142,64 @@ public class GameController : MonoBehaviour
             for (int i = 0; i < personagens.Length; i++) {
 
             indicesDisponiveis.Add(i);
+            }
+
+        }
+
+    }
+
+    public void CriarPersonagem2() {
+
+        if(personagemInstancia != null) {
+            
+            Destroy(personagemInstancia);
+
+        }
+        
+        int aleatoria = Random.Range(0,personagensDoDia.Count);
+
+        personagemInstancia = Instantiate(personagensDoDia[aleatoria]);
+        //personagemIndex = aleatoria;
+        botaoSim.onClick.RemoveAllListeners();
+        botaoNao.onClick.RemoveAllListeners();
+        botaoSim.onClick.AddListener(personagemInstancia.GetComponent<Personagem>().concordo);
+        botaoNao.onClick.AddListener(personagemInstancia.GetComponent<Personagem>().discordo);
+
+        personagensDoDia.RemoveAt(aleatoria);
+
+    }
+
+    public void PreencherListaDoDiaAtual() {
+
+        for (int i = 0; i < personagensDiaSeguinte.Count; i++) 
+        {
+            print("Adicionado um personagem do dia seguinte");
+            personagensDoDia.Add(personagensDiaSeguinte[i]); //adiciona na lista de personagens do dia todos os que devem aparecer no dia seguinte
+        }
+
+        personagensDiaSeguinte.Clear(); //limpa a lista de personagens do dia seguinte
+
+        if(personagensDoDia.Count < quantidadeDePedidosPorDia) {//se a lista de personagens para o dia não for totalmente preenchida...
+
+            float diferenca = quantidadeDePedidosPorDia - personagensDoDia.Count;
+            for (int i = 0; i < diferenca; i++)
+            {
+                if(personagensDisponiveis.Count == 0) {
+
+                    for (int j = 0; j < personagensTodos.Count; j++)
+                    {
+                    personagensDisponiveis.Add(personagensTodos[j]);
+                    }
+
+                }
+
+                int aleatoria = Random.Range(0,personagensDisponiveis.Count);
+
+                //se o item escolhido ja estiver na lista personagensDoDia, escolha outro
+
+                personagensDoDia.Add(personagensDisponiveis[aleatoria]); //... são adicionados mais até completarem a quantidade de pedido max no dia
+                personagensDisponiveis.RemoveAt(aleatoria);
+
             }
 
         }
@@ -257,7 +325,8 @@ public class GameController : MonoBehaviour
 
                 painelFimDeDia.SetActive(false);
                 botaoTablet.interactable = true;
-                criarPersonagem();
+                PreencherListaDoDiaAtual();
+                CriarPersonagem2();
 
             } else {
 
