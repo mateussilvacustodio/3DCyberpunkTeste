@@ -49,6 +49,8 @@ public class Personagem : MonoBehaviour
     [SerializeField] Balao balao;
     [Header("GameController")]
     [SerializeField] GameController gameController;
+    [SerializeField] bool tutorial;
+    [SerializeField] Tutorial tutorialScript;
     [Header("Teste")]
     public bool teste;
     void Start()
@@ -58,8 +60,14 @@ public class Personagem : MonoBehaviour
         
         balaoAnim = GameObject.Find("Balao").GetComponent<Animator>();
         balao = GameObject.Find("Balao").GetComponent<Balao>();
+        tutorialScript = GameObject.Find("Balao").GetComponent<Tutorial>();
 
-        gameController = GameObject.Find("GameController").GetComponent<GameController>();
+        if(!tutorial) {
+
+            gameController = GameObject.Find("GameController").GetComponent<GameController>();
+
+        }        
+        
         inventarioScript = Resources.FindObjectsOfTypeAll<Inventario>().FirstOrDefault(); //como o inventario começa desativado na cena, essa linha puxa ele mesmo desativado
         contentMercenario = Resources.FindObjectsOfTypeAll<Transform>().FirstOrDefault(t => t.gameObject.CompareTag("ContentMercenario"));
         mercenarioScript = Resources.FindObjectsOfTypeAll<Mercenarios>().FirstOrDefault();
@@ -69,8 +77,7 @@ public class Personagem : MonoBehaviour
             //missaoMercenario.GetComponent<MissoesMercenario>().recursosMercenarios = recursos;
             missaoMercenario.GetComponent<MissoesMercenario>().mudadoresMercenarios = mudadoresSim;
 
-        }
-        
+        }        
 
         botaoFimDoDia = Resources.FindObjectsOfTypeAll<GameObject>().FirstOrDefault(b => b.gameObject.name == "BotaoFimDoDia");
         botaoFimDoDia.SetActive(false);
@@ -139,7 +146,16 @@ public class Personagem : MonoBehaviour
         {
             if(recursos[i]) {
 
-                gameController.gangues[i] += mudadoresSim[i];
+                if(gameController != null) {
+
+                    gameController.gangues[i] += mudadoresSim[i];
+
+                } else if (tutorialScript != null) {
+
+                    tutorialScript.gangues[i] += mudadoresSim[i];
+
+                }
+                
 
             }
         }
@@ -150,12 +166,21 @@ public class Personagem : MonoBehaviour
         //rotacaoAlvo = transform.rotation * Quaternion.Euler(0,90,0);
         //podeRodar = true;
         personagemAnim.SetTrigger("IrEmbora");
-        balao.balaoTexto.text = "";
-        balao.nomeTexto.text = "";
+        balao.balaoTexto.text = ""; //--
+        balao.nomeTexto.text = ""; //--
         balao.corrotinaDigitar = null;
         balaoAnim.SetTrigger("Sumir");
-        balao.botaoSimTexto.text = "";
-        balao.botaoNaoTexto.text = "";
+        balao.botaoSimTexto.text = ""; //--
+        balao.botaoNaoTexto.text = ""; //--
+
+        if(tutorial) {
+
+            tutorialScript.nomeBalaoTutorialTexto.text = "";
+            tutorialScript.pedidoBalaoTutorialTexto.text = "";
+            tutorialScript.botaoSimTexto.text = "";
+            tutorialScript.botaoNaoTexto.text = "";
+
+        }
 
     }
 
@@ -165,7 +190,15 @@ public class Personagem : MonoBehaviour
         {
             if(recursos[i]) {
 
-                gameController.gangues[i] += mudadoresNao[i];
+                if(gameController != null) {
+
+                    gameController.gangues[i] += mudadoresNao[i];
+
+                } else if (tutorialScript != null) {
+
+                    tutorialScript.gangues[i] += mudadoresNao[i];
+
+                }
 
             }
         }
@@ -182,6 +215,15 @@ public class Personagem : MonoBehaviour
         balaoAnim.SetTrigger("Sumir");
         balao.botaoSimTexto.text = "";
         balao.botaoNaoTexto.text = "";
+
+        if(tutorial) {
+
+            tutorialScript.nomeBalaoTutorialTexto.text = "";
+            tutorialScript.pedidoBalaoTutorialTexto.text = "";
+            tutorialScript.botaoSimTexto.text = "";
+            tutorialScript.botaoNaoTexto.text = "";
+
+        }
 
     }
 
@@ -213,20 +255,29 @@ public class Personagem : MonoBehaviour
         
         if(collider.gameObject.name == "Trigger2") {
 
-            //print("Colidiu com trigger");
-            gameController.quantidadeDePedidos++;
-            
-            if(gameController.quantidadeDePedidos < gameController.quantidadeDePedidosPorDia) {
+            if(!tutorial) {
+
+                gameController.quantidadeDePedidos++;
+
+                if(gameController.quantidadeDePedidos < gameController.quantidadeDePedidosPorDia) {
                 
                 gameController.CriarPersonagem2();
 
+                } else {
+
+                    gameController.quantidadeDePedidos = 0;
+                    //gameController.FimDoDia();
+                    botaoFimDoDia.SetActive(true);
+
+                }
+
             } else {
 
-                gameController.quantidadeDePedidos = 0;
-                //gameController.FimDoDia();
-                botaoFimDoDia.SetActive(true);
+                tutorialScript.InstanciarPersonagemTutorial();
 
             }
+            
+            
 
         }
 

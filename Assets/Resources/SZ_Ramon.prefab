@@ -183,6 +183,8 @@ MonoBehaviour:
     nome: 
     quant: 0
     sprite: {fileID: 0}
+  missaoMercenario: {fileID: 0}
+  contentMercenario: {fileID: 0}
   opcao1: "Vou enviar as informa\xE7\xF5es que voc\xEA precisa. S\xF3 n\xE3o esquece
     de fazer a sua parte do acordo."
   opcao2: "Desculpe, n\xE3o posso ajudar com isso agora. Talvez da pr\xF3xima."
@@ -205,12 +207,15 @@ MonoBehaviour:
   - 0
   - 0
   inventarioScript: {fileID: 0}
+  mercenarioScript: {fileID: 0}
   velocidadeMover: 0.5
   podeMover: 1
   personagemAnim: {fileID: 5727048386475545727}
   botaoSim: {fileID: 0}
   botaoNao: {fileID: 0}
+  botaoFimDoDia: {fileID: 0}
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
   gameController: {fileID: 0}
+  tutorial: 1
   teste: 0

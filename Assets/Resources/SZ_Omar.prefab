@@ -184,6 +184,8 @@ MonoBehaviour:
     nome: 
     quant: 0
     sprite: {fileID: 0}
+  missaoMercenario: {fileID: 0}
+  contentMercenario: {fileID: 0}
   opcao1: "Vou te enviar a localiza\xE7\xE3o dele. Espero que eu seja bem remunerado
     por isso."
   opcao2: "J\xE1 que o motivo n\xE3o \xE9 da minha conta, essa informa\xE7\xE3o tamb\xE9m
@@ -207,12 +209,15 @@ MonoBehaviour:
   - 0
   - 0
   inventarioScript: {fileID: 0}
+  mercenarioScript: {fileID: 0}
   velocidadeMover: 0.5
   podeMover: 1
   personagemAnim: {fileID: 8553190991289987546}
   botaoSim: {fileID: 0}
   botaoNao: {fileID: 0}
+  botaoFimDoDia: {fileID: 0}
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
   gameController: {fileID: 0}
+  tutorial: 1
   teste: 0

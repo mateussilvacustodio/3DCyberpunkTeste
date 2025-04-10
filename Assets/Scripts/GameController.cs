@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Unity.VisualScripting;
+using System.Linq;
+using UnityEditor;
 
 [System.Serializable]
 public class EventosFimDeDia {
@@ -36,17 +38,20 @@ public class GameController : MonoBehaviour
         [SerializeField] List<GameObject> personagensDisponiveis = new List<GameObject>();
         [SerializeField] List<GameObject> personagensDoDia = new List<GameObject>();
         [SerializeField] List<GameObject> personagensDiaSeguinte = new List<GameObject>();
-        //[SerializeField] List<GameObject> personagensNaoRepetir = new List<GameObject>();
+        [SerializeField] List<GameObject> personagensTutorial = new List<GameObject>();
     [Header("Botões")]
         [SerializeField] Button botaoSim;
         [SerializeField] Button botaoNao;
         public Button botaoTablet;
         [SerializeField] Tablet tabletScript;
+        [SerializeField] GameObject botaoIniciar;
+        [SerializeField] GameObject botaoTutorial;
+        [SerializeField] GameObject botaoConfig;
     [Header("Pedidos")]
         public float dia;
         [SerializeField] float diaMax;
         public float quantidadeDePedidos;
-        public float quantidadeDePedidosPorDia;
+        public float quantidadeDePedidosPorDia; 
         [SerializeField] GameObject painelFimDeDia;
         [SerializeField] Text textoFimDoDia;
         [SerializeField] Text textoEventoFimDoDia;
@@ -108,9 +113,6 @@ public class GameController : MonoBehaviour
 
         //criarPersonagem1();
 
-        PreencherListaDoDiaAtual();
-        CriarPersonagem2();
-
     }
 
     void Update()
@@ -169,6 +171,31 @@ public class GameController : MonoBehaviour
 
     }
 
+    // public void Tutorial() {
+
+    //     if(personagemInstancia != null) {
+            
+    //         Destroy(personagemInstancia);
+
+    //     }
+
+    //     if(indexTutorial < quantidadeDiasTutorial) {
+
+    //         personagemInstancia = Instantiate(personagensTutorial[indexTutorial]);
+    //         botaoSim.onClick.RemoveAllListeners();
+    //         botaoNao.onClick.RemoveAllListeners();
+    //         botaoSim.onClick.AddListener(personagemInstancia.GetComponent<Personagem>().concordo);
+    //         botaoNao.onClick.AddListener(personagemInstancia.GetComponent<Personagem>().discordo);
+    //         indexTutorial++;
+
+    //     } else {
+
+    //         IniciarJogo();
+
+    //     }
+
+    // }
+
     public void PreencherListaDoDiaAtual() {
 
         for (int i = 0; i < personagensDiaSeguinte.Count; i++) 
@@ -194,8 +221,14 @@ public class GameController : MonoBehaviour
                 }
 
                 int aleatoria = Random.Range(0,personagensDisponiveis.Count);
+                bool jaExiste = personagensDoDia.Any(p => p.name == personagensDisponiveis[aleatoria].name);
 
-                //se o item escolhido ja estiver na lista personagensDoDia, escolha outro
+                while (jaExiste) {
+
+                    aleatoria = Random.Range(0,personagensDisponiveis.Count);
+                    jaExiste = personagensDoDia.Any(p => p.name == personagensDisponiveis[aleatoria].name);
+
+                }
 
                 personagensDoDia.Add(personagensDisponiveis[aleatoria]); //... são adicionados mais até completarem a quantidade de pedido max no dia
                 personagensDisponiveis.RemoveAt(aleatoria);
@@ -347,6 +380,22 @@ public class GameController : MonoBehaviour
     public void Reiniciar() {
 
         SceneManager.LoadScene(0);
+
+    }
+
+    public void IniciarJogo() {
+
+        botaoIniciar.SetActive(false);
+        botaoTutorial.SetActive(false);
+        botaoConfig.SetActive(false);
+        PreencherListaDoDiaAtual();
+        CriarPersonagem2();
+
+    }
+
+    public void IniciarTutorial() {
+
+        SceneManager.LoadScene(1);
 
     }
 
