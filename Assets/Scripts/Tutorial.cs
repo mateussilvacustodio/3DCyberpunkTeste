@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
-using TMPro.EditorUtilities;
+//using TMPro.EditorUtilities;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Tutorial : MonoBehaviour
 {
     [Header("Controller")]
     [SerializeField] List<GameObject> personagensTutorial = new List<GameObject>();
-    [SerializeField] GameObject personagemTutorialInstancia;
+    public GameObject personagemTutorialInstancia;
     [SerializeField] int indexTutorial;
-    [SerializeField] int etapasTutorial;
+    public int etapasTutorial;
+    [SerializeField] Inventario inventarioScript;
 
     [Header("Balao")]
     
@@ -33,20 +35,11 @@ public class Tutorial : MonoBehaviour
     [SerializeField] Button botaoNao;
     public Text botaoSimTexto;
     public Text botaoNaoTexto;
+    [SerializeField] GameObject botaoFimDoDia;
 
-    [Header("Recursos")]
-        [Tooltip("NB, RR, GS, SZ, NX, Policia, dinheiro")]
-            public float[] gangues;
-            [SerializeField] Image[] barrasGangues;
-            //[SerializeField] Image[] barrasGangues2;
-            [SerializeField] Text[] barrasGanguesPCT;
-            //[SerializeField] Text[] barrasGanguesPCT2;
-            [SerializeField] Text dinheiroText;
     void Start()
     {
-        AtualizarBarras();
         Tutoriall();
-        
     }
 
     void Update()
@@ -64,15 +57,12 @@ public class Tutorial : MonoBehaviour
 
             botaoSimTexto.text = textosOpcao1Tutorial[etapasTutorial];
             botaoNaoTexto.text = textosOpcao2Tutorial[etapasTutorial];
-            
             botaoSim.interactable = true;
             botaoNao.interactable = true;
-
-            print("Deu certo");
+            corrotinaDigitar = null;
 
         }
 
-        dinheiroText.text = gangues[6].ToString("F0");
     }
 
     public void InstanciarPersonagemTutorial() {
@@ -100,21 +90,9 @@ public class Tutorial : MonoBehaviour
 
         //nomeBalaoTutorialTexto.text = personagemTutorialInstancia.GetComponent<Personagem>().nome;
         //nomeBalaoTutorialTexto.color = personagemTutorialInstancia.GetComponent<Personagem>().corGangue;
-        //corrotinaDigitar = StartCoroutine(DigitarPersonagemTutorial());
         nomeBalaoTutorialTexto.text = textoNomeTutorial[etapasTutorial];
         corrotinaDigitar = StartCoroutine(DigitarTutorial());
 
-
-    }
-
-    IEnumerator DigitarPersonagemTutorial() {
-
-        foreach (char letter in personagemTutorialInstancia.GetComponent<Personagem>().pedido.ToCharArray()) {
-
-            pedidoBalaoTutorialTexto.text += letter;
-            yield return new WaitForSeconds(typeSpeed);
-
-        }
 
     }
 
@@ -125,26 +103,6 @@ public class Tutorial : MonoBehaviour
             pedidoBalaoTutorialTexto.text += letter;
             yield return new WaitForSeconds(typeSpeed);
 
-        }
-
-    }
-
-    public void AtualizarBarras() {
-
-        for (int i = 0; i < barrasGangues.Length; i++)
-        {
-            barrasGangues[i].fillAmount = gangues[i] / 100;
-        }
-        for (int i = 0; i < barrasGangues.Length; i++)
-        {
-            float R = (100 - gangues[i]) / 50;
-            float G = gangues[i] /  50;
-            Color corTeste = new Color(R, G, 0f, 1f);
-            barrasGangues[i].color = corTeste;    
-        }
-        for (int i = 0; i < barrasGangues.Length; i++)
-        {
-            barrasGanguesPCT[i].text = gangues[i].ToString() + "%";
         }
 
     }
@@ -162,16 +120,36 @@ public class Tutorial : MonoBehaviour
     
     public void Entendi() {
 
-        
         botaoSim.interactable = false;
         botaoNao.interactable = false;
         nomeBalaoTutorialTexto.text = "";
         pedidoBalaoTutorialTexto.text = "";
         botaoSimTexto.text = "";
         botaoNaoTexto.text = "";
-        balaoAnim.SetTrigger("Sumir");
         etapasTutorial++;
-        InstanciarPersonagemTutorial();
+        balaoAnim.SetTrigger("Sumir");
+
+        if(etapasTutorial < 6) {
+
+            InstanciarPersonagemTutorial();
+
+        } else if (etapasTutorial == 7){
+
+            print("Ultimo tutorial");
+            Tutoriall();
+
+        } else if (etapasTutorial == 8) {
+
+            botaoFimDoDia.SetActive(true);
+
+        }
 
     }
+
+    public void FimDoTutorial() {
+
+        SceneManager.LoadScene(0);
+
+    }
+
 }

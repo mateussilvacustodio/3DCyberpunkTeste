@@ -5707,7 +5707,7 @@ GameObject:
   - component: {fileID: 536325944}
   - component: {fileID: 536325946}
   m_Layer: 0
-  m_Name: ControllerTutorial
+  m_Name: GameController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5720,7 +5720,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 536325943}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1e9f8a18acec4b4f8bc66acca255f18, type: 3}
   m_Name: 
@@ -7571,7 +7571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itensPossuidos:
   - nome: "Lamina de bra\xE7o"
-    quant: 5
+    quant: 0
     sprite: {fileID: 21300000, guid: 9082067575d36dc43b3eeeaee2f6a7ee, type: 3}
   - nome: Equip Hacker
     quant: 1
@@ -7598,6 +7598,8 @@ MonoBehaviour:
   textoEncomendaFimDoDia: {fileID: 1735969629}
   textoDevidosFimDoDia: {fileID: 1748699926}
   gameController: {fileID: 536325944}
+  tutorial: 1
+  tutorialScript: {fileID: 7620076168266197729}
 --- !u!1 &684647821
 GameObject:
   m_ObjectHideFlags: 0
@@ -17091,9 +17093,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 536325944}
-        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
-        m_MethodName: ProximoDia
+      - m_Target: {fileID: 7620076168266197729}
+        m_TargetAssemblyTypeName: Tutorial, Assembly-CSharp
+        m_MethodName: FimDoTutorial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25450,7 +25452,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7545845224569969028}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e2120541471948f4988bdfa19d27ec3a, type: 3}
   m_Name: 
@@ -25463,6 +25465,8 @@ MonoBehaviour:
     testar a paragem de corrotina
   typeSpeed: 0.02
   gameController: {fileID: 536325944}
+  tutorial: 1
+  tutorialScript: {fileID: 7620076168266197729}
   botaoSimTexto: {fileID: 3369349789966893860}
   botaoNaoTexto: {fileID: 2879873916024741520}
 --- !u!224 &1809961244591139672
@@ -25817,12 +25821,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   personagensTutorial:
-  - {fileID: 8789429958387718174, guid: 0351e15119f48814ebbe5154d4b916ac, type: 3}
   - {fileID: 7606784413904191893, guid: 8c7738b7cd55cb24caf8bde0d47ee149, type: 3}
-  - {fileID: 8846157345087627382, guid: 80c681fb6eb02944c808006b98776e95, type: 3}
+  - {fileID: 7144555309560106588, guid: 04f4dc89d6fd6e54dbc2f4e9abde6ce2, type: 3}
+  - {fileID: 8789429958387718174, guid: 0351e15119f48814ebbe5154d4b916ac, type: 3}
   personagemTutorialInstancia: {fileID: 0}
   indexTutorial: 0
   etapasTutorial: 0
+  inventarioScript: {fileID: 0}
   nomeBalaoTutorial: {fileID: 1607751039}
   pedidoBalaoTutorial: {fileID: 1387600843}
   nomeBalaoTutorialTexto: {fileID: 1607751041}
@@ -25830,49 +25835,68 @@ MonoBehaviour:
   typeSpeed: 0.02
   balaoAnim: {fileID: 940908835176228881}
   textosTutorial:
-  - "Voc\xEA est\xE1 na pele de James, um Canal com alto renome da cidade do Novo
-    M\xE9xico. Gangues te observam. Clientes sussurram seu nome nas sombras. Cuide
+  - "Seu nome \xE9 James, um Canal com alto renome da cidade do Novo M\xE9xico. Cuide
     de seus recursos, atenda pedidos para as gangues da cidade e tente manter uma
     boa reputa\xE7\xE3o com eles. Utilize os bot\xF5es na tela para aceitar ou negar
     os pedidos, mas pense bem, pois cada escolha tem uma consequ\xEAncia."
+  - "Voc\xEA \xE9 o James n\xE9? Fiquei sabendo que voc\xEA vende informa\xE7\xF5es.
+    T\xF4 precisando encontrar o chefe da Ghost Circuit. O motivo? N\xE3o \xE9 da
+    sua conta."
+  - "Sua reputa\xE7\xE3o tamb\xE9m \xE9 uma moeda. Monitore sua reputa\xE7\xE3o com
+    as gangues da cidade atrav\xE9s de seu tablet, no aplicativo \u201CReputa\xE7\xE3o\u201D."
+  - "James, tranquilo? Voc\xEA pode me arrumar uma daquelas l\xE2minas de bra\xE7o
+    fodonas?"
+  - "Sem item, sem neg\xF3cio. Acesse o aplicativo \u201CInvent\xE1rio\u201D no seu
+    tablet e confira se voc\xEA possui em seu estoque o produto solicitado. Casa
+    n\xE3o o tenha, basta encomend\xE1-lo."
   - "James, tem um contato de algum trilha redes dos bons? Preciso invadir o sistema
     do ot\xE1rio que comeu minha mulher e fuder todo o neg\xF3cio dele."
+  - "Alguns pedidos n\xE3o s\xE3o s\xF3 conversa. Para eles voc\xEA precisar\xE1
+    encomendar o trabalho de mercen\xE1rios. Acesse o aplicativo \u201CMiss\xF5es\u201D
+    no seu tablet e escolha o mercen\xE1rio que melhor se adequa a miss\xE3o solicitada."
+  - "Ao final do dia voc\xEA ter\xE1 um relat\xF3rio com um resumo de suas atividades.
+    O que inclui sua reputa\xE7\xE3o com as gangues atualmente, os itens encomendados
+    e pendentes e o resultado das miss\xF5es dos mercen\xE1rios. Administre bem tudo
+    isso e tente n\xE3o falir ou ficar sem reputa\xE7\xE3o com as gangues da cidade.
+    Boa sorte, voc\xEA vai precisar."
+  - ---
   textosOpcao1Tutorial:
   - Certo
-  - Sim, tenho
+  - "Vou te enviar a localiza\xE7\xE3o dele. Espero que eu seja bem remunerado por
+    isso."
+  - Certo
+  - Relaxa cara, eu consigo sim.
+  - Certo
+  - "Eu tenho sim parceiro, j\xE1 t\xF4 te mandando."
+  - Certo
+  - Certo
+  - ---
   textosOpcao2Tutorial:
   - Entendi
-  - "N\xE3o, vai se fuder"
+  - "J\xE1 que o motivo n\xE3o \xE9 da minha conta, essa informa\xE7\xE3o tamb\xE9m
+    n\xE3o \xE9 da sua."
+  - Entendi
+  - "Mano, n\xE3o vou poder ajudar."
+  - Entendi
+  - "N\xE3o joga essa merda pra cima de mim n\xE3o."
+  - Entendi
+  - Entendi
+  - ---
   textoNomeTutorial:
   - Criador
+  - Omar
+  - Criador
+  - Richard
+  - Criador
   - Blackout
+  - Criador
+  - Criador
+  - ---
   botaoSim: {fileID: 6650924875043326189}
   botaoNao: {fileID: 5748368910718658345}
   botaoSimTexto: {fileID: 3369349789966893860}
   botaoNaoTexto: {fileID: 2879873916024741520}
-  gangues:
-  - 50
-  - 50
-  - 50
-  - 50
-  - 50
-  - 50
-  - 1000
-  barrasGangues:
-  - {fileID: 1723409220}
-  - {fileID: 2108347232}
-  - {fileID: 1717924591}
-  - {fileID: 1191507228}
-  - {fileID: 1972552563}
-  - {fileID: 1728163078}
-  barrasGanguesPCT:
-  - {fileID: 180744148}
-  - {fileID: 2023348840}
-  - {fileID: 2074777545}
-  - {fileID: 2051892761}
-  - {fileID: 776703157}
-  - {fileID: 455691589}
-  dinheiroText: {fileID: 1497858834}
+  botaoFimDoDia: {fileID: 1543157925}
 --- !u!114 &8358450452003342271
 MonoBehaviour:
   m_ObjectHideFlags: 0

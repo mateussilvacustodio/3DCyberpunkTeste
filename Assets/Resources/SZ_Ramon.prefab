@@ -217,5 +217,6 @@ MonoBehaviour:
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
   gameController: {fileID: 0}
-  tutorial: 1
+  tutorial: 0
+  tutorialScript: {fileID: 0}
   teste: 0

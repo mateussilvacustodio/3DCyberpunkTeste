@@ -62,11 +62,7 @@ public class Personagem : MonoBehaviour
         balao = GameObject.Find("Balao").GetComponent<Balao>();
         tutorialScript = GameObject.Find("Balao").GetComponent<Tutorial>();
 
-        if(!tutorial) {
-
-            gameController = GameObject.Find("GameController").GetComponent<GameController>();
-
-        }        
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();     
         
         inventarioScript = Resources.FindObjectsOfTypeAll<Inventario>().FirstOrDefault(); //como o inventario começa desativado na cena, essa linha puxa ele mesmo desativado
         contentMercenario = Resources.FindObjectsOfTypeAll<Transform>().FirstOrDefault(t => t.gameObject.CompareTag("ContentMercenario"));
@@ -145,17 +141,8 @@ public class Personagem : MonoBehaviour
         for (int i = 0; i < recursos.Length; i++)
         {
             if(recursos[i]) {
-
-                if(gameController != null) {
-
-                    gameController.gangues[i] += mudadoresSim[i];
-
-                } else if (tutorialScript != null) {
-
-                    tutorialScript.gangues[i] += mudadoresSim[i];
-
-                }
                 
+                gameController.gangues[i] += mudadoresSim[i];
 
             }
         }
@@ -189,16 +176,8 @@ public class Personagem : MonoBehaviour
         for (int i = 0; i < recursos.Length; i++)
         {
             if(recursos[i]) {
-
-                if(gameController != null) {
-
-                    gameController.gangues[i] += mudadoresNao[i];
-
-                } else if (tutorialScript != null) {
-
-                    tutorialScript.gangues[i] += mudadoresNao[i];
-
-                }
+                
+                gameController.gangues[i] += mudadoresNao[i];
 
             }
         }
@@ -237,6 +216,12 @@ public class Personagem : MonoBehaviour
 
         balaoAnim.SetTrigger("Aparecer");
 
+        if(tutorial) {
+
+            //tutorialScript.etapasTutorial++;
+
+        }
+
     }
 
     public void andar() {
@@ -273,7 +258,9 @@ public class Personagem : MonoBehaviour
 
             } else {
 
-                tutorialScript.InstanciarPersonagemTutorial();
+                //tutorialScript.InstanciarPersonagemTutorial();
+                tutorialScript.etapasTutorial++;
+                tutorialScript.Tutoriall();
 
             }
             

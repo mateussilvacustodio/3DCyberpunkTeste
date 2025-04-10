@@ -17,10 +17,11 @@ public class Balao : MonoBehaviour
     bool dentroDaTag;
     [Header("GameController")]
     [SerializeField] GameController gameController;
+    [SerializeField] bool tutorial;
+    [SerializeField] Tutorial tutorialScript;
     [Header("Botões")]
     public Text botaoSimTexto;
     public Text botaoNaoTexto;
-    //[SerializeField] Personagem personagem;
     void Update()
     {
         if(Input.GetMouseButtonUp(0) && corrotinaDigitar != null) {
@@ -37,8 +38,7 @@ public class Balao : MonoBehaviour
 
             botaoSimTexto.text = gameController.personagemInstancia.GetComponent<Personagem>().opcao1;
             botaoNaoTexto.text = gameController.personagemInstancia.GetComponent<Personagem>().opcao2;
-            
-            //print("Habilitar botoes");
+
             gameController.personagemInstancia.GetComponent<Personagem>().botaoSim.interactable = true;
             gameController.personagemInstancia.GetComponent<Personagem>().botaoNao.interactable = true;
 
@@ -50,11 +50,19 @@ public class Balao : MonoBehaviour
 
     void AparecerTexto() {
 
-        balaoFala.SetActive(true);
-        nome.SetActive(true);
-        nomeTexto.text = gameController.personagemInstancia.GetComponent<Personagem>().nome;
-        nomeTexto.color = gameController.personagemInstancia.GetComponent<Personagem>().corGangue;
-        corrotinaDigitar = StartCoroutine(Digitar());
+        if(!tutorial) {
+
+            balaoFala.SetActive(true);
+            nome.SetActive(true);
+            nomeTexto.text = gameController.personagemInstancia.GetComponent<Personagem>().nome;
+            nomeTexto.color = gameController.personagemInstancia.GetComponent<Personagem>().corGangue;
+            corrotinaDigitar = StartCoroutine(Digitar());
+
+        } else {
+
+            tutorialScript.AparecerTextoTutorial();
+
+        }
 
     }
 

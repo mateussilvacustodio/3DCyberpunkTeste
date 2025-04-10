@@ -183,6 +183,8 @@ MonoBehaviour:
     nome: "Lamina de bra\xE7o"
     quant: -1
     sprite: {fileID: 21300000, guid: 9082067575d36dc43b3eeeaee2f6a7ee, type: 3}
+  missaoMercenario: {fileID: 0}
+  contentMercenario: {fileID: 0}
   opcao1: Relaxa cara, eu consigo sim.
   opcao2: "Mano, n\xE3o vou poder ajudar."
   corGangue: {r: 1, g: 0.14901961, b: 0.7137255, a: 1}
@@ -204,11 +206,16 @@ MonoBehaviour:
   - 0
   - 0
   inventarioScript: {fileID: 0}
+  mercenarioScript: {fileID: 0}
   velocidadeMover: 0.5
   podeMover: 1
   personagemAnim: {fileID: 9056291856612195721}
   botaoSim: {fileID: 0}
   botaoNao: {fileID: 0}
+  botaoFimDoDia: {fileID: 0}
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
   gameController: {fileID: 0}
+  tutorial: 1
+  tutorialScript: {fileID: 0}
+  teste: 0

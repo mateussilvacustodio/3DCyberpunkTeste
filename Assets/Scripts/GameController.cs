@@ -38,7 +38,6 @@ public class GameController : MonoBehaviour
         [SerializeField] List<GameObject> personagensDisponiveis = new List<GameObject>();
         [SerializeField] List<GameObject> personagensDoDia = new List<GameObject>();
         [SerializeField] List<GameObject> personagensDiaSeguinte = new List<GameObject>();
-        [SerializeField] List<GameObject> personagensTutorial = new List<GameObject>();
     [Header("Botões")]
         [SerializeField] Button botaoSim;
         [SerializeField] Button botaoNao;
@@ -170,31 +169,6 @@ public class GameController : MonoBehaviour
         personagensDoDia.RemoveAt(aleatoria);
 
     }
-
-    // public void Tutorial() {
-
-    //     if(personagemInstancia != null) {
-            
-    //         Destroy(personagemInstancia);
-
-    //     }
-
-    //     if(indexTutorial < quantidadeDiasTutorial) {
-
-    //         personagemInstancia = Instantiate(personagensTutorial[indexTutorial]);
-    //         botaoSim.onClick.RemoveAllListeners();
-    //         botaoNao.onClick.RemoveAllListeners();
-    //         botaoSim.onClick.AddListener(personagemInstancia.GetComponent<Personagem>().concordo);
-    //         botaoNao.onClick.AddListener(personagemInstancia.GetComponent<Personagem>().discordo);
-    //         indexTutorial++;
-
-    //     } else {
-
-    //         IniciarJogo();
-
-    //     }
-
-    // }
 
     public void PreencherListaDoDiaAtual() {
 
@@ -382,7 +356,6 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene(0);
 
     }
-
     public void IniciarJogo() {
 
         botaoIniciar.SetActive(false);
@@ -392,7 +365,6 @@ public class GameController : MonoBehaviour
         CriarPersonagem2();
 
     }
-
     public void IniciarTutorial() {
 
         SceneManager.LoadScene(1);

@@ -6365,13 +6365,16 @@ MonoBehaviour:
   - {fileID: 8520339862292705498, guid: 56ff27f07fd93c546922225276ea4b72, type: 3}
   - {fileID: 798647730435146061, guid: af5a3102570ab164dbea279a25de02f0, type: 3}
   - {fileID: 6033418518802117976, guid: 0b901267d46f6af4abe2d60852a8cf3b, type: 3}
-  - {fileID: 8789429958387718174, guid: 0351e15119f48814ebbe5154d4b916ac, type: 3}
+  - {fileID: 2416011525182430387, guid: 0a6fa8dcdc15f504aa1edfcddf927dce, type: 3}
+  - {fileID: 4180906009250163222, guid: d053284ff2793f849b6617e965ac2786, type: 3}
+  - {fileID: 4942909087280337214, guid: 708740434cfe46149ae2d455aea7d0f1, type: 3}
+  - {fileID: 3123701097628454069, guid: 57dd80b11417aa94b801650c5c41ed1f, type: 3}
+  - {fileID: 2537303868858572526, guid: f490778c88aa85c42bd7fc304d579527, type: 3}
+  - {fileID: 2969375125121912761, guid: 4bd9d632748ee284aa2cd57392e7a8c8, type: 3}
+  - {fileID: 8846157345087627382, guid: 80c681fb6eb02944c808006b98776e95, type: 3}
   personagensDisponiveis: []
   personagensDoDia: []
   personagensDiaSeguinte: []
-  personagensTutorial:
-  - {fileID: 7606784413904191893, guid: 8c7738b7cd55cb24caf8bde0d47ee149, type: 3}
-  - {fileID: 8846157345087627382, guid: 80c681fb6eb02944c808006b98776e95, type: 3}
   botaoSim: {fileID: 6650924875043326189}
   botaoNao: {fileID: 5748368910718658345}
   botaoTablet: {fileID: 297536191}
@@ -6380,9 +6383,9 @@ MonoBehaviour:
   botaoTutorial: {fileID: 684441030}
   botaoConfig: {fileID: 96373247}
   dia: 1
-  diaMax: 6
+  diaMax: 5
   quantidadeDePedidos: 0
-  quantidadeDePedidosPorDia: 3
+  quantidadeDePedidosPorDia: 2
   painelFimDeDia: {fileID: 2069204536}
   textoFimDoDia: {fileID: 746338583}
   textoEventoFimDoDia: {fileID: 952241657}
@@ -8258,6 +8261,8 @@ MonoBehaviour:
   textoEncomendaFimDoDia: {fileID: 1735969629}
   textoDevidosFimDoDia: {fileID: 1748699926}
   gameController: {fileID: 536325944}
+  tutorial: 0
+  tutorialScript: {fileID: 0}
 --- !u!1 &684441030
 GameObject:
   m_ObjectHideFlags: 0
@@ -31515,7 +31520,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Voc\xEA venceu. Sobreviveu aos 6 dias."
+  m_Text: "Voc\xEA venceu. Sobreviveu aos 5 dias."
 --- !u!222 &1872134439
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32882,7 +32887,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Miss\xF5es de mercen\xE1rio"
+  m_Text: "Miss\xF5es"
 --- !u!222 &2034567393
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -35144,6 +35149,8 @@ MonoBehaviour:
     testar a paragem de corrotina
   typeSpeed: 0.02
   gameController: {fileID: 536325944}
+  tutorial: 0
+  tutorialScript: {fileID: 0}
   botaoSimTexto: {fileID: 3369349789966893860}
   botaoNaoTexto: {fileID: 2879873916024741520}
 --- !u!224 &1809961244591139672

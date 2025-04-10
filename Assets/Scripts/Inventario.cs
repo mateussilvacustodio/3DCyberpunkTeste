@@ -25,6 +25,8 @@ public class Inventario : MonoBehaviour
 
     [Header("GameController")]
     [SerializeField] GameController gameController;
+    [SerializeField] bool tutorial;
+    [SerializeField] Tutorial tutorialScript;
 
     void Start()
     {
@@ -43,8 +45,17 @@ public class Inventario : MonoBehaviour
 
                     //print("Voce esta devendo item");
                     textoDevidosFimDoDia.text += "- Voce esta devendo: " + itensPossuidos[i].nome + "\n";
-                    gameController.personagPraQuemDevo.Add(Resources.Load<GameObject>(gameController.personagemInstancia.name.Replace("(Clone)", "")));
-                    //a linha adiciona na list 'personagPraQuemDevo' o prefab da instancia do personagem. o 'Replace' tira a parte '(Clone)' do nome da inst pra busar na pasta de prefabs
+                    if(!tutorial) {
+
+                        gameController.personagPraQuemDevo.Add(Resources.Load<GameObject>(gameController.personagemInstancia.name.Replace("(Clone)", "")));
+
+                    } else {
+
+                        gameController.personagPraQuemDevo.Add(Resources.Load<GameObject>(tutorialScript.personagemTutorialInstancia.name.Replace("(Clone)", "")));
+
+                    }
+                    
+                    //a linha adiciona na list 'personagPraQuemDevo' o prefab da instancia do personagem. o 'Replace' tira a parte '(Clone)' do nome da inst pra buscar na pasta de prefabs
                     itensPossuidos[i].quant = 0;
                 }
                 //itemEncontrado = true;
@@ -141,4 +152,5 @@ public class Inventario : MonoBehaviour
         }
 
     }
+
 }
