@@ -45,7 +45,7 @@ public class MissoesMercenario : MonoBehaviour
 
         //enviar dados para comparacao
 
-        print(index);
+        //print(index);
         mercenarioScript.indexDaMissaoAtual = index;
         mercenarioScript.forcaNecessariaMissaoAtual = forca;
         mercenarioScript.inteligenciaNecessariaMissaoAtual = inteligencia;

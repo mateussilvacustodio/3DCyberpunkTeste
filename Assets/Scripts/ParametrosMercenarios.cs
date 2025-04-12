@@ -18,6 +18,9 @@ public class ParametrosMercenarios : MonoBehaviour
     [SerializeField] ScrollRect scrollRectMercenario;
     [SerializeField] GameObject scrollbarMercenario;
 
+    [Header("SetasTutorial")]
+    [SerializeField] GameObject seta6;
+
     public void EscolherMercenario() {
 
         ListaDeMercenarios.SetActive(false);
@@ -25,6 +28,12 @@ public class ParametrosMercenarios : MonoBehaviour
         scrollbarMercenario.SetActive(true);
 
         mercenarioScript.destruirMissaoAtual(forcaMercenario, inteligenciaMercenario, stealhMercenario, nomeMercenario);
+
+        if(seta6 != null) {
+
+            seta6.SetActive(false);
+
+        }
 
     }
 

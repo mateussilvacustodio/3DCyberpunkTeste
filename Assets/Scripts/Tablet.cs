@@ -21,6 +21,9 @@ public class Tablet : MonoBehaviour
     [SerializeField] GameObject reputacaoFimDoDia;
     [SerializeField] GameObject inventarioFimDoDia;
     [SerializeField] GameObject mercenariosFimDoDia;
+    [Header("SetasTutorial")]
+    [SerializeField] GameObject[] setas;
+    int indexSeta;
     // Start is called before the first frame update
     void Update() {
 
@@ -36,6 +39,15 @@ public class Tablet : MonoBehaviour
 
     public void FecharTablet() {
 
+        menuInicial.SetActive(true);
+        menuReputacao.SetActive(false);
+        menuInventario.SetActive(false);
+        menuMercenarios.SetActive(false);
+        if(setas.Length > 0) {
+
+            setas[indexSeta].SetActive(true);
+
+        }
         painelTablet.SetActive(false);
 
     }
@@ -56,6 +68,14 @@ public class Tablet : MonoBehaviour
 
         menuInicial.SetActive(false);
         menuReputacao.SetActive(true);
+        if(setas.Length > 0) {
+
+            foreach (GameObject seta in setas)
+            {
+                seta.SetActive(false);
+            }
+            indexSeta = 0;
+        }
 
     }
 
@@ -63,6 +83,13 @@ public class Tablet : MonoBehaviour
 
         menuInicial.SetActive(false);
         menuInventario.SetActive(true);
+        if(setas.Length > 0) {
+            foreach (GameObject seta in setas)
+            {
+                seta.SetActive(false);
+            }
+            indexSeta = 1;
+        }
 
     }
 
@@ -70,6 +97,13 @@ public class Tablet : MonoBehaviour
 
         menuInicial.SetActive(false);
         menuMercenarios.SetActive(true);
+        if(setas.Length > 0) {
+            foreach (GameObject seta in setas)
+            {
+                seta.SetActive(false);
+            }
+            indexSeta = 2;
+        }
 
     }
 
@@ -79,6 +113,9 @@ public class Tablet : MonoBehaviour
         menuReputacao.SetActive(false);
         menuInventario.SetActive(false);
         menuMercenarios.SetActive(false);
+        if(setas.Length > 0) {
+            setas[indexSeta].SetActive(true);
+        }
 
     }
 

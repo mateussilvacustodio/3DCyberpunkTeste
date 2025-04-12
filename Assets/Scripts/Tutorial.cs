@@ -9,15 +9,14 @@ using UnityEngine.SceneManagement;
 
 public class Tutorial : MonoBehaviour
 {
-    [Header("Controller")]
+[Header("Controller")]
     [SerializeField] List<GameObject> personagensTutorial = new List<GameObject>();
     public GameObject personagemTutorialInstancia;
     [SerializeField] int indexTutorial;
     public int etapasTutorial;
     [SerializeField] Inventario inventarioScript;
 
-    [Header("Balao")]
-    
+[Header("Balao")]
     [SerializeField] GameObject nomeBalaoTutorial;
     [SerializeField] GameObject pedidoBalaoTutorial;
     public Text nomeBalaoTutorialTexto;
@@ -30,12 +29,18 @@ public class Tutorial : MonoBehaviour
     [SerializeField] string[] textosOpcao2Tutorial;
     [SerializeField] string[] textoNomeTutorial;
 
-    [Header("Botoes")]
+[Header("Botoes")]
     [SerializeField] Button botaoSim;
     [SerializeField] Button botaoNao;
     public Text botaoSimTexto;
     public Text botaoNaoTexto;
     [SerializeField] GameObject botaoFimDoDia;
+    [SerializeField] Button botaoMenuReputacao;
+    [SerializeField] Button botaoMenuInventario;
+    [SerializeField] Button botaoMenuMercenario;
+
+[Header("Setas")]
+    [SerializeField] GameObject[] setas;
 
     void Start()
     {
@@ -60,6 +65,39 @@ public class Tutorial : MonoBehaviour
             botaoSim.interactable = true;
             botaoNao.interactable = true;
             corrotinaDigitar = null;
+
+            switch (etapasTutorial)
+            {
+                case 0:
+                    setas[0].SetActive(true);
+                    break;
+
+                case 2:
+                    setas[1].SetActive(true);
+                    setas[2].SetActive(true);
+                    botaoMenuReputacao.interactable = true;
+                    break;
+                
+                case 4:
+                    setas[1].SetActive(true);
+                    setas[2].SetActive(false);
+                    setas[3].SetActive(true);
+                    setas[4].SetActive(true);
+                    botaoMenuInventario.interactable = true;
+                    break;
+
+                case 6:
+                    setas[1].SetActive(true);
+                    setas[3].SetActive(false);
+                    setas[5].SetActive(true);
+                    setas[6].SetActive(true);
+                    setas[7].SetActive(true);
+                    botaoMenuMercenario.interactable = true;
+                    break;
+
+                default:
+                    break;
+            }
 
         }
 
@@ -87,7 +125,6 @@ public class Tutorial : MonoBehaviour
 
         pedidoBalaoTutorial.SetActive(true);
         nomeBalaoTutorial.SetActive(true);
-
         //nomeBalaoTutorialTexto.text = personagemTutorialInstancia.GetComponent<Personagem>().nome;
         //nomeBalaoTutorialTexto.color = personagemTutorialInstancia.GetComponent<Personagem>().corGangue;
         nomeBalaoTutorialTexto.text = textoNomeTutorial[etapasTutorial];
@@ -115,7 +152,6 @@ public class Tutorial : MonoBehaviour
         botaoSim.onClick.AddListener(Entendi);
         botaoNao.onClick.AddListener(Entendi);
 
-
     }
     
     public void Entendi() {
@@ -135,7 +171,6 @@ public class Tutorial : MonoBehaviour
 
         } else if (etapasTutorial == 7){
 
-            print("Ultimo tutorial");
             Tutoriall();
 
         } else if (etapasTutorial == 8) {
@@ -143,6 +178,15 @@ public class Tutorial : MonoBehaviour
             botaoFimDoDia.SetActive(true);
 
         }
+
+        foreach (GameObject seta in setas) //para cada variavel do tipo GameObject chamada 'seta' no array 'setas'
+        {
+            seta.SetActive(false);
+        }
+
+        botaoMenuReputacao.interactable = false;
+        botaoMenuInventario.interactable = false;
+        botaoMenuMercenario.interactable = false;
 
     }
 

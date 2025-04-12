@@ -72,6 +72,10 @@ public class GameController : MonoBehaviour
     [Header("Mercenarios")]
         [SerializeField] Mercenarios mercenarioScript;
         [SerializeField] bool HaMissoesDeMercenario;
+    [Header("Musicas")]
+        [SerializeField] AudioSource audioSource;
+        //[SerializeField] AudioClip musicaMenu;
+        [SerializeField] AudioClip musicaJogo;
     void Start()
     {   
         for (int i = 0; i < barrasGangues.Length; i++)
@@ -361,13 +365,18 @@ public class GameController : MonoBehaviour
         botaoIniciar.SetActive(false);
         botaoTutorial.SetActive(false);
         botaoConfig.SetActive(false);
+        botaoTablet.gameObject.SetActive(true);
         PreencherListaDoDiaAtual();
         CriarPersonagem2();
+        audioSource.clip =  musicaJogo;
+        audioSource.Play();
+        //trocar musica
 
     }
     public void IniciarTutorial() {
 
         SceneManager.LoadScene(1);
+        //trocar musica
 
     }
 
