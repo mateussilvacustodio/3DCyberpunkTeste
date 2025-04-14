@@ -184,6 +184,8 @@ MonoBehaviour:
     nome: Equip Hacker
     quant: -1
     sprite: {fileID: 21300000, guid: e7ac1b35d882b7f48918cf5fda4266b8, type: 3}
+  missaoMercenario: {fileID: 0}
+  contentMercenario: {fileID: 0}
   opcao1: "Conte comigo, mas saiba que isso ter\xE1 um custo alto."
   opcao2: "N\xE3o confio em ofertas misteriosas. Vai ter que se virar sozinho."
   corGangue: {r: 0, g: 0.9882353, b: 1, a: 1}
@@ -195,7 +197,7 @@ MonoBehaviour:
   - 0
   - 5
   - -20
-  - 150
+  - 200
   mudadoresNao:
   - 0
   - 0
@@ -205,11 +207,16 @@ MonoBehaviour:
   - 0
   - 0
   inventarioScript: {fileID: 0}
+  mercenarioScript: {fileID: 0}
   velocidadeMover: 0.5
   podeMover: 1
   personagemAnim: {fileID: 1692465616257638651}
   botaoSim: {fileID: 0}
   botaoNao: {fileID: 0}
+  botaoFimDoDia: {fileID: 0}
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
   gameController: {fileID: 0}
+  tutorial: 0
+  tutorialScript: {fileID: 0}
+  teste: 0

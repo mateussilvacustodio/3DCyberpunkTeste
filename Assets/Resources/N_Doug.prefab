@@ -4133,7 +4133,7 @@ MonoBehaviour:
   - 0
   - 0
   - 0
-  - 50
+  - 200
   mudadoresNao:
   - 5
   - 0
@@ -4149,9 +4149,12 @@ MonoBehaviour:
   personagemAnim: {fileID: 8947716108279985710}
   botaoSim: {fileID: 0}
   botaoNao: {fileID: 0}
+  botaoFimDoDia: {fileID: 0}
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
   gameController: {fileID: 0}
+  tutorial: 0
+  tutorialScript: {fileID: 0}
   teste: 0
 --- !u!1 &807640701287514539
 GameObject:

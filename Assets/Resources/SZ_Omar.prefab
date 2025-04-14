@@ -199,7 +199,7 @@ MonoBehaviour:
   - 5
   - 0
   - 0
-  - 75
+  - 100
   mudadoresNao:
   - 0
   - 0
@@ -220,4 +220,5 @@ MonoBehaviour:
   balao: {fileID: 0}
   gameController: {fileID: 0}
   tutorial: 1
+  tutorialScript: {fileID: 0}
   teste: 0

@@ -6144,16 +6144,20 @@ MonoBehaviour:
   indicesDisponiveis: 
   personagemInstancia: {fileID: 0}
   personagensTodos:
+  - {fileID: 420269755386655560, guid: 2ddf8d7caa525714b9137784da23f612, type: 3}
   - {fileID: 8520339862292705498, guid: 56ff27f07fd93c546922225276ea4b72, type: 3}
   - {fileID: 798647730435146061, guid: af5a3102570ab164dbea279a25de02f0, type: 3}
   - {fileID: 6033418518802117976, guid: 0b901267d46f6af4abe2d60852a8cf3b, type: 3}
   - {fileID: 2416011525182430387, guid: 0a6fa8dcdc15f504aa1edfcddf927dce, type: 3}
   - {fileID: 4180906009250163222, guid: d053284ff2793f849b6617e965ac2786, type: 3}
+  - {fileID: 6228953492948272520, guid: bc590e821b7a705438c3dc459b311b24, type: 3}
   - {fileID: 4942909087280337214, guid: 708740434cfe46149ae2d455aea7d0f1, type: 3}
   - {fileID: 3123701097628454069, guid: 57dd80b11417aa94b801650c5c41ed1f, type: 3}
   - {fileID: 2537303868858572526, guid: f490778c88aa85c42bd7fc304d579527, type: 3}
+  - {fileID: 6928697058241134482, guid: 1095d7f9799577e43a93b0325ab7c197, type: 3}
   - {fileID: 2969375125121912761, guid: 4bd9d632748ee284aa2cd57392e7a8c8, type: 3}
   - {fileID: 8846157345087627382, guid: 80c681fb6eb02944c808006b98776e95, type: 3}
+  - {fileID: 5677129381909304727, guid: 1988527ed581f0c4c94f36a6b96ab4c3, type: 3}
   personagensDisponiveis: []
   personagensDoDia: []
   personagensDiaSeguinte: []
@@ -6165,7 +6169,7 @@ MonoBehaviour:
   botaoTutorial: {fileID: 684441030}
   botaoConfig: {fileID: 96373247}
   dia: 1
-  diaMax: 5
+  diaMax: 6
   quantidadeDePedidos: 0
   quantidadeDePedidosPorDia: 2
   painelFimDeDia: {fileID: 2069204536}
@@ -6213,7 +6217,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a251417b60322d34691d4936a3400d7f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 95a4b9e1136c0fa428369668e949f84a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -10048,6 +10052,7 @@ MonoBehaviour:
   ListaDeMercenarios: {fileID: 1125909469}
   scrollRectMercenario: {fileID: 227433834}
   scrollbarMercenario: {fileID: 863535517}
+  seta6: {fileID: 0}
 --- !u!114 &823208404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11507,6 +11512,7 @@ MonoBehaviour:
   ListaDeMercenarios: {fileID: 1125909469}
   scrollRectMercenario: {fileID: 227433834}
   scrollbarMercenario: {fileID: 863535517}
+  seta6: {fileID: 0}
 --- !u!114 &903750095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15198,6 +15204,7 @@ MonoBehaviour:
   ListaDeMercenarios: {fileID: 1125909469}
   scrollRectMercenario: {fileID: 227433834}
   scrollbarMercenario: {fileID: 863535517}
+  seta6: {fileID: 0}
 --- !u!114 &1181637266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15737,6 +15744,7 @@ MonoBehaviour:
   ListaDeMercenarios: {fileID: 1125909469}
   scrollRectMercenario: {fileID: 227433834}
   scrollbarMercenario: {fileID: 863535517}
+  seta6: {fileID: 0}
 --- !u!114 &1209850922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17365,6 +17373,7 @@ MonoBehaviour:
   ListaDeMercenarios: {fileID: 1125909469}
   scrollRectMercenario: {fileID: 227433834}
   scrollbarMercenario: {fileID: 863535517}
+  seta6: {fileID: 0}
 --- !u!114 &1397527513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20666,6 +20675,7 @@ MonoBehaviour:
   ListaDeMercenarios: {fileID: 1125909469}
   scrollRectMercenario: {fileID: 227433834}
   scrollbarMercenario: {fileID: 863535517}
+  seta6: {fileID: 0}
 --- !u!1 &1694623943
 GameObject:
   m_ObjectHideFlags: 0
@@ -22367,6 +22377,7 @@ MonoBehaviour:
   reputacaoFimDoDia: {fileID: 1065046249}
   inventarioFimDoDia: {fileID: 935117980}
   mercenariosFimDoDia: {fileID: 100309504}
+  setas: []
 --- !u!1 &1844942377
 GameObject:
   m_ObjectHideFlags: 0

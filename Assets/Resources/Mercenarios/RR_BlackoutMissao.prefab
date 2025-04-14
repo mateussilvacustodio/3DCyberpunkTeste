@@ -320,9 +320,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nomeNPC: Blackout
-  forca: 1
-  inteligencia: 5
-  stealh: 3
+  forca: 0
+  inteligencia: 4
+  stealh: 0
   index: 0
   mudadoresMercenarios: []
   painelListaDeMercenarios: {fileID: 0}

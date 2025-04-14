@@ -455,10 +455,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nomeNPC: Doug
   forca: 5
-  inteligencia: 2
-  stealh: 1
+  inteligencia: 0
+  stealh: 0
   index: 0
-  mudadoresMercenarios: []
+  mudadoresMercenarios:
+  - -10
+  - 5
+  - 0
+  - 0
+  - 0
+  - 0
+  - 200
   painelListaDeMercenarios: {fileID: 0}
   scrollRectMercenario: {fileID: 0}
   scrollbarMercenario: {fileID: 0}
