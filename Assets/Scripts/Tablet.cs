@@ -24,7 +24,7 @@ public class Tablet : MonoBehaviour
     [SerializeField] GameObject mercenariosFimDoDia;
     [Header("SetasTutorial")]
     [SerializeField] GameObject[] setas;
-    int indexSeta;
+    //int indexSeta;
     void Update() {
 
         diaAtual.text = "Dia " + gameController.dia;
@@ -46,7 +46,17 @@ public class Tablet : MonoBehaviour
         listaMercenarios.SetActive(false);
         if(setas.Length > 0) {
 
-            setas[indexSeta].SetActive(true);
+            if(setas[3].activeSelf) {
+
+                setas[2].SetActive(true);
+
+            }
+
+            if(setas[5].activeSelf) {
+
+                setas[4].SetActive(true);
+
+            }            
 
         }
         painelTablet.SetActive(false);
@@ -69,14 +79,6 @@ public class Tablet : MonoBehaviour
 
         menuInicial.SetActive(false);
         menuReputacao.SetActive(true);
-        if(setas.Length > 0) {
-
-            foreach (GameObject seta in setas)
-            {
-                seta.SetActive(false);
-            }
-            indexSeta = 0;
-        }
 
     }
 
@@ -84,13 +86,6 @@ public class Tablet : MonoBehaviour
 
         menuInicial.SetActive(false);
         menuInventario.SetActive(true);
-        if(setas.Length > 0) {
-            foreach (GameObject seta in setas)
-            {
-                seta.SetActive(false);
-            }
-            indexSeta = 1;
-        }
 
     }
 
@@ -98,13 +93,6 @@ public class Tablet : MonoBehaviour
 
         menuInicial.SetActive(false);
         menuMercenarios.SetActive(true);
-        if(setas.Length > 0) {
-            foreach (GameObject seta in setas)
-            {
-                seta.SetActive(false);
-            }
-            indexSeta = 2;
-        }
         gameController.numNotificacao = 0;
 
     }
@@ -115,9 +103,6 @@ public class Tablet : MonoBehaviour
         menuReputacao.SetActive(false);
         menuInventario.SetActive(false);
         menuMercenarios.SetActive(false);
-        if(setas.Length > 0) {
-            setas[indexSeta].SetActive(true);
-        }
 
     }
 
@@ -144,4 +129,51 @@ public class Tablet : MonoBehaviour
         mercenariosFimDoDia.SetActive(true);
 
     }
+
+    public void SumirSetas() {
+
+        if(setas.Length > 0) {
+
+            foreach (GameObject seta in setas)
+            {
+                seta.SetActive(false);
+            }
+            //indexSeta = 0;
+        }
+
+    }
+
+    public void SumirSeta3() {
+
+        setas[2].SetActive(false);
+        
+    }
+
+    public void AparecerSeta3() {
+
+        if(setas[3].activeSelf) {
+
+            setas[2].SetActive(true);
+
+        }
+
+    }
+
+    public void SumirSeta5() {
+
+        setas[4].SetActive(false);
+        
+    }
+
+    public void AparecerSeta5() {
+
+        if(setas[5].activeSelf) {
+
+            setas[4].SetActive(true);
+
+        }
+
+    }
+
+    
 }

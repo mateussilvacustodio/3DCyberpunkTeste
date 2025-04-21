@@ -86,6 +86,10 @@ public class Tutorial : MonoBehaviour
                     botaoMenuInventario.interactable = true;
                     break;
 
+                case 5:
+                    botaoNao.gameObject.SetActive(false);
+                    break;
+
                 case 6:
                     setas[1].SetActive(true);
                     setas[3].SetActive(false);

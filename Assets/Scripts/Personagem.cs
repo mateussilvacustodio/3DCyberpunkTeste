@@ -149,6 +149,7 @@ public class Personagem : MonoBehaviour
         }
         
         botaoSim.interactable = false;
+        botaoNao.gameObject.SetActive(true); //para o tutorial
         botaoNao.interactable = false;
         //irEmbora = true;
         //rotacaoAlvo = transform.rotation * Quaternion.Euler(0,90,0);
