@@ -14,7 +14,7 @@ public class ParametrosEncomendas : MonoBehaviour
 
     public void mudarTexto() {
         
-        textoNoBotao.text = "R$ " + custo.ToString();
+        textoNoBotao.text = "$ " + custo.ToString();
         textoNoBotao.color = new Color32(255, 220, 0, 255);
 
     }

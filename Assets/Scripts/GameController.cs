@@ -27,6 +27,9 @@ public class GameController : MonoBehaviour
         [SerializeField] Text[] barrasGanguesPCT;
         [SerializeField] Text[] barrasGanguesPCT2;
         [SerializeField] Text dinheiroText;
+        [SerializeField] Text dinheiroText2;
+        [SerializeField] Text dinheiroText3;
+        [SerializeField] Text dinheiroText4;
         [SerializeField] List<EventosFimDeDia> ListaDeEventosFimDeDia = new List<EventosFimDeDia>();
         [SerializeField] string[] textoFimDeJogoGangues;
     [Header("Personagens")]
@@ -72,6 +75,12 @@ public class GameController : MonoBehaviour
     [Header("Mercenarios")]
         [SerializeField] Mercenarios mercenarioScript;
         [SerializeField] bool HaMissoesDeMercenario;
+        [SerializeField] GameObject notificacao1;
+        [SerializeField] Text notificacao1Text;
+        [SerializeField] GameObject notificacao2;
+        [SerializeField] Text notificacao2Text;
+        public int numNotificacao;
+        [SerializeField] GameObject[] indisponiveis;
     [Header("Musicas")]
         [SerializeField] AudioSource audioSource;
         //[SerializeField] AudioClip musicaMenu;
@@ -120,7 +129,26 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-        dinheiroText.text = gangues[6].ToString("F0");
+        dinheiroText.text = "$ " + gangues[6].ToString("F0");
+        dinheiroText2.text = dinheiroText.text;
+        dinheiroText3.text = dinheiroText.text;
+        dinheiroText4.text = dinheiroText.text;
+
+        if(numNotificacao > 0) {
+
+            notificacao1.SetActive(true);
+            notificacao2.SetActive(true);
+            notificacao1Text.text = numNotificacao.ToString();
+            notificacao2Text.text = numNotificacao.ToString();
+
+        }
+
+        if(numNotificacao <= 0) {
+
+            notificacao1.SetActive(false);
+            notificacao2.SetActive(false);
+
+        }
     }
 
     public void criarPersonagem1() {
@@ -219,6 +247,13 @@ public class GameController : MonoBehaviour
 
     public void FimDoDia() {
 
+        numNotificacao = 0;
+
+        foreach (GameObject item in indisponiveis)
+        {
+            item.SetActive(false);
+        }
+        
         if(HaEncomenda) {
 
             inventario.Encomendar();
@@ -250,6 +285,8 @@ public class GameController : MonoBehaviour
 
             Destroy(mercenarioScript.pedidosFalhos[i]);
         }
+
+        mercenarioScript.pedidosFalhos.Clear();
         
         botaoTablet.interactable = false;
         tabletScript.FecharTablet();

@@ -135,6 +135,7 @@ public class Personagem : MonoBehaviour
             GameObject novaMissao = Instantiate(missaoMercenario, contentMercenario);
             mercenarioScript.pedidosAceitos.Add(novaMissao);
             novaMissao.GetComponent<MissoesMercenario>().index = mercenarioScript.pedidosAceitos.Count - 1;
+            gameController.numNotificacao++;
 
         }
         

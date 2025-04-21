@@ -17,6 +17,7 @@ public class Tablet : MonoBehaviour
     [SerializeField] GameObject menuReputacao;
     [SerializeField] GameObject menuInventario;
     [SerializeField] GameObject menuMercenarios;
+    [SerializeField] GameObject listaMercenarios;
     [Header("Aplicativos Fim Do Dia")]
     [SerializeField] GameObject reputacaoFimDoDia;
     [SerializeField] GameObject inventarioFimDoDia;
@@ -24,7 +25,6 @@ public class Tablet : MonoBehaviour
     [Header("SetasTutorial")]
     [SerializeField] GameObject[] setas;
     int indexSeta;
-    // Start is called before the first frame update
     void Update() {
 
         diaAtual.text = "Dia " + gameController.dia;
@@ -43,6 +43,7 @@ public class Tablet : MonoBehaviour
         menuReputacao.SetActive(false);
         menuInventario.SetActive(false);
         menuMercenarios.SetActive(false);
+        listaMercenarios.SetActive(false);
         if(setas.Length > 0) {
 
             setas[indexSeta].SetActive(true);
@@ -104,6 +105,7 @@ public class Tablet : MonoBehaviour
             }
             indexSeta = 2;
         }
+        gameController.numNotificacao = 0;
 
     }
 

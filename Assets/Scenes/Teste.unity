@@ -2698,6 +2698,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bronzomg
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d07163f219bb6764ea739e8d4bc381cb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3099,7 +3103,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5ffa59a0f78322547a444203f54fffbb, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

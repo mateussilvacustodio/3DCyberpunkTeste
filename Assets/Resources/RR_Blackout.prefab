@@ -188,7 +188,7 @@ MonoBehaviour:
   opcao1: "Eu tenho sim parceiro, j\xE1 t\xF4 te mandando."
   opcao2: "N\xE3o joga essa merda pra cima de mim n\xE3o."
   corGangue: {r: 1, g: 0, b: 0, a: 1}
-  recursos: 00010000010000
+  recursos: 00010000010001
   mudadoresSim:
   - 0
   - 15
@@ -196,7 +196,7 @@ MonoBehaviour:
   - 0
   - 15
   - 0
-  - 0
+  - 300
   mudadoresNao:
   - 0
   - -15
@@ -217,4 +217,5 @@ MonoBehaviour:
   balao: {fileID: 0}
   gameController: {fileID: 0}
   tutorial: 1
+  tutorialScript: {fileID: 0}
   teste: 0

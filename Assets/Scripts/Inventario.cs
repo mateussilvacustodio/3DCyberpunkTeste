@@ -28,6 +28,9 @@ public class Inventario : MonoBehaviour
     [SerializeField] bool tutorial;
     [SerializeField] Tutorial tutorialScript;
 
+    [SerializeField] GameObject encomendaRealizadaText;
+    [SerializeField] GameObject inventarioAba;
+
     void Start()
     {
         AtualizarItens();     
@@ -92,6 +95,8 @@ public class Inventario : MonoBehaviour
         gameController.HaEncomenda = true;
         gameController.gangues[6] -= PparametrosEncomendas.custo;
         gameController.itensEncomendados.Add(PparametrosEncomendas.parametrosItem);
+        GameObject textoEncomendaRealizada = Instantiate(encomendaRealizadaText, inventarioAba.transform);
+        Destroy(textoEncomendaRealizada, 1f);
 
     }
 
