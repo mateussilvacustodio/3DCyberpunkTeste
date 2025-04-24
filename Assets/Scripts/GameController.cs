@@ -30,6 +30,7 @@ public class GameController : MonoBehaviour
         [SerializeField] Text dinheiroText2;
         [SerializeField] Text dinheiroText3;
         [SerializeField] Text dinheiroText4;
+        [SerializeField] Text dinheiroTextFimDoDia;
         [SerializeField] List<EventosFimDeDia> ListaDeEventosFimDeDia = new List<EventosFimDeDia>();
         [SerializeField] string[] textoFimDeJogoGangues;
     [Header("Personagens")]
@@ -124,7 +125,6 @@ public class GameController : MonoBehaviour
         }
 
         //criarPersonagem1();
-
     }
 
     void Update()
@@ -133,6 +133,7 @@ public class GameController : MonoBehaviour
         dinheiroText2.text = dinheiroText.text;
         dinheiroText3.text = dinheiroText.text;
         dinheiroText4.text = dinheiroText.text;
+        dinheiroTextFimDoDia.text = "Dinheiro atual: " + dinheiroText.text;
 
         if(numNotificacao > 0) {
 
@@ -270,7 +271,7 @@ public class GameController : MonoBehaviour
                     gangues[j] -= mercenarioScript.pedidosAceitos[i].GetComponent<MissoesMercenario>().mudadoresMercenarios[j] * 2;
                 }
 
-                mercenarioScript.textoFimDoDia.text += "A missão de " + mercenarioScript.pedidosAceitos[i].GetComponent<MissoesMercenario>().nomeNPC + " não foi executada \n";
+                mercenarioScript.textoFimDoDia.text += "A missão de " + mercenarioScript.pedidosAceitos[i].GetComponent<MissoesMercenario>().nomeNPC + " não foi executada - $ " + (mercenarioScript.pedidosAceitos[i].GetComponent<MissoesMercenario>().mudadoresMercenarios[6] * 2).ToString() + "\n";
                 Destroy(mercenarioScript.pedidosAceitos[i]);
                 
             }
@@ -372,6 +373,7 @@ public class GameController : MonoBehaviour
             if(dia < diaMax + 1) {
 
                 painelFimDeDia.SetActive(false);
+                tabletScript.AbrirReputacaoFimDoDia();
                 botaoTablet.interactable = true;
                 PreencherListaDoDiaAtual();
                 CriarPersonagem2();

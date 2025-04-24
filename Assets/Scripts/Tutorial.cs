@@ -6,6 +6,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class Tutorial : MonoBehaviour
 {
@@ -38,9 +39,14 @@ public class Tutorial : MonoBehaviour
     [SerializeField] Button botaoMenuReputacao;
     [SerializeField] Button botaoMenuInventario;
     [SerializeField] Button botaoMenuMercenario;
+    [SerializeField] Button botaoMercanriosFimDoDia;
+    [SerializeField] Button botaoFimTutorial;
 
 [Header("Setas")]
     [SerializeField] GameObject[] setas;
+    [SerializeField] GameObject seta8;
+    [SerializeField] GameObject seta9;
+    [SerializeField] GameObject seta10;
 
     void Start()
     {
@@ -197,6 +203,34 @@ public class Tutorial : MonoBehaviour
     public void FimDoTutorial() {
 
         SceneManager.LoadScene(0);
+
+    }
+
+    public void SumirSetasFimDoDia(int parametro) {
+
+        switch (parametro)
+        {
+            
+            case 1:
+                
+                if(seta8.activeSelf) {
+
+                    botaoMercanriosFimDoDia.interactable = true;
+                    seta8.SetActive(false);
+                    seta9.SetActive(true);
+
+                }
+                break;
+            case 2:
+                if(seta9.activeSelf) {
+
+                    botaoFimTutorial.interactable = true;
+                    seta9.SetActive(false);
+                    seta10.SetActive(true);
+
+                }
+                break;
+        }
 
     }
 

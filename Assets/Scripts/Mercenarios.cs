@@ -51,7 +51,7 @@ public class Mercenarios : MonoBehaviour
 
         } else {
 
-            textoFimDoDia.text += "- O mercenario " + nomeMercenarioAtual + " não cumpriu a missão \n";
+            textoFimDoDia.text += "- O mercenario " + nomeMercenarioAtual + " não cumpriu a missão - $ " + (missaoAtual.GetComponent<MissoesMercenario>().mudadoresMercenarios[6]*2).ToString() + "\n";
             GameObject clone = Instantiate(missaoAtual);
             clone.SetActive(false);
             pedidosFalhos.Add(clone);

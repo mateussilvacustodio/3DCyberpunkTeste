@@ -454,7 +454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1315ab618e83f254f96f743732a09c9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nomeNPC: Doug
+  nomeNPC: Overclock
   forca: 0
   inteligencia: 4
   stealh: 0
@@ -466,7 +466,7 @@ MonoBehaviour:
   - 0
   - 0
   - -5
-  - 100
+  - 300
   painelListaDeMercenarios: {fileID: 0}
   scrollRectMercenario: {fileID: 0}
   scrollbarMercenario: {fileID: 0}
