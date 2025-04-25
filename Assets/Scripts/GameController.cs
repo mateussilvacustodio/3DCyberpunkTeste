@@ -86,8 +86,14 @@ public class GameController : MonoBehaviour
         [SerializeField] AudioSource audioSource;
         //[SerializeField] AudioClip musicaMenu;
         [SerializeField] AudioClip musicaJogo;
+    [Header("Playtest")]
+        bool contarTempo;
+        public float tempoDeJogo;
     void Start()
     {   
+        contarTempo = true;
+        tempoDeJogo = PlayerPrefs.GetFloat("tempoJogo");
+        
         for (int i = 0; i < barrasGangues.Length; i++)
         {
             barrasGangues[i].fillAmount = gangues[i] / 100;
@@ -150,6 +156,13 @@ public class GameController : MonoBehaviour
             notificacao2.SetActive(false);
 
         }
+
+        if(contarTempo) {
+
+            tempoDeJogo += Time.deltaTime;
+
+        }
+        
     }
 
     public void criarPersonagem1() {
@@ -207,7 +220,7 @@ public class GameController : MonoBehaviour
 
         for (int i = 0; i < personagensDiaSeguinte.Count; i++) 
         {
-            print("Adicionado um personagem do dia seguinte");
+            //print("Adicionado um personagem do dia seguinte");
             personagensDoDia.Add(personagensDiaSeguinte[i]); //adiciona na lista de personagens do dia todos os que devem aparecer no dia seguinte
         }
 
@@ -364,6 +377,7 @@ public class GameController : MonoBehaviour
 
                 GameOver = true; //... o jogo acaba...
                 textoFimDeJogo.text += "Você perdeu porque ficou sem " + textoFimDeJogoGangues[i] + "\n";
+                
                 //...e se o jogad ficar sem reputação com mais de uma gangue, mais de uma mensagem será exibida
             }
         }
@@ -382,6 +396,16 @@ public class GameController : MonoBehaviour
 
                 painelFimDeDia.SetActive(false);
                 painelVitoria.SetActive(true);
+                float minuto = 0;
+                while (tempoDeJogo >= 60) {
+                    minuto ++;
+                    tempoDeJogo -= 60;
+                } 
+                print("Sua gameplay durou " + minuto.ToString("00") + ":" + tempoDeJogo.ToString("00") + " minutos");
+                contarTempo = false;
+                tempoDeJogo = 0;
+                PlayerPrefs.SetFloat("tempoJogo", tempoDeJogo);
+                PlayerPrefs.Save();
 
             }           
 
@@ -390,6 +414,16 @@ public class GameController : MonoBehaviour
             float DiaImpresso = dia - 1;
             fimDeJogo.text = "Fim de jogo no dia " + DiaImpresso.ToString();
             painelFimDeJogo.SetActive(true);
+            float minuto = 0;
+            while (tempoDeJogo >= 60) {
+                minuto ++;
+                tempoDeJogo -= 60;
+            } 
+            print("Sua gameplay durou " + minuto.ToString("00") + ":" + tempoDeJogo.ToString("00") + " minutos");
+            contarTempo = false;
+            tempoDeJogo = 0;
+            PlayerPrefs.SetFloat("tempoJogo", tempoDeJogo);
+            PlayerPrefs.Save();
         }
 
     }
@@ -408,6 +442,7 @@ public class GameController : MonoBehaviour
         PreencherListaDoDiaAtual();
         CriarPersonagem2();
         audioSource.clip =  musicaJogo;
+        audioSource.volume = 0.25f;
         audioSource.Play();
         //trocar musica
 

@@ -11,6 +11,7 @@ using Unity.VisualScripting;
 public class Tutorial : MonoBehaviour
 {
 [Header("Controller")]
+    [SerializeField] GameController gameController;
     [SerializeField] List<GameObject> personagensTutorial = new List<GameObject>();
     public GameObject personagemTutorialInstancia;
     [SerializeField] int indexTutorial;
@@ -202,6 +203,8 @@ public class Tutorial : MonoBehaviour
 
     public void FimDoTutorial() {
 
+        PlayerPrefs.SetFloat("tempoJogo", gameController.tempoDeJogo);
+        PlayerPrefs.Save();
         SceneManager.LoadScene(0);
 
     }

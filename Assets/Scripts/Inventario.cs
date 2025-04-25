@@ -127,19 +127,19 @@ public class Inventario : MonoBehaviour
                         //olhar se a quantidade do item supre o pedido do personagem
                         if(itensPossuidos[j].quant >= Mathf.Abs(gameController.personagPraQuemDevo[i].GetComponent<Personagem>().itemDoNPC.quant)) {
 
-                            print("Tenho itens pra pagar a divida");
+                            //print("Tenho itens pra pagar a divida");
                             itensPossuidos[j].quant += gameController.personagPraQuemDevo[i].GetComponent<Personagem>().itemDoNPC.quant;
                             //o valor do item é diminuído no estoque. Como o valor do item no NPC é sempre negativo, coloquei uma soma
 
                         } else {
 
-                            print("Punição pra você");
+                            //print("Punição pra você");
                             for (int k = 0; k < gameController.gangues.Length; k++){
         
                                 if(gameController.personagPraQuemDevo[i].GetComponent<Personagem>().mudadoresSim[k] > 0) {
 
-                                    print(k);
-                                    print(gameController.personagPraQuemDevo[i].GetComponent<Personagem>().mudadoresSim[k] * 2);
+                                    //print(k);
+                                    //print(gameController.personagPraQuemDevo[i].GetComponent<Personagem>().mudadoresSim[k] * 2);
                                     gameController.gangues[k] -= gameController.personagPraQuemDevo[i].GetComponent<Personagem>().mudadoresSim[k] * 2;
 
                                 }

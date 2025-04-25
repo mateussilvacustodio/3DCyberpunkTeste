@@ -7392,6 +7392,7 @@ MonoBehaviour:
   indisponiveis: []
   audioSource: {fileID: 0}
   musicaJogo: {fileID: 0}
+  tempoDeJogo: 0
 --- !u!4 &536325945
 Transform:
   m_ObjectHideFlags: 0
@@ -7419,7 +7420,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 95a4b9e1136c0fa428369668e949f84a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -10559,7 +10560,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 386, y: 200.99988}
+  m_AnchoredPosition: {x: 385.99994, y: 200.99988}
   m_SizeDelta: {x: 673.62, y: 86.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &708806582
@@ -29546,6 +29547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd41ac475fb610c4f9f7a2021ebafff0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameController: {fileID: 536325944}
   personagensTutorial:
   - {fileID: 7606784413904191893, guid: 8c7738b7cd55cb24caf8bde0d47ee149, type: 3}
   - {fileID: 7144555309560106588, guid: 04f4dc89d6fd6e54dbc2f4e9abde6ce2, type: 3}
