@@ -70,8 +70,8 @@ public class GameController : MonoBehaviour
     [Header("Inventario")]
         [SerializeField] Inventario inventario;
         public bool HaEncomenda;
-        public List<Item> itensEncomendados = new List<Item>();
-        public List<GameObject> personagPraQuemDevo = new List<GameObject>();
+        //public List<Item> itensEncomendados = new List<Item>();
+        //public List<GameObject> personagPraQuemDevo = new List<GameObject>();
         public ParametrosEncomendas parametrosEncomendasGC;
     [Header("Mercenarios")]
         [SerializeField] Mercenarios mercenarioScript;
@@ -268,12 +268,13 @@ public class GameController : MonoBehaviour
             item.SetActive(false);
         }
         
+        inventario.PagarDivida();
+        
         if(HaEncomenda) {
 
             inventario.Encomendar();
             
         }
-        inventario.PagarDivida();
 
         for (int i = 0; i < mercenarioScript.pedidosAceitos.Count; i++)
         {
