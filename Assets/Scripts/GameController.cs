@@ -34,8 +34,7 @@ public class GameController : MonoBehaviour
         [SerializeField] List<EventosFimDeDia> ListaDeEventosFimDeDia = new List<EventosFimDeDia>();
         [SerializeField] string[] textoFimDeJogoGangues;
     [Header("Personagens")]
-        public GameObject[] personagens;
-        [SerializeField] List<int> indicesDisponiveis = new List<int>();
+        //[SerializeField] List<int> indicesDisponiveis = new List<int>();
         //public int personagemIndex;
         public GameObject personagemInstancia;
         [SerializeField] List<GameObject> personagensTodos = new List<GameObject>();
@@ -124,11 +123,11 @@ public class GameController : MonoBehaviour
         }
 
 
-        for (int i = 0; i < personagens.Length; i++) {
+        // for (int i = 0; i < personagens.Length; i++) {
 
-            indicesDisponiveis.Add(i);
+        //     indicesDisponiveis.Add(i);
 
-        }
+        // }
 
         //criarPersonagem1();
     }
@@ -163,36 +162,6 @@ public class GameController : MonoBehaviour
 
         }
         
-    }
-
-    public void criarPersonagem1() {
-
-        if(personagemInstancia != null) {
-            
-            Destroy(personagemInstancia);
-
-        }       
-        
-        int aleatoria = Random.Range(0,indicesDisponiveis.Count);
-
-        personagemInstancia = Instantiate(personagens[indicesDisponiveis[aleatoria]]);
-        //personagemIndex = aleatoria;
-        botaoSim.onClick.RemoveAllListeners();
-        botaoNao.onClick.RemoveAllListeners();
-        botaoSim.onClick.AddListener(personagemInstancia.GetComponent<Personagem>().concordo);
-        botaoNao.onClick.AddListener(personagemInstancia.GetComponent<Personagem>().discordo);
-
-        indicesDisponiveis.RemoveAt(aleatoria);
-
-        if(indicesDisponiveis.Count == 0) {
-
-            for (int i = 0; i < personagens.Length; i++) {
-
-            indicesDisponiveis.Add(i);
-            }
-
-        }
-
     }
 
     public void CriarPersonagem2() {
@@ -441,7 +410,7 @@ public class GameController : MonoBehaviour
         botaoConfig.SetActive(false);
         botaoTablet.gameObject.SetActive(true);
         PreencherListaDoDiaAtual();
-        CriarPersonagem2();
+        Invoke("CriarPersonagem2", 0.5f);
         audioSource.clip =  musicaJogo;
         audioSource.volume = 0.25f;
         audioSource.Play();

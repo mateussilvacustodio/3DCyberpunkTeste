@@ -23,23 +23,23 @@ public class Personagem : MonoBehaviour
     public Color corGangue;
     //
     [Header("Recursos")]
-        [Tooltip("NB, RR, GS, SZ, NX, Policia, dinheiro")]
-        public bool[] recursos;
-        [Tooltip("NB, RR, GS, SZ, NX, Policia, dinheiro")]
-        public float[] mudadoresSim;
-        [Tooltip("NB, RR, GS, SZ, NX, Policia, dinheiro")]
-        public float[] mudadoresNao;
-        [SerializeField] Inventario inventarioScript;
-        [SerializeField] Mercenarios mercenarioScript;
+    [Tooltip("NB, RR, GS, SZ, NX, Policia, dinheiro")]
+    public bool[] recursos;
+    [Tooltip("NB, RR, GS, SZ, NX, Policia, dinheiro")]
+    public float[] mudadoresSim;
+    [Tooltip("NB, RR, GS, SZ, NX, Policia, dinheiro")]
+    public float[] mudadoresNao;
+    [SerializeField] Inventario inventarioScript;
+    [SerializeField] Mercenarios mercenarioScript;
     [Header("Movimento")]
     [SerializeField] float velocidadeMover;
     [SerializeField] bool podeMover;
     [SerializeField] Animator personagemAnim;
     //[SerializeField] AnimacaoDosPersonagens animacaoDosPersonagensScript;
     //[SerializeField] float velocidadeRodar;
-    //[SerializeField] bool podeRodar;
-    //[SerializeField] Quaternion rotacaoAlvo;
-    //[SerializeField] bool irEmbora;
+    [SerializeField] bool podeRodar;
+    Quaternion rotacaoAlvo = Quaternion.Euler(0, 180, 0);
+    [SerializeField] bool irEmbora;
     [Header("Botões")]
     public Button botaoSim;
     public Button botaoNao;
@@ -57,23 +57,24 @@ public class Personagem : MonoBehaviour
     {
         botaoSim = GameObject.Find("BotaoSim").GetComponent<Button>();
         botaoNao = GameObject.Find("BotaoNao").GetComponent<Button>();
-        
+
         balaoAnim = GameObject.Find("Balao").GetComponent<Animator>();
         balao = GameObject.Find("Balao").GetComponent<Balao>();
         tutorialScript = GameObject.Find("Balao").GetComponent<Tutorial>();
 
-        gameController = GameObject.Find("GameController").GetComponent<GameController>();     
-        
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
+
         inventarioScript = Resources.FindObjectsOfTypeAll<Inventario>().FirstOrDefault(); //como o inventario começa desativado na cena, essa linha puxa ele mesmo desativado
         contentMercenario = Resources.FindObjectsOfTypeAll<Transform>().FirstOrDefault(t => t.gameObject.CompareTag("ContentMercenario"));
         mercenarioScript = Resources.FindObjectsOfTypeAll<Mercenarios>().FirstOrDefault();
-        
-        if(missaoMercenario != null){
-            
+
+        if (missaoMercenario != null)
+        {
+
             //missaoMercenario.GetComponent<MissoesMercenario>().recursosMercenarios = recursos;
             missaoMercenario.GetComponent<MissoesMercenario>().mudadoresMercenarios = mudadoresSim;
 
-        }        
+        }
 
         botaoFimDoDia = Resources.FindObjectsOfTypeAll<GameObject>().FirstOrDefault(b => b.gameObject.name == "BotaoFimDoDia");
         botaoFimDoDia.SetActive(false);
@@ -82,54 +83,44 @@ public class Personagem : MonoBehaviour
     }
     void Update()
     {
-        if(podeMover) {
+        if (podeMover)
+        {
             transform.position += new Vector3(-10, 0, 0) * Time.deltaTime * velocidadeMover;
         }
 
-        // if(podeRodar) {
+        if (podeRodar)
+        {
 
-        //     transform.rotation = Quaternion.Lerp(transform.rotation, rotacaoAlvo, velocidadeRodar * Time.deltaTime);
+            transform.rotation = Quaternion.Lerp(transform.rotation, rotacaoAlvo, 10f * Time.deltaTime);
 
-        //      if(Quaternion.Angle(transform.rotation, rotacaoAlvo) < 0.1f) {
+            if (Quaternion.Angle(transform.rotation, rotacaoAlvo) < 0.1f)
+            {
 
-        //          transform.rotation = rotacaoAlvo;
-        //          podeRodar = false;
-        //          if(irEmbora) {
+                transform.rotation = rotacaoAlvo;
+                podeRodar = false;
+                if (!irEmbora)
+                {
+                    balaoAnim.SetTrigger("Aparecer");
+                }
 
-        //              podeMover = true;
-                    
-        //          } else if (!irEmbora) {
+            }
 
-        //              //botaoSim.interactable = true;
-        //              //botaoNao.interactable = true;
-        //              //print("setar trigger");
-        //              balaoAnim.SetTrigger("Aparecer");
+        }
 
-        //        }
-
-        //      }
-
-        // }
-        
     }
 
-    // void pararEVirar() {
+    public void concordo()
+    {
 
-    //     podeMover = false;
-    //     rotacaoAlvo = transform.rotation * Quaternion.Euler(0,-90,0);
-    //     podeRodar = true;
-
-    // }
-
-    public void concordo() {
-
-        if(tipoPedido.ToString() == "inventario"){
+        if (tipoPedido.ToString() == "inventario")
+        {
 
             inventarioScript.GanharPerderItens(itemDoNPC);
 
         }
 
-        if(tipoPedido.ToString() == "mercenario") {
+        if (tipoPedido.ToString() == "mercenario")
+        {
 
             //print("Voce aceitou o pedido que requer um mercenario");
             GameObject novaMissao = Instantiate(missaoMercenario, contentMercenario);
@@ -138,23 +129,21 @@ public class Personagem : MonoBehaviour
             gameController.numNotificacao++;
 
         }
-        
+
         for (int i = 0; i < recursos.Length; i++)
         {
-            if(recursos[i]) {
-                
+            if (recursos[i])
+            {
+
                 gameController.gangues[i] += mudadoresSim[i];
 
             }
         }
-        
+
         botaoSim.interactable = false;
         botaoNao.gameObject.SetActive(true); //para o tutorial
         botaoNao.interactable = false;
-        //irEmbora = true;
-        //rotacaoAlvo = transform.rotation * Quaternion.Euler(0,90,0);
-        //podeRodar = true;
-        personagemAnim.SetTrigger("IrEmbora");
+        IrEmbora();
         balao.balaoTexto.text = ""; //--
         balao.nomeTexto.text = ""; //--
         balao.corrotinaDigitar = null;
@@ -162,7 +151,8 @@ public class Personagem : MonoBehaviour
         balao.botaoSimTexto.text = ""; //--
         balao.botaoNaoTexto.text = ""; //--
 
-        if(tutorial) {
+        if (tutorial)
+        {
 
             tutorialScript.nomeBalaoTutorialTexto.text = "";
             tutorialScript.pedidoBalaoTutorialTexto.text = "";
@@ -173,23 +163,22 @@ public class Personagem : MonoBehaviour
 
     }
 
-    public void discordo() {
+    public void discordo()
+    {
 
         for (int i = 0; i < recursos.Length; i++)
         {
-            if(recursos[i]) {
-                
+            if (recursos[i])
+            {
+
                 gameController.gangues[i] += mudadoresNao[i];
 
             }
         }
-        
+
         botaoSim.interactable = false;
         botaoNao.interactable = false;
-        //irEmbora = true;
-        //rotacaoAlvo = transform.rotation * Quaternion.Euler(0,90,0);
-        //podeRodar = true;
-        personagemAnim.SetTrigger("IrEmbora");
+        IrEmbora();
         balao.balaoTexto.text = "";
         balao.nomeTexto.text = "";
         balao.corrotinaDigitar = null;
@@ -197,7 +186,8 @@ public class Personagem : MonoBehaviour
         balao.botaoSimTexto.text = "";
         balao.botaoNaoTexto.text = "";
 
-        if(tutorial) {
+        if (tutorial)
+        {
 
             tutorialScript.nomeBalaoTutorialTexto.text = "";
             tutorialScript.pedidoBalaoTutorialTexto.text = "";
@@ -208,49 +198,49 @@ public class Personagem : MonoBehaviour
 
     }
 
-    public void parar() {
+    public void Parar()
+    {
 
-        podeMover = false;
-
-    }
-
-    public void SetarTriggerBalao() {
-
-        balaoAnim.SetTrigger("Aparecer");
-
-        if(tutorial) {
-
-            //tutorialScript.etapasTutorial++;
-
+        if (!irEmbora)
+        {
+            podeRodar = true;
+            podeMover = false;
+            personagemAnim.SetBool("Andar", false);
         }
 
     }
 
-    public void andar() {
+    public void IrEmbora()
+    {
 
+        irEmbora = true;
+        personagemAnim.SetBool("Andar", true);
+        personagemAnim.SetTrigger("IrEmbora");
         podeMover = true;
+        rotacaoAlvo = Quaternion.Euler(0, 270, 0);
+        podeRodar = true;
 
     }
 
-    void OnTriggerEnter (Collider collider) {
+    void OnTriggerEnter(Collider collider)
+    {
 
-        // if(collider.gameObject.name == "Trigger") {
+        if (collider.gameObject.name == "Trigger2")
+        {
 
-        //     //pararEVirar();
-
-        // } else 
-        
-        if(collider.gameObject.name == "Trigger2") {
-
-            if(!tutorial) {
+            if (!tutorial)
+            {
 
                 gameController.quantidadeDePedidos++;
 
-                if(gameController.quantidadeDePedidos < gameController.quantidadeDePedidosPorDia) {
-                
-                gameController.CriarPersonagem2();
+                if (gameController.quantidadeDePedidos < gameController.quantidadeDePedidosPorDia)
+                {
 
-                } else {
+                    Invoke("ChamarCriarPersonagem2", 0.5f);
+
+                }
+                else
+                {
 
                     gameController.quantidadeDePedidos = 0;
                     //gameController.FimDoDia();
@@ -258,19 +248,25 @@ public class Personagem : MonoBehaviour
 
                 }
 
-            } else {
+            }
+            else
+            {
 
                 //tutorialScript.InstanciarPersonagemTutorial();
                 tutorialScript.etapasTutorial++;
                 tutorialScript.Tutoriall();
 
             }
-            
-            
 
         }
 
     }
 
+    void ChamarCriarPersonagem2()
+    {
+        
+        gameController.CriarPersonagem2();
+
+    }
     
 }

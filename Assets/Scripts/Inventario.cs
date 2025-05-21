@@ -12,6 +12,7 @@ public class Item {
     public string nome;
     public int quant;
     public Sprite sprite;
+    public float[] modificadores;
 
 }
 
@@ -142,7 +143,11 @@ public class Inventario : MonoBehaviour
 
             for (int i = 0; i < itensDevidos.Count; i++)
             {
-                textoDevidosFimDoDia.text += "- " + itensDevidos[i].nome + " - $ 100 \n";
+                for (int j = 0; j < gameController.gangues.Length; j++)
+                {
+                    gameController.gangues[j] += itensDevidos[i].modificadores[j];
+                }
+                textoDevidosFimDoDia.text += "- " + itensDevidos[i].nome + " - $ " + itensDevidos[i].modificadores[6] + "\n";
             }
             
         }

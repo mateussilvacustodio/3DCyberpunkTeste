@@ -459,13 +459,13 @@ MonoBehaviour:
   stealh: 0
   index: 0
   mudadoresMercenarios:
-  - -10
-  - 5
   - 0
   - 0
   - 0
   - 0
-  - 200
+  - 0
+  - 0
+  - 300
   painelListaDeMercenarios: {fileID: 0}
   scrollRectMercenario: {fileID: 0}
   scrollbarMercenario: {fileID: 0}

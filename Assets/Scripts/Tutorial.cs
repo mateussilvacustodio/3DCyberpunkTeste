@@ -30,6 +30,7 @@ public class Tutorial : MonoBehaviour
     [SerializeField] string[] textosOpcao1Tutorial;
     [SerializeField] string[] textosOpcao2Tutorial;
     [SerializeField] string[] textoNomeTutorial;
+    [SerializeField] Color[] corNomeTutorial;
 
 [Header("Botoes")]
     [SerializeField] Button botaoSim;
@@ -139,6 +140,7 @@ public class Tutorial : MonoBehaviour
         //nomeBalaoTutorialTexto.text = personagemTutorialInstancia.GetComponent<Personagem>().nome;
         //nomeBalaoTutorialTexto.color = personagemTutorialInstancia.GetComponent<Personagem>().corGangue;
         nomeBalaoTutorialTexto.text = textoNomeTutorial[etapasTutorial];
+        nomeBalaoTutorialTexto.color = corNomeTutorial[etapasTutorial];
         corrotinaDigitar = StartCoroutine(DigitarTutorial());
 
 
