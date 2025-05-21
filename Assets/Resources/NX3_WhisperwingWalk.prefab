@@ -258,7 +258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c06b9f025e2fea342a8ccd4db9ca2418, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1330755669629619180, guid: c06b9f025e2fea342a8ccd4db9ca2418, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -441,7 +441,13 @@ PrefabInstance:
       addedObject: {fileID: 6384591528670383044}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c06b9f025e2fea342a8ccd4db9ca2418, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6876517909747613542}
+      addedObject: {fileID: 2716239592241431458}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c06b9f025e2fea342a8ccd4db9ca2418, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8543928196929749642}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c06b9f025e2fea342a8ccd4db9ca2418, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9143610306069949898}
   m_SourcePrefab: {fileID: 100100000, guid: c06b9f025e2fea342a8ccd4db9ca2418, type: 3}
 --- !u!4 &2879275604462416774 stripped
 Transform:
@@ -484,7 +490,55 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6876517909747613542
+--- !u!54 &2716239592241431458
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5715823764203370144}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &-8543928196929749642
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5715823764203370144}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.99999964, y: 12.821768, z: 3.6801083}
+  m_Center: {x: 5.4733787e-16, y: 5.9108753, z: -0.06504844}
+--- !u!114 &9143610306069949898
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -493,12 +547,69 @@ MonoBehaviour:
   m_GameObject: {fileID: 5715823764203370144}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 822284c5801046c4183745f0159a0125, type: 3}
+  m_Script: {fileID: 11500000, guid: a91f6131870d88f4d801fb10081d85ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 6384591528670383044}
+  nome: Whisperwing
+  pedido: "Ouvi dizer que voc\xEA tem acesso a hardware raro. Eu estou trabalhando
+    em uma invas\xE3o profunda na rede da pol\xEDcia, mas meus sistemas est\xE3o
+    no limite. Preciso de uma nova placa neural com mais pot\xEAncia e uma boa camada
+    de prote\xE7\xE3o. Voc\xEA consegue isso pra mim?"
+  tipoPedido: 0
+  itemDoNPC:
+    nome: Placa neural
+    quant: -1
+    sprite: {fileID: 21300000, guid: 05e92c33f0f0d9347aebf95b179f2c01, type: 3}
+    modificadores:
+    - 0
+    - 0
+    - 0
+    - 0
+    - -10
+    - 0
+    - -1600
+  missaoMercenario: {fileID: 0}
+  contentMercenario: {fileID: 0}
+  ramifica: 0
+  personagemRamificacao1: {fileID: 0}
+  personagemRamificacao2: {fileID: 0}
+  opcao1: "Posso arranjar o que voc\xEA precisa, mas n\xE3o vou fazer isso por simples
+    cr\xE9ditos. Quero as informa\xE7\xF5es valiosas que voc\xEA conseguir sobre
+    a pol\xEDcia."
+  opcao2: "Voc\xEA quer jogar com os grandes, mas n\xE3o parece preparada pra pagar
+    o pre\xE7o. Hardware assim n\xE3o \xE9 barato, e eu n\xE3o vou arriscar minha
+    reputa\xE7\xE3o por algu\xE9m que pode n\xE3o sobreviver a essa invas\xE3o."
+  corGangue: {r: 0, g: 0.9882353, b: 1, a: 1}
+  recursos: 00000000010101
+  mudadoresSim:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 5
+  - -10
+  - 800
+  mudadoresNao:
+  - 0
+  - 0
+  - 0
+  - 0
+  - -5
+  - 0
+  - 0
+  inventarioScript: {fileID: 0}
+  mercenarioScript: {fileID: 0}
+  velocidadeMover: 0.5
   podeMover: 1
+  personagemAnim: {fileID: 6384591528670383044}
   podeRodar: 0
   irEmbora: 0
-  teste1: 0
-  teste2: 0
+  botaoSim: {fileID: 0}
+  botaoNao: {fileID: 0}
+  botaoFimDoDia: {fileID: 0}
+  balaoAnim: {fileID: 0}
+  balao: {fileID: 0}
+  gameController: {fileID: 0}
+  tutorial: 0
+  tutorialScript: {fileID: 0}
+  teste: 0

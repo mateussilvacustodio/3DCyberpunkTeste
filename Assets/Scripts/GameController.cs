@@ -40,7 +40,7 @@ public class GameController : MonoBehaviour
         [SerializeField] List<GameObject> personagensTodos = new List<GameObject>();
         [SerializeField] List<GameObject> personagensDisponiveis = new List<GameObject>();
         [SerializeField] List<GameObject> personagensDoDia = new List<GameObject>();
-        [SerializeField] List<GameObject> personagensDiaSeguinte = new List<GameObject>();
+        public List<GameObject> personagensDiaSeguinte = new List<GameObject>();
     [Header("Botões")]
         [SerializeField] Button botaoSim;
         [SerializeField] Button botaoNao;
@@ -338,6 +338,7 @@ public class GameController : MonoBehaviour
     public void ProximoDia() {        
         
         inventario.textoEncomendaFimDoDia.text = "";
+        inventario.textoEntreguesFimDoDia.text = "";
         inventario.textoDevidosFimDoDia.text = "";
         mercenarioScript.textoFimDoDia.text = "";
         

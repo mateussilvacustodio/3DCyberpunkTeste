@@ -7160,8 +7160,29 @@ MonoBehaviour:
   - dinheiro
   personagemInstancia: {fileID: 0}
   personagensTodos:
+  - {fileID: 7379131674327880369, guid: 4fb56cfd4fee70b489c3712f256ffb56, type: 3}
+  - {fileID: 6824677255523505205, guid: ffacbf1d3663206418eb515a9f602740, type: 3}
+  - {fileID: 4158530545513783480, guid: 542d8ab6811cad04ab98db4f3784768f, type: 3}
+  - {fileID: 6468429451074748459, guid: 4e157a4a448e30f4fa3d49ff2fa8b6e0, type: 3}
+  - {fileID: 9190884024286561442, guid: 46dba5ab0eb36c04bb322a66f6e2df93, type: 3}
+  - {fileID: 1150514934034309058, guid: 067e53d1b197a034b9a5861e800e7e1e, type: 3}
+  - {fileID: 1852166968401586020, guid: eac439e509a9d6b44bd5905fc98c77cf, type: 3}
+  - {fileID: 2410040300806396098, guid: f9d4b85f7e00e9d46b17603e56bad9c2, type: 3}
+  - {fileID: 6103003969747644522, guid: f4f7b9f2ffbc59f41be9aa45041d51b5, type: 3}
+  - {fileID: 1965752859505803604, guid: b055c5019a5ecc44ab1ef78f7ce6118c, type: 3}
+  - {fileID: 6987525970057259260, guid: 1d538e927874f2540a6ed32da1d03849, type: 3}
+  - {fileID: 5715823764203370144, guid: b1b63865e55ed644597ebef0eb6d5058, type: 3}
+  - {fileID: 2383926318808390173, guid: 98b07244aeb023e44a2eba29d407cedb, type: 3}
+  - {fileID: 8248053595075533461, guid: abb1ddeb69c5c4f4daef4a9e91da7968, type: 3}
+  - {fileID: 4210381985710782039, guid: d381711200378434e91f8520be61ff85, type: 3}
+  - {fileID: 6061312562673200063, guid: 09b62aafa8eb7a44fbeef6f7c5014c87, type: 3}
+  - {fileID: 1100480386627817037, guid: c8fe64320602dc04a8e0ddcb80c477e2, type: 3}
   - {fileID: 1173030161217437679, guid: 45bd5f260e7877e48981dcbbe528e980, type: 3}
   - {fileID: 6929250477996504409, guid: f052968d79fd37341b13c9a9390a165a, type: 3}
+  - {fileID: 2670993026357077192, guid: 296bacb2689cfd84eb53285db81ead84, type: 3}
+  - {fileID: 8854510694012900019, guid: 86fc6f80b5bc9e14bb22e8bdc4afb6ff, type: 3}
+  - {fileID: 5068679200740828869, guid: c2f8cb094e4378144a064cea15b13283, type: 3}
+  - {fileID: 5291320436090925475, guid: b61768f46fb978f4882ea055f0fed6c5, type: 3}
   personagensDisponiveis: []
   personagensDoDia: []
   personagensDiaSeguinte: []
@@ -7175,7 +7196,7 @@ MonoBehaviour:
   dia: 1
   diaMax: 6
   quantidadeDePedidos: 0
-  quantidadeDePedidosPorDia: 2
+  quantidadeDePedidosPorDia: 3
   painelFimDeDia: {fileID: 2069204536}
   textoFimDoDia: {fileID: 746338583}
   textoEventoFimDoDia: {fileID: 952241657}
@@ -7205,7 +7226,7 @@ MonoBehaviour:
   - {fileID: 778044759}
   - {fileID: 1315345529}
   audioSource: {fileID: 536325946}
-  musicaJogo: {fileID: 8300000, guid: 95a4b9e1136c0fa428369668e949f84a, type: 3}
+  musicaJogo: {fileID: 8300000, guid: ec2ca62a3d32cc0498b7aaae828da441, type: 3}
   tempoDeJogo: 0
 --- !u!4 &536325945
 Transform:
@@ -9119,9 +9140,9 @@ MonoBehaviour:
     quant: 0
     sprite: {fileID: 21300000, guid: 9082067575d36dc43b3eeeaee2f6a7ee, type: 3}
     modificadores: []
-  - nome: Equip Hacker
+  - nome: Placa neural
     quant: 0
-    sprite: {fileID: 21300000, guid: e7ac1b35d882b7f48918cf5fda4266b8, type: 3}
+    sprite: {fileID: 21300000, guid: 05e92c33f0f0d9347aebf95b179f2c01, type: 3}
     modificadores: []
   - nome: Robo
     quant: 0
@@ -19297,11 +19318,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parametrosItem:
-    nome: Equip Hacker
-    quant: 1
-    sprite: {fileID: 21300000, guid: e7ac1b35d882b7f48918cf5fda4266b8, type: 3}
+    nome: Placa neural
+    quant: 0
+    sprite: {fileID: 21300000, guid: 05e92c33f0f0d9347aebf95b179f2c01, type: 3}
     modificadores: []
-  custo: 50
+  custo: 350
   textoNoBotao: {fileID: 1152091684}
 --- !u!114 &1268160036
 MonoBehaviour:

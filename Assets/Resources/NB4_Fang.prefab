@@ -1,0 +1,231 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6373525959984172347
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 9059af39a0a9e1d4aab6e214c2a06f4d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9059af39a0a9e1d4aab6e214c2a06f4d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9059af39a0a9e1d4aab6e214c2a06f4d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9059af39a0a9e1d4aab6e214c2a06f4d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.05
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9059af39a0a9e1d4aab6e214c2a06f4d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9059af39a0a9e1d4aab6e214c2a06f4d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 103.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9059af39a0a9e1d4aab6e214c2a06f4d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9059af39a0a9e1d4aab6e214c2a06f4d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9059af39a0a9e1d4aab6e214c2a06f4d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9059af39a0a9e1d4aab6e214c2a06f4d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9059af39a0a9e1d4aab6e214c2a06f4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9059af39a0a9e1d4aab6e214c2a06f4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9059af39a0a9e1d4aab6e214c2a06f4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9059af39a0a9e1d4aab6e214c2a06f4d, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9059af39a0a9e1d4aab6e214c2a06f4d, type: 3}
+      propertyPath: m_Name
+      value: NB4_Fang
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9059af39a0a9e1d4aab6e214c2a06f4d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9059af39a0a9e1d4aab6e214c2a06f4d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8604424617127913121}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9059af39a0a9e1d4aab6e214c2a06f4d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1710107583975421449}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9059af39a0a9e1d4aab6e214c2a06f4d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2472183662683219160}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9059af39a0a9e1d4aab6e214c2a06f4d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -4988622931600010170}
+  m_SourcePrefab: {fileID: 100100000, guid: 9059af39a0a9e1d4aab6e214c2a06f4d, type: 3}
+--- !u!1 &6103003969747644522 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9059af39a0a9e1d4aab6e214c2a06f4d, type: 3}
+  m_PrefabInstance: {fileID: 6373525959984172347}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8604424617127913121
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6103003969747644522}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1281191f6dc3eea458347f4f5dd632ba, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!54 &1710107583975421449
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6103003969747644522}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &2472183662683219160
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6103003969747644522}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9999998, y: 20.2134, z: 6.666293}
+  m_Center: {x: 8.903163e-16, y: 9.606697, z: 0.6340328}
+--- !u!114 &-4988622931600010170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6103003969747644522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a91f6131870d88f4d801fb10081d85ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nome: Fang
+  pedido: "James, precisamos que voc\xEA atrase uma entrega dos Ghost Circuit para
+    a Redline Rebels. S\xF3 o suficiente pra ganhar vantagem. Os Rebels v\xE3o culpar
+    os Circuit e a gente se mant\xE9m fora do radar. Pago bem se conseguir."
+  tipoPedido: 1
+  itemDoNPC:
+    nome: 
+    quant: 0
+    sprite: {fileID: 0}
+    modificadores: []
+  missaoMercenario: {fileID: 6907679401614571848, guid: 4b28fcba5ae0924469c97b5b860fcb62, type: 3}
+  contentMercenario: {fileID: 0}
+  ramifica: 0
+  personagemRamificacao1: {fileID: 0}
+  personagemRamificacao2: {fileID: 0}
+  opcao1: "Se o pagamento t\xE1 garantido, eu arranjo um mercen\xE1rio pro trabalho.
+    Mas depois, vou precisar ficar fora do radar por um tempo. Esse tipo de servi\xE7o
+    sempre volta pra cobrar."
+  opcao2: Roubar drogas no meio da troca deles? Muito risco e pouca vantagem. Encontrem
+    outra forma de chegar neles. Dessa vez, eu passo.
+  corGangue: {r: 0.9607843, g: 0.8156863, b: 0, a: 1}
+  recursos: 01010100000001
+  mudadoresSim:
+  - 15
+  - -10
+  - -20
+  - 0
+  - 0
+  - 0
+  - 500
+  mudadoresNao:
+  - -20
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  inventarioScript: {fileID: 0}
+  mercenarioScript: {fileID: 0}
+  velocidadeMover: 0.5
+  podeMover: 1
+  personagemAnim: {fileID: 8604424617127913121}
+  podeRodar: 0
+  irEmbora: 0
+  botaoSim: {fileID: 0}
+  botaoNao: {fileID: 0}
+  botaoFimDoDia: {fileID: 0}
+  balaoAnim: {fileID: 0}
+  balao: {fileID: 0}
+  gameController: {fileID: 0}
+  tutorial: 0
+  tutorialScript: {fileID: 0}
+  teste: 0

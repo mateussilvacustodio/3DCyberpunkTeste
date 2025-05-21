@@ -18,6 +18,9 @@ public class Personagem : MonoBehaviour
     public Item itemDoNPC;
     public GameObject missaoMercenario;
     public Transform contentMercenario;
+    [SerializeField] bool ramifica;
+    [SerializeField] GameObject personagemRamificacao1;
+    [SerializeField] GameObject personagemRamificacao2;
     public string opcao1;
     public string opcao2;
     public Color corGangue;
@@ -112,6 +115,13 @@ public class Personagem : MonoBehaviour
     public void concordo()
     {
 
+        if (ramifica)
+        {
+
+            gameController.personagensDiaSeguinte.Add(personagemRamificacao1);
+
+        }
+
         if (tipoPedido.ToString() == "inventario")
         {
 
@@ -165,6 +175,13 @@ public class Personagem : MonoBehaviour
 
     public void discordo()
     {
+
+        if (ramifica)
+        {
+
+            gameController.personagensDiaSeguinte.Add(personagemRamificacao2);
+
+        }
 
         for (int i = 0; i < recursos.Length; i++)
         {
