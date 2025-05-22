@@ -10,21 +10,26 @@ public class ParametrosEncomendas : MonoBehaviour
     public float custo;
 
     [Header("Textos")]
-    [SerializeField] TMP_Text textoNoBotao;
+    [SerializeField] TMP_Text Preco;
 
-    public void mudarTexto() {
-        
-        textoNoBotao.text = "$ " + custo.ToString();
-        textoNoBotao.color = new Color32(255, 220, 0, 255);
-
+    void Update()
+    {
+        Preco.text = "$ " + custo.ToString();
     }
 
-    public void voltarTexto() {
+    // public void mudarTexto() {
 
-        textoNoBotao.text = "Encomendar";
-        textoNoBotao.color = new Color32(50, 50, 50, 255);
+    //     textoNoBotao.text = "$ " + custo.ToString();
+    //     textoNoBotao.color = new Color32(255, 220, 0, 255);
+
+    // }
+
+    // public void voltarTexto() {
+
+    //     textoNoBotao.text = "Encomendar";
+    //     textoNoBotao.color = new Color32(50, 50, 50, 255);
 
 
-    }
+    // }
 
 }

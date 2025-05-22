@@ -27,6 +27,7 @@ public class Inventario : MonoBehaviour
     public TMP_Text textoEncomendaFimDoDia;
     public TMP_Text textoEntreguesFimDoDia;
     public TMP_Text textoDevidosFimDoDia;
+    public GameObject notificacaoInvent;
 
     [Header("GameController")]
     [SerializeField] GameController gameController;
@@ -108,8 +109,9 @@ public class Inventario : MonoBehaviour
 
         for (int i = 0; i < itensRecebidos.Count; i++)
         {
-            GanharPerderItens(itensRecebidos[i]); 
-            textoEncomendaFimDoDia.text += "- " + itensRecebidos[i].nome + "\n";   
+            GanharPerderItens(itensRecebidos[i]);
+            textoEncomendaFimDoDia.text += "- " + itensRecebidos[i].nome + "\n";
+            notificacaoInvent.SetActive(true);
         }
         
         itensRecebidos.Clear(); //limpa todos os itens da lista
@@ -148,6 +150,7 @@ public class Inventario : MonoBehaviour
                     gameController.gangues[j] += itensDevidos[i].modificadores[j];
                 }
                 textoDevidosFimDoDia.text += "- " + itensDevidos[i].nome + " - $ " + itensDevidos[i].modificadores[6] + "\n";
+                notificacaoInvent.SetActive(true);
             }
             
         }
@@ -159,6 +162,7 @@ public class Inventario : MonoBehaviour
             for (int i = 0; i < itensEntregues.Count; i++)
             {
                 textoEntreguesFimDoDia.text += "- " + itensEntregues[i].nome + "\n";
+                notificacaoInvent.SetActive(true);
             }
 
         }

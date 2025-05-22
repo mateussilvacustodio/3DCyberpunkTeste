@@ -114,19 +114,23 @@ public class Tablet : MonoBehaviour
 
     }
 
-    public void AbrirInventarioFimDoDia() {
+    public void AbrirInventarioFimDoDia()
+    {
 
         reputacaoFimDoDia.SetActive(false);
         inventarioFimDoDia.SetActive(true);
         mercenariosFimDoDia.SetActive(false);
+        gameController.inventario.notificacaoInvent.SetActive(false);
 
     }
 
-    public void AbrirMercenariosFimDoDia() {
+    public void AbrirMercenariosFimDoDia()
+    {
 
         reputacaoFimDoDia.SetActive(false);
         inventarioFimDoDia.SetActive(false);
         mercenariosFimDoDia.SetActive(true);
+        gameController.mercenarioScript.notificacaoMerc.SetActive(false);
 
     }
 

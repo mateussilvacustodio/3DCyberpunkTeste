@@ -27,6 +27,7 @@ public class Mercenarios : MonoBehaviour
     [SerializeField] GameObject scrollbarMercenario;
 
     public TMP_Text textoFimDoDia;
+    public GameObject notificacaoMerc;
 
     void Start()
     {
@@ -44,17 +45,21 @@ public class Mercenarios : MonoBehaviour
         inteligenciaMercenarioAtual = pInteligenciaMercenarioAtual;
         stealhMercenarioAtual = pStealthMercenarioAtual;
         nomeMercenarioAtual = pNomeMercenarioAtual;
-        
-        if(forcaMercenarioAtual >= forcaNecessariaMissaoAtual && inteligenciaMercenarioAtual >= inteligenciaNecessariaMissaoAtual && stealhMercenarioAtual >= stealhNecessarioMissaoAtual)
+
+        if (forcaMercenarioAtual >= forcaNecessariaMissaoAtual && inteligenciaMercenarioAtual >= inteligenciaNecessariaMissaoAtual && stealhMercenarioAtual >= stealhNecessarioMissaoAtual)
         {
-            textoFimDoDia.text += "- O mercenario " + nomeMercenarioAtual + " cumpriu a missão \n"; 
+            textoFimDoDia.text += "- O mercenario " + nomeMercenarioAtual + " cumpriu a missão \n";
+            notificacaoMerc.SetActive(true);
 
-        } else {
+        }
+        else
+        {
 
-            textoFimDoDia.text += "- O mercenario " + nomeMercenarioAtual + " não cumpriu a missão - $ " + (missaoAtual.GetComponent<MissoesMercenario>().mudadoresMercenarios[6]*2).ToString() + "\n";
+            textoFimDoDia.text += "- O mercenario " + nomeMercenarioAtual + " não cumpriu a missão - $ " + (missaoAtual.GetComponent<MissoesMercenario>().mudadoresMercenarios[6] * 2).ToString() + "\n";
             GameObject clone = Instantiate(missaoAtual);
             clone.SetActive(false);
             pedidosFalhos.Add(clone);
+            notificacaoMerc.SetActive(true);
 
         }
         

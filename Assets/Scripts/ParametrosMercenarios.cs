@@ -27,16 +27,23 @@ public class ParametrosMercenarios : MonoBehaviour
     [Header("SetasTutorial")]
     [SerializeField] GameObject seta6;
 
-    public void EscolherMercenario() {
+    void Update()
+    {
+        textoPrecoMercenario.text = "$ " + precoMercenario.ToString();
+    }
+
+    public void EscolherMercenario()
+    {
 
         mercenarioScript.destruirMissaoAtual(forcaMercenario, inteligenciaMercenario, stealhMercenario, nomeMercenario);
         gameController.gangues[6] -= precoMercenario;
 
-        textoPrecoMercenario.text = "Escolher";
-        textoPrecoMercenario.color = new Color32(50, 50, 50, 255);
+        //textoPrecoMercenario.text = "Escolher";
+        //textoPrecoMercenario.color = new Color32(50, 50, 50, 255);
         indisponivel.SetActive(true);
 
-        if(seta6 != null) {
+        if (seta6 != null)
+        {
 
             seta6.SetActive(false);
 
@@ -48,18 +55,18 @@ public class ParametrosMercenarios : MonoBehaviour
 
     }
 
-    public void mudarTexto() {
+    // public void mudarTexto() {
 
-        textoPrecoMercenario.text = "$ " + precoMercenario.ToString();
-        textoPrecoMercenario.color = new Color32(255, 0, 0, 255);
+    //     textoPrecoMercenario.text = "$ " + precoMercenario.ToString();
+    //     textoPrecoMercenario.color = new Color32(255, 0, 0, 255);
 
-    }
+    // }
 
-    public void voltarTexto() {
+    // public void voltarTexto() {
 
-        textoPrecoMercenario.text = "Escolher";
-        textoPrecoMercenario.color = new Color32(50, 50, 50, 255);
+    //     textoPrecoMercenario.text = "Escolher";
+    //     textoPrecoMercenario.color = new Color32(50, 50, 50, 255);
 
-    }
+    // }
 
 }

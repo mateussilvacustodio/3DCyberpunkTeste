@@ -67,13 +67,13 @@ public class GameController : MonoBehaviour
         public float R;
         public float G;
     [Header("Inventario")]
-        [SerializeField] Inventario inventario;
+        public Inventario inventario;
         public bool HaEncomenda;
         //public List<Item> itensEncomendados = new List<Item>();
         //public List<GameObject> personagPraQuemDevo = new List<GameObject>();
         public ParametrosEncomendas parametrosEncomendasGC;
     [Header("Mercenarios")]
-        [SerializeField] Mercenarios mercenarioScript;
+        public Mercenarios mercenarioScript;
         [SerializeField] bool HaMissoesDeMercenario;
         [SerializeField] GameObject notificacao1;
         [SerializeField] Text notificacao1Text;
@@ -255,6 +255,7 @@ public class GameController : MonoBehaviour
                 }
 
                 mercenarioScript.textoFimDoDia.text += "A missão de " + mercenarioScript.pedidosAceitos[i].GetComponent<MissoesMercenario>().nomeNPC + " não foi executada - $ " + (mercenarioScript.pedidosAceitos[i].GetComponent<MissoesMercenario>().mudadoresMercenarios[6] * 2).ToString() + "\n";
+                mercenarioScript.notificacaoMerc.SetActive(true);
                 Destroy(mercenarioScript.pedidosAceitos[i]);
                 
             }
@@ -341,14 +342,17 @@ public class GameController : MonoBehaviour
         inventario.textoEntreguesFimDoDia.text = "";
         inventario.textoDevidosFimDoDia.text = "";
         mercenarioScript.textoFimDoDia.text = "";
+        inventario.notificacaoInvent.SetActive(false);
+        mercenarioScript.notificacaoMerc.SetActive(false);
         
         for (int i = 0; i < gangues.Length; i++) //confere o valor de todas as gangues do jogo (incluindo o dinheiro)
         {
-            if(gangues[i] <= 0) { //se alguma for menor que zero...
+            if (gangues[i] <= 0)
+            { //se alguma for menor que zero...
 
                 GameOver = true; //... o jogo acaba...
                 textoFimDeJogo.text += "Você perdeu porque ficou sem " + textoFimDeJogoGangues[i] + "\n";
-                
+
                 //...e se o jogad ficar sem reputação com mais de uma gangue, mais de uma mensagem será exibida
             }
         }
