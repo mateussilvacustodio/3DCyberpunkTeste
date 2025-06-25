@@ -20,79 +20,85 @@ public class EventosFimDeDia {
 public class GameController : MonoBehaviour
 {
     [Header("Recursos")]
-        [Tooltip("NB, RR, GS, SZ, NX, Policia, dinheiro")]
-        public float[] gangues;
-        [SerializeField] Image[] barrasGangues;
-        [SerializeField] Image[] barrasGangues2;
-        [SerializeField] Text[] barrasGanguesPCT;
-        [SerializeField] Text[] barrasGanguesPCT2;
-        [SerializeField] Text dinheiroText;
-        [SerializeField] Text dinheiroText2;
-        [SerializeField] Text dinheiroText3;
-        [SerializeField] Text dinheiroText4;
-        [SerializeField] Text dinheiroTextFimDoDia;
-        [SerializeField] List<EventosFimDeDia> ListaDeEventosFimDeDia = new List<EventosFimDeDia>();
-        [SerializeField] string[] textoFimDeJogoGangues;
+    [Tooltip("NB, RR, GS, SZ, NX, Policia, dinheiro")]
+    public float[] gangues;
+    [SerializeField] Image[] barrasGangues;
+    [SerializeField] Image[] barrasGangues2;
+    [SerializeField] Text[] barrasGanguesPCT;
+    [SerializeField] Text[] barrasGanguesPCT2;
+    [SerializeField] Text dinheiroText;
+    [SerializeField] Text dinheiroText2;
+    [SerializeField] Text dinheiroText3;
+    [SerializeField] Text dinheiroText4;
+    [SerializeField] Text dinheiroTextFimDoDia;
+    [SerializeField] List<EventosFimDeDia> ListaDeEventosFimDeDia = new List<EventosFimDeDia>();
+    [SerializeField] string[] textoFimDeJogoGangues;
     [Header("Personagens")]
-        //[SerializeField] List<int> indicesDisponiveis = new List<int>();
-        //public int personagemIndex;
-        public GameObject personagemInstancia;
-        [SerializeField] List<GameObject> personagensTodos = new List<GameObject>();
-        [SerializeField] List<GameObject> personagensDisponiveis = new List<GameObject>();
-        [SerializeField] List<GameObject> personagensDoDia = new List<GameObject>();
-        public List<GameObject> personagensDiaSeguinte = new List<GameObject>();
+    //[SerializeField] List<int> indicesDisponiveis = new List<int>();
+    //public int personagemIndex;
+    public GameObject personagemInstancia;
+    [SerializeField] List<GameObject> personagensTodos = new List<GameObject>();
+    [SerializeField] List<GameObject> personagensDisponiveis = new List<GameObject>();
+    [SerializeField] List<GameObject> personagensDoDia = new List<GameObject>();
+    public List<GameObject> personagensDiaSeguinte = new List<GameObject>();
     [Header("Botões")]
-        [SerializeField] Button botaoSim;
-        [SerializeField] Button botaoNao;
-        public Button botaoTablet;
-        [SerializeField] Tablet tabletScript;
-        [SerializeField] GameObject botaoIniciar;
-        [SerializeField] GameObject botaoTutorial;
-        [SerializeField] GameObject botaoConfig;
+    [SerializeField] Button botaoSim;
+    [SerializeField] Button botaoNao;
+    public Button botaoTablet;
+    [SerializeField] Tablet tabletScript;
+    [SerializeField] GameObject botaoIniciar;
+    [SerializeField] GameObject botaoTutorial;
+    [SerializeField] GameObject botaoConfig;
+    public TVEffect tVEffectScript;
+    [SerializeField] GameObject botaoFimDoDia;
     [Header("Pedidos")]
-        public float dia;
-        [SerializeField] float diaMax;
-        public float quantidadeDePedidos;
-        public float quantidadeDePedidosPorDia; 
-        [SerializeField] GameObject painelFimDeDia;
-        [SerializeField] Text textoFimDoDia;
-        [SerializeField] Text textoEventoFimDoDia;
-        [SerializeField] GameObject painelFimDeJogo;
-        [SerializeField] Text fimDeJogo;
-        [SerializeField] Text textoFimDeJogo;
-        [SerializeField] bool GameOver;
-        [SerializeField] GameObject painelVitoria;
+    public float dia;
+    [SerializeField] float diaMax;
+    public float quantidadeDePedidos;
+    public float quantidadeDePedidosPorDia;
+    [SerializeField] GameObject painelFimDeDia;
+    [SerializeField] Text textoFimDoDia;
+    [SerializeField] Text textoEventoFimDoDia;
+    [SerializeField] GameObject painelFimDeJogo;
+    [SerializeField] Text fimDeJogo;
+    [SerializeField] Text textoFimDeJogo;
+    [SerializeField] bool GameOver;
+    [SerializeField] GameObject painelVitoria;
     [Header("Cores")]
-        public Color corTeste;
-        public float R;
-        public float G;
+    public Color corTeste;
+    public float R;
+    public float G;
     [Header("Inventario")]
-        public Inventario inventario;
-        public bool HaEncomenda;
-        //public List<Item> itensEncomendados = new List<Item>();
-        //public List<GameObject> personagPraQuemDevo = new List<GameObject>();
-        public ParametrosEncomendas parametrosEncomendasGC;
+    public Inventario inventario;
+    public bool HaEncomenda;
+    //public List<Item> itensEncomendados = new List<Item>();
+    //public List<GameObject> personagPraQuemDevo = new List<GameObject>();
+    public ParametrosEncomendas parametrosEncomendasGC;
     [Header("Mercenarios")]
-        public Mercenarios mercenarioScript;
-        [SerializeField] bool HaMissoesDeMercenario;
-        [SerializeField] GameObject notificacao1;
-        [SerializeField] Text notificacao1Text;
-        [SerializeField] GameObject notificacao2;
-        [SerializeField] Text notificacao2Text;
-        public int numNotificacao;
-        [SerializeField] GameObject[] indisponiveis;
+    public Mercenarios mercenarioScript;
+    [SerializeField] bool HaMissoesDeMercenario;
+    [SerializeField] GameObject notificacao1;
+    [SerializeField] Text notificacao1Text;
+    [SerializeField] GameObject notificacao2;
+    [SerializeField] Text notificacao2Text;
+    public int numNotificacao;
+    [SerializeField] GameObject[] indisponiveis;
     [Header("Musicas")]
-        [SerializeField] AudioSource audioSource;
-        //[SerializeField] AudioClip musicaMenu;
-        [SerializeField] AudioClip musicaJogo;
+    [SerializeField] AudioSource audioSource;
+    //[SerializeField] AudioClip musicaMenu;
+    [SerializeField] AudioClip musicaJogo;
     [Header("Playtest")]
-        bool contarTempo;
-        public float tempoDeJogo;
+    bool contarTempo;
+    public float tempoDeJogo;
+    //[Header("Carros")]
+    //[SerializeField] GameObject[] carros;
+    //[SerializeField] float tempoSpawnCarros;
+    //int qualCarro = 1;
     void Start()
-    {   
+    {
         contarTempo = true;
         tempoDeJogo = PlayerPrefs.GetFloat("tempoJogo");
-        
+
         for (int i = 0; i < barrasGangues.Length; i++)
         {
             barrasGangues[i].fillAmount = gangues[i] / 100;
@@ -100,9 +106,9 @@ public class GameController : MonoBehaviour
         for (int i = 0; i < barrasGangues.Length; i++)
         {
             R = (100 - gangues[i]) / 50;
-            G = gangues[i] /  50;
+            G = gangues[i] / 50;
             corTeste = new Color(R, G, 0f, 1f);
-            barrasGangues[i].color = corTeste;    
+            barrasGangues[i].color = corTeste;
         }
         for (int i = 0; i < barrasGangues.Length; i++)
         {
@@ -140,7 +146,8 @@ public class GameController : MonoBehaviour
         dinheiroText4.text = dinheiroText.text;
         dinheiroTextFimDoDia.text = "Dinheiro atual: " + dinheiroText.text;
 
-        if(numNotificacao > 0) {
+        if (numNotificacao > 0)
+        {
 
             notificacao1.SetActive(true);
             notificacao2.SetActive(true);
@@ -149,30 +156,34 @@ public class GameController : MonoBehaviour
 
         }
 
-        if(numNotificacao <= 0) {
+        if (numNotificacao <= 0)
+        {
 
             notificacao1.SetActive(false);
             notificacao2.SetActive(false);
 
         }
 
-        if(contarTempo) {
+        if (contarTempo)
+        {
 
             tempoDeJogo += Time.deltaTime;
 
         }
-        
+
     }
 
-    public void CriarPersonagem2() {
+    public void CriarPersonagem2()
+    {
 
-        if(personagemInstancia != null) {
-            
+        if (personagemInstancia != null)
+        {
+
             Destroy(personagemInstancia);
 
         }
-        
-        int aleatoria = Random.Range(0,personagensDoDia.Count);
+
+        int aleatoria = Random.Range(0, personagensDoDia.Count);
 
         personagemInstancia = Instantiate(personagensDoDia[aleatoria]);
         //personagemIndex = aleatoria;
@@ -185,9 +196,10 @@ public class GameController : MonoBehaviour
 
     }
 
-    public void PreencherListaDoDiaAtual() {
+    public void PreencherListaDoDiaAtual()
+    {
 
-        for (int i = 0; i < personagensDiaSeguinte.Count; i++) 
+        for (int i = 0; i < personagensDiaSeguinte.Count; i++)
         {
             //print("Adicionado um personagem do dia seguinte");
             personagensDoDia.Add(personagensDiaSeguinte[i]); //adiciona na lista de personagens do dia todos os que devem aparecer no dia seguinte
@@ -195,26 +207,29 @@ public class GameController : MonoBehaviour
 
         personagensDiaSeguinte.Clear(); //limpa a lista de personagens do dia seguinte
 
-        if(personagensDoDia.Count < quantidadeDePedidosPorDia) {//se a lista de personagens para o dia não for totalmente preenchida...
+        if (personagensDoDia.Count < quantidadeDePedidosPorDia)
+        {//se a lista de personagens para o dia não for totalmente preenchida...
 
             float diferenca = quantidadeDePedidosPorDia - personagensDoDia.Count;
             for (int i = 0; i < diferenca; i++)
             {
-                if(personagensDisponiveis.Count == 0) {
+                if (personagensDisponiveis.Count == 0)
+                {
 
                     for (int j = 0; j < personagensTodos.Count; j++)
                     {
-                    personagensDisponiveis.Add(personagensTodos[j]);
+                        personagensDisponiveis.Add(personagensTodos[j]);
                     }
 
                 }
 
-                int aleatoria = Random.Range(0,personagensDisponiveis.Count);
+                int aleatoria = Random.Range(0, personagensDisponiveis.Count);
                 bool jaExiste = personagensDoDia.Any(p => p.name == personagensDisponiveis[aleatoria].name);
 
-                while (jaExiste) {
+                while (jaExiste)
+                {
 
-                    aleatoria = Random.Range(0,personagensDisponiveis.Count);
+                    aleatoria = Random.Range(0, personagensDisponiveis.Count);
                     jaExiste = personagensDoDia.Any(p => p.name == personagensDisponiveis[aleatoria].name);
 
                 }
@@ -228,7 +243,8 @@ public class GameController : MonoBehaviour
 
     }
 
-    public void FimDoDia() {
+    public void FimDoDia()
+    {
 
         numNotificacao = 0;
 
@@ -236,18 +252,20 @@ public class GameController : MonoBehaviour
         {
             item.SetActive(false);
         }
-        
+
         inventario.PagarDivida();
-        
-        if(HaEncomenda) {
+
+        if (HaEncomenda)
+        {
 
             inventario.Encomendar();
-            
+
         }
 
         for (int i = 0; i < mercenarioScript.pedidosAceitos.Count; i++)
         {
-            if(mercenarioScript.pedidosAceitos[i] != null) {
+            if (mercenarioScript.pedidosAceitos[i] != null)
+            {
 
                 for (int j = 0; j < gangues.Length; j++)
                 {
@@ -257,7 +275,7 @@ public class GameController : MonoBehaviour
                 mercenarioScript.textoFimDoDia.text += "A missão de " + mercenarioScript.pedidosAceitos[i].GetComponent<MissoesMercenario>().nomeNPC + " não foi executada - $ " + (mercenarioScript.pedidosAceitos[i].GetComponent<MissoesMercenario>().mudadoresMercenarios[6] * 2).ToString() + "\n";
                 mercenarioScript.notificacaoMerc.SetActive(true);
                 Destroy(mercenarioScript.pedidosAceitos[i]);
-                
+
             }
         }
 
@@ -272,7 +290,7 @@ public class GameController : MonoBehaviour
         }
 
         mercenarioScript.pedidosFalhos.Clear();
-        
+
         botaoTablet.interactable = false;
         tabletScript.FecharTablet();
         dia++;
@@ -283,25 +301,26 @@ public class GameController : MonoBehaviour
         int eventoAleatorio = Random.Range(0, ListaDeEventosFimDeDia.Count);
         //int eventoAleatorio = 0;
         textoEventoFimDoDia.text = ListaDeEventosFimDeDia[eventoAleatorio].textoDoEvento;
-        
+
 
         for (int i = 0; i < gangues.Length; i++)
         {
-            
+
             for (int j = 0; j < ListaDeEventosFimDeDia[eventoAleatorio].quantasGanguesAfeta; j++)
             {
-                                
-                if(i == ListaDeEventosFimDeDia[eventoAleatorio].gangueQueAfeta[j]) {
+
+                if (i == ListaDeEventosFimDeDia[eventoAleatorio].gangueQueAfeta[j])
+                {
 
                     gangues[i] += ListaDeEventosFimDeDia[eventoAleatorio].quantoAfetaNaGangue[j];
 
                 }
             }
-            
+
         }
 
         ListaDeEventosFimDeDia.RemoveAt(eventoAleatorio);
-        
+
         for (int i = 0; i < barrasGangues.Length; i++)
         {
             barrasGangues[i].fillAmount = gangues[i] / 100;
@@ -310,15 +329,15 @@ public class GameController : MonoBehaviour
         for (int i = 0; i < barrasGangues.Length; i++)
         {
             R = (100 - gangues[i]) / 50;
-            G = gangues[i] /  50;
+            G = gangues[i] / 50;
             corTeste = new Color(R, G, 0f, 1f);
-            barrasGangues[i].color = corTeste;    
+            barrasGangues[i].color = corTeste;
         }
         for (int i = 0; i < barrasGangues.Length; i++)
         {
             barrasGanguesPCT[i].text = gangues[i].ToString() + "%";
         }
-        
+
         for (int i = 0; i < barrasGangues.Length; i++)
         {
             barrasGangues2[i].fillAmount = barrasGangues[i].fillAmount;
@@ -330,21 +349,23 @@ public class GameController : MonoBehaviour
         for (int i = 0; i < barrasGangues.Length; i++)
         {
             barrasGanguesPCT2[i].text = barrasGanguesPCT[i].text;
-        }     
-        
+        }
+
         painelFimDeDia.SetActive(true);
-    
+        botaoFimDoDia.SetActive(false);
+
     }
 
-    public void ProximoDia() {        
-        
+    public void ProximoDia()
+    {
+
         inventario.textoEncomendaFimDoDia.text = "";
         inventario.textoEntreguesFimDoDia.text = "";
         inventario.textoDevidosFimDoDia.text = "";
         mercenarioScript.textoFimDoDia.text = "";
         inventario.notificacaoInvent.SetActive(false);
         mercenarioScript.notificacaoMerc.SetActive(false);
-        
+
         for (int i = 0; i < gangues.Length; i++) //confere o valor de todas as gangues do jogo (incluindo o dinheiro)
         {
             if (gangues[i] <= 0)
@@ -357,43 +378,52 @@ public class GameController : MonoBehaviour
             }
         }
 
-        if(!GameOver) {
+        if (!GameOver)
+        {
 
-            if(dia < diaMax + 1) {
+            if (dia < diaMax + 1)
+            {
 
+                AtivarEfeitoTV();
                 painelFimDeDia.SetActive(false);
                 tabletScript.AbrirReputacaoFimDoDia();
                 botaoTablet.interactable = true;
                 PreencherListaDoDiaAtual();
-                CriarPersonagem2();
+                Invoke("CriarPersonagem2", 0.75f);
 
-            } else {
+            }
+            else
+            {
 
                 painelFimDeDia.SetActive(false);
                 painelVitoria.SetActive(true);
                 float minuto = 0;
-                while (tempoDeJogo >= 60) {
-                    minuto ++;
+                while (tempoDeJogo >= 60)
+                {
+                    minuto++;
                     tempoDeJogo -= 60;
-                } 
+                }
                 print("Sua gameplay durou " + minuto.ToString("00") + ":" + tempoDeJogo.ToString("00") + " minutos");
                 contarTempo = false;
                 tempoDeJogo = 0;
                 PlayerPrefs.SetFloat("tempoJogo", tempoDeJogo);
                 PlayerPrefs.Save();
 
-            }           
+            }
 
-        } else {
+        }
+        else
+        {
             painelFimDeDia.SetActive(false);
             float DiaImpresso = dia - 1;
             fimDeJogo.text = "Fim de jogo no dia " + DiaImpresso.ToString();
             painelFimDeJogo.SetActive(true);
             float minuto = 0;
-            while (tempoDeJogo >= 60) {
-                minuto ++;
+            while (tempoDeJogo >= 60)
+            {
+                minuto++;
                 tempoDeJogo -= 60;
-            } 
+            }
             print("Sua gameplay durou " + minuto.ToString("00") + ":" + tempoDeJogo.ToString("00") + " minutos");
             contarTempo = false;
             tempoDeJogo = 0;
@@ -403,30 +433,64 @@ public class GameController : MonoBehaviour
 
     }
 
-    public void Reiniciar() {
+    public void Reiniciar()
+    {
 
         SceneManager.LoadScene(0);
 
     }
-    public void IniciarJogo() {
+    public void IniciarJogo()
+    {
 
         botaoIniciar.SetActive(false);
         botaoTutorial.SetActive(false);
         botaoConfig.SetActive(false);
         botaoTablet.gameObject.SetActive(true);
         PreencherListaDoDiaAtual();
-        Invoke("CriarPersonagem2", 0.5f);
-        audioSource.clip =  musicaJogo;
+        Invoke("AtivarEfeitoTV", 0.25f);
+        Invoke("CriarPersonagem2", 0.75f);
+        //StartCoroutine(CriarCarros());
+        audioSource.clip = musicaJogo;
         audioSource.volume = 0.25f;
         audioSource.Play();
         //trocar musica
 
     }
-    public void IniciarTutorial() {
+    public void IniciarTutorial()
+    {
 
         SceneManager.LoadScene(1);
         //trocar musica
 
     }
+
+    void AtivarEfeitoTV()
+    {
+        
+        tVEffectScript.tvEffectAnim.SetTrigger("Abrir");
+
+    }
+
+    // IEnumerator CriarCarros()
+    // {
+
+    //     yield return new WaitForSeconds(tempoSpawnCarros + Random.Range(0, 1));
+    //     GameObject carroInstancia = Instantiate(carros[qualCarro]);
+
+    //     if (qualCarro == 1)
+    //     {
+    //         qualCarro = 0;
+    //     }
+    //     else if (qualCarro == 0)
+    //     {
+
+    //         qualCarro = 1;
+
+    //     }
+
+    //     Destroy(carroInstancia, 2.5f);
+    //     StartCoroutine(CriarCarros());
+
+    // }
 
 }

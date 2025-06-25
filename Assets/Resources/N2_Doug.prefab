@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 31b08e95a7bbad54f8595baf6c35f229, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.1
+      value: 5.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 31b08e95a7bbad54f8595baf6c35f229, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.1
+      value: -6.89
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 31b08e95a7bbad54f8595baf6c35f229, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 103.2
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 31b08e95a7bbad54f8595baf6c35f229, type: 3}
       propertyPath: m_LocalRotation.w
@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 31b08e95a7bbad54f8595baf6c35f229, type: 3}
       propertyPath: m_Name
-      value: N2_Doug_Walk
+      value: N2_Doug
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 31b08e95a7bbad54f8595baf6c35f229, type: 3}
       propertyPath: m_IsActive
@@ -186,9 +186,12 @@ MonoBehaviour:
     modificadores: []
   missaoMercenario: {fileID: 6907679401614571848, guid: 895109a1e195fd84a8c352282ed9f9e5, type: 3}
   contentMercenario: {fileID: 0}
+  ramifica: 0
+  personagemRamificacao1: {fileID: 0}
+  personagemRamificacao2: {fileID: 0}
   opcao1: "Voc\xEA veio ao lugar certo, meu caro. Vou te ajudar."
   opcao2: "N\xE3o sei do que esta falando. Vaza se n\xE3o quiser uma bala na cabe\xE7a."
-  corGangue: {r: 0, g: 0, b: 0, a: 1}
+  corGangue: {r: 1, g: 1, b: 1, a: 1}
   recursos: 01010000000001
   mudadoresSim:
   - -10
@@ -215,7 +218,6 @@ MonoBehaviour:
   irEmbora: 0
   botaoSim: {fileID: 0}
   botaoNao: {fileID: 0}
-  botaoFimDoDia: {fileID: 0}
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
   gameController: {fileID: 0}

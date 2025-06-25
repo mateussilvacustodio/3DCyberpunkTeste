@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8cb8a60263d9bbd469930af0a5d0021f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.1
+      value: 5.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8cb8a60263d9bbd469930af0a5d0021f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.1
+      value: -6.89
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8cb8a60263d9bbd469930af0a5d0021f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 103.2
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8cb8a60263d9bbd469930af0a5d0021f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8cb8a60263d9bbd469930af0a5d0021f, type: 3}
       propertyPath: m_Name
-      value: SZ1_RamonWalk
+      value: SZ1RamonWalk
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8cb8a60263d9bbd469930af0a5d0021f, type: 3}
       propertyPath: m_IsActive
@@ -186,6 +186,9 @@ MonoBehaviour:
     modificadores: []
   missaoMercenario: {fileID: 0}
   contentMercenario: {fileID: 0}
+  ramifica: 0
+  personagemRamificacao1: {fileID: 0}
+  personagemRamificacao2: {fileID: 0}
   opcao1: "Vou enviar as informa\xE7\xF5es que voc\xEA precisa. S\xF3 n\xE3o esquece
     de fazer a sua parte do acordo."
   opcao2: "Desculpe, n\xE3o posso ajudar com isso agora. Talvez da pr\xF3xima."
@@ -212,9 +215,10 @@ MonoBehaviour:
   velocidadeMover: 0.5
   podeMover: 1
   personagemAnim: {fileID: 4652149757874257747}
+  podeRodar: 0
+  irEmbora: 0
   botaoSim: {fileID: 0}
   botaoNao: {fileID: 0}
-  botaoFimDoDia: {fileID: 0}
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
   gameController: {fileID: 0}

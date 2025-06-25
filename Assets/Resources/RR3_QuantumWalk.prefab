@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a2f8ad184ca116f43ac00911d24d368b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.1
+      value: 5.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a2f8ad184ca116f43ac00911d24d368b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.1
+      value: -6.89
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a2f8ad184ca116f43ac00911d24d368b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 103.2
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a2f8ad184ca116f43ac00911d24d368b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -199,6 +199,9 @@ MonoBehaviour:
     - -600
   missaoMercenario: {fileID: 0}
   contentMercenario: {fileID: 0}
+  ramifica: 0
+  personagemRamificacao1: {fileID: 0}
+  personagemRamificacao2: {fileID: 0}
   opcao1: "Um carregamento assim \xE9 arriscado, mas com a grana certa, eu topo.
     Vou pegar o que precisam e deixar o trabalho limpo."
   opcao2: "Foi mal parceiro, mas mexer com tanto fogo cruzado n\xE3o vale o pre\xE7o.
@@ -230,7 +233,6 @@ MonoBehaviour:
   irEmbora: 0
   botaoSim: {fileID: 0}
   botaoNao: {fileID: 0}
-  botaoFimDoDia: {fileID: 0}
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
   gameController: {fileID: 0}

@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e793e4294373ebd4890ea786e0314bb4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.1
+      value: 5.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e793e4294373ebd4890ea786e0314bb4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.1
+      value: -6.89
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e793e4294373ebd4890ea786e0314bb4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 103.2
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e793e4294373ebd4890ea786e0314bb4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e793e4294373ebd4890ea786e0314bb4, type: 3}
       propertyPath: m_Name
-      value: Police2_HexWalk
+      value: Police2_Hex
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e793e4294373ebd4890ea786e0314bb4, type: 3}
       propertyPath: m_IsActive
@@ -187,6 +187,9 @@ MonoBehaviour:
     modificadores: []
   missaoMercenario: {fileID: 0}
   contentMercenario: {fileID: 0}
+  ramifica: 0
+  personagemRamificacao1: {fileID: 0}
+  personagemRamificacao2: {fileID: 0}
   opcao1: "Olha, voc\xEA n\xE3o pegou comigo, mas esse chip tem o que voc\xEA quer."
   opcao2: "Ainda vai me prender mesmo depois desses $2000 na sua m\xE3o?"
   corGangue: {r: 0.1764706, g: 0.101960786, b: 1, a: 1}
@@ -216,7 +219,6 @@ MonoBehaviour:
   irEmbora: 0
   botaoSim: {fileID: 0}
   botaoNao: {fileID: 0}
-  botaoFimDoDia: {fileID: 0}
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
   gameController: {fileID: 0}

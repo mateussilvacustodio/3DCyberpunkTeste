@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63006c36ebb78df4083f0ca6aa00fa3f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.1
+      value: 5.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63006c36ebb78df4083f0ca6aa00fa3f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.1
+      value: -6.89
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63006c36ebb78df4083f0ca6aa00fa3f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 103.2
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63006c36ebb78df4083f0ca6aa00fa3f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 63006c36ebb78df4083f0ca6aa00fa3f, type: 3}
       propertyPath: m_Name
-      value: GS3_VictorWalk
+      value: GS3_Victor
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 63006c36ebb78df4083f0ca6aa00fa3f, type: 3}
       propertyPath: m_IsActive
@@ -193,6 +193,9 @@ MonoBehaviour:
     - -200
   missaoMercenario: {fileID: 0}
   contentMercenario: {fileID: 0}
+  ramifica: 0
+  personagemRamificacao1: {fileID: 0}
+  personagemRamificacao2: {fileID: 0}
   opcao1: "Pode deixar, sua cabe\xE7a n\xE3o vai rolar hoje."
   opcao2: "Cara, foi mal, mas n\xE3o posso te ajudar."
   corGangue: {r: 1, g: 0.14901961, b: 0.7137255, a: 1}
@@ -222,7 +225,6 @@ MonoBehaviour:
   irEmbora: 0
   botaoSim: {fileID: 0}
   botaoNao: {fileID: 0}
-  botaoFimDoDia: {fileID: 0}
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
   gameController: {fileID: 0}

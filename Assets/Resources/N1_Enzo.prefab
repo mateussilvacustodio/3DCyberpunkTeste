@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f2c539699a2192f40be2b21cf3cc473e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.1
+      value: 5.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f2c539699a2192f40be2b21cf3cc473e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.1
+      value: -6.89
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f2c539699a2192f40be2b21cf3cc473e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 103.2
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f2c539699a2192f40be2b21cf3cc473e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f2c539699a2192f40be2b21cf3cc473e, type: 3}
       propertyPath: m_Name
-      value: N1_Enzo_Walk
+      value: N1_Enzo
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f2c539699a2192f40be2b21cf3cc473e, type: 3}
       propertyPath: m_IsActive
@@ -185,9 +185,12 @@ MonoBehaviour:
     modificadores: []
   missaoMercenario: {fileID: 0}
   contentMercenario: {fileID: 0}
+  ramifica: 0
+  personagemRamificacao1: {fileID: 0}
+  personagemRamificacao2: {fileID: 0}
   opcao1: Que?
   opcao2: "Isso \xE9 algum tipo de refer\xEAncia?"
-  corGangue: {r: 0, g: 0, b: 0, a: 1}
+  corGangue: {r: 1, g: 1, b: 1, a: 1}
   recursos: 00000000000000
   mudadoresSim:
   - 0
@@ -214,7 +217,6 @@ MonoBehaviour:
   irEmbora: 0
   botaoSim: {fileID: 0}
   botaoNao: {fileID: 0}
-  botaoFimDoDia: {fileID: 0}
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
   gameController: {fileID: 0}

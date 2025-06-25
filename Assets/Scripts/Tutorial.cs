@@ -43,6 +43,8 @@ public class Tutorial : MonoBehaviour
     [SerializeField] Button botaoMenuMercenario;
     [SerializeField] Button botaoMercanriosFimDoDia;
     [SerializeField] Button botaoFimTutorial;
+    [SerializeField] TVEffect tVEffectScript;
+
 
 [Header("Setas")]
     [SerializeField] GameObject[] setas;
@@ -52,7 +54,8 @@ public class Tutorial : MonoBehaviour
 
     void Start()
     {
-        Tutoriall();
+        //Tutoriall();
+        tVEffectScript.tvEffectAnim.SetTrigger("Abrir");
     }
 
     void Update()
@@ -178,17 +181,23 @@ public class Tutorial : MonoBehaviour
         etapasTutorial++;
         balaoAnim.SetTrigger("Sumir");
 
-        if(etapasTutorial < 6) {
+        if (etapasTutorial < 6)
+        {
 
             InstanciarPersonagemTutorial();
 
-        } else if (etapasTutorial == 7){
+        }
+        else if (etapasTutorial == 7)
+        {
 
             Tutoriall();
 
-        } else if (etapasTutorial == 8) {
+        }
+        else if (etapasTutorial == 8)
+        {
 
-            botaoFimDoDia.SetActive(true);
+            //botaoFimDoDia.SetActive(true);
+            tVEffectScript.tvEffectAnim.SetTrigger("Fechar");
 
         }
 

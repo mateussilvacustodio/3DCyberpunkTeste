@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 85e56df325219124f8d138bedd63158b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.1
+      value: 5.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 85e56df325219124f8d138bedd63158b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.1
+      value: -6.89
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 85e56df325219124f8d138bedd63158b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 103.2
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 85e56df325219124f8d138bedd63158b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 85e56df325219124f8d138bedd63158b, type: 3}
       propertyPath: m_Name
-      value: Police1_AngelWalk
+      value: Police1_Angel
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 85e56df325219124f8d138bedd63158b, type: 3}
       propertyPath: m_IsActive
@@ -186,6 +186,9 @@ MonoBehaviour:
     modificadores: []
   missaoMercenario: {fileID: 0}
   contentMercenario: {fileID: 0}
+  ramifica: 0
+  personagemRamificacao1: {fileID: 0}
+  personagemRamificacao2: {fileID: 0}
   opcao1: "Eu posso te dar o que voc\xEA quer, mas preciso de algo em troca. Quem
     sabe uma garantia de que a pol\xEDcia n\xE3o vai atrapalhar meus neg\xF3cios?"
   opcao2: "Informa\xE7\xE3o \xE9 poder e eu n\xE3o dou poder de gra\xE7a. V\xE1 procurar

@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b31532f0f2c5e4e40acf4c0b11af7c4b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.1
+      value: 5.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b31532f0f2c5e4e40acf4c0b11af7c4b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.1
+      value: -6.89
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b31532f0f2c5e4e40acf4c0b11af7c4b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 103.2
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b31532f0f2c5e4e40acf4c0b11af7c4b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b31532f0f2c5e4e40acf4c0b11af7c4b, type: 3}
       propertyPath: m_Name
-      value: NB2_CipherWalk
+      value: NB2_Cipher
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b31532f0f2c5e4e40acf4c0b11af7c4b, type: 3}
       propertyPath: m_IsActive
@@ -193,6 +193,9 @@ MonoBehaviour:
     - -800
   missaoMercenario: {fileID: 0}
   contentMercenario: {fileID: 0}
+  ramifica: 0
+  personagemRamificacao1: {fileID: 0}
+  personagemRamificacao2: {fileID: 0}
   opcao1: "Porra, esse \xE9 do bom. Vai vender f\xE1cil."
   opcao2: "Cara eu n\xE3o posso te ajudar. Tu t\xE1 sozinho nessa."
   corGangue: {r: 0.9607843, g: 0.8156863, b: 0, a: 1}
@@ -222,7 +225,6 @@ MonoBehaviour:
   irEmbora: 0
   botaoSim: {fileID: 0}
   botaoNao: {fileID: 0}
-  botaoFimDoDia: {fileID: 0}
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
   gameController: {fileID: 0}

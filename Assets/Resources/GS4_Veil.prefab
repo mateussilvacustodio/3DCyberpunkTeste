@@ -10,27 +10,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: d98e516d294162f4a87da2cad58ed022, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.9
+      value: 1.02
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d98e516d294162f4a87da2cad58ed022, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.9
+      value: 1.02
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d98e516d294162f4a87da2cad58ed022, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.9
+      value: 1.02
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d98e516d294162f4a87da2cad58ed022, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.33
+      value: 6.33
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d98e516d294162f4a87da2cad58ed022, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.62
+      value: -6.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d98e516d294162f4a87da2cad58ed022, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 103.2
+      value: 9.36
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d98e516d294162f4a87da2cad58ed022, type: 3}
       propertyPath: m_LocalRotation.w
@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d98e516d294162f4a87da2cad58ed022, type: 3}
       propertyPath: m_Name
-      value: GS4_VeilWalk
+      value: GS4_Veil
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d98e516d294162f4a87da2cad58ed022, type: 3}
       propertyPath: m_IsActive
@@ -199,6 +199,9 @@ MonoBehaviour:
     - -200
   missaoMercenario: {fileID: 0}
   contentMercenario: {fileID: 0}
+  ramifica: 0
+  personagemRamificacao1: {fileID: 0}
+  personagemRamificacao2: {fileID: 0}
   opcao1: "Se o Setor Zero tem um pre\xE7o, eu encontro. Mas vai sair caro, e vai
     exigir um pouco de finesse. Se est\xE3o dispostos a bancar, deixem o resto comigo."
   opcao2: Esse tipo de jogo atrai os piores olhares, e com o Setor Zero no meio,
@@ -223,14 +226,13 @@ MonoBehaviour:
   - 0
   inventarioScript: {fileID: 0}
   mercenarioScript: {fileID: 0}
-  velocidadeMover: 0.5
+  velocidadeMover: 0.55
   podeMover: 1
   personagemAnim: {fileID: 7824440719172525028}
   podeRodar: 0
   irEmbora: 0
   botaoSim: {fileID: 0}
   botaoNao: {fileID: 0}
-  botaoFimDoDia: {fileID: 0}
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
   gameController: {fileID: 0}

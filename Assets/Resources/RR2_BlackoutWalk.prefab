@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 49eaa5f30fe6fc049838078cf0be7a44, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.1
+      value: 5.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 49eaa5f30fe6fc049838078cf0be7a44, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.1
+      value: -6.89
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 49eaa5f30fe6fc049838078cf0be7a44, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 103.2
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 49eaa5f30fe6fc049838078cf0be7a44, type: 3}
       propertyPath: m_LocalRotation.w
@@ -186,6 +186,9 @@ MonoBehaviour:
     modificadores: []
   missaoMercenario: {fileID: 5758622150030310900, guid: 196c0cd60344bd34d9523f43c8d4963d, type: 3}
   contentMercenario: {fileID: 0}
+  ramifica: 0
+  personagemRamificacao1: {fileID: 0}
+  personagemRamificacao2: {fileID: 0}
   opcao1: "Eu tenho sim parceiro, j\xE1 t\xF4 te mandando."
   opcao2: "N\xE3o joga essa merda pra cima de mim n\xE3o."
   corGangue: {r: 1, g: 0, b: 0, a: 1}
@@ -215,7 +218,6 @@ MonoBehaviour:
   irEmbora: 0
   botaoSim: {fileID: 0}
   botaoNao: {fileID: 0}
-  botaoFimDoDia: {fileID: 0}
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
   gameController: {fileID: 0}

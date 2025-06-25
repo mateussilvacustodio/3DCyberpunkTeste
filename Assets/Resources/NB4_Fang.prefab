@@ -10,27 +10,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 9059af39a0a9e1d4aab6e214c2a06f4d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.42
+      value: 0.46
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9059af39a0a9e1d4aab6e214c2a06f4d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.42
+      value: 0.46
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9059af39a0a9e1d4aab6e214c2a06f4d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.42
+      value: 0.46
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9059af39a0a9e1d4aab6e214c2a06f4d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.05
+      value: 6.85
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9059af39a0a9e1d4aab6e214c2a06f4d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.1
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9059af39a0a9e1d4aab6e214c2a06f4d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 103.2
+      value: 8.75
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9059af39a0a9e1d4aab6e214c2a06f4d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -215,14 +215,13 @@ MonoBehaviour:
   - 0
   inventarioScript: {fileID: 0}
   mercenarioScript: {fileID: 0}
-  velocidadeMover: 0.5
+  velocidadeMover: 0.6
   podeMover: 1
   personagemAnim: {fileID: 8604424617127913121}
   podeRodar: 0
   irEmbora: 0
   botaoSim: {fileID: 0}
   botaoNao: {fileID: 0}
-  botaoFimDoDia: {fileID: 0}
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
   gameController: {fileID: 0}

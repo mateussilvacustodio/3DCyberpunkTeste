@@ -10,27 +10,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c06b9f025e2fea342a8ccd4db9ca2418, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.66
+      value: 0.73
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c06b9f025e2fea342a8ccd4db9ca2418, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.66
+      value: 0.73
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c06b9f025e2fea342a8ccd4db9ca2418, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.66
+      value: 0.73
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c06b9f025e2fea342a8ccd4db9ca2418, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.17
+      value: 5.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c06b9f025e2fea342a8ccd4db9ca2418, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.55
+      value: -6.89
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c06b9f025e2fea342a8ccd4db9ca2418, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 106.5
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c06b9f025e2fea342a8ccd4db9ca2418, type: 3}
       propertyPath: m_LocalRotation.w
@@ -258,7 +258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c06b9f025e2fea342a8ccd4db9ca2418, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1330755669629619180, guid: c06b9f025e2fea342a8ccd4db9ca2418, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -606,7 +606,6 @@ MonoBehaviour:
   irEmbora: 0
   botaoSim: {fileID: 0}
   botaoNao: {fileID: 0}
-  botaoFimDoDia: {fileID: 0}
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
   gameController: {fileID: 0}

@@ -46,7 +46,7 @@ public class Personagem : MonoBehaviour
     [Header("Botões")]
     public Button botaoSim;
     public Button botaoNao;
-    [SerializeField] GameObject botaoFimDoDia;
+    //[SerializeField] GameObject botaoFimDoDia;
     [Header("Balão")]
     public Animator balaoAnim;
     [SerializeField] Balao balao;
@@ -79,8 +79,8 @@ public class Personagem : MonoBehaviour
 
         }
 
-        botaoFimDoDia = Resources.FindObjectsOfTypeAll<GameObject>().FirstOrDefault(b => b.gameObject.name == "BotaoFimDoDia");
-        botaoFimDoDia.SetActive(false);
+        //botaoFimDoDia = Resources.FindObjectsOfTypeAll<GameObject>().FirstOrDefault(b => b.gameObject.name == "BotaoFimDoDia");
+        //botaoFimDoDia.SetActive(false);
 
 
     }
@@ -260,8 +260,9 @@ public class Personagem : MonoBehaviour
                 {
 
                     gameController.quantidadeDePedidos = 0;
+                    gameController.tVEffectScript.tvEffectAnim.SetTrigger("Fechar");
                     //gameController.FimDoDia();
-                    botaoFimDoDia.SetActive(true);
+                    //botaoFimDoDia.SetActive(true);
 
                 }
 
