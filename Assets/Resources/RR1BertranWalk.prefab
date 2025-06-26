@@ -189,7 +189,7 @@ MonoBehaviour:
     MK V\xF3rtex a\xED, teria?"
   tipoPedido: 0
   itemDoNPC:
-    nome: Robo
+    nome: Robo MK Vortex
     quant: -1
     sprite: {fileID: 21300000, guid: 8138c14e5daeec346b163f0eaf42b7fe, type: 3}
     modificadores:

@@ -30,7 +30,7 @@ public class TVEffect : MonoBehaviour
         if (tutorialScript != null)
         {
 
-            print("Iniciar tutorial");
+            //print("Iniciar tutorial");
             tutorialScript.Tutoriall();
 
         }

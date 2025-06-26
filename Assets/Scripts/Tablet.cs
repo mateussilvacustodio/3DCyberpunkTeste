@@ -18,6 +18,7 @@ public class Tablet : MonoBehaviour
     [SerializeField] GameObject menuInventario;
     [SerializeField] GameObject menuMercenarios;
     [SerializeField] GameObject listaMercenarios;
+    [SerializeField] GameObject menuConfiguracoes;
     [Header("Aplicativos Fim Do Dia")]
     [SerializeField] GameObject reputacaoFimDoDia;
     [SerializeField] GameObject inventarioFimDoDia;
@@ -44,19 +45,23 @@ public class Tablet : MonoBehaviour
         menuInventario.SetActive(false);
         menuMercenarios.SetActive(false);
         listaMercenarios.SetActive(false);
-        if(setas.Length > 0) {
+        menuConfiguracoes.SetActive(false);
+        if (setas.Length > 0)
+        {
 
-            if(setas[3].activeSelf) {
+            if (setas[3].activeSelf)
+            {
 
                 setas[2].SetActive(true);
 
             }
 
-            if(setas[5].activeSelf) {
+            if (setas[5].activeSelf)
+            {
 
                 setas[4].SetActive(true);
 
-            }            
+            }
 
         }
         painelTablet.SetActive(false);
@@ -97,12 +102,22 @@ public class Tablet : MonoBehaviour
 
     }
 
-    public void VoltarTelaInicio() {
+    public void AbrirConfiguracoes()
+    {
+        
+        menuInicial.SetActive(false);
+        menuConfiguracoes.SetActive(true);
+
+    }
+
+    public void VoltarTelaInicio()
+    {
 
         menuInicial.SetActive(true);
         menuReputacao.SetActive(false);
         menuInventario.SetActive(false);
         menuMercenarios.SetActive(false);
+        menuConfiguracoes.SetActive(false);
 
     }
 

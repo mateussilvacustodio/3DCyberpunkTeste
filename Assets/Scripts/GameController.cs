@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using Unity.VisualScripting;
 using System.Linq;
 using UnityEditor;
+using TMPro;
 
 [System.Serializable]
 public class EventosFimDeDia {
@@ -48,7 +49,7 @@ public class GameController : MonoBehaviour
     [SerializeField] Tablet tabletScript;
     [SerializeField] GameObject botaoIniciar;
     [SerializeField] GameObject botaoTutorial;
-    [SerializeField] GameObject botaoConfig;
+    //[SerializeField] GameObject botaoConfig;
     public TVEffect tVEffectScript;
     [SerializeField] GameObject botaoFimDoDia;
     [Header("Pedidos")]
@@ -87,6 +88,8 @@ public class GameController : MonoBehaviour
     [SerializeField] AudioSource audioSource;
     //[SerializeField] AudioClip musicaMenu;
     [SerializeField] AudioClip musicaJogo;
+    [SerializeField] Slider sliderVolume;
+    [SerializeField] TMP_Text volumeMusicaTexto;
     [Header("Playtest")]
     bool contarTempo;
     public float tempoDeJogo;
@@ -168,6 +171,14 @@ public class GameController : MonoBehaviour
         {
 
             tempoDeJogo += Time.deltaTime;
+
+        }
+
+        if (sliderVolume != null)
+        {
+            
+            audioSource.volume = sliderVolume.value;
+            volumeMusicaTexto.text = (sliderVolume.value*100).ToString("F0");
 
         }
 
@@ -444,14 +455,13 @@ public class GameController : MonoBehaviour
 
         botaoIniciar.SetActive(false);
         botaoTutorial.SetActive(false);
-        botaoConfig.SetActive(false);
+        //botaoConfig.SetActive(false);
         botaoTablet.gameObject.SetActive(true);
         PreencherListaDoDiaAtual();
         Invoke("AtivarEfeitoTV", 0.25f);
         Invoke("CriarPersonagem2", 0.75f);
         //StartCoroutine(CriarCarros());
         audioSource.clip = musicaJogo;
-        audioSource.volume = 0.25f;
         audioSource.Play();
         //trocar musica
 
@@ -466,8 +476,15 @@ public class GameController : MonoBehaviour
 
     void AtivarEfeitoTV()
     {
-        
+
         tVEffectScript.tvEffectAnim.SetTrigger("Abrir");
+
+    }
+
+    public void AbrirConfigurações()
+    {
+        
+
 
     }
 
