@@ -487,6 +487,21 @@ public class GameController : MonoBehaviour
         firebaseRESTScript.diasSobrevividos = dia - 1;
         firebaseRESTScript.dinheiroRestante = (int)gangues[6];
 
+        for (int i = 0; i < firebaseRESTScript.listaDeDadosOrdenada.Count; i++)
+        {
+            if (firebaseRESTScript.diasSobrevividos >= firebaseRESTScript.listaDeDadosOrdenada[i].diasDado)
+            {
+
+                if (firebaseRESTScript.dinheiroRestante > firebaseRESTScript.listaDeDadosOrdenada[i].dinheiroDado)
+                {
+                    firebaseRESTScript.HabilitarSubirRanking();
+                    firebaseRESTScript.seuRecord.text = $"Dias sobrevividos:{firebaseRESTScript.diasSobrevividos}\nDinheiro restante:{firebaseRESTScript.dinheiroRestante}";
+                    break;
+                }
+                
+            }
+        }
+
         painelFimDeDia.SetActive(false);
         painelVitoria.SetActive(false);
         painelRanking.SetActive(true);

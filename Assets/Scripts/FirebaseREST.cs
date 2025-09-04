@@ -8,6 +8,7 @@ using Unity.VisualScripting;
 using System.Linq;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.PlayerLoop;
 
 [System.Serializable]
 public class FirestoreResposta //a string recebida do banco é transformada em um objeto dessa classe
@@ -60,15 +61,22 @@ public class FirebaseREST : MonoBehaviour
     [Header("Listas")]
     [SerializeField] List<DocumentosFirestore> documentosBD;
     [SerializeField] List<Dado> listaDeDados = new List<Dado>();
-    [SerializeField] List<Dado> listaDeDadosOrdenada = new List<Dado>();
+    public List<Dado> listaDeDadosOrdenada = new List<Dado>();
 
     [Header("TextosDoRanking")]
+    [SerializeField] GameObject adicionarRanking;
     [SerializeField] Text listaNomes;
     [SerializeField] Text listaDias;
     [SerializeField] Text listaDinheiro;
+    public Text seuRecord;
+    [SerializeField] TMP_InputField nomePreenchido;
+    [SerializeField] GameObject atualizandoRanking;
+    [SerializeField] GameObject rankingAtualizado;
 
     void Start()
     {
+
+        nomePreenchido.onValueChanged.AddListener(FormatarNome);
         //SalvarJogador();
         LerJogadores();
     }
@@ -108,13 +116,12 @@ public class FirebaseREST : MonoBehaviour
         if (requisicao.result == UnityWebRequest.Result.Success)
         {
             Debug.Log("Dados do jogador salvos com sucesso");
+            yield return StartCoroutine(BuscarDadosBancoDeDados());
         }
         else
         {
-
             Debug.LogError("Erro ao salvar dados do jogador " + requisicao.error);
             Debug.LogError("Resposta da API " + requisicao.downloadHandler.text);
-
         }
 
     }
@@ -131,6 +138,13 @@ public class FirebaseREST : MonoBehaviour
         {
 
             Debug.Log("Dados recebidos com sucesso");
+            if (atualizandoRanking.activeSelf)
+            {
+
+                atualizandoRanking.SetActive(false);
+                rankingAtualizado.SetActive(true);
+
+            }
 
             string jsonResposta = requisicao.downloadHandler.text;  //os dados recebidos são armazenados nessa variavel
             //Debug.Log("Json recebido " + jsonResposta);
@@ -153,6 +167,7 @@ public class FirebaseREST : MonoBehaviour
 
             OrdenarDados();
             ImprimirDados();
+            listaDeDados.Clear();
 
         }
         else
@@ -175,12 +190,62 @@ public class FirebaseREST : MonoBehaviour
     void ImprimirDados()
     {
 
+        listaNomes.text = "";
+        listaDias.text = "";
+        listaDinheiro.text = "";
+
         for (int i = 0; i < listaDeDadosOrdenada.Count; i++)
         {
             listaNomes.text += listaDeDadosOrdenada[i].nomeDado + "\n";
             listaDias.text += listaDeDadosOrdenada[i].diasDado + "\n";
             listaDinheiro.text += "$ " + listaDeDadosOrdenada[i].dinheiroDado + "\n";
         }
+
+    }
+
+    public void HabilitarSubirRanking()
+    {
+
+        adicionarRanking.SetActive(true);
+
+    }
+
+    public void AtivarSalvarDados()
+    {
+
+        nomePessoa = nomePreenchido.text;
+        adicionarRanking.SetActive(false);
+        atualizandoRanking.SetActive(true);
+        SalvarJogador();
+
+    }
+
+    public void FormatarNome(string valor)
+    {
+
+        if (string.IsNullOrEmpty(valor))
+        {
+            return;
+
+        }
+
+        if (valor.Length > 10)
+        {
+
+            valor = valor.Substring(0, 10);
+
+        }
+
+        valor = char.ToUpper(valor[0]) + valor.Substring(1).ToLower();
+
+        nomePreenchido.text = valor;
+
+    }
+
+    void TesteImpressao()
+    {
+
+        print("Imprimi");
 
     }
 }
