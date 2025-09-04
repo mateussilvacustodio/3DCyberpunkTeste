@@ -53,7 +53,7 @@ public class GameController : MonoBehaviour
     public TVEffect tVEffectScript;
     [SerializeField] GameObject botaoFimDoDia;
     [Header("Pedidos")]
-    public float dia;
+    public int dia;
     [SerializeField] float diaMax;
     public float quantidadeDePedidos;
     public float quantidadeDePedidosPorDia;
@@ -65,6 +65,8 @@ public class GameController : MonoBehaviour
     [SerializeField] Text textoFimDeJogo;
     [SerializeField] bool GameOver;
     [SerializeField] GameObject painelVitoria;
+    [SerializeField] GameObject painelRanking;
+    [SerializeField] FirebaseREST firebaseRESTScript;
     [Header("Cores")]
     public Color corTeste;
     public float R;
@@ -131,14 +133,6 @@ public class GameController : MonoBehaviour
             barrasGanguesPCT2[i].text = barrasGanguesPCT[i].text;
         }
 
-
-        // for (int i = 0; i < personagens.Length; i++) {
-
-        //     indicesDisponiveis.Add(i);
-
-        // }
-
-        //criarPersonagem1();
     }
 
     void Update()
@@ -176,9 +170,9 @@ public class GameController : MonoBehaviour
 
         if (sliderVolume != null)
         {
-            
+
             audioSource.volume = sliderVolume.value;
-            volumeMusicaTexto.text = (sliderVolume.value*100).ToString("F0");
+            volumeMusicaTexto.text = (sliderVolume.value * 100).ToString("F0");
 
         }
 
@@ -444,8 +438,7 @@ public class GameController : MonoBehaviour
 
     }
 
-    public void Reiniciar()
-    {
+    public void Reiniciar() {
 
         SceneManager.LoadScene(0);
 
@@ -483,8 +476,20 @@ public class GameController : MonoBehaviour
 
     public void AbrirConfigurações()
     {
-        
 
+
+
+    }
+
+    public void AbrirRanking()
+    {
+
+        firebaseRESTScript.diasSobrevividos = dia - 1;
+        firebaseRESTScript.dinheiroRestante = (int)gangues[6];
+
+        painelFimDeDia.SetActive(false);
+        painelVitoria.SetActive(false);
+        painelRanking.SetActive(true);
 
     }
 

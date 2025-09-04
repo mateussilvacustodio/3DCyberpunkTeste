@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using System.Text;
+using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
+using System.Linq;
+using TMPro;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class FirestoreResposta //a string recebida do banco é transformada em um objeto dessa classe
@@ -31,20 +36,36 @@ public class CampoString {
 }
 
 [System.Serializable]
-public class CampoInt {
+public class CampoInt
+{
     public string integerValue;
+}
+
+[System.Serializable]
+public class Dado
+{
+    public string nomeDado;
+    public float diasDado;
+    public float dinheiroDado;
 }
 
 public class FirebaseREST : MonoBehaviour
 {
-
     string bancoDeDadosURL = "https://firestore.googleapis.com/v1/projects/thefixer-17e57/databases/(default)/documents/Jogador";
 
-    string nomePessoa = "Bruna";
-    int diasSobrevividos = 3;
-    int dinheiroRestante = 200;
+    public string nomePessoa;
+    public int diasSobrevividos;
+    public int dinheiroRestante;
 
+    [Header("Listas")]
     [SerializeField] List<DocumentosFirestore> documentosBD;
+    [SerializeField] List<Dado> listaDeDados = new List<Dado>();
+    [SerializeField] List<Dado> listaDeDadosOrdenada = new List<Dado>();
+
+    [Header("TextosDoRanking")]
+    [SerializeField] Text listaNomes;
+    [SerializeField] Text listaDias;
+    [SerializeField] Text listaDinheiro;
 
     void Start()
     {
@@ -65,16 +86,18 @@ public class FirebaseREST : MonoBehaviour
     IEnumerator EnviarDadosBancoDeDados()
     {
 
+        string urlEscrita = $"{bancoDeDadosURL}/{nomePessoa}"; //muda a url para criar um documento com o nome da pessoa na colecao Jogador do banco de dados
+
         string json = $@"
         {{
             ""fields"": {{
                 ""Nome"": {{""stringValue"": ""{nomePessoa}""}},
-                ""Dias"": {{""integerValue"": ""{diasSobrevividos}""}},
-                ""Dinheiro"": {{""integerValue"": ""{dinheiroRestante}""}}
+                ""Dias"": {{""integerValue"": {diasSobrevividos}}},
+                ""Dinheiro"": {{""integerValue"": {dinheiroRestante}}}
             }}
         }}"; //essa é a string que passa as infos pro banco de dados
 
-        UnityWebRequest requisicao = new UnityWebRequest(bancoDeDadosURL, "POST"); //esse comando cria a requisao pro banco, o POST indica que vai inserir dados
+        UnityWebRequest requisicao = new UnityWebRequest(urlEscrita, "PATCH"); //esse comando cria a requisao pro banco, o PATCH indica que vai inserir dados ou substituilos se ja existirem
         byte[] bodyRaw = Encoding.UTF8.GetBytes(json); //cria um array de bytes convertendo a string 'json' em bytes para serem enviados
         requisicao.uploadHandler = new UploadHandlerRaw(bodyRaw); //define que o que vai ser enviado na requisicao é o array de bytes criado
         requisicao.downloadHandler = new DownloadHandlerBuffer(); //diz pra Unity que vai receber respostas da API
@@ -110,16 +133,26 @@ public class FirebaseREST : MonoBehaviour
             Debug.Log("Dados recebidos com sucesso");
 
             string jsonResposta = requisicao.downloadHandler.text;  //os dados recebidos são armazenados nessa variavel
-            Debug.Log("Json recebido " + jsonResposta);
+            //Debug.Log("Json recebido " + jsonResposta);
 
             var resultadoRequisicao = JsonUtility.FromJson<FirestoreResposta>(jsonResposta); //a string recebida é transformada em objeto da classe FirestoreResposta (criada la em cima)
 
             documentosBD = resultadoRequisicao.documents;
 
-            foreach (var item in resultadoRequisicao.documents)
+            foreach (var dado in documentosBD)
             {
-                Debug.Log("Nome: " + item.fields.Nome.stringValue + ", Dias sobrevividos: " + item.fields.Dias.integerValue + ", Dinheiro restante: " + item.fields.Dinheiro.integerValue);
+
+                Dado novoDado = new Dado();
+
+                novoDado.nomeDado = dado.fields.Nome.stringValue;
+                novoDado.diasDado = float.Parse(dado.fields.Dias.integerValue); //float.Parse() converte o q tá dentro do () pra float. Funciona tbm com Int
+                novoDado.dinheiroDado = float.Parse(dado.fields.Dinheiro.integerValue);
+
+                listaDeDados.Add(novoDado);
             }
+
+            OrdenarDados();
+            ImprimirDados();
 
         }
         else
@@ -127,6 +160,26 @@ public class FirebaseREST : MonoBehaviour
 
             Debug.LogError("Erro ao buscar os dados: " + requisicao.error);
 
+        }
+
+    }
+
+    void OrdenarDados()
+    {
+
+        listaDeDadosOrdenada = listaDeDados.OrderByDescending(d => d.diasDado).ThenByDescending(d => d.dinheiroDado).Take(7).ToList();
+        //adiciona na nova lista a lsta anterior ordenada com um limite de 7
+
+    }
+
+    void ImprimirDados()
+    {
+
+        for (int i = 0; i < listaDeDadosOrdenada.Count; i++)
+        {
+            listaNomes.text += listaDeDadosOrdenada[i].nomeDado + "\n";
+            listaDias.text += listaDeDadosOrdenada[i].diasDado + "\n";
+            listaDinheiro.text += "$ " + listaDeDadosOrdenada[i].dinheiroDado + "\n";
         }
 
     }
