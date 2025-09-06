@@ -19,6 +19,7 @@ public class Tablet : MonoBehaviour
     [SerializeField] GameObject menuMercenarios;
     [SerializeField] GameObject listaMercenarios;
     [SerializeField] GameObject menuConfiguracoes;
+    [SerializeField] GameObject menuCheats;
     [Header("Aplicativos Fim Do Dia")]
     [SerializeField] GameObject reputacaoFimDoDia;
     [SerializeField] GameObject inventarioFimDoDia;
@@ -46,6 +47,7 @@ public class Tablet : MonoBehaviour
         menuMercenarios.SetActive(false);
         listaMercenarios.SetActive(false);
         menuConfiguracoes.SetActive(false);
+        menuCheats.SetActive(false);
         if (setas.Length > 0)
         {
 
@@ -110,6 +112,14 @@ public class Tablet : MonoBehaviour
 
     }
 
+    public void AbrirCheats()
+    {
+
+        menuInicial.SetActive(false);
+        menuCheats.SetActive(true);
+
+    }
+
     public void VoltarTelaInicio()
     {
 
@@ -118,6 +128,7 @@ public class Tablet : MonoBehaviour
         menuInventario.SetActive(false);
         menuMercenarios.SetActive(false);
         menuConfiguracoes.SetActive(false);
+        menuCheats.SetActive(false);
 
     }
 

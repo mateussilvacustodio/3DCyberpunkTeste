@@ -214,8 +214,6 @@ public class Tutorial : MonoBehaviour
 
     public void FimDoTutorial() {
 
-        PlayerPrefs.SetFloat("tempoJogo", gameController.tempoDeJogo);
-        PlayerPrefs.Save();
         SceneManager.LoadScene(0);
 
     }

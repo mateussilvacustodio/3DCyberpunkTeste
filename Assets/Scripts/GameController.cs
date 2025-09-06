@@ -39,8 +39,9 @@ public class GameController : MonoBehaviour
     //public int personagemIndex;
     public GameObject personagemInstancia;
     [SerializeField] List<GameObject> personagensTodos = new List<GameObject>();
+    //[SerializeField] List<GameObject> personagensTodosBackup = new List<GameObject>();
     [SerializeField] List<GameObject> personagensDisponiveis = new List<GameObject>();
-    [SerializeField] List<GameObject> personagensDoDia = new List<GameObject>();
+    public List<GameObject> personagensDoDia = new List<GameObject>();
     public List<GameObject> personagensDiaSeguinte = new List<GameObject>();
     [Header("Botões")]
     [SerializeField] Button botaoSim;
@@ -74,8 +75,6 @@ public class GameController : MonoBehaviour
     [Header("Inventario")]
     public Inventario inventario;
     public bool HaEncomenda;
-    //public List<Item> itensEncomendados = new List<Item>();
-    //public List<GameObject> personagPraQuemDevo = new List<GameObject>();
     public ParametrosEncomendas parametrosEncomendasGC;
     [Header("Mercenarios")]
     public Mercenarios mercenarioScript;
@@ -92,17 +91,12 @@ public class GameController : MonoBehaviour
     [SerializeField] AudioClip musicaJogo;
     [SerializeField] Slider sliderVolume;
     [SerializeField] TMP_Text volumeMusicaTexto;
-    [Header("Playtest")]
-    bool contarTempo;
-    public float tempoDeJogo;
     //[Header("Carros")]
     //[SerializeField] GameObject[] carros;
     //[SerializeField] float tempoSpawnCarros;
     //int qualCarro = 1;
     void Start()
     {
-        contarTempo = true;
-        tempoDeJogo = PlayerPrefs.GetFloat("tempoJogo");
 
         for (int i = 0; i < barrasGangues.Length; i++)
         {
@@ -158,13 +152,6 @@ public class GameController : MonoBehaviour
 
             notificacao1.SetActive(false);
             notificacao2.SetActive(false);
-
-        }
-
-        if (contarTempo)
-        {
-
-            tempoDeJogo += Time.deltaTime;
 
         }
 
@@ -250,6 +237,9 @@ public class GameController : MonoBehaviour
 
     public void FimDoDia()
     {
+
+        //nao pode digitar o codigo
+        //print("Nao pode digitar o codigo")
 
         numNotificacao = 0;
 
@@ -395,6 +385,8 @@ public class GameController : MonoBehaviour
                 botaoTablet.interactable = true;
                 PreencherListaDoDiaAtual();
                 Invoke("CriarPersonagem2", 0.75f);
+                //liberar digitacao do codigo
+                //print("pode digitar o codigo")
 
             }
             else
@@ -402,17 +394,6 @@ public class GameController : MonoBehaviour
 
                 painelFimDeDia.SetActive(false);
                 painelVitoria.SetActive(true);
-                float minuto = 0;
-                while (tempoDeJogo >= 60)
-                {
-                    minuto++;
-                    tempoDeJogo -= 60;
-                }
-                print("Sua gameplay durou " + minuto.ToString("00") + ":" + tempoDeJogo.ToString("00") + " minutos");
-                contarTempo = false;
-                tempoDeJogo = 0;
-                PlayerPrefs.SetFloat("tempoJogo", tempoDeJogo);
-                PlayerPrefs.Save();
 
             }
 
@@ -423,17 +404,6 @@ public class GameController : MonoBehaviour
             float DiaImpresso = dia - 1;
             fimDeJogo.text = "Fim de jogo no dia " + DiaImpresso.ToString();
             painelFimDeJogo.SetActive(true);
-            float minuto = 0;
-            while (tempoDeJogo >= 60)
-            {
-                minuto++;
-                tempoDeJogo -= 60;
-            }
-            print("Sua gameplay durou " + minuto.ToString("00") + ":" + tempoDeJogo.ToString("00") + " minutos");
-            contarTempo = false;
-            tempoDeJogo = 0;
-            PlayerPrefs.SetFloat("tempoJogo", tempoDeJogo);
-            PlayerPrefs.Save();
         }
 
     }

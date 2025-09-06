@@ -101,7 +101,7 @@ public class Inventario : MonoBehaviour
         //gameController.itensEncomendados.Add(PparametrosEncomendas.parametrosItem);
         itensRecebidos.Add(PparametrosEncomendas.parametrosItem);
         GameObject textoEncomendaRealizada = Instantiate(encomendaRealizadaText, inventarioAba.transform);
-        Destroy(textoEncomendaRealizada, 1f);
+        Destroy(textoEncomendaRealizada, 0.75f);
 
     }
 
