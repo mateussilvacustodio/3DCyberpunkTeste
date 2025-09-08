@@ -5127,7 +5127,7 @@ MonoBehaviour:
   gameController: {fileID: 536325944}
   tutorial: 0
   tutorialScript: {fileID: 7620076168266197729}
-  encomendaRealizadaText: {fileID: 263806689272075562, guid: 11cb70075f3452545bfb4e6f26e42a23, type: 3}
+  encomendaRealizadaText: {fileID: 1838543244040051375, guid: 624ad5f1ad1bcba41ae61d3c2ff7885a, type: 3}
   inventarioAba: {fileID: 2065571718}
 --- !u!1 &304075230
 GameObject:
@@ -8902,6 +8902,8 @@ GameObject:
   - component: {fileID: 536325945}
   - component: {fileID: 536325944}
   - component: {fileID: 536325946}
+  - component: {fileID: 536325948}
+  - component: {fileID: 536325947}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -9015,6 +9017,7 @@ MonoBehaviour:
   - dinheiro
   personagemInstancia: {fileID: 0}
   personagensTodos: []
+  personagensTodosBackup: []
   personagensDisponiveis: []
   personagensDoDia: []
   personagensDiaSeguinte: []
@@ -9038,6 +9041,8 @@ MonoBehaviour:
   textoFimDeJogo: {fileID: 1881923324}
   GameOver: 0
   painelVitoria: {fileID: 1319800302}
+  painelRanking: {fileID: 0}
+  firebaseRESTScript: {fileID: 0}
   corTeste: {r: 0, g: 0, b: 0, a: 0}
   R: 1
   G: 0
@@ -9052,11 +9057,14 @@ MonoBehaviour:
   notificacao2Text: {fileID: 1950235805}
   numNotificacao: 0
   indisponiveis: []
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 536325946}
+  SFXPassos: {fileID: 536325948}
+  SFXBotao: {fileID: 536325947}
   musicaJogo: {fileID: 0}
   sliderVolume: {fileID: 0}
+  sliderSFX: {fileID: 0}
+  volumeSFXTexto: {fileID: 0}
   volumeMusicaTexto: {fileID: 0}
-  tempoDeJogo: 0
 --- !u!4 &536325945
 Transform:
   m_ObjectHideFlags: 0
@@ -9087,6 +9095,198 @@ AudioSource:
   m_Volume: 0.25
   m_Pitch: 1
   Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &536325947
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536325943}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b7e1eed9d7c05a0499d713d3ee35844c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &536325948
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536325943}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: af21142ddcad05f438e9892b9b18e619, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -31485,6 +31685,7 @@ MonoBehaviour:
   menuMercenarios: {fileID: 334431303}
   listaMercenarios: {fileID: 1125909469}
   menuConfiguracoes: {fileID: 141295402}
+  menuCheats: {fileID: 141295402}
   reputacaoFimDoDia: {fileID: 1065046249}
   inventarioFimDoDia: {fileID: 747492900}
   mercenariosFimDoDia: {fileID: 100309504}

@@ -172,6 +172,7 @@ public class Tutorial : MonoBehaviour
     
     public void Entendi() {
 
+        gameController.SFXBotao.Play();
         botaoSim.interactable = false;
         botaoNao.interactable = false;
         nomeBalaoTutorialTexto.text = "";

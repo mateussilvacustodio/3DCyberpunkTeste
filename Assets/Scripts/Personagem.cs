@@ -58,6 +58,7 @@ public class Personagem : MonoBehaviour
     public bool teste;
     void Start()
     {
+
         botaoSim = GameObject.Find("BotaoSim").GetComponent<Button>();
         botaoNao = GameObject.Find("BotaoNao").GetComponent<Button>();
 
@@ -70,6 +71,8 @@ public class Personagem : MonoBehaviour
         inventarioScript = Resources.FindObjectsOfTypeAll<Inventario>().FirstOrDefault(); //como o inventario começa desativado na cena, essa linha puxa ele mesmo desativado
         contentMercenario = Resources.FindObjectsOfTypeAll<Transform>().FirstOrDefault(t => t.gameObject.CompareTag("ContentMercenario"));
         mercenarioScript = Resources.FindObjectsOfTypeAll<Mercenarios>().FirstOrDefault();
+
+        gameController.SFXPassos.Play();
 
         if (missaoMercenario != null)
         {
@@ -114,6 +117,8 @@ public class Personagem : MonoBehaviour
 
     public void concordo()
     {
+
+        gameController.SFXBotao.Play();
 
         if (ramifica)
         {
@@ -176,6 +181,8 @@ public class Personagem : MonoBehaviour
     public void discordo()
     {
 
+        gameController.SFXBotao.Play();
+
         if (ramifica)
         {
 
@@ -218,6 +225,7 @@ public class Personagem : MonoBehaviour
     public void Parar()
     {
 
+        gameController.SFXPassos.Stop();
         if (!irEmbora)
         {
             podeRodar = true;
@@ -230,6 +238,7 @@ public class Personagem : MonoBehaviour
     public void IrEmbora()
     {
 
+        gameController.SFXPassos.Play();
         irEmbora = true;
         personagemAnim.SetBool("Andar", true);
         personagemAnim.SetTrigger("IrEmbora");

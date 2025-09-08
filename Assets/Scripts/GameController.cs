@@ -39,7 +39,7 @@ public class GameController : MonoBehaviour
     //public int personagemIndex;
     public GameObject personagemInstancia;
     [SerializeField] List<GameObject> personagensTodos = new List<GameObject>();
-    //[SerializeField] List<GameObject> personagensTodosBackup = new List<GameObject>();
+    [SerializeField] List<GameObject> personagensTodosBackup = new List<GameObject>();
     [SerializeField] List<GameObject> personagensDisponiveis = new List<GameObject>();
     public List<GameObject> personagensDoDia = new List<GameObject>();
     public List<GameObject> personagensDiaSeguinte = new List<GameObject>();
@@ -87,9 +87,12 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject[] indisponiveis;
     [Header("Musicas")]
     [SerializeField] AudioSource audioSource;
-    //[SerializeField] AudioClip musicaMenu;
+    public AudioSource SFXPassos;
+    public AudioSource SFXBotao;
     [SerializeField] AudioClip musicaJogo;
     [SerializeField] Slider sliderVolume;
+    public Slider sliderSFX;
+    [SerializeField] TMP_Text volumeSFXTexto;
     [SerializeField] TMP_Text volumeMusicaTexto;
     //[Header("Carros")]
     //[SerializeField] GameObject[] carros;
@@ -157,10 +160,17 @@ public class GameController : MonoBehaviour
 
         if (sliderVolume != null)
         {
+            if (botaoTablet.gameObject.activeSelf)
+            {
 
-            audioSource.volume = sliderVolume.value;
-            volumeMusicaTexto.text = (sliderVolume.value * 100).ToString("F0");
+                audioSource.volume = sliderVolume.value / 6;
+                volumeMusicaTexto.text = (sliderVolume.value * 100).ToString("F0");
+                SFXPassos.volume = sliderSFX.value;
+                SFXBotao.volume = sliderSFX.value / 4;
+                volumeSFXTexto.text = (sliderSFX.value * 100).ToString("F0");
 
+            }
+            
         }
 
     }

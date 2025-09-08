@@ -47,7 +47,7 @@ public class Tablet : MonoBehaviour
         menuMercenarios.SetActive(false);
         listaMercenarios.SetActive(false);
         menuConfiguracoes.SetActive(false);
-        menuCheats.SetActive(false);
+        menuCheats.SetActive(false); //no tutorial está ligado o menu de config, para n precisar passar os cheats, ja que o jogador nem tem acesso a eles no tutorial
         if (setas.Length > 0)
         {
 
