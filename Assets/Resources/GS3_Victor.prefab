@@ -179,11 +179,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nome: Victor
-  pedido: "James, fudeu. Eu preciso que voc\xEA me arrume 40 chips ou eu to morto
-    irm\xE3o."
+  pedido: "James, fudeu. Eu preciso que voc\xEA me arrume um chip criptografado r\xE1pido
+    ou eu to morto irm\xE3o."
   tipoPedido: 0
   itemDoNPC:
-    nome: Kit 40 Chips
+    nome: Chip criptografado
     quant: -1
     sprite: {fileID: 21300000, guid: cee05b85a86a02a42a2934d683dfb3c8, type: 3}
     modificadores:
@@ -234,9 +234,6 @@ MonoBehaviour:
   tutorial: 0
   tutorialScript: {fileID: 0}
   teste: 0
-  somComponente: {fileID: -8212211082304309830}
-  passosSom: {fileID: 8300000, guid: af21142ddcad05f438e9892b9b18e619, type: 3}
-  botaoSom: {fileID: 8300000, guid: b7e1eed9d7c05a0499d713d3ee35844c, type: 3}
 --- !u!82 &-8212211082304309830
 AudioSource:
   m_ObjectHideFlags: 0

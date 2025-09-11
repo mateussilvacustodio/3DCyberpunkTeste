@@ -176,15 +176,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nome: Orion
-  pedido: "James, acho que voc\xEA \xE9 a pessoa pra me ajudar a vender a minha mercadoria
-    das drogas mais incr\xEDveis que voc\xEA j\xE1 viu. O que voc\xEA me diz?"
+  pedido: "James, acho que voc\xEA \xE9 a pessoa certa para me ajudar a vender minha
+    mercadoria. A melhor neurotoxina que voc\xEA j\xE1 viu. De qualidade. Te vendo
+    duas por $ 1000."
   tipoPedido: 0
   itemDoNPC:
-    nome: Drogas
+    nome: Neurotoxina
     quant: 2
     sprite: {fileID: 21300000, guid: be5a90c0615990c459904dcd2b244c65, type: 3}
     modificadores:
-    - -10
+    - -30
     - 0
     - 0
     - 0
@@ -197,19 +198,19 @@ MonoBehaviour:
   personagemRamificacao1: {fileID: 0}
   personagemRamificacao2: {fileID: 0}
   opcao1: "Caralho, t\xF4 nessa parceiro."
-  opcao2: Nem por um caralho que eu vou vender essa merda, Orion.
+  opcao2: "Nem por um caralho que vou comprar por esse pre\xE7o, Orion."
   corGangue: {r: 0.9607843, g: 0.8156863, b: 0, a: 1}
-  recursos: 01000000000000
+  recursos: 01000000000001
   mudadoresSim:
-  - 5
+  - 15
   - 0
   - 0
   - 0
   - 0
   - 0
-  - 0
+  - -1000
   mudadoresNao:
-  - -10
+  - -15
   - 0
   - 0
   - 0

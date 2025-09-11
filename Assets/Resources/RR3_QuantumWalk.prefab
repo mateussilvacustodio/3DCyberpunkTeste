@@ -186,7 +186,7 @@ MonoBehaviour:
     dentro?"
   tipoPedido: 0
   itemDoNPC:
-    nome: Armas pesadas
+    nome: Armamento militar
     quant: -1
     sprite: {fileID: 21300000, guid: e5dc1850561f2cb418ea5f7e6521d9f7, type: 3}
     modificadores:
@@ -215,7 +215,7 @@ MonoBehaviour:
   - 0
   - 0
   - -5
-  - 300
+  - 450
   mudadoresNao:
   - 5
   - -15
