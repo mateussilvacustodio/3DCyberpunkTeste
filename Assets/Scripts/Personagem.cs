@@ -24,6 +24,7 @@ public class Personagem : MonoBehaviour
     public string opcao1;
     public string opcao2;
     public Color corGangue;
+    [SerializeField] bool mercador;
     //
     [Header("Recursos")]
     [Tooltip("NB, RR, GS, SZ, NX, Policia, dinheiro")]
@@ -155,17 +156,28 @@ public class Personagem : MonoBehaviour
             }
         }
 
-        botaoSim.interactable = false;
-        botaoNao.gameObject.SetActive(true); //para o tutorial
-        botaoNao.interactable = false;
-        IrEmbora();
-        balao.balaoTexto.text = ""; //--
-        balao.nomeTexto.text = ""; //--
-        balao.corrotinaDigitar = null;
-        balaoAnim.SetTrigger("Sumir");
-        balao.botaoSimTexto.text = ""; //--
-        balao.botaoNaoTexto.text = ""; //--
+        if (!mercador)
+        {
+            botaoSim.interactable = false;
+            botaoNao.gameObject.SetActive(true); //para o tutorial
+            botaoNao.interactable = false;
+            IrEmbora();
+            balao.balaoTexto.text = ""; //--
+            balao.nomeTexto.text = ""; //--
+            balao.corrotinaDigitar = null;
+            balaoAnim.SetTrigger("Sumir");
+            balao.botaoSimTexto.text = ""; //--
+            balao.botaoNaoTexto.text = ""; //--
 
+        }
+        else
+        {
+
+            print("Mercador");
+            this.gameObject.GetComponent<PersonagemMercador>().AbrirMercador();
+
+        }
+        
         if (tutorial)
         {
 
