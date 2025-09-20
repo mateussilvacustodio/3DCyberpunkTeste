@@ -48,9 +48,7 @@ public class GameController : MonoBehaviour
     [SerializeField] Button botaoNao;
     public Button botaoTablet;
     [SerializeField] Tablet tabletScript;
-    [SerializeField] GameObject botaoIniciar;
-    [SerializeField] GameObject botaoTutorial;
-    //[SerializeField] GameObject botaoConfig;
+    [SerializeField] GameObject menu;
     public TVEffect tVEffectScript;
     [SerializeField] GameObject botaoFimDoDia;
     [Header("Pedidos")]
@@ -134,7 +132,7 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-        dinheiroText.text = "$ " + gangues[6].ToString("F0");
+        dinheiroText.text = "$" + gangues[6].ToString("F0");
         dinheiroText2.text = dinheiroText.text;
         dinheiroText3.text = dinheiroText.text;
         dinheiroText4.text = dinheiroText.text;
@@ -277,7 +275,7 @@ public class GameController : MonoBehaviour
                     gangues[j] -= mercenarioScript.pedidosAceitos[i].GetComponent<MissoesMercenario>().mudadoresMercenarios[j] * 2;
                 }
 
-                mercenarioScript.textoFimDoDia.text += "A missão de " + mercenarioScript.pedidosAceitos[i].GetComponent<MissoesMercenario>().nomeNPC + " não foi executada - $ " + (mercenarioScript.pedidosAceitos[i].GetComponent<MissoesMercenario>().mudadoresMercenarios[6] * 2).ToString() + "\n";
+                mercenarioScript.textoFimDoDia.text += "- A missão de " + mercenarioScript.pedidosAceitos[i].GetComponent<MissoesMercenario>().nomeNPC + " não foi executada - $ " + (mercenarioScript.pedidosAceitos[i].GetComponent<MissoesMercenario>().mudadoresMercenarios[6] * 2).ToString() + "\n";
                 mercenarioScript.notificacaoMerc.SetActive(true);
                 Destroy(mercenarioScript.pedidosAceitos[i]);
 
@@ -426,9 +424,7 @@ public class GameController : MonoBehaviour
     public void IniciarJogo()
     {
 
-        botaoIniciar.SetActive(false);
-        botaoTutorial.SetActive(false);
-        //botaoConfig.SetActive(false);
+        menu.SetActive(false);
         botaoTablet.gameObject.SetActive(true);
         PreencherListaDoDiaAtual();
         Invoke("AtivarEfeitoTV", 0.25f);

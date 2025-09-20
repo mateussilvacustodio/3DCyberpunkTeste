@@ -533,6 +533,7 @@ MonoBehaviour:
   opcao1: Contra a SpectraCore? Pode contar com a minha ajuda.
   opcao2: "Contra a SpectraCore? Voc\xEAs v\xE3o morrer, isso sim."
   corGangue: {r: 0, g: 0.9882353, b: 1, a: 1}
+  mercador: 0
   recursos: 00000000010001
   mudadoresSim:
   - 0
@@ -550,13 +551,16 @@ MonoBehaviour:
   - -15
   - 0
   - 0
+  textoDinheiroGanhoGasto: {fileID: 7502805927975152675, guid: 9725cd254ebfc4b41b051f085ac6a584, type: 3}
   inventarioScript: {fileID: 0}
+  textoItemRecebido: {fileID: 1727427521983561730, guid: 2f15c24d35b052e45a8f787712af648d, type: 3}
   mercenarioScript: {fileID: 0}
   velocidadeMover: 0.5
   podeMover: 1
   personagemAnim: {fileID: 1160686027282151088}
   podeRodar: 0
   irEmbora: 0
+  canvas: {fileID: 0}
   botaoSim: {fileID: 0}
   botaoNao: {fileID: 0}
   balaoAnim: {fileID: 0}

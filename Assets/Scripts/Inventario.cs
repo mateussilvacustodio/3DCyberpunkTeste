@@ -28,6 +28,8 @@ public class Inventario : MonoBehaviour
     public TMP_Text textoEntreguesFimDoDia;
     public TMP_Text textoDevidosFimDoDia;
     public GameObject notificacaoInvent;
+    [SerializeField] GameObject textoItemRecebido;
+    [SerializeField] GameObject canvas;
 
     [Header("GameController")]
     [SerializeField] GameController gameController;
@@ -50,21 +52,34 @@ public class Inventario : MonoBehaviour
             if(itemRecebido.nome == itensPossuidos[i].nome){ //o codigo procura o item na lista pelo nome
 
                 itensPossuidos[i].quant += itemRecebido.quant; //e atualiza o valor dele
-                if(itensPossuidos[i].quant < 0) { //se após atualizar a quantiade ficar negativa, significa que voce ficou devendo itens para o personag
+                if (itensPossuidos[i].quant < 0)
+                { //se após atualizar a quantiade ficar negativa, significa que voce ficou devendo itens para o personag
 
                     itensDevidos.Add(itemRecebido);
-                    if(!tutorial) {
+                    if (!tutorial)
+                    {
 
                         //gameController.personagPraQuemDevo.Add(Resources.Load<GameObject>(gameController.personagemInstancia.name.Replace("(Clone)", "")));
 
-                    } else {
+                    }
+                    else
+                    {
 
                         //gameController.personagPraQuemDevo.Add(Resources.Load<GameObject>(tutorialScript.personagemTutorialInstancia.name.Replace("(Clone)", "")));
 
                     }
-                    
+
                     //a linha adiciona na list 'personagPraQuemDevo' o prefab da instancia do personagem. o 'Replace' tira a parte '(Clone)' do nome da inst pra buscar na pasta de prefabs
                     itensPossuidos[i].quant = 0;
+                }
+                else
+                {
+
+                    string textoItemExibir = itemRecebido.quant.ToString("+;-;") + itemRecebido.nome + " x" + Mathf.Abs(itemRecebido.quant);
+                    textoItemRecebido.GetComponent<TMP_Text>().text = textoItemExibir;
+                    GameObject instanciaItem = Instantiate(textoItemRecebido, canvas.transform);
+                    Destroy(instanciaItem, 0.75f);
+
                 }
 
             }

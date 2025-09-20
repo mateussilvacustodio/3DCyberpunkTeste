@@ -599,6 +599,7 @@ MonoBehaviour:
   opcao1: "Posso conseguir uma. Mas n\xE3o me culpe se algo ruim acontecer."
   opcao2: "N\xE3o vou mexer com isso. Melhor voc\xEA encontrar outro fornecedor."
   corGangue: {r: 0, g: 0.9882353, b: 1, a: 1}
+  mercador: 0
   recursos: 01000000000001
   mudadoresSim:
   - 0
@@ -616,13 +617,16 @@ MonoBehaviour:
   - -15
   - 0
   - 0
+  textoDinheiroGanhoGasto: {fileID: 7502805927975152675, guid: 9725cd254ebfc4b41b051f085ac6a584, type: 3}
   inventarioScript: {fileID: 0}
+  textoItemRecebido: {fileID: 1727427521983561730, guid: 2f15c24d35b052e45a8f787712af648d, type: 3}
   mercenarioScript: {fileID: 0}
   velocidadeMover: 0.55
   podeMover: 1
   personagemAnim: {fileID: 2698008808016212394}
   podeRodar: 0
   irEmbora: 0
+  canvas: {fileID: 0}
   botaoSim: {fileID: 0}
   botaoNao: {fileID: 0}
   balaoAnim: {fileID: 0}

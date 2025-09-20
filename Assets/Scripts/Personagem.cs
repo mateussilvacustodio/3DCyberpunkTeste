@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using TMPro;
 
 public enum tipoPedido {inventario, mercenario, nenhum}
 
@@ -33,7 +34,9 @@ public class Personagem : MonoBehaviour
     public float[] mudadoresSim;
     [Tooltip("NB, RR, GS, SZ, NX, Policia, dinheiro")]
     public float[] mudadoresNao;
+    [SerializeField] GameObject textoDinheiroGanhoGasto;
     [SerializeField] Inventario inventarioScript;
+    //[SerializeField] GameObject textoItemRecebido;
     [SerializeField] Mercenarios mercenarioScript;
     [Header("Movimento")]
     [SerializeField] float velocidadeMover;
@@ -44,11 +47,10 @@ public class Personagem : MonoBehaviour
     [SerializeField] bool podeRodar;
     Quaternion rotacaoAlvo = Quaternion.Euler(0, 180, 0);
     [SerializeField] bool irEmbora;
-    [Header("Botões")]
+    [Header("Canvas")]
+    [SerializeField] GameObject canvas;
     public Button botaoSim;
     public Button botaoNao;
-    //[SerializeField] GameObject botaoFimDoDia;
-    [Header("Balão")]
     public Animator balaoAnim;
     [SerializeField] Balao balao;
     [Header("GameController")]
@@ -68,6 +70,7 @@ public class Personagem : MonoBehaviour
         tutorialScript = GameObject.Find("Balao").GetComponent<Tutorial>();
 
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
+        canvas = GameObject.Find("Canvas");
 
         inventarioScript = Resources.FindObjectsOfTypeAll<Inventario>().FirstOrDefault(); //como o inventario começa desativado na cena, essa linha puxa ele mesmo desativado
         contentMercenario = Resources.FindObjectsOfTypeAll<Transform>().FirstOrDefault(t => t.gameObject.CompareTag("ContentMercenario"));
@@ -156,8 +159,19 @@ public class Personagem : MonoBehaviour
             }
         }
 
+        if (mudadoresSim[6] != 0)
+        {
+
+            string textoDinheiroExibir = mudadoresSim[6].ToString("+0;-0;0");
+            textoDinheiroGanhoGasto.GetComponent<TMP_Text>().text = textoDinheiroExibir;
+            GameObject instanciaDinheiro = Instantiate(textoDinheiroGanhoGasto, canvas.transform);
+            Destroy(instanciaDinheiro, 0.75f);
+
+        }
+
         if (!mercador)
         {
+            //instanciar
             botaoSim.interactable = false;
             botaoNao.gameObject.SetActive(true); //para o tutorial
             botaoNao.interactable = false;

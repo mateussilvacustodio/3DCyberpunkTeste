@@ -246,7 +246,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 15b73b4cbc898e540baba00c0da5e64d, type: 3}
       propertyPath: m_Name
-      value: NX6_Aline
+      value: NX7_Aline
       objectReference: {fileID: 0}
     - target: {fileID: 1330755669629619180, guid: 15b73b4cbc898e540baba00c0da5e64d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -509,7 +509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: Aline
   pedido: "James, roubei esta placa neural direto de um terminal da pol\xEDcia. T\xE1
-    limpa, mas o firmware \xE9 vol\xE1til. Fa\xE7o pra voc\xEA por $ 500,00."
+    limpa, mas o firmware \xE9 vol\xE1til. Fa\xE7o pra voc\xEA por $ 500."
   tipoPedido: 0
   itemDoNPC:
     nome: Placa neural
@@ -532,6 +532,7 @@ MonoBehaviour:
   opcao2: "Qual \xE9 a do pre\xE7o inflado? Al\xE9m disso, se ela explodir na minha
     bancada, vai sobrar s\xF3 cinzas. Eu passo."
   corGangue: {r: 0, g: 0.9882353, b: 1, a: 1}
+  mercador: 0
   recursos: 00000000010101
   mudadoresSim:
   - 0
@@ -549,6 +550,7 @@ MonoBehaviour:
   - -15
   - 0
   - 0
+  textoDinheiroGanhoGasto: {fileID: 7502805927975152675, guid: 9725cd254ebfc4b41b051f085ac6a584, type: 3}
   inventarioScript: {fileID: 0}
   mercenarioScript: {fileID: 0}
   velocidadeMover: 0.55
@@ -556,6 +558,7 @@ MonoBehaviour:
   personagemAnim: {fileID: 8255635147394740963}
   podeRodar: 0
   irEmbora: 0
+  canvas: {fileID: 0}
   botaoSim: {fileID: 0}
   botaoNao: {fileID: 0}
   balaoAnim: {fileID: 0}

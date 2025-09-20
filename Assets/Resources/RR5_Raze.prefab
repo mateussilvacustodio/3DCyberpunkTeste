@@ -532,6 +532,7 @@ MonoBehaviour:
   opcao2: "N\xE3o vou fortalecer sua guerra, Raze. Eu tamb\xE9m n\xE3o quero virar
     alvo."
   corGangue: {r: 1, g: 0, b: 0, a: 1}
+  mercador: 0
   recursos: 00010000000101
   mudadoresSim:
   - 0
@@ -549,13 +550,16 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  textoDinheiroGanhoGasto: {fileID: 7502805927975152675, guid: 9725cd254ebfc4b41b051f085ac6a584, type: 3}
   inventarioScript: {fileID: 0}
+  textoItemRecebido: {fileID: 1727427521983561730, guid: 2f15c24d35b052e45a8f787712af648d, type: 3}
   mercenarioScript: {fileID: 0}
   velocidadeMover: 0.625
   podeMover: 1
   personagemAnim: {fileID: 2279366620745290461}
   podeRodar: 0
   irEmbora: 0
+  canvas: {fileID: 0}
   botaoSim: {fileID: 0}
   botaoNao: {fileID: 0}
   balaoAnim: {fileID: 0}

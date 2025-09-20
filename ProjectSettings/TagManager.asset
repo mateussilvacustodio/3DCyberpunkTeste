@@ -10,6 +10,7 @@ TagManager:
   - ListaDeMercenarios
   - Scrollview
   - ScrollBarMercenario
+  - Canvas
   layers:
   - Default
   - TransparentFX

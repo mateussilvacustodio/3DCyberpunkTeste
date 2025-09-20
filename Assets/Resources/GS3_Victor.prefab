@@ -202,6 +202,7 @@ MonoBehaviour:
   opcao1: "Pode deixar, sua cabe\xE7a n\xE3o vai rolar hoje."
   opcao2: "Cara, foi mal, mas n\xE3o posso te ajudar."
   corGangue: {r: 1, g: 0.14901961, b: 0.7137255, a: 1}
+  mercador: 0
   recursos: 00000100000001
   mudadoresSim:
   - 0
@@ -219,13 +220,16 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  textoDinheiroGanhoGasto: {fileID: 7502805927975152675, guid: 9725cd254ebfc4b41b051f085ac6a584, type: 3}
   inventarioScript: {fileID: 0}
+  textoItemRecebido: {fileID: 1727427521983561730, guid: 2f15c24d35b052e45a8f787712af648d, type: 3}
   mercenarioScript: {fileID: 0}
   velocidadeMover: 0.5
   podeMover: 1
   personagemAnim: {fileID: 5343056491946908802}
   podeRodar: 0
   irEmbora: 0
+  canvas: {fileID: 0}
   botaoSim: {fileID: 0}
   botaoNao: {fileID: 0}
   balaoAnim: {fileID: 0}

@@ -194,6 +194,7 @@ MonoBehaviour:
   opcao2: "Informa\xE7\xE3o \xE9 poder e eu n\xE3o dou poder de gra\xE7a. V\xE1 procurar
     em outro lugar."
   corGangue: {r: 0.1764706, g: 0.101960786, b: 1, a: 1}
+  mercador: 0
   recursos: 01000000000100
   mudadoresSim:
   - -10
@@ -211,16 +212,18 @@ MonoBehaviour:
   - 0
   - -15
   - 0
+  textoDinheiroGanhoGasto: {fileID: 7502805927975152675, guid: 9725cd254ebfc4b41b051f085ac6a584, type: 3}
   inventarioScript: {fileID: 0}
+  textoItemRecebido: {fileID: 1727427521983561730, guid: 2f15c24d35b052e45a8f787712af648d, type: 3}
   mercenarioScript: {fileID: 0}
   velocidadeMover: 0.5
   podeMover: 1
   personagemAnim: {fileID: 7396137987258868051}
   podeRodar: 0
   irEmbora: 0
+  canvas: {fileID: 0}
   botaoSim: {fileID: 0}
   botaoNao: {fileID: 0}
-  botaoFimDoDia: {fileID: 0}
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
   gameController: {fileID: 0}

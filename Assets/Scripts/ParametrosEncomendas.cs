@@ -14,7 +14,7 @@ public class ParametrosEncomendas : MonoBehaviour
 
     void Update()
     {
-        Preco.text = "$ " + custo.ToString();
+        Preco.text = "$" + custo.ToString();
     }
 
     // public void mudarTexto() {

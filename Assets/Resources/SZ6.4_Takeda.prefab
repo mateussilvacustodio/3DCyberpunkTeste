@@ -530,6 +530,7 @@ MonoBehaviour:
   opcao1: "Se isso encerra essa hist\xF3ria, eu fa\xE7o."
   opcao2: "Eu j\xE1 disse que n\xE3o preciso provar nada para ningu\xE9m."
   corGangue: {r: 0.43529412, g: 1, b: 0, a: 1}
+  mercador: 0
   recursos: 00000001000100
   mudadoresSim:
   - 0
@@ -547,13 +548,16 @@ MonoBehaviour:
   - 0
   - 5
   - 0
+  textoDinheiroGanhoGasto: {fileID: 7502805927975152675, guid: 9725cd254ebfc4b41b051f085ac6a584, type: 3}
   inventarioScript: {fileID: 0}
+  textoItemRecebido: {fileID: 1727427521983561730, guid: 2f15c24d35b052e45a8f787712af648d, type: 3}
   mercenarioScript: {fileID: 0}
   velocidadeMover: 0.5
   podeMover: 1
   personagemAnim: {fileID: 377669257632506490}
   podeRodar: 0
   irEmbora: 0
+  canvas: {fileID: 0}
   botaoSim: {fileID: 0}
   botaoNao: {fileID: 0}
   balaoAnim: {fileID: 0}

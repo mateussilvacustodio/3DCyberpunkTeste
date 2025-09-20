@@ -5124,6 +5124,8 @@ MonoBehaviour:
   textoEntreguesFimDoDia: {fileID: 535076310}
   textoDevidosFimDoDia: {fileID: 778178965}
   notificacaoInvent: {fileID: 1454117074}
+  textoItemRecebido: {fileID: 0}
+  canvas: {fileID: 0}
   gameController: {fileID: 536325944}
   tutorial: 0
   tutorialScript: {fileID: 7620076168266197729}
@@ -9025,8 +9027,7 @@ MonoBehaviour:
   botaoNao: {fileID: 5748368910718658345}
   botaoTablet: {fileID: 297536191}
   tabletScript: {fileID: 1820562248}
-  botaoIniciar: {fileID: 0}
-  botaoTutorial: {fileID: 0}
+  menu: {fileID: 0}
   tVEffectScript: {fileID: 0}
   botaoFimDoDia: {fileID: 1543157925}
   dia: 0
@@ -20509,7 +20510,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 919f62139fb727247929bf61180c2fff, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b536d4064878ecd41a7adfdcf16f7589, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -24215,7 +24216,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1412155121
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25769,7 +25770,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2778, y: -1403}
+  m_AnchoredPosition: {x: -236, y: -147}
   m_SizeDelta: {x: 586.13794, y: 109.901}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1497858834
@@ -25793,9 +25794,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 80
-    m_FontStyle: 1
+    m_Font: {fileID: 12800000, guid: d5d695bf51cf56f429c87a8fa4dbbf6c, type: 3}
+    m_FontSize: 60
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 6
     m_MaxSize: 300
@@ -32517,7 +32518,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1905413300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -4.41}
+  m_LocalPosition: {x: 0, y: 0, z: -6.679}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -32526,8 +32527,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 550, y: 286}
-  m_SizeDelta: {x: 3179.49, y: 1907.46}
+  m_AnchoredPosition: {x: -645, y: -202.957}
+  m_SizeDelta: {x: 495.238, y: 336.214}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1905413302
 MonoBehaviour:
@@ -32549,7 +32550,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 74a2ed4109bec9e4885c2566391e46d6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dc0d5f106ff420f4da41caf662aad59d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

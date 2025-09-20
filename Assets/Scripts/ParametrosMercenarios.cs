@@ -29,7 +29,7 @@ public class ParametrosMercenarios : MonoBehaviour
 
     void Update()
     {
-        textoPrecoMercenario.text = "$ " + precoMercenario.ToString();
+        textoPrecoMercenario.text = "$" + precoMercenario.ToString();
     }
 
     public void EscolherMercenario()
