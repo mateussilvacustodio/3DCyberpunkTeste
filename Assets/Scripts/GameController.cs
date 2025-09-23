@@ -50,13 +50,13 @@ public class GameController : MonoBehaviour
     [SerializeField] Tablet tabletScript;
     [SerializeField] GameObject menu;
     public TVEffect tVEffectScript;
-    [SerializeField] GameObject botaoFimDoDia;
+    public GameObject botaoFimDoDia;
     [Header("Pedidos")]
     public int dia;
     [SerializeField] float diaMax;
     public float quantidadeDePedidos;
     public float quantidadeDePedidosPorDia;
-    [SerializeField] GameObject painelFimDeDia;
+    public GameObject painelFimDeDia;
     [SerializeField] Text textoFimDoDia;
     [SerializeField] Text textoEventoFimDoDia;
     [SerializeField] GameObject painelFimDeJogo;
@@ -87,11 +87,17 @@ public class GameController : MonoBehaviour
     [SerializeField] AudioSource audioSource;
     public AudioSource SFXPassos;
     public AudioSource SFXBotao;
+    [SerializeField] AudioSource SFXSirene;
+    [SerializeField] float volumeSirene;
+    bool subirSirene = true;
+    [SerializeField] float velocidadeVolumeSirene;
     [SerializeField] AudioClip musicaJogo;
     [SerializeField] Slider sliderVolume;
     public Slider sliderSFX;
     [SerializeField] TMP_Text volumeSFXTexto;
     [SerializeField] TMP_Text volumeMusicaTexto;
+    [Header("Cheat")]
+    public bool cheatDavid;
     //[Header("Carros")]
     //[SerializeField] GameObject[] carros;
     //[SerializeField] float tempoSpawnCarros;
@@ -168,7 +174,48 @@ public class GameController : MonoBehaviour
                 volumeSFXTexto.text = (sliderSFX.value * 100).ToString("F0");
 
             }
-            
+
+        }
+
+        // if (Input.GetKeyDown(KeyCode.A))
+        // {
+
+        //     SFXSirene.Play();
+
+        // }
+
+        if (SFXSirene.isPlaying)
+        {
+            if (subirSirene && volumeSirene < 1)
+            {
+                volumeSirene += Time.deltaTime * velocidadeVolumeSirene;
+                SFXSirene.volume = volumeSirene;
+
+            }
+
+            if (volumeSirene > 1)
+            {
+
+                subirSirene = false;
+
+            }
+
+            if (!subirSirene && volumeSirene > 0)
+            {
+                volumeSirene -= Time.deltaTime * velocidadeVolumeSirene;
+                SFXSirene.volume = volumeSirene;
+
+
+            }
+
+        }
+
+        if (!SFXSirene.isPlaying)
+        {
+
+            volumeSirene = 0;
+            subirSirene = true;
+
         }
 
     }
@@ -246,9 +293,7 @@ public class GameController : MonoBehaviour
     public void FimDoDia()
     {
 
-        //nao pode digitar o codigo
-        //print("Nao pode digitar o codigo")
-
+        painelFimDeDia.SetActive(true);
         numNotificacao = 0;
 
         foreach (GameObject item in indisponiveis)
@@ -293,6 +338,14 @@ public class GameController : MonoBehaviour
         }
 
         mercenarioScript.pedidosFalhos.Clear();
+
+        if (cheatDavid)
+        {
+
+            quantidadeDePedidosPorDia--;
+            cheatDavid = false;
+
+        }
 
         botaoTablet.interactable = false;
         tabletScript.FecharTablet();
@@ -354,7 +407,6 @@ public class GameController : MonoBehaviour
             barrasGanguesPCT2[i].text = barrasGanguesPCT[i].text;
         }
 
-        painelFimDeDia.SetActive(true);
         botaoFimDoDia.SetActive(false);
 
     }
@@ -465,16 +517,26 @@ public class GameController : MonoBehaviour
 
         for (int i = 0; i < firebaseRESTScript.listaDeDadosOrdenada.Count; i++)
         {
-            if (firebaseRESTScript.diasSobrevividos >= firebaseRESTScript.listaDeDadosOrdenada[i].diasDado)
+            if (firebaseRESTScript.diasSobrevividos > firebaseRESTScript.listaDeDadosOrdenada[i].diasDado)
+            {
+
+                firebaseRESTScript.HabilitarSubirRanking();
+                firebaseRESTScript.seuRecord.text = $"Dias sobrevividos:{firebaseRESTScript.diasSobrevividos}\nDinheiro restante:{firebaseRESTScript.dinheiroRestante}";
+                break;
+
+            }
+
+            if (firebaseRESTScript.diasSobrevividos == firebaseRESTScript.listaDeDadosOrdenada[i].diasDado)
             {
 
                 if (firebaseRESTScript.dinheiroRestante > firebaseRESTScript.listaDeDadosOrdenada[i].dinheiroDado)
                 {
-                    firebaseRESTScript.HabilitarSubirRanking();
+            
+                     firebaseRESTScript.HabilitarSubirRanking();
                     firebaseRESTScript.seuRecord.text = $"Dias sobrevividos:{firebaseRESTScript.diasSobrevividos}\nDinheiro restante:{firebaseRESTScript.dinheiroRestante}";
-                    break;
+                    break;   
+                    
                 }
-                
             }
         }
 

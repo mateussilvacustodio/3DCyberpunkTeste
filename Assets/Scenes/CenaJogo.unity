@@ -12279,6 +12279,7 @@ GameObject:
   - component: {fileID: 536325946}
   - component: {fileID: 536325948}
   - component: {fileID: 536325949}
+  - component: {fileID: 536325950}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -12516,11 +12517,15 @@ MonoBehaviour:
   audioSource: {fileID: 536325946}
   SFXPassos: {fileID: 536325948}
   SFXBotao: {fileID: 536325949}
+  SFXSirene: {fileID: 536325950}
+  volumeSirene: 0
+  velocidadeVolumeSirene: 0.5
   musicaJogo: {fileID: 8300000, guid: ec2ca62a3d32cc0498b7aaae828da441, type: 3}
   sliderVolume: {fileID: 509956988}
   sliderSFX: {fileID: 149106780}
   volumeSFXTexto: {fileID: 1006126688}
   volumeMusicaTexto: {fileID: 487216163}
+  cheatDavid: 0
 --- !u!4 &536325945
 Transform:
   m_ObjectHideFlags: 0
@@ -12668,7 +12673,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: af21142ddcad05f438e9892b9b18e619, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b43c678cb9d32d3409784dec7cae536c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -12765,6 +12770,102 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b7e1eed9d7c05a0499d713d3ee35844c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &536325950
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536325943}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 87eb29d541896bf478f5836027d6a232, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -13528,7 +13629,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 347021796}
   m_HandleRect: {fileID: 347021795}
   m_Direction: 0
-  m_Value: -0.00000043085657
+  m_Value: -0.0000005385708
   m_Size: 0.55119044
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -16470,27 +16571,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itensPossuidos:
   - nome: "Lamina de bra\xE7o"
-    quant: 0
+    quant: 1
     sprite: {fileID: 21300000, guid: 9082067575d36dc43b3eeeaee2f6a7ee, type: 3}
     modificadores: []
   - nome: Placa neural
-    quant: 0
+    quant: 1
     sprite: {fileID: 21300000, guid: 05e92c33f0f0d9347aebf95b179f2c01, type: 3}
     modificadores: []
   - nome: Drone MK Vortex
-    quant: 0
+    quant: 1
     sprite: {fileID: 21300000, guid: 8138c14e5daeec346b163f0eaf42b7fe, type: 3}
     modificadores: []
   - nome: Neurotoxina
-    quant: 0
+    quant: 1
     sprite: {fileID: 21300000, guid: be5a90c0615990c459904dcd2b244c65, type: 3}
     modificadores: []
   - nome: Droga Stardust
-    quant: 0
+    quant: 1
     sprite: {fileID: 21300000, guid: adc03e7528ba0ff458ed93b7711d9fe7, type: 3}
     modificadores: []
   - nome: Chip criptografado
-    quant: 0
+    quant: 1
     sprite: {fileID: 21300000, guid: cee05b85a86a02a42a2934d683dfb3c8, type: 3}
     modificadores: []
   - nome: Armamento militar
@@ -16498,7 +16599,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: e5dc1850561f2cb418ea5f7e6521d9f7, type: 3}
     modificadores: []
   - nome: Cortador laser
-    quant: 0
+    quant: 1
     sprite: {fileID: 21300000, guid: dc3c6b03b8b84f74d97388402bec3f4f, type: 3}
     modificadores: []
   itensRecebidos: []
@@ -16942,7 +17043,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1170222181}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.9999999
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -35700,7 +35801,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 775a2beaf5f683a43b11e2e910b111a6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2c9419bc830ccb34da89b194a34df300, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

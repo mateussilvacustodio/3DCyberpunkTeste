@@ -7,7 +7,7 @@ using UnityEngine;
 public class Cheats : MonoBehaviour
 {
     [SerializeField] List<string> codigosSecretos = new List<string>();
-    [SerializeField] TMP_InputField codigoDigitado;
+    public TMP_InputField codigoDigitado;
     bool cheatConfirmado;
     [SerializeField] GameObject cheatConfirmadoText;
     [SerializeField] GameObject codigoIncorretoText;
@@ -42,8 +42,18 @@ public class Cheats : MonoBehaviour
                     gameController.gangues[6] += 7500;
                     break;
                 case "Felipe":
-                    gameController.personagensDoDia.Add(david);
-                    gameController.quantidadeDePedidosPorDia++;
+                    if (!gameController.botaoFimDoDia.activeSelf)
+                    {
+                        gameController.personagensDoDia.Add(david);
+                        gameController.quantidadeDePedidosPorDia++;
+                    }
+                    else
+                    {
+                        print("O botao esta ativado");
+                        gameController.personagensDiaSeguinte.Add(david);
+                        gameController.quantidadeDePedidosPorDia++;
+                    }
+                    
                     break;
                 case "Leonardo":
                     Debug.Log("Leonardo");

@@ -128,6 +128,12 @@ public class Personagem : MonoBehaviour
         {
 
             gameController.personagensDiaSeguinte.Add(personagemRamificacao1);
+            if (nome == "David")
+            {
+
+                gameController.cheatDavid = true;
+
+            }
 
         }
 

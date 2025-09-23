@@ -75,11 +75,17 @@ public class Inventario : MonoBehaviour
                 else
                 {
 
-                    string textoItemExibir = itemRecebido.quant.ToString("+;-;") + itemRecebido.nome + " x" + Mathf.Abs(itemRecebido.quant);
-                    textoItemRecebido.GetComponent<TMP_Text>().text = textoItemExibir;
-                    GameObject instanciaItem = Instantiate(textoItemRecebido, canvas.transform);
-                    Destroy(instanciaItem, 0.75f);
+                    if (!gameController.painelFimDeDia.activeSelf)
+                    {
+                        
+                        string textoItemExibir = itemRecebido.quant.ToString("+;-;") + itemRecebido.nome + " x" + Mathf.Abs(itemRecebido.quant);
+                        textoItemRecebido.GetComponent<TMP_Text>().text = textoItemExibir;
+                        GameObject instanciaItem = Instantiate(textoItemRecebido, canvas.transform);
+                        print("o problema ta aqui");
+                        Destroy(instanciaItem, 0.75f);
 
+                    }
+                    
                 }
 
             }
