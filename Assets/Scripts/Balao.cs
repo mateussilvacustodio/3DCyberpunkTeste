@@ -34,14 +34,21 @@ public class Balao : MonoBehaviour
 
         if(gameController.personagemInstancia != null) {
 
-            if(balaoTexto.text == gameController.personagemInstancia.GetComponent<Personagem>().pedido && !gameController.personagemInstancia.GetComponent<Personagem>().botaoSim.interactable && !gameController.personagemInstancia.GetComponent<Personagem>().botaoNao.interactable) {
+            if (balaoTexto.text == gameController.personagemInstancia.GetComponent<Personagem>().pedido && !gameController.personagemInstancia.GetComponent<Personagem>().botaoSim.interactable && !gameController.personagemInstancia.GetComponent<Personagem>().botaoNao.interactable)
+            {
 
-            botaoSimTexto.text = gameController.personagemInstancia.GetComponent<Personagem>().opcao1;
-            botaoNaoTexto.text = gameController.personagemInstancia.GetComponent<Personagem>().opcao2;
+                botaoSimTexto.text = gameController.personagemInstancia.GetComponent<Personagem>().opcao1;
+                botaoNaoTexto.text = gameController.personagemInstancia.GetComponent<Personagem>().opcao2;
 
-            gameController.personagemInstancia.GetComponent<Personagem>().botaoSim.interactable = true;
-            gameController.personagemInstancia.GetComponent<Personagem>().botaoNao.interactable = true;
+                gameController.personagemInstancia.GetComponent<Personagem>().botaoSim.interactable = true;
+                gameController.personagemInstancia.GetComponent<Personagem>().botaoNao.interactable = true;
 
+                gameController.ciberOlhoUsadoNessePedido = false;
+                if (!gameController.ciberOlhoUsado)
+                {
+                    gameController.botaoCiberOlho.interactable = true;
+                }
+                
             }
 
         }

@@ -514,7 +514,7 @@ MonoBehaviour:
   itemDoNPC:
     nome: Placa neural
     quant: 1
-    sprite: {fileID: 21300000, guid: 05e92c33f0f0d9347aebf95b179f2c01, type: 3}
+    sprite: {fileID: 21300000, guid: a48c3c5b1fc1c1e4283c8e5c3b99efbb, type: 3}
     modificadores:
     - 0
     - 0

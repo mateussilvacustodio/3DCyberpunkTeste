@@ -11,6 +11,7 @@ public class Tablet : MonoBehaviour
     [SerializeField] Text diaAtual;
     [SerializeField] GameController gameController;
     [SerializeField] Animator tabletAnim;
+    [SerializeField] GameObject contornoTablet;
 
     [Header("Aplicativos")]
     [SerializeField] GameObject menuInicial;
@@ -71,15 +72,19 @@ public class Tablet : MonoBehaviour
 
     }
 
-    public void CrescerTablet() {
+    public void CrescerTablet()
+    {
 
-        tabletAnim.SetBool("Crescer", true);
+        //tabletAnim.SetBool("Crescer", true);
+        contornoTablet.SetActive(true);
 
     }
 
-    public void DiminuirTablet() {
+    public void DiminuirTablet()
+    {
 
-        tabletAnim.SetBool("Crescer", false);
+        //tabletAnim.SetBool("Crescer", false);
+        contornoTablet.SetActive(false);
 
     }
 

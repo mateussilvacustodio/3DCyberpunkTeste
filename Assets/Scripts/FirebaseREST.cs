@@ -72,6 +72,7 @@ public class FirebaseREST : MonoBehaviour
     [SerializeField] TMP_InputField nomePreenchido;
     [SerializeField] GameObject atualizandoRanking;
     [SerializeField] GameObject rankingAtualizado;
+    [SerializeField] GameObject nomeJaExiste;
 
     void Start()
     {
@@ -213,10 +214,40 @@ public class FirebaseREST : MonoBehaviour
     public void AtivarSalvarDados()
     {
 
-        nomePessoa = nomePreenchido.text;
-        adicionarRanking.SetActive(false);
-        atualizandoRanking.SetActive(true);
-        SalvarJogador();
+        bool nomeExiste = false;
+        foreach (var item in listaDeDadosOrdenada)
+        {
+            if (item.nomeDado == nomePreenchido.text)
+            {
+                if (item.diasDado > diasSobrevividos)
+                {
+                    nomeExiste = true;
+                    break;
+                    
+                }
+                else if (item.dinheiroDado > dinheiroRestante)
+                {
+                    nomeExiste = true;
+                    break;
+                }
+                
+            }
+        }
+
+        if (!nomeExiste)
+        {
+            nomePessoa = nomePreenchido.text;
+            adicionarRanking.SetActive(false);
+            atualizandoRanking.SetActive(true);
+            SalvarJogador();
+        }
+        else
+        {
+
+            adicionarRanking.SetActive(false);
+            nomeJaExiste.SetActive(true);
+
+        }
 
     }
 

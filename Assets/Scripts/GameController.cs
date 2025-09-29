@@ -27,7 +27,7 @@ public class GameController : MonoBehaviour
     [SerializeField] Image[] barrasGangues2;
     [SerializeField] Text[] barrasGanguesPCT;
     [SerializeField] Text[] barrasGanguesPCT2;
-    [SerializeField] Text dinheiroText;
+    [SerializeField] Text[] dinheiroText;
     [SerializeField] Text dinheiroText2;
     [SerializeField] Text dinheiroText3;
     [SerializeField] Text dinheiroText4;
@@ -98,6 +98,17 @@ public class GameController : MonoBehaviour
     [SerializeField] TMP_Text volumeMusicaTexto;
     [Header("Cheat")]
     public bool cheatDavid;
+    [Header("Itens")]
+    public float quantidadeCiberOlho;
+    public Button botaoCiberOlho;
+    [SerializeField] TMP_Text textoQuantidadeCiberOlho;
+    public bool ciberOlhoUsado;
+    public bool ciberOlhoUsadoNessePedido;
+    [SerializeField] GameObject painelOlho;
+    public GameObject[] gangueOlho1;
+    public TMP_Text gangueOlho1Dinheiro;
+    public GameObject[] gangueOlho2;
+    public TMP_Text gangueOlho2Dinheiro;
     //[Header("Carros")]
     //[SerializeField] GameObject[] carros;
     //[SerializeField] float tempoSpawnCarros;
@@ -138,11 +149,15 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-        dinheiroText.text = "$" + gangues[6].ToString("F0");
-        dinheiroText2.text = dinheiroText.text;
-        dinheiroText3.text = dinheiroText.text;
-        dinheiroText4.text = dinheiroText.text;
-        dinheiroTextFimDoDia.text = "Dinheiro atual: " + dinheiroText.text;
+        foreach (var item in dinheiroText)
+        {
+            item.text = "$" + gangues[6].ToString("F0");
+        }
+
+        dinheiroText2.text = dinheiroText[0].text;
+        dinheiroText3.text = dinheiroText[0].text;
+        dinheiroText4.text = dinheiroText[0].text;
+        dinheiroTextFimDoDia.text = "Dinheiro atual: " + dinheiroText[0].text;
 
         if (numNotificacao > 0)
         {
@@ -216,6 +231,16 @@ public class GameController : MonoBehaviour
             volumeSirene = 0;
             subirSirene = true;
 
+        }
+
+        if (quantidadeCiberOlho < 1)
+        {
+            botaoCiberOlho.GameObject().SetActive(false);
+        }
+        else
+        {
+            botaoCiberOlho.GameObject().SetActive(true);
+            textoQuantidadeCiberOlho.text = quantidadeCiberOlho.ToString();
         }
 
     }
@@ -381,7 +406,10 @@ public class GameController : MonoBehaviour
         {
             barrasGangues[i].fillAmount = gangues[i] / 100;
         }
-        dinheiroText.text = gangues[6].ToString("F0");
+        foreach (var item in dinheiroText)
+        {
+            item.text = "$" + gangues[6].ToString("F0");
+        }
         for (int i = 0; i < barrasGangues.Length; i++)
         {
             R = (100 - gangues[i]) / 50;
@@ -408,6 +436,7 @@ public class GameController : MonoBehaviour
         }
 
         botaoFimDoDia.SetActive(false);
+        ciberOlhoUsado = false;
 
     }
 

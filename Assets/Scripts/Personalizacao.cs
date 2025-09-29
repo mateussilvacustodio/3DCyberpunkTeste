@@ -8,6 +8,8 @@ using UnityEngine.UI;
 
 public class Personalizacao : MonoBehaviour, IPointerDownHandler, IDragHandler
 {
+    [Header("GameController")]
+    [SerializeField] GameController gameController;
     [Header("Menus")]
     [SerializeField] GameObject inicio;
     [SerializeField] GameObject luzes;
@@ -19,6 +21,10 @@ public class Personalizacao : MonoBehaviour, IPointerDownHandler, IDragHandler
     [SerializeField] RectTransform bolinhaCursor;
     [SerializeField] Image bolinhaImage;
     [SerializeField] Texture2D colorTexture;
+    [Header("CiberOlho")]
+    [SerializeField] GameObject painelCiberOlho;
+    [SerializeField] GameObject desejaUsarCiberOlho;
+    [SerializeField] GameObject ciberOlhoUsado;
     void Start()
     {
         colorTexture = rodaCores.texture as Texture2D;
@@ -27,6 +33,10 @@ public class Personalizacao : MonoBehaviour, IPointerDownHandler, IDragHandler
     public void FecharPainel()
     {
 
+        luzes.SetActive(false);
+        itens.SetActive(false);
+        decoracoes.SetActive(false);
+        inicio.SetActive(true);
         this.gameObject.SetActive(false);
 
     }
@@ -69,18 +79,20 @@ public class Personalizacao : MonoBehaviour, IPointerDownHandler, IDragHandler
     public void OnPointerDown(PointerEventData eventData)
     {
 
-        if (luzes.activeSelf) {
+        if (luzes.activeSelf)
+        {
 
             PegarCor(eventData);
 
         }
-        
+
     }
 
     public void OnDrag(PointerEventData eventData)
     {
 
-        if (luzes.activeSelf) {
+        if (luzes.activeSelf)
+        {
 
             PegarCor(eventData);
 
@@ -132,5 +144,52 @@ public class Personalizacao : MonoBehaviour, IPointerDownHandler, IDragHandler
 
     }
 
+    public void ComprarItem(ParametrosItens pParametrosItem)
+    {
 
+        gameController.gangues[6] -= pParametrosItem.valor;
+
+        switch (pParametrosItem.nome)
+        {
+            case "Ciber olho":
+                gameController.quantidadeCiberOlho += 1;
+                break;
+
+            case "Chip":
+                print("chip");
+                break;
+
+            case "Multichip":
+                print("multichip");
+                break;
+
+        }
+
+    }
+
+    public void AbrirPainelOlho()
+    {
+        painelCiberOlho.SetActive(true);
+        if (gameController.ciberOlhoUsado)
+        {
+            desejaUsarCiberOlho.SetActive(false);
+            ciberOlhoUsado.SetActive(true);
+        }
+    }
+
+    public void UsarCiberOlho()
+    {
+        desejaUsarCiberOlho.SetActive(false);
+        ciberOlhoUsado.SetActive(true);
+        //gameController.quantidadeCiberOlho -= 1;
+        gameController.ciberOlhoUsado = true;
+        gameController.ciberOlhoUsadoNessePedido = true;
+    }
+
+    public void FecharPainelOlho()
+    {
+        desejaUsarCiberOlho.SetActive(true);
+        ciberOlhoUsado.SetActive(false);
+        painelCiberOlho.SetActive(false);
+    }
 }

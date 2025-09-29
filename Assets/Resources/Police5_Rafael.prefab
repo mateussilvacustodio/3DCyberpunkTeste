@@ -182,7 +182,7 @@ MonoBehaviour:
   itemDoNPC:
     nome: Drone MK Vortex
     quant: 1
-    sprite: {fileID: 21300000, guid: 8138c14e5daeec346b163f0eaf42b7fe, type: 3}
+    sprite: {fileID: 21300000, guid: d6f79d0045d546843a769839d67740f7, type: 3}
     modificadores:
     - 0
     - 0
@@ -221,7 +221,6 @@ MonoBehaviour:
   - 0
   textoDinheiroGanhoGasto: {fileID: 7502805927975152675, guid: 9725cd254ebfc4b41b051f085ac6a584, type: 3}
   inventarioScript: {fileID: 0}
-  textoItemRecebido: {fileID: 1727427521983561730, guid: 2f15c24d35b052e45a8f787712af648d, type: 3}
   mercenarioScript: {fileID: 0}
   velocidadeMover: 0.5
   podeMover: 1
