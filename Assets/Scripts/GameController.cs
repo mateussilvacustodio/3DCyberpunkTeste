@@ -87,10 +87,10 @@ public class GameController : MonoBehaviour
     [SerializeField] AudioSource audioSource;
     public AudioSource SFXPassos;
     public AudioSource SFXBotao;
-    [SerializeField] AudioSource SFXSirene;
-    [SerializeField] float volumeSirene;
-    bool subirSirene = true;
-    [SerializeField] float velocidadeVolumeSirene;
+    //[SerializeField] AudioSource SFXSirene;
+    //[SerializeField] float volumeSirene;
+    //bool subirSirene = true;
+    //[SerializeField] float velocidadeVolumeSirene;
     [SerializeField] AudioClip musicaJogo;
     [SerializeField] Slider sliderVolume;
     public Slider sliderSFX;
@@ -99,6 +99,7 @@ public class GameController : MonoBehaviour
     [Header("Cheat")]
     public bool cheatDavid;
     [Header("Itens")]
+    [Header("Ciberolho")]
     public float quantidadeCiberOlho;
     public Button botaoCiberOlho;
     [SerializeField] TMP_Text textoQuantidadeCiberOlho;
@@ -109,6 +110,17 @@ public class GameController : MonoBehaviour
     public TMP_Text gangueOlho1Dinheiro;
     public GameObject[] gangueOlho2;
     public TMP_Text gangueOlho2Dinheiro;
+    [Header("Chips")]
+    [SerializeField] ParametrosItens parametrosItensScript1;
+    public float quantidadeChips;
+    public Button botaoChip;
+    [SerializeField] TMP_Text textoQuantidadeChip;
+    [Header("Multichips")]
+    public float quantidadeMultichips;
+    public Button botaoMultichip;
+    [SerializeField] TMP_Text textoQuantidadeMultichip;
+    //public List<GameObject> chips = new List<GameObject>();
+
     //[Header("Carros")]
     //[SerializeField] GameObject[] carros;
     //[SerializeField] float tempoSpawnCarros;
@@ -116,34 +128,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
 
-        for (int i = 0; i < barrasGangues.Length; i++)
-        {
-            barrasGangues[i].fillAmount = gangues[i] / 100;
-        }
-        for (int i = 0; i < barrasGangues.Length; i++)
-        {
-            R = (100 - gangues[i]) / 50;
-            G = gangues[i] / 50;
-            corTeste = new Color(R, G, 0f, 1f);
-            barrasGangues[i].color = corTeste;
-        }
-        for (int i = 0; i < barrasGangues.Length; i++)
-        {
-            barrasGanguesPCT[i].text = gangues[i].ToString() + "%";
-        }
-
-        for (int i = 0; i < barrasGangues.Length; i++)
-        {
-            barrasGangues2[i].fillAmount = barrasGangues[i].fillAmount;
-        }
-        for (int i = 0; i < barrasGangues.Length; i++)
-        {
-            barrasGangues2[i].color = barrasGangues[i].color;
-        }
-        for (int i = 0; i < barrasGangues.Length; i++)
-        {
-            barrasGanguesPCT2[i].text = barrasGanguesPCT[i].text;
-        }
+        AtualizarGangues();
 
     }
 
@@ -192,47 +177,6 @@ public class GameController : MonoBehaviour
 
         }
 
-        // if (Input.GetKeyDown(KeyCode.A))
-        // {
-
-        //     SFXSirene.Play();
-
-        // }
-
-        if (SFXSirene.isPlaying)
-        {
-            if (subirSirene && volumeSirene < 1)
-            {
-                volumeSirene += Time.deltaTime * velocidadeVolumeSirene;
-                SFXSirene.volume = volumeSirene;
-
-            }
-
-            if (volumeSirene > 1)
-            {
-
-                subirSirene = false;
-
-            }
-
-            if (!subirSirene && volumeSirene > 0)
-            {
-                volumeSirene -= Time.deltaTime * velocidadeVolumeSirene;
-                SFXSirene.volume = volumeSirene;
-
-
-            }
-
-        }
-
-        if (!SFXSirene.isPlaying)
-        {
-
-            volumeSirene = 0;
-            subirSirene = true;
-
-        }
-
         if (quantidadeCiberOlho < 1)
         {
             botaoCiberOlho.GameObject().SetActive(false);
@@ -241,6 +185,60 @@ public class GameController : MonoBehaviour
         {
             botaoCiberOlho.GameObject().SetActive(true);
             textoQuantidadeCiberOlho.text = quantidadeCiberOlho.ToString();
+        }
+
+        if (quantidadeChips < 1)
+        {
+            botaoChip.GameObject().SetActive(false);
+        }
+        else
+        {
+            botaoChip.GameObject().SetActive(true);
+            textoQuantidadeChip.text = quantidadeChips.ToString();
+        }
+
+        if (quantidadeMultichips < 1)
+        {
+            botaoMultichip.GameObject().SetActive(false);
+        }
+        else
+        {
+            botaoMultichip.GameObject().SetActive(true);
+            textoQuantidadeMultichip.text = quantidadeMultichips.ToString();
+        }
+
+    }
+
+    public void AtualizarGangues()
+    {
+        
+        for (int i = 0; i < barrasGangues.Length; i++)
+        {
+            barrasGangues[i].fillAmount = gangues[i] / 100;
+        }
+        for (int i = 0; i < barrasGangues.Length; i++)
+        {
+            R = (100 - gangues[i]) / 50;
+            G = gangues[i] / 50;
+            corTeste = new Color(R, G, 0f, 1f);
+            barrasGangues[i].color = corTeste;
+        }
+        for (int i = 0; i < barrasGangues.Length; i++)
+        {
+            barrasGanguesPCT[i].text = gangues[i].ToString() + "%";
+        }
+
+        for (int i = 0; i < barrasGangues.Length; i++)
+        {
+            barrasGangues2[i].fillAmount = barrasGangues[i].fillAmount;
+        }
+        for (int i = 0; i < barrasGangues.Length; i++)
+        {
+            barrasGangues2[i].color = barrasGangues[i].color;
+        }
+        for (int i = 0; i < barrasGangues.Length; i++)
+        {
+            barrasGanguesPCT2[i].text = barrasGanguesPCT[i].text;
         }
 
     }
@@ -258,6 +256,11 @@ public class GameController : MonoBehaviour
         int aleatoria = Random.Range(0, personagensDoDia.Count);
 
         personagemInstancia = Instantiate(personagensDoDia[aleatoria]);
+        if (personagemInstancia.GetComponent<Personagem>().nome == "Mercador")
+        {
+            parametrosItensScript1.AleatoriezarChip();
+            print("Aleatoriezei Chips");
+        }
         //personagemIndex = aleatoria;
         botaoSim.onClick.RemoveAllListeners();
         botaoNao.onClick.RemoveAllListeners();
@@ -402,37 +405,11 @@ public class GameController : MonoBehaviour
 
         ListaDeEventosFimDeDia.RemoveAt(eventoAleatorio);
 
-        for (int i = 0; i < barrasGangues.Length; i++)
-        {
-            barrasGangues[i].fillAmount = gangues[i] / 100;
-        }
+        AtualizarGangues();
+
         foreach (var item in dinheiroText)
         {
             item.text = "$" + gangues[6].ToString("F0");
-        }
-        for (int i = 0; i < barrasGangues.Length; i++)
-        {
-            R = (100 - gangues[i]) / 50;
-            G = gangues[i] / 50;
-            corTeste = new Color(R, G, 0f, 1f);
-            barrasGangues[i].color = corTeste;
-        }
-        for (int i = 0; i < barrasGangues.Length; i++)
-        {
-            barrasGanguesPCT[i].text = gangues[i].ToString() + "%";
-        }
-
-        for (int i = 0; i < barrasGangues.Length; i++)
-        {
-            barrasGangues2[i].fillAmount = barrasGangues[i].fillAmount;
-        }
-        for (int i = 0; i < barrasGangues.Length; i++)
-        {
-            barrasGangues2[i].color = barrasGangues[i].color;
-        }
-        for (int i = 0; i < barrasGangues.Length; i++)
-        {
-            barrasGanguesPCT2[i].text = barrasGanguesPCT[i].text;
         }
 
         botaoFimDoDia.SetActive(false);
@@ -531,12 +508,12 @@ public class GameController : MonoBehaviour
 
     }
 
-    public void AbrirConfigurações()
-    {
+    // public void AbrirConfigurações()
+    // {
 
 
 
-    }
+    // }
 
     public void AbrirRanking()
     {

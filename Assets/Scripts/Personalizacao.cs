@@ -21,10 +21,18 @@ public class Personalizacao : MonoBehaviour, IPointerDownHandler, IDragHandler
     [SerializeField] RectTransform bolinhaCursor;
     [SerializeField] Image bolinhaImage;
     [SerializeField] Texture2D colorTexture;
+    [Header("Itens")]
+    [SerializeField] GameObject painelItens;
     [Header("CiberOlho")]
-    [SerializeField] GameObject painelCiberOlho;
     [SerializeField] GameObject desejaUsarCiberOlho;
     [SerializeField] GameObject ciberOlhoUsado;
+    [Header("Chip")]
+    [SerializeField] GameObject chipsLista;
+    [SerializeField] GameObject contentChip;
+    [Header("Multichip")]
+    [SerializeField] GameObject multichipsLista;
+    [SerializeField] GameObject contentMultichip;
+
     void Start()
     {
         colorTexture = rodaCores.texture as Texture2D;
@@ -156,11 +164,27 @@ public class Personalizacao : MonoBehaviour, IPointerDownHandler, IDragHandler
                 break;
 
             case "Chip":
-                print("chip");
+                GameObject instanciaChip = Instantiate(pParametrosItem.chipPrefab, contentChip.transform);
+                instanciaChip.GetComponent<Chip>().corAChip = pParametrosItem.corA;
+                instanciaChip.GetComponent<Chip>().corBChip = pParametrosItem.corB;
+                instanciaChip.GetComponent<Chip>().nome = pParametrosItem.nomeMostrar;
+                instanciaChip.GetComponent<Chip>().gangueAfetada = pParametrosItem.aleatCor;
+                instanciaChip.GetComponent<Chip>().gangueAfetada2 = pParametrosItem.aleatCor2;
+                instanciaChip.GetComponent<Chip>().valorAfetada = 10;
+                instanciaChip.GetComponent<Chip>().valorAfetada2 = 0;
+                gameController.quantidadeChips += 1;
                 break;
 
             case "Multichip":
-                print("multichip");
+                instanciaChip = Instantiate(pParametrosItem.chipPrefab, contentMultichip.transform);
+                instanciaChip.GetComponent<Chip>().corAChip = pParametrosItem.corA;
+                instanciaChip.GetComponent<Chip>().corBChip = pParametrosItem.corB;
+                instanciaChip.GetComponent<Chip>().nome = pParametrosItem.nomeMostrar;
+                instanciaChip.GetComponent<Chip>().gangueAfetada = pParametrosItem.aleatCor;
+                instanciaChip.GetComponent<Chip>().gangueAfetada2 = pParametrosItem.aleatCor2;
+                instanciaChip.GetComponent<Chip>().valorAfetada = 5;
+                instanciaChip.GetComponent<Chip>().valorAfetada2 = 5;
+                gameController.quantidadeMultichips += 1;
                 break;
 
         }
@@ -169,12 +193,16 @@ public class Personalizacao : MonoBehaviour, IPointerDownHandler, IDragHandler
 
     public void AbrirPainelOlho()
     {
-        painelCiberOlho.SetActive(true);
+        painelItens.SetActive(true);
+        chipsLista.SetActive(false);
+        multichipsLista.SetActive(false);
+        desejaUsarCiberOlho.SetActive(true);
         if (gameController.ciberOlhoUsado)
         {
             desejaUsarCiberOlho.SetActive(false);
             ciberOlhoUsado.SetActive(true);
         }
+
     }
 
     public void UsarCiberOlho()
@@ -190,6 +218,26 @@ public class Personalizacao : MonoBehaviour, IPointerDownHandler, IDragHandler
     {
         desejaUsarCiberOlho.SetActive(true);
         ciberOlhoUsado.SetActive(false);
-        painelCiberOlho.SetActive(false);
+        painelItens.SetActive(false);
+        chipsLista.SetActive(false);
+        multichipsLista.SetActive(false);
+    }
+
+    public void AbrirListaChips()
+    {
+        painelItens.SetActive(true);
+        desejaUsarCiberOlho.SetActive(false);
+        ciberOlhoUsado.SetActive(false);
+        chipsLista.SetActive(true);
+        multichipsLista.SetActive(false);
+    }
+
+    public void AbrirListaMultichips()
+    {
+        painelItens.SetActive(true);
+        desejaUsarCiberOlho.SetActive(false);
+        ciberOlhoUsado.SetActive(false);
+        chipsLista.SetActive(false);
+        multichipsLista.SetActive(true);
     }
 }
