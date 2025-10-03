@@ -33,6 +33,7 @@ public class GameController : MonoBehaviour
     [SerializeField] Text dinheiroText4;
     [SerializeField] Text dinheiroTextFimDoDia;
     [SerializeField] List<EventosFimDeDia> ListaDeEventosFimDeDia = new List<EventosFimDeDia>();
+    [SerializeField] List<EventosFimDeDia> ListaDeEventosBackup = new List<EventosFimDeDia>();
     [SerializeField] string[] textoFimDeJogoGangues;
     [Header("Personagens")]
     //[SerializeField] List<int> indicesDisponiveis = new List<int>();
@@ -41,6 +42,7 @@ public class GameController : MonoBehaviour
     [SerializeField] List<GameObject> personagensTodos = new List<GameObject>();
     [SerializeField] List<GameObject> personagensTodosBackup = new List<GameObject>();
     [SerializeField] List<GameObject> personagensDisponiveis = new List<GameObject>();
+    [SerializeField] GameObject mercador;
     public List<GameObject> personagensDoDia = new List<GameObject>();
     public List<GameObject> personagensDiaSeguinte = new List<GameObject>();
     [Header("Botões")]
@@ -56,6 +58,7 @@ public class GameController : MonoBehaviour
     [SerializeField] float diaMax;
     public float quantidadeDePedidos;
     public float quantidadeDePedidosPorDia;
+    [SerializeField] int[] diasMercador; //o dia que o mercador aparece tambem é o dia em que a quantidade de personagens no dia aumenta
     public GameObject painelFimDeDia;
     [SerializeField] Text textoFimDoDia;
     [SerializeField] Text textoEventoFimDoDia;
@@ -444,23 +447,26 @@ public class GameController : MonoBehaviour
 
             if (dia < diaMax + 1)
             {
-
                 AtivarEfeitoTV();
                 painelFimDeDia.SetActive(false);
                 tabletScript.AbrirReputacaoFimDoDia();
                 botaoTablet.interactable = true;
+                foreach (var item in diasMercador)
+                {
+                    if (item == dia)
+                    {
+                        quantidadeDePedidosPorDia++;
+                        personagensDiaSeguinte.Add(mercador);
+                        break;
+                    }
+                }
                 PreencherListaDoDiaAtual();
                 Invoke("CriarPersonagem2", 0.75f);
-                //liberar digitacao do codigo
-                //print("pode digitar o codigo")
-
             }
             else
             {
-
                 painelFimDeDia.SetActive(false);
                 painelVitoria.SetActive(true);
-
             }
 
         }

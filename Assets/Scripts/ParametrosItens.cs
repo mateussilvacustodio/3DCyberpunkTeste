@@ -12,25 +12,25 @@ public class ParametrosItens : MonoBehaviour
     public string nomeMostrar;
     [SerializeField] TMP_Text campoValor;
     public float valor;
+    [SerializeField] TMP_Text campoDescricao;
     [SerializeField] string descricao;
     [SerializeField] Image ladoA;
     [SerializeField] Image ladoB;
     public Color corA;
     public Color corB;
     [SerializeField] Color[] corLista;
+    [SerializeField] string[] ganguesSigla;
     [SerializeField] string[] gangues;
     public int aleatCor;
     public int aleatCor2;
     public GameObject chipPrefab;
 
-    // Start is called before the first frame update
     void Start()
     {
 
         AleatoriezarChip();
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -40,7 +40,8 @@ public class ParametrosItens : MonoBehaviour
             corB = corA;
             ladoA.color = corA;
             ladoB.color = corB;
-            nomeMostrar = "Chip " + gangues[aleatCor];
+            nomeMostrar = "Chip " + ganguesSigla[aleatCor];
+            descricao = "Um chip contendo informações sobre a " + gangues[aleatCor] + ". Pode ser usado para chantageá-los, aumentando sua reputação.";
         }
         else if (nome == "Multichip")
         {
@@ -48,7 +49,8 @@ public class ParametrosItens : MonoBehaviour
             corB = corLista[aleatCor2];
             ladoA.color = corA;
             ladoB.color = corB;
-            nomeMostrar = "Chip " + gangues[aleatCor] + "+" + gangues[aleatCor2];
+            nomeMostrar = "Chip " + ganguesSigla[aleatCor] + "+" + ganguesSigla[aleatCor2];
+            descricao = "Um chip contendo informações sobre a " + gangues[aleatCor] + " e a " + gangues[aleatCor2] + ". Pode ser usado para chantageá-los, aumentando um pouco sua reputação com cada.";
         }
 
         campoNome.text = nomeMostrar;
@@ -59,7 +61,14 @@ public class ParametrosItens : MonoBehaviour
     public void MostrarExplicacao()
     {
 
+        campoDescricao.text = descricao;
 
+    }
+
+    public void SumirExplicacao()
+    {
+
+        campoDescricao.text = "";
 
     }
 

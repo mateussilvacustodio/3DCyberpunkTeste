@@ -671,6 +671,7 @@ GameObject:
   - component: {fileID: 22779058}
   - component: {fileID: 22779060}
   - component: {fileID: 22779059}
+  - component: {fileID: 22779061}
   m_Layer: 5
   m_Name: Interrogacao1
   m_TagString: Untagged
@@ -736,6 +737,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 22779057}
   m_CullTransparentMesh: 1
+--- !u!114 &22779061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22779057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 480560311}
+          m_TargetAssemblyTypeName: ParametrosItens, Assembly-CSharp
+          m_MethodName: MostrarExplicacao
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 480560311}
+          m_TargetAssemblyTypeName: ParametrosItens, Assembly-CSharp
+          m_MethodName: SumirExplicacao
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &22853920
 GameObject:
   m_ObjectHideFlags: 0
@@ -5516,7 +5562,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &195061158
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8009,7 +8055,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -494, y: -400.3}
+  m_AnchoredPosition: {x: -511.92404, y: -400.3}
   m_SizeDelta: {x: 361, y: 271}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &297536191
@@ -13398,13 +13444,28 @@ MonoBehaviour:
   nomeMostrar: Ciber olho
   campoValor: {fileID: 1781606634}
   valor: 1000
-  descricao: 
+  campoDescricao: {fileID: 1368741650}
+  descricao: "Um implante cibern\xE9tico de \xFAltima gera\xE7\xE3o que permite ver
+    a verdade. Revela as consequ\xEAncias de cada escolha feita."
   ladoA: {fileID: 0}
   ladoB: {fileID: 0}
   corA: {r: 0, g: 0, b: 0, a: 0}
   corB: {r: 0, g: 0, b: 0, a: 0}
   corLista: []
-  gangues: []
+  ganguesSigla:
+  - NB
+  - RR
+  - GC
+  - SZ
+  - NX
+  - Pol
+  gangues:
+  - <color=#F5D000>Nano Blades</color>
+  - <color=#FF0000>Redline Rebels</color>
+  - <color=#FF26B6>Ghost Circuit</color>
+  - <color=#6FFF00>Setor Zero</color>
+  - <color=#00FCFF>Nexos</color>
+  - "<color=#2D1AFF>Pol\xEDcia</color>"
   aleatCor: 0
   aleatCor2: 0
   chipPrefab: {fileID: 0}
@@ -14371,32 +14432,33 @@ MonoBehaviour:
   dinheiroText4: {fileID: 858616537}
   dinheiroTextFimDoDia: {fileID: 208287602}
   ListaDeEventosFimDeDia:
-  - textoDoEvento: Um implante que James vendeu para GhostCircuit deu defeito.
+  - textoDoEvento: Um implante que James vendeu para <color=#FF26B6>GhostCircuit</color>
+      deu defeito.
     quantasGanguesAfeta: 1
     gangueQueAfeta: 02000000
     quantoAfetaNaGangue:
     - -5
-  - textoDoEvento: "A pol\xEDcia achou seu esconderijo e voc\xEA teve de fugir r\xE1pido
-      deixando coisas preciosas para tr\xE1s."
-    quantasGanguesAfeta: 2
-    gangueQueAfeta: 0500000006000000
+  - textoDoEvento: "A <color=#2D1AFF>Pol\xEDcia</color> achou o esconderijo de James.
+      Ele conseguiu despist\xE1-los, mas eles agora est\xE3o em sua cola."
+    quantasGanguesAfeta: 1
+    gangueQueAfeta: 05000000
     quantoAfetaNaGangue:
-    - -5
-    - -100
-  - textoDoEvento: "Um esquema da RedLineRebels foi frustrado por uma gangue de outro
-      distrito. Eles suspeitam que James vazou informa\xE7\xF5es."
+    - -10
+  - textoDoEvento: "Um carregamento de armas da <color=#FF0000>RedLineRebels</color>
+      foi interceptado pela <color=#2D1AFF>Pol\xEDcia</color>. Eles suspeitam que
+      James vazou informa\xE7\xF5es."
     quantasGanguesAfeta: 1
     gangueQueAfeta: 01000000
     quantoAfetaNaGangue:
     - -15
-  - textoDoEvento: Uma gangue de outro distrito atacou James. Eles levaram algumas
-      mercadorias que estavam com ele.
+  - textoDoEvento: "A <color=#00FCFF>Nexos</color> teve tr\xEAs de seus integrantes
+      mortos pela Pol\xEDcia. Eles suspeitam de James."
     quantasGanguesAfeta: 1
-    gangueQueAfeta: 06000000
+    gangueQueAfeta: 04000000
     quantoAfetaNaGangue:
-    - -500
+    - -10
   - textoDoEvento: "Uma gangue rival come\xE7ou a espalhar rumores sobre James, afetando
-      sua reputa\xE7\xE3o na cidade."
+      sua reputa\xE7\xE3o com todas as gangues da cidade."
     quantasGanguesAfeta: 5
     gangueQueAfeta: 0000000001000000020000000300000004000000
     quantoAfetaNaGangue:
@@ -14405,21 +14467,165 @@ MonoBehaviour:
     - -10
     - -10
     - -10
-  - textoDoEvento: "Um carregamento de armas que James estava vendendo foi confiscado
-      pela Pol\xEDcia durante uma batida."
-    quantasGanguesAfeta: 3
-    gangueQueAfeta: 010000000500000006000000
+  - textoDoEvento: Um carregamento de drogas adulteradas circulou na cidade com o
+      nome de James associado. Sua credibilidade com a <color=#F5D000>Nano Blades</color>
+      foi manchada.
+    quantasGanguesAfeta: 1
+    gangueQueAfeta: 00000000
+    quantoAfetaNaGangue:
+    - -15
+  - textoDoEvento: "Um dos contatos de James do <color=#6FFF00>Setor Zero</color>
+      trouxe informa\xE7\xF5es valiosas e pediu um pagamento alto por isso.  James
+      negou, afetando sua reputa\xE7\xE3o."
+    quantasGanguesAfeta: 1
+    gangueQueAfeta: 03000000
     quantoAfetaNaGangue:
     - -10
+  - textoDoEvento: "Um hacker invadiu o sistema de James e comprometeu algumas de
+      suas opera\xE7\xF5es, afetando sua reputa\xE7\xE3o por toda a cidade e sua
+      renda."
+    quantasGanguesAfeta: 6
+    gangueQueAfeta: 000000000100000002000000030000000400000006000000
+    quantoAfetaNaGangue:
+    - -5
+    - -5
+    - -5
+    - -5
+    - -5
+    - -200
+  - textoDoEvento: "Uma gangue de outro distrito atacou James. Eles levaram algumas
+      mercadorias que estavam com ele, deixando preju\xEDzo financeiro."
+    quantasGanguesAfeta: 1
+    gangueQueAfeta: 06000000
+    quantoAfetaNaGangue:
+    - -500
+  - textoDoEvento: "Um drone da <color=#2D1AFF>Pol\xEDcia</color> registrou movimentos
+      suspeitos perto do esconderijo de James. Ele pagou o suborno, mas seu nome
+      ainda est\xE1 em pauta."
+    quantasGanguesAfeta: 2
+    gangueQueAfeta: 0500000006000000
+    quantoAfetaNaGangue:
+    - -5
+    - -300
+  - textoDoEvento: "Um cliente importante reclamou que recebeu armas enferrujadas
+      no lugar do pedido. Ele espalhou a hist\xF3ria no submundo."
+    quantasGanguesAfeta: 4
+    gangueQueAfeta: 00000000010000000200000003000000
+    quantoAfetaNaGangue:
+    - -5
+    - -10
+    - -5
+    - -5
+  - textoDoEvento: Um conhecido foi pego com implantes falsificados e jurou que tinha
+      comprado de James. Mesmo sem prova, o boato se espalhou.
+    quantasGanguesAfeta: 4
+    gangueQueAfeta: 00000000010000000200000003000000
+    quantoAfetaNaGangue:
+    - -5
+    - -5
+    - -10
+    - -5
+  ListaDeEventosBackup:
+  - textoDoEvento: Um implante que James vendeu para <color=#FF26B6>GhostCircuit</color>
+      deu defeito.
+    quantasGanguesAfeta: 1
+    gangueQueAfeta: 02000000
+    quantoAfetaNaGangue:
+    - -5
+  - textoDoEvento: "A <color=#2D1AFF>Pol\xEDcia</color> achou o esconderijo de James.
+      Ele conseguiu despist\xE1-los, mas eles agora est\xE3o em sua cola."
+    quantasGanguesAfeta: 1
+    gangueQueAfeta: 05000000
+    quantoAfetaNaGangue:
+    - -10
+  - textoDoEvento: "Um carregamento de armas da <color=#FF0000>RedLineRebels</color>
+      foi interceptado pela <color=#2D1AFF>Pol\xEDcia</color>. Eles suspeitam que
+      James vazou informa\xE7\xF5es."
+    quantasGanguesAfeta: 1
+    gangueQueAfeta: 01000000
+    quantoAfetaNaGangue:
     - -15
-    - -350
+  - textoDoEvento: "A <color=#00FCFF>Nexos</color> teve tr\xEAs de seus integrantes
+      mortos pela Pol\xEDcia. Eles suspeitam de James."
+    quantasGanguesAfeta: 1
+    gangueQueAfeta: 04000000
+    quantoAfetaNaGangue:
+    - -10
+  - textoDoEvento: "Uma gangue rival come\xE7ou a espalhar rumores sobre James, afetando
+      sua reputa\xE7\xE3o com todas as gangues da cidade."
+    quantasGanguesAfeta: 5
+    gangueQueAfeta: 0000000001000000020000000300000004000000
+    quantoAfetaNaGangue:
+    - -10
+    - -10
+    - -10
+    - -10
+    - -10
+  - textoDoEvento: Um carregamento de drogas adulteradas circulou na cidade com o
+      nome de James associado. Sua credibilidade com a <color=#F5D000>Nano Blades</color>
+      foi manchada.
+    quantasGanguesAfeta: 1
+    gangueQueAfeta: 00000000
+    quantoAfetaNaGangue:
+    - -15
+  - textoDoEvento: "Um dos contatos de James do <color=#6FFF00>Setor Zero</color>
+      trouxe informa\xE7\xF5es valiosas e pediu um pagamento alto por isso.  James
+      negou, afetando sua reputa\xE7\xE3o."
+    quantasGanguesAfeta: 1
+    gangueQueAfeta: 03000000
+    quantoAfetaNaGangue:
+    - -10
+  - textoDoEvento: "Um hacker invadiu o sistema de James e comprometeu algumas de
+      suas opera\xE7\xF5es, afetando sua reputa\xE7\xE3o por toda a cidade e sua
+      renda."
+    quantasGanguesAfeta: 6
+    gangueQueAfeta: 000000000100000002000000030000000400000006000000
+    quantoAfetaNaGangue:
+    - -5
+    - -5
+    - -5
+    - -5
+    - -5
+    - -200
+  - textoDoEvento: "Uma gangue de outro distrito atacou James. Eles levaram algumas
+      mercadorias que estavam com ele, deixando preju\xEDzo financeiro."
+    quantasGanguesAfeta: 1
+    gangueQueAfeta: 06000000
+    quantoAfetaNaGangue:
+    - -500
+  - textoDoEvento: "Um drone da <color=#2D1AFF>Pol\xEDcia</color> registrou movimentos
+      suspeitos perto do esconderijo de James. Ele pagou o suborno, mas seu nome
+      ainda est\xE1 em pauta."
+    quantasGanguesAfeta: 2
+    gangueQueAfeta: 0500000006000000
+    quantoAfetaNaGangue:
+    - -5
+    - -300
+  - textoDoEvento: "Um cliente importante reclamou que recebeu armas enferrujadas
+      no lugar do pedido. Ele espalhou a hist\xF3ria no submundo."
+    quantasGanguesAfeta: 4
+    gangueQueAfeta: 00000000010000000200000003000000
+    quantoAfetaNaGangue:
+    - -5
+    - -10
+    - -5
+    - -5
+  - textoDoEvento: Um conhecido foi pego com implantes falsificados e jurou que tinha
+      comprado de James. Mesmo sem prova, o boato se espalhou.
+    quantasGanguesAfeta: 4
+    gangueQueAfeta: 00000000010000000200000003000000
+    quantoAfetaNaGangue:
+    - -5
+    - -5
+    - -10
+    - -5
   textoFimDeJogoGangues:
-  - "reputa\xE7\xE3o com a gangue Nano Blades"
-  - "reputa\xE7\xE3o com a gangue Redline Rebels"
-  - "reputa\xE7\xE3o com a gangue Ghost Circuit"
-  - "reputa\xE7\xE3o com a gangue Setor Zero"
-  - "reputa\xE7\xE3o com a gangue Nexos"
-  - "reputa\xE7\xE3o com a pol\xEDcia"
+  - "reputa\xE7\xE3o com a gangue <color=#F5D000>Nano Blades</color>"
+  - "reputa\xE7\xE3o com a gangue <color=#FF0000>Redline Rebels</color>"
+  - "reputa\xE7\xE3o com a gangue <color=#FF26B6>Ghost Circuit</color>"
+  - "reputa\xE7\xE3o com a gangue <color=#6FFF00>Setor Zero</color>"
+  - "reputa\xE7\xE3o com a gangue <color=#00FCFF>Nexos</color>"
+  - "reputa\xE7\xE3o com a <color=#2D1AFF>Pol\xEDcia</color>"
   - dinheiro
   personagemInstancia: {fileID: 0}
   personagensTodos:
@@ -14460,7 +14666,6 @@ MonoBehaviour:
   - {fileID: 5068679200740828869, guid: c2f8cb094e4378144a064cea15b13283, type: 3}
   - {fileID: 5120879649090524011, guid: b61768f46fb978f4882ea055f0fed6c5, type: 3}
   - {fileID: 6054355033594866966, guid: 97e2b0b517979574ea684e047037479c, type: 3}
-  - {fileID: 3730452107108470643, guid: 89bab3a8497aec94e8f6f22feede779c, type: 3}
   personagensTodosBackup:
   - {fileID: 7379131674327880369, guid: 4fb56cfd4fee70b489c3712f256ffb56, type: 3}
   - {fileID: 6824677255523505205, guid: ffacbf1d3663206418eb515a9f602740, type: 3}
@@ -14499,8 +14704,8 @@ MonoBehaviour:
   - {fileID: 5068679200740828869, guid: c2f8cb094e4378144a064cea15b13283, type: 3}
   - {fileID: 5120879649090524011, guid: b61768f46fb978f4882ea055f0fed6c5, type: 3}
   - {fileID: 6054355033594866966, guid: 97e2b0b517979574ea684e047037479c, type: 3}
-  - {fileID: 3730452107108470643, guid: 89bab3a8497aec94e8f6f22feede779c, type: 3}
   personagensDisponiveis: []
+  mercador: {fileID: 3730452107108470643, guid: 89bab3a8497aec94e8f6f22feede779c, type: 3}
   personagensDoDia: []
   personagensDiaSeguinte: []
   botaoSim: {fileID: 6650924875043326189}
@@ -14511,9 +14716,10 @@ MonoBehaviour:
   tVEffectScript: {fileID: 552027024}
   botaoFimDoDia: {fileID: 1543157925}
   dia: 1
-  diaMax: 6
+  diaMax: 10
   quantidadeDePedidos: 0
-  quantidadeDePedidosPorDia: 3
+  quantidadeDePedidosPorDia: 2
+  diasMercador: 030000000600000009000000
   painelFimDeDia: {fileID: 2069204536}
   textoFimDoDia: {fileID: 746338583}
   textoEventoFimDoDia: {fileID: 952241657}
@@ -19352,35 +19558,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itensPossuidos:
   - nome: "Lamina de bra\xE7o"
-    quant: 1
+    quant: 0
     sprite: {fileID: 21300000, guid: 08212c86e2edc754ea9be70c21d03ad3, type: 3}
     modificadores: []
   - nome: Placa neural
-    quant: 1
+    quant: 0
     sprite: {fileID: 21300000, guid: a48c3c5b1fc1c1e4283c8e5c3b99efbb, type: 3}
     modificadores: []
   - nome: Drone MK Vortex
-    quant: 1
+    quant: 0
     sprite: {fileID: 21300000, guid: d6f79d0045d546843a769839d67740f7, type: 3}
     modificadores: []
   - nome: Neurotoxina
-    quant: 1
+    quant: 0
     sprite: {fileID: 21300000, guid: 4f10fafde3739b74680fb46e72c59200, type: 3}
     modificadores: []
   - nome: Droga Stardust
-    quant: 1
+    quant: 0
     sprite: {fileID: 21300000, guid: cef302103f7699b4ca29e73a6c9f9a95, type: 3}
     modificadores: []
   - nome: Chip criptografado
-    quant: 1
+    quant: 0
     sprite: {fileID: 21300000, guid: cee05b85a86a02a42a2934d683dfb3c8, type: 3}
     modificadores: []
   - nome: Armamento militar
-    quant: 1
+    quant: 0
     sprite: {fileID: 21300000, guid: 6f86a43e8fe1b0947844aed6ca3ce843, type: 3}
     modificadores: []
   - nome: Cortador laser
-    quant: 1
+    quant: 0
     sprite: {fileID: 21300000, guid: 2452b80ea4a6d4f499dcef94e365e85c, type: 3}
     modificadores: []
   itensRecebidos: []
@@ -28022,7 +28228,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &936587317
 RectTransform:
   m_ObjectHideFlags: 0
@@ -39546,7 +39752,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1750857067}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.9999999
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -40363,7 +40569,9 @@ MonoBehaviour:
   nomeMostrar: Chip RR
   campoValor: {fileID: 554860457}
   valor: 300
-  descricao: 
+  campoDescricao: {fileID: 1368741650}
+  descricao: "Um chip contendo informa\xE7\xF5es sobre a gangue Redline Rebels. Pode
+    ser usado para chantagea-los aumentando sua reputa\xE7\xE3o."
   ladoA: {fileID: 2059193886}
   ladoB: {fileID: 1830919719}
   corA: {r: 1, g: 0, b: 0, a: 1}
@@ -40375,13 +40583,20 @@ MonoBehaviour:
   - {r: 0.43529412, g: 1, b: 0, a: 1}
   - {r: 0, g: 0.9882353, b: 1, a: 1}
   - {r: 0.1764706, g: 0.101960786, b: 1, a: 1}
-  gangues:
+  ganguesSigla:
   - NB
   - RR
   - GC
   - SZ
   - NX
   - Pol
+  gangues:
+  - <color=#F5D000>Nano Blades</color>
+  - <color=#FF0000>Redline Rebels</color>
+  - <color=#FF26B6>Ghost Circuit</color>
+  - <color=#6FFF00>Setor Zero</color>
+  - <color=#00FCFF>Nexos</color>
+  - "<color=#2D1AFF>Pol\xEDcia</color>"
   aleatCor: 0
   aleatCor2: 0
   chipPrefab: {fileID: 4213344896395613607, guid: 121f1cd07c964db4eb166c63254875b0, type: 3}
@@ -40549,6 +40764,7 @@ GameObject:
   - component: {fileID: 1321299805}
   - component: {fileID: 1321299807}
   - component: {fileID: 1321299806}
+  - component: {fileID: 1321299808}
   m_Layer: 5
   m_Name: Interrogacao2
   m_TagString: Untagged
@@ -40614,6 +40830,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321299804}
   m_CullTransparentMesh: 1
+--- !u!114 &1321299808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321299804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1313481329}
+          m_TargetAssemblyTypeName: ParametrosItens, Assembly-CSharp
+          m_MethodName: MostrarExplicacao
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1313481329}
+          m_TargetAssemblyTypeName: ParametrosItens, Assembly-CSharp
+          m_MethodName: SumirExplicacao
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1323762181
 GameObject:
   m_ObjectHideFlags: 0
@@ -41556,6 +41817,140 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368200042}
+  m_CullTransparentMesh: 1
+--- !u!1 &1368741648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1368741649}
+  - component: {fileID: 1368741651}
+  - component: {fileID: 1368741650}
+  m_Layer: 5
+  m_Name: Descricao
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1368741649
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368741648}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1653080112}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.761, y: -187.032}
+  m_SizeDelta: {x: 542.186, y: 374.064}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1368741650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368741648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: edf39b0e5daeaa74587abfd43c14758d, type: 2}
+  m_sharedMaterial: {fileID: -4449942495030054907, guid: edf39b0e5daeaa74587abfd43c14758d, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 27.28
+  m_fontSizeBase: 27.28
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1368741651
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368741648}
   m_CullTransparentMesh: 1
 --- !u!1 &1369352671
 GameObject:
@@ -43859,7 +44254,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -493.076, y: -408.889}
+  m_AnchoredPosition: {x: -511, y: -408.889}
   m_SizeDelta: {x: 383.89, y: 288.188}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1449648797
@@ -48816,7 +49211,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1653080112
 RectTransform:
   m_ObjectHideFlags: 0
@@ -48834,6 +49229,7 @@ RectTransform:
   - {fileID: 748543142}
   - {fileID: 858499837}
   - {fileID: 882132116}
+  - {fileID: 1368741649}
   m_Father: {fileID: 1500680281}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -50639,7 +51035,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -254, y: -336}
+  m_AnchoredPosition: {x: -242, y: -336}
   m_SizeDelta: {x: 155.166, y: 155.166}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1703291108
@@ -54714,7 +55110,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Voc\xEA venceu. Sobreviveu aos 6 dias."
+  m_Text: "Voc\xEA venceu. Sobreviveu aos 10 dias."
 --- !u!222 &1872134439
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -59204,7 +59600,9 @@ MonoBehaviour:
   nomeMostrar: Chip RR
   campoValor: {fileID: 1168774963}
   valor: 500
-  descricao: 
+  campoDescricao: {fileID: 1368741650}
+  descricao: "Um chip contendo informa\xE7\xF5es sobre as gangues Redline Rebels
+    e Ghost Circuit. Pode ser usado para chantagea-los aumentando sua reputa\xE7\xE3o."
   ladoA: {fileID: 869649670}
   ladoB: {fileID: 399529245}
   corA: {r: 1, g: 0, b: 0, a: 1}
@@ -59216,13 +59614,20 @@ MonoBehaviour:
   - {r: 0.43529412, g: 1, b: 0, a: 1}
   - {r: 0, g: 0.9882353, b: 1, a: 1}
   - {r: 0.1764706, g: 0.101960786, b: 1, a: 1}
-  gangues:
+  ganguesSigla:
   - NB
   - RR
   - GC
   - SZ
   - NX
   - Pol
+  gangues:
+  - <color=#F5D000>Nano Blades</color>
+  - <color=#FF0000>Redline Rebels</color>
+  - <color=#FF26B6>Ghost Circuit</color>
+  - <color=#6FFF00>Setor Zero</color>
+  - <color=#00FCFF>Nexos</color>
+  - "<color=#2D1AFF>Pol\xEDcia</color>"
   aleatCor: 0
   aleatCor2: 0
   chipPrefab: {fileID: 4213344896395613607, guid: c139f45bbc56e6040a845dd5e8776b9c, type: 3}
@@ -59698,6 +60103,7 @@ GameObject:
   - component: {fileID: 2078011227}
   - component: {fileID: 2078011229}
   - component: {fileID: 2078011228}
+  - component: {fileID: 2078011230}
   m_Layer: 5
   m_Name: Interrogacao3
   m_TagString: Untagged
@@ -59763,6 +60169,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2078011226}
   m_CullTransparentMesh: 1
+--- !u!114 &2078011230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078011226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2066527653}
+          m_TargetAssemblyTypeName: ParametrosItens, Assembly-CSharp
+          m_MethodName: MostrarExplicacao
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2066527653}
+          m_TargetAssemblyTypeName: ParametrosItens, Assembly-CSharp
+          m_MethodName: SumirExplicacao
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2080332819
 GameObject:
   m_ObjectHideFlags: 0

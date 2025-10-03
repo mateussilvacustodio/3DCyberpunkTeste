@@ -225,7 +225,7 @@ public class FirebaseREST : MonoBehaviour
                     break;
                     
                 }
-                else if (item.dinheiroDado > dinheiroRestante)
+                else if (item.diasDado == diasSobrevividos && item.dinheiroDado > dinheiroRestante)
                 {
                     nomeExiste = true;
                     break;
