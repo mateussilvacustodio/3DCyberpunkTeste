@@ -172,10 +172,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nome: Torque
-  pedido: "Eu esperava mais de voc\xEA, James. Nexos j\xE1 come\xE7ou a espalhar
-    boatos sobre nossos implantes e alguns clientes est\xE3o ficando nervosos. Ainda
-    h\xE1 tempo de resolver: precisamos que voc\xEA desacredite a fonte das informa\xE7\xF5es
-    deles. Talvez um \"acidente\" digital fa\xE7a eles perderem a credibilidade."
+  pedido: "Eu esperava mais de voc\xEA, James. <color=#00FCFF>Nexos</color> j\xE1
+    come\xE7ou a espalhar boatos sobre nossos implantes e alguns clientes est\xE3o
+    ficando nervosos. Ainda h\xE1 tempo de resolver: precisamos que voc\xEA desacredite
+    a fonte das informa\xE7\xF5es deles. Talvez um \"acidente\" digital fa\xE7a eles
+    perderem a credibilidade."
   tipoPedido: 2
   itemDoNPC:
     nome: 

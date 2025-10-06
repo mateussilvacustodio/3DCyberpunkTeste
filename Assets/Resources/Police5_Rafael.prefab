@@ -176,8 +176,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nome: Rafael
-  pedido: "Preciso de informa\xE7\xF5es da pr\xF3xima opera\xE7\xE3o dos Nano Blades.
-    Em troca, te dou esse Drone MK Vortex que \xEDamos descartar. O que me diz?"
+  pedido: "Preciso de informa\xE7\xF5es da pr\xF3xima opera\xE7\xE3o dos <color=#F5D000>Nano
+    Blades</color>. Em troca, te dou esse Drone MK Vortex que \xEDamos descartar.
+    O que me diz?"
   tipoPedido: 0
   itemDoNPC:
     nome: Drone MK Vortex

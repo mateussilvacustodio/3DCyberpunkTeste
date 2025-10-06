@@ -173,9 +173,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: Zenith
   pedido: "James, achou que poderia entrar nos nossos sistemas sem que a gente percebesse?
-    Voc\xEA pode at\xE9 ter apagado os dados da Ghost Circuit, mas agora temos um
-    novo arquivo, o seu. A boa not\xEDcia \xE9 que ainda podemos esquecer isso, se
-    voc\xEA nos arranjar um c\xF3digo mestre para acessarmos a base deles."
+    Voc\xEA pode at\xE9 ter apagado os dados da <color=#FF26B6>Ghost Circuit</color>,
+    mas agora temos um novo arquivo, o seu. A boa not\xEDcia \xE9 que ainda podemos
+    esquecer isso, se voc\xEA nos arranjar um c\xF3digo mestre para acessarmos a
+    base deles."
   tipoPedido: 2
   itemDoNPC:
     nome: 

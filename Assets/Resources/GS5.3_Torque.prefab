@@ -172,11 +172,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nome: Torque
-  pedido: "James, eu achei que podia contar com voc\xEA. Nexos pode at\xE9 ter feito
-    um acordo, mas eu n\xE3o confio neles. Se voc\xEA n\xE3o quer mexer nos servidores
-    deles, ent\xE3o temos outra solu\xE7\xE3o: preciso que voc\xEA encontre um dos
-    hackers respons\xE1veis por espalhar as informa\xE7\xF5es. Ele precisa ser silenciado\u2026
-    permanentemente."
+  pedido: "James, eu achei que podia contar com voc\xEA. <color=#00FCFF>Nexos</color>
+    pode at\xE9 ter feito um acordo, mas eu n\xE3o confio neles. Se voc\xEA n\xE3o
+    quer mexer nos servidores deles, ent\xE3o temos outra solu\xE7\xE3o: preciso
+    que voc\xEA encontre um dos hackers respons\xE1veis por espalhar as informa\xE7\xF5es.
+    Ele precisa ser silenciado\u2026 permanentemente."
   tipoPedido: 2
   itemDoNPC:
     nome: 

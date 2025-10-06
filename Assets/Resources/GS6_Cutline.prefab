@@ -585,8 +585,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: Cutline
   pedido: "Eae James, minha l\xE2mina emperrou no meio de um trabalho. Trampo dif\xEDcil,
-    invadimos a base da Redline e foi merda pra todo lado. Preciso de um bra\xE7o
-    novo. Voc\xEA consegue?"
+    invadimos a base da <color=#FF0000>Redline</color> e foi merda pra todo lado.
+    Preciso de um bra\xE7o novo. Voc\xEA consegue?"
   tipoPedido: 0
   itemDoNPC:
     nome: "Lamina de bra\xE7o"

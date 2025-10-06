@@ -180,10 +180,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nome: Quantum
-  pedido: "James, estamos preparando um ataque pra derrubar a rota dos Nano Blades.
-    Preciso que voc\xEA consiga algumas armas pesadas \u2013 discretamente, \xE9
-    claro. Isso vai deixar a Pol\xEDcia de olho, ent\xE3o paga bem. E a\xED, t\xE1
-    dentro?"
+  pedido: "James, estamos preparando um ataque pra derrubar a rota dos <color=#F5D000>Nano
+    Blades</color>. Preciso que voc\xEA consiga algumas armas pesadas \u2013 discretamente,
+    \xE9 claro. Isso vai deixar a <color=#2D1AFF>Pol\xEDcia</color> de olho, ent\xE3o
+    paga bem. E a\xED, t\xE1 dentro?"
   tipoPedido: 0
   itemDoNPC:
     nome: Armamento militar

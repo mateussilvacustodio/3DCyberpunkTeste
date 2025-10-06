@@ -183,10 +183,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nome: Veil
-  pedido: "James, o Nexos t\xE1 se metendo onde n\xE3o deve e soltando informa\xE7\xF5es
-    sobre nossa opera\xE7\xE3o de implantes. Precisamos de material sobre eles, algo
-    que possa comprometer. Ou, quem sabe, voc\xEA poderia negociar com o Setor Zero
-    e comprar o sil\xEAncio. Quanto custa essa conveni\xEAncia?"
+  pedido: "James, o <color=#00FCFF>Nexos</color> t\xE1 se metendo onde n\xE3o deve
+    e soltando informa\xE7\xF5es sobre nossa opera\xE7\xE3o de implantes. Precisamos
+    de material sobre eles, algo que possa comprometer. Ou, quem sabe, voc\xEA poderia
+    negociar com o <color=#6FFF00>Setor Zero</color> e comprar o sil\xEAncio. Quanto
+    custa essa conveni\xEAncia?"
   tipoPedido: 2
   itemDoNPC:
     nome: 
@@ -230,7 +231,6 @@ MonoBehaviour:
   - 0
   textoDinheiroGanhoGasto: {fileID: 7502805927975152675, guid: 9725cd254ebfc4b41b051f085ac6a584, type: 3}
   inventarioScript: {fileID: 0}
-  textoItemRecebido: {fileID: 1727427521983561730, guid: 2f15c24d35b052e45a8f787712af648d, type: 3}
   mercenarioScript: {fileID: 0}
   velocidadeMover: 0.55
   podeMover: 1

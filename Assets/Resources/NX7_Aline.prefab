@@ -508,8 +508,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nome: Aline
-  pedido: "James, roubei esta placa neural direto de um terminal da pol\xEDcia. T\xE1
-    limpa, mas o firmware \xE9 vol\xE1til. Fa\xE7o pra voc\xEA por $ 500."
+  pedido: "James, roubei esta placa neural direto de um terminal da <color=#2D1AFF>Pol\xEDcia</color>.
+    T\xE1 limpa, mas o firmware \xE9 vol\xE1til. Fa\xE7o pra voc\xEA por $ 500."
   tipoPedido: 0
   itemDoNPC:
     nome: Placa neural

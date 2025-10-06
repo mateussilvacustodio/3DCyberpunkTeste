@@ -172,11 +172,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nome: Torque
-  pedido: "Negocia\xE7\xE3o feita, James. Nexos pegou o dinheiro e prometeu esquecer
-    o assunto, pelo menos por enquanto. Mas eu n\xE3o confio neles. Se eles venderam
-    informa\xE7\xF5es antes, podem fazer de novo. Quero garantir que isso n\xE3o
-    aconte\xE7a. Voc\xEA poderia acessar os servidores deles e apagar qualquer rastro
-    sobre n\xF3s?"
+  pedido: "Negocia\xE7\xE3o feita, James. <color=#00FCFF>Nexos</color> pegou o dinheiro
+    e prometeu esquecer o assunto, pelo menos por enquanto. Mas eu n\xE3o confio
+    neles. Se eles venderam informa\xE7\xF5es antes, podem fazer de novo. Quero garantir
+    que isso n\xE3o aconte\xE7a. Voc\xEA poderia acessar os servidores deles e apagar
+    qualquer rastro sobre n\xF3s?"
   tipoPedido: 2
   itemDoNPC:
     nome: 

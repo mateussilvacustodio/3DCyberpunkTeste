@@ -176,8 +176,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nome: Ramon
-  pedido: "E a\xED, James. Preciso de alguns dados sobre os Nano Blades. Estou montando
-    um relat\xF3rio sobre eles para uma mat\xE9ria quente. Topa ajudar?"
+  pedido: "E a\xED, James. Preciso de alguns dados sobre os <color=#F5D000>Nano Blades</color>.
+    Estou montando um relat\xF3rio sobre eles para uma mat\xE9ria quente. Topa ajudar?"
   tipoPedido: 2
   itemDoNPC:
     nome: 
@@ -213,7 +213,6 @@ MonoBehaviour:
   - 0
   textoDinheiroGanhoGasto: {fileID: 7502805927975152675, guid: 9725cd254ebfc4b41b051f085ac6a584, type: 3}
   inventarioScript: {fileID: 0}
-  textoItemRecebido: {fileID: 1727427521983561730, guid: 2f15c24d35b052e45a8f787712af648d, type: 3}
   mercenarioScript: {fileID: 0}
   velocidadeMover: 0.5
   podeMover: 1

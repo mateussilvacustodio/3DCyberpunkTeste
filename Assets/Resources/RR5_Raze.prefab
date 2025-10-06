@@ -509,7 +509,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: Raze
   pedido: "James, bonito como sempre, hein, gato? Preciso de um armamento forte.
-    Vamos derrubar um comboio da pol\xEDcia. Consegue me ajudar, docinho?"
+    Vamos derrubar um comboio da <color=#2D1AFF>Pol\xEDcia</color>. Consegue me ajudar,
+    docinho?"
   tipoPedido: 0
   itemDoNPC:
     nome: Armamento militar

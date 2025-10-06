@@ -12,6 +12,8 @@ public class Tablet : MonoBehaviour
     [SerializeField] GameController gameController;
     [SerializeField] Animator tabletAnim;
     [SerializeField] GameObject contornoTablet;
+    [SerializeField] GameObject contornoChip1;
+    
 
     [Header("Aplicativos")]
     [SerializeField] GameObject menuInicial;
@@ -88,7 +90,21 @@ public class Tablet : MonoBehaviour
 
     }
 
-    public void AbrirReputacao() {
+    public void AparecerContornoChip1()
+    {
+        contornoChip1.SetActive(true);
+    }
+
+    public void SumirContornoChip1()
+    {
+
+        //tabletAnim.SetBool("Crescer", false);
+        contornoChip1.SetActive(false);
+
+    }
+
+    public void AbrirReputacao()
+    {
 
         menuInicial.SetActive(false);
         menuReputacao.SetActive(true);

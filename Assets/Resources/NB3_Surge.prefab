@@ -176,9 +176,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nome: Surge
-  pedido: "James, ouvimos que o Nexos tem dados confidenciais da \xFAltima opera\xE7\xE3o
-    da pol\xEDcia. Preciso que voc\xEA consiga essas informa\xE7\xF5es para n\xF3s
-    antes que eles liberem tudo. Sei que o Setor Zero t\xE1 de olho, ent\xE3o discri\xE7\xE3o
+  pedido: "James, ouvimos que o <color=#00FCFF>Nexos</color> tem dados confidenciais
+    da \xFAltima opera\xE7\xE3o da <color=#2D1AFF>Pol\xEDcia</color>. Preciso que
+    voc\xEA consiga essas informa\xE7\xF5es para n\xF3s antes que eles liberem tudo.
+    Sei que o <color=#6FFF00>Setor Zero</color> t\xE1 de olho, ent\xE3o discri\xE7\xE3o
     \xE9 essencial. Vai nessa?"
   tipoPedido: 1
   itemDoNPC:
@@ -216,7 +217,6 @@ MonoBehaviour:
   - 0
   textoDinheiroGanhoGasto: {fileID: 7502805927975152675, guid: 9725cd254ebfc4b41b051f085ac6a584, type: 3}
   inventarioScript: {fileID: 0}
-  textoItemRecebido: {fileID: 1727427521983561730, guid: 2f15c24d35b052e45a8f787712af648d, type: 3}
   mercenarioScript: {fileID: 0}
   velocidadeMover: 0.5
   podeMover: 1

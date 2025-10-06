@@ -172,9 +172,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nome: Torque
-  pedido: "O Nexos conseguiu informa\xE7\xF5es sobre nosso esquema de implantes.
-    Queremos que voc\xEA pague pelo sil\xEAncio deles ou... encontre outra forma
-    de garantir que fiquem quietos."
+  pedido: "O <color=#00FCFF>Nexos</color> conseguiu informa\xE7\xF5es sobre nosso
+    esquema de implantes. Queremos que voc\xEA pague pelo sil\xEAncio deles ou...
+    encontre outra forma de garantir que fiquem quietos."
   tipoPedido: 2
   itemDoNPC:
     nome: 

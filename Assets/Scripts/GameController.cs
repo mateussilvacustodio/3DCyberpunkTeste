@@ -36,8 +36,6 @@ public class GameController : MonoBehaviour
     [SerializeField] List<EventosFimDeDia> ListaDeEventosBackup = new List<EventosFimDeDia>();
     [SerializeField] string[] textoFimDeJogoGangues;
     [Header("Personagens")]
-    //[SerializeField] List<int> indicesDisponiveis = new List<int>();
-    //public int personagemIndex;
     public GameObject personagemInstancia;
     [SerializeField] List<GameObject> personagensTodos = new List<GameObject>();
     [SerializeField] List<GameObject> personagensTodosBackup = new List<GameObject>();
@@ -53,6 +51,9 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject menu;
     public TVEffect tVEffectScript;
     public GameObject botaoFimDoDia;
+    //[SerializeField] Texture2D cursorSeta;
+    //[SerializeField] Vector2 hotspot = Vector2.zero;
+    public Image cursorImage;
     [Header("Pedidos")]
     public int dia;
     [SerializeField] float diaMax;
@@ -90,10 +91,6 @@ public class GameController : MonoBehaviour
     [SerializeField] AudioSource audioSource;
     public AudioSource SFXPassos;
     public AudioSource SFXBotao;
-    //[SerializeField] AudioSource SFXSirene;
-    //[SerializeField] float volumeSirene;
-    //bool subirSirene = true;
-    //[SerializeField] float velocidadeVolumeSirene;
     [SerializeField] AudioClip musicaJogo;
     [SerializeField] Slider sliderVolume;
     public Slider sliderSFX;
@@ -130,13 +127,15 @@ public class GameController : MonoBehaviour
     //int qualCarro = 1;
     void Start()
     {
-
+        //Cursor.SetCursor(cursorSeta, hotspot, CursorMode.Auto);
         AtualizarGangues();
-
     }
 
     void Update()
     {
+        Cursor.visible = false;
+        cursorImage.transform.position = Input.mousePosition;
+
         foreach (var item in dinheiroText)
         {
             item.text = "$" + gangues[6].ToString("F0");

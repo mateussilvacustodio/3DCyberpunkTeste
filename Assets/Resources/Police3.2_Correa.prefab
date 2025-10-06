@@ -176,10 +176,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nome: Correa
-  pedido: "James, n\xF3s sabemos que voc\xEA fez uma entrega para o Setor Zero. Interceptamos
-    o pacote antes que chegasse ao destino. Agora queremos saber, quem mais estava
-    envolvido? Se cooperar, podemos esquecer que isso aconteceu. Caso contr\xE1rio\u2026
-    bem... voc\xEA n\xE3o vai querer descobrir."
+  pedido: "James, n\xF3s sabemos que voc\xEA fez uma entrega para o <color=#6FFF00>Setor
+    Zero</color>. Interceptamos o pacote antes que chegasse ao destino. Agora queremos
+    saber, quem mais estava envolvido? Se cooperar, podemos esquecer que isso aconteceu.
+    Caso contr\xE1rio\u2026 bem... voc\xEA n\xE3o vai querer descobrir."
   tipoPedido: 2
   itemDoNPC:
     nome: 
@@ -214,7 +214,6 @@ MonoBehaviour:
   - -15
   textoDinheiroGanhoGasto: {fileID: 7502805927975152675, guid: 9725cd254ebfc4b41b051f085ac6a584, type: 3}
   inventarioScript: {fileID: 0}
-  textoItemRecebido: {fileID: 1727427521983561730, guid: 2f15c24d35b052e45a8f787712af648d, type: 3}
   mercenarioScript: {fileID: 0}
   velocidadeMover: 0.5
   podeMover: 1

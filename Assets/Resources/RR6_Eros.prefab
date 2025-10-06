@@ -584,7 +584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nome: Eros
-  pedido: "Conseguimos p\xF4r as m\xE3os em um armamento muito foda da pol\xEDcia.
+  pedido: "Conseguimos p\xF4r as m\xE3os em um armamento muito foda da <color=#2D1AFF>Pol\xEDcia</color>.
     Totalmente irrastre\xE1vel. Quer comprar? Fa\xE7o por $ 250."
   tipoPedido: 0
   itemDoNPC:

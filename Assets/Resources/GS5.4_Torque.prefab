@@ -172,11 +172,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nome: Torque
-  pedido: "Bom trabalho, James. A Nexos est\xE1 lidando com o estrago, e nossos clientes
-    j\xE1 est\xE3o menos desconfiados. Mas temos um problema: um dos t\xE9cnicos
-    deles sobreviveu e est\xE1 tentando restaurar os dados. Se conseguirem recuperar
-    as informa\xE7\xF5es, toda a nossa opera\xE7\xE3o pode estar comprometida. Precisamos
-    que voc\xEA resolva isso antes que seja tarde."
+  pedido: "Bom trabalho, James. A <color=#00FCFF>Nexos</color> est\xE1 lidando com
+    o estrago, e nossos clientes j\xE1 est\xE3o menos desconfiados. Mas temos um
+    problema: um dos t\xE9cnicos deles sobreviveu e est\xE1 tentando restaurar os
+    dados. Se conseguirem recuperar as informa\xE7\xF5es, toda a nossa opera\xE7\xE3o
+    pode estar comprometida. Precisamos que voc\xEA resolva isso antes que seja tarde."
   tipoPedido: 2
   itemDoNPC:
     nome: 

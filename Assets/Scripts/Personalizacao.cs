@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -10,12 +11,15 @@ public class Personalizacao : MonoBehaviour, IPointerDownHandler, IDragHandler
 {
     [Header("GameController")]
     [SerializeField] GameController gameController;
+    [SerializeField] GameObject dinheiroGastoGanho;
+    [SerializeField] GameObject canvas;
     [Header("Menus")]
     [SerializeField] GameObject inicio;
     [SerializeField] GameObject luzes;
     [SerializeField] GameObject decoracoes;
     [SerializeField] GameObject itens;
     [Header("Personalização")]
+    [Header("Cores")]
     [SerializeField] Image LuzNeonImagem;
     [SerializeField] RawImage rodaCores;
     [SerializeField] RectTransform bolinhaCursor;
@@ -32,6 +36,12 @@ public class Personalizacao : MonoBehaviour, IPointerDownHandler, IDragHandler
     [Header("Multichip")]
     [SerializeField] GameObject multichipsLista;
     [SerializeField] GameObject contentMultichip;
+    [Header("Decoracoes")]
+    [SerializeField] GameObject[] cofres;
+    [SerializeField] Image props1;
+    [SerializeField] Sprite[] grade1;
+    [SerializeField] Image props3;
+    [SerializeField] Sprite[] grade3;
 
     void Start()
     {
@@ -239,5 +249,55 @@ public class Personalizacao : MonoBehaviour, IPointerDownHandler, IDragHandler
         ciberOlhoUsado.SetActive(false);
         chipsLista.SetActive(false);
         multichipsLista.SetActive(true);
+    }
+
+    public void ComprarAlterarPersonalizacao(ParametrosPersonalizacao pParametrosPersonalizacao)
+    {
+
+        if (!pParametrosPersonalizacao.comprado)
+        {
+            gameController.gangues[6] += pParametrosPersonalizacao.preco;
+            string textoDinheiroExibir = pParametrosPersonalizacao.preco.ToString("+0;-0;0");
+            dinheiroGastoGanho.GetComponent<TMP_Text>().text = textoDinheiroExibir;
+            GameObject instanciaDinheiro = Instantiate(dinheiroGastoGanho, canvas.transform);
+            Destroy(instanciaDinheiro, 0.75f);
+            pParametrosPersonalizacao.comprado = true;
+        }
+
+        pParametrosPersonalizacao.textoBotao.text = "Selecionado";
+        pParametrosPersonalizacao.textoBotao.color = Color.red;
+        foreach (var item in pParametrosPersonalizacao.textoOutrosBotoes)
+        {
+            if (item.comprado)
+            {
+                item.textoBotao.text = "Selecionar";
+                item.textoBotao.color = Color.black;
+            }
+            
+        }
+
+        switch (pParametrosPersonalizacao.conjunto)
+        {
+            case "Cofrinho":
+                for (int i = 0; i < cofres.Length; i++)
+                {
+                    if (i == pParametrosPersonalizacao.indexArray)
+                    {
+                        cofres[i].SetActive(true);
+                    }
+                    else
+                    {
+                        cofres[i].SetActive(false);
+                    }
+                }
+                break;
+            case "Grade1":
+                props1.sprite = grade1[pParametrosPersonalizacao.indexArray];
+                break;
+            case "Grade3":
+                props3.sprite = grade3[pParametrosPersonalizacao.indexArray];
+                break;
+        }
+
     }
 }
