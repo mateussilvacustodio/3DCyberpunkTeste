@@ -192,8 +192,8 @@ MonoBehaviour:
   personagemRamificacao2: {fileID: 0}
   opcao1: "Eu posso te dar uma dire\xE7\xE3o, mas voc\xEA sabe como isso funciona.
     Se te der o que quer, vou precisar de algo em troca."
-  opcao2: "Nexos? Eu n\xE3o mexo com esses caras. Se n\xE3o tiver mais nada pra falar,
-    vaza."
+  opcao2: "<color=#00FCFF>Nexos</color>? Eu n\xE3o mexo com esses caras. Se n\xE3o
+    tiver mais nada pra falar, vaza."
   corGangue: {r: 0.1764706, g: 0.101960786, b: 1, a: 1}
   mercador: 0
   recursos: 00000000010101

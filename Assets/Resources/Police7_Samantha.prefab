@@ -607,7 +607,8 @@ MonoBehaviour:
   personagemRamificacao2: {fileID: 0}
   opcao1: "Consigo sim. Mas se esse drone aparecer em execu\xE7\xF5es sum\xE1rias,
     n\xE3o me envolva."
-  opcao2: "N\xE3o vou fortalecer a pol\xEDcia. Arrume em outro lugar."
+  opcao2: "N\xE3o vou fortalecer a <color=#2D1AFF>Pol\xEDcia</color>. Arrume em outro
+    lugar."
   corGangue: {r: 0.1764706, g: 0.101960786, b: 1, a: 1}
   mercador: 0
   recursos: 00010000000101

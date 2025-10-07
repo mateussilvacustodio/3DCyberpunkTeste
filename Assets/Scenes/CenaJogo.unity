@@ -2011,6 +2011,7 @@ GameObject:
   - component: {fileID: 58032200}
   - component: {fileID: 58032199}
   - component: {fileID: 58032198}
+  - component: {fileID: 58032201}
   m_Layer: 5
   m_Name: CiberOlhos
   m_TagString: Untagged
@@ -2132,6 +2133,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58032196}
   m_CullTransparentMesh: 1
+--- !u!114 &58032201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58032196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1820562248}
+          m_TargetAssemblyTypeName: Tablet, Assembly-CSharp
+          m_MethodName: AparecerContornoOlho
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 58032198}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1820562248}
+          m_TargetAssemblyTypeName: Tablet, Assembly-CSharp
+          m_MethodName: SumirContornoOlho
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 58032198}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &65009397
 GameObject:
   m_ObjectHideFlags: 0
@@ -5606,6 +5652,8 @@ MonoBehaviour:
   bolinhaImage: {fileID: 1634696950}
   colorTexture: {fileID: 0}
   painelItens: {fileID: 1609591053}
+  dinheiroGasto: {fileID: 7502805927975152675, guid: 9725cd254ebfc4b41b051f085ac6a584, type: 3}
+  scrollviewAba: {fileID: 1500680280}
   desejaUsarCiberOlho: {fileID: 927243742}
   ciberOlhoUsado: {fileID: 1699471360}
   chipsLista: {fileID: 1281845340}
@@ -7798,6 +7846,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 280572371}
+  m_CullTransparentMesh: 1
+--- !u!1 &283648534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 283648535}
+  - component: {fileID: 283648537}
+  - component: {fileID: 283648536}
+  m_Layer: 5
+  m_Name: ContornoCiberOlhos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &283648535
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283648534}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1820562247}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 480.77988, y: -474.8943}
+  m_SizeDelta: {x: 164.052, y: 165.181}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &283648536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283648534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0.87058824, a: 0.9019608}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: bc75888062706cf4a857bd7d95fb1af1, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &283648537
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283648534}
   m_CullTransparentMesh: 1
 --- !u!1 &283863179
 GameObject:
@@ -11043,6 +11166,7 @@ GameObject:
   - component: {fileID: 422250846}
   - component: {fileID: 422250845}
   - component: {fileID: 422250844}
+  - component: {fileID: 422250847}
   m_Layer: 5
   m_Name: Chip2
   m_TagString: Untagged
@@ -11164,6 +11288,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 422250842}
   m_CullTransparentMesh: 1
+--- !u!114 &422250847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422250842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1820562248}
+          m_TargetAssemblyTypeName: Tablet, Assembly-CSharp
+          m_MethodName: AparecerContornoChip2
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1820562248}
+          m_TargetAssemblyTypeName: Tablet, Assembly-CSharp
+          m_MethodName: SumirContornoChip2
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &422553686
 GameObject:
   m_ObjectHideFlags: 0
@@ -19734,6 +19903,7 @@ MonoBehaviour:
   tutorial: 0
   tutorialScript: {fileID: 0}
   encomendaRealizadaText: {fileID: 1838543244040051375, guid: 624ad5f1ad1bcba41ae61d3c2ff7885a, type: 3}
+  dinheiroGasto: {fileID: 7502805927975152675, guid: 9725cd254ebfc4b41b051f085ac6a584, type: 3}
   inventarioAba: {fileID: 1392249100}
 --- !u!1 &679517942
 GameObject:
@@ -24192,6 +24362,7 @@ MonoBehaviour:
   indisponivel: {fileID: 1315345529}
   gameController: {fileID: 536325944}
   mercenarioScript: {fileID: 334431305}
+  dinheiroGasto: {fileID: 7502805927975152675, guid: 9725cd254ebfc4b41b051f085ac6a584, type: 3}
   ListaDeMercenarios: {fileID: 1125909469}
   scrollRectMercenario: {fileID: 227433834}
   scrollbarMercenario: {fileID: 863535517}
@@ -27486,6 +27657,7 @@ MonoBehaviour:
   indisponivel: {fileID: 778044759}
   gameController: {fileID: 536325944}
   mercenarioScript: {fileID: 334431305}
+  dinheiroGasto: {fileID: 7502805927975152675, guid: 9725cd254ebfc4b41b051f085ac6a584, type: 3}
   ListaDeMercenarios: {fileID: 1125909469}
   scrollRectMercenario: {fileID: 227433834}
   scrollbarMercenario: {fileID: 863535517}
@@ -33366,89 +33538,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1071985087}
   m_CullTransparentMesh: 1
---- !u!1 &1072908538
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1072908542}
-  - component: {fileID: 1072908541}
-  - component: {fileID: 1072908540}
-  m_Layer: 0
-  m_Name: Rua
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!23 &1072908540
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072908538}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 04479f9b480dc364d8439a1bddc0aa06, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1072908541
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072908538}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1072908542
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072908538}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.3089434, y: -7.5095444, z: 40.1}
-  m_LocalScale: {x: 74.21945, y: 1, z: 208.83025}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1077849087
 GameObject:
   m_ObjectHideFlags: 0
@@ -35939,6 +36028,7 @@ MonoBehaviour:
   indisponivel: {fileID: 689178739}
   gameController: {fileID: 536325944}
   mercenarioScript: {fileID: 334431305}
+  dinheiroGasto: {fileID: 7502805927975152675, guid: 9725cd254ebfc4b41b051f085ac6a584, type: 3}
   ListaDeMercenarios: {fileID: 1125909469}
   scrollRectMercenario: {fileID: 227433834}
   scrollbarMercenario: {fileID: 863535517}
@@ -37315,6 +37405,7 @@ MonoBehaviour:
   indisponivel: {fileID: 808117075}
   gameController: {fileID: 536325944}
   mercenarioScript: {fileID: 334431305}
+  dinheiroGasto: {fileID: 7502805927975152675, guid: 9725cd254ebfc4b41b051f085ac6a584, type: 3}
   ListaDeMercenarios: {fileID: 1125909469}
   scrollRectMercenario: {fileID: 227433834}
   scrollbarMercenario: {fileID: 863535517}
@@ -43137,6 +43228,7 @@ MonoBehaviour:
   indisponivel: {fileID: 906581103}
   gameController: {fileID: 536325944}
   mercenarioScript: {fileID: 334431305}
+  dinheiroGasto: {fileID: 7502805927975152675, guid: 9725cd254ebfc4b41b051f085ac6a584, type: 3}
   ListaDeMercenarios: {fileID: 1125909469}
   scrollRectMercenario: {fileID: 227433834}
   scrollbarMercenario: {fileID: 863535517}
@@ -47551,6 +47643,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1553580250}
   m_CullTransparentMesh: 1
+--- !u!1 &1562359420
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1562359421}
+  - component: {fileID: 1562359423}
+  - component: {fileID: 1562359422}
+  m_Layer: 5
+  m_Name: ContornoChip2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1562359421
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562359420}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1820562247}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -228.473, y: -483.53}
+  m_SizeDelta: {x: 163.943, y: 163.94}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1562359422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562359420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0.87058824, a: 0.9019608}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 260f86767b95e244a81556d412821e9c, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1562359423
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562359420}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1563745484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50714,6 +50881,7 @@ MonoBehaviour:
   indisponivel: {fileID: 18892036}
   gameController: {fileID: 536325944}
   mercenarioScript: {fileID: 334431305}
+  dinheiroGasto: {fileID: 7502805927975152675, guid: 9725cd254ebfc4b41b051f085ac6a584, type: 3}
   ListaDeMercenarios: {fileID: 1125909469}
   scrollRectMercenario: {fileID: 227433834}
   scrollbarMercenario: {fileID: 863535517}
@@ -54596,9 +54764,11 @@ RectTransform:
   - {fileID: 809452876}
   - {fileID: 384053286}
   - {fileID: 1018945904}
+  - {fileID: 283648535}
   - {fileID: 58032197}
   - {fileID: 264761335}
   - {fileID: 1703291107}
+  - {fileID: 1562359421}
   - {fileID: 422250843}
   - {fileID: 1809961244591139672}
   - {fileID: 1376034744434297584}
@@ -54641,6 +54811,8 @@ MonoBehaviour:
   tabletAnim: {fileID: 297536195}
   contornoTablet: {fileID: 1447850340}
   contornoChip1: {fileID: 264761334}
+  contornoChip2: {fileID: 1562359420}
+  contornoCiberOlho: {fileID: 283648534}
   menuInicial: {fileID: 1462018074}
   menuReputacao: {fileID: 1680060620}
   menuInventario: {fileID: 1392249100}
@@ -63530,7 +63702,6 @@ SceneRoots:
   - {fileID: 698498855}
   - {fileID: 1820562247}
   - {fileID: 806616342}
-  - {fileID: 1072908542}
   - {fileID: 541544461}
   - {fileID: 705527863}
   - {fileID: 1173232218}

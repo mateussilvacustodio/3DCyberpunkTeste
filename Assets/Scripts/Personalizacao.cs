@@ -27,6 +27,8 @@ public class Personalizacao : MonoBehaviour, IPointerDownHandler, IDragHandler
     [SerializeField] Texture2D colorTexture;
     [Header("Itens")]
     [SerializeField] GameObject painelItens;
+    [SerializeField] GameObject dinheiroGasto;
+    [SerializeField] GameObject scrollviewAba;
     [Header("CiberOlho")]
     [SerializeField] GameObject desejaUsarCiberOlho;
     [SerializeField] GameObject ciberOlhoUsado;
@@ -166,6 +168,10 @@ public class Personalizacao : MonoBehaviour, IPointerDownHandler, IDragHandler
     {
 
         gameController.gangues[6] -= pParametrosItem.valor;
+        string dinheiroGastoTexto = "-" + pParametrosItem.valor.ToString();
+        dinheiroGasto.GetComponent<TMP_Text>().text = dinheiroGastoTexto;
+        GameObject dinheiroGastoInstancia = Instantiate(dinheiroGasto, scrollviewAba.transform);
+        Destroy(dinheiroGastoInstancia, 0.75f);
 
         switch (pParametrosItem.nome)
         {

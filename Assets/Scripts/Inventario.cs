@@ -37,6 +37,7 @@ public class Inventario : MonoBehaviour
     [SerializeField] Tutorial tutorialScript;
 
     [SerializeField] GameObject encomendaRealizadaText;
+    [SerializeField] GameObject dinheiroGasto;
     [SerializeField] GameObject inventarioAba;
 
     void Start()
@@ -81,7 +82,6 @@ public class Inventario : MonoBehaviour
                         string textoItemExibir = itemRecebido.quant.ToString("+;-;") + itemRecebido.nome + " x" + Mathf.Abs(itemRecebido.quant);
                         textoItemRecebido.GetComponent<TMP_Text>().text = textoItemExibir;
                         GameObject instanciaItem = Instantiate(textoItemRecebido, canvas.transform);
-                        print("o problema ta aqui");
                         Destroy(instanciaItem, 0.75f);
 
                     }
@@ -115,7 +115,8 @@ public class Inventario : MonoBehaviour
 
     }
 
-    public void AvisoEncomenda(ParametrosEncomendas PparametrosEncomendas) {
+    public void AvisoEncomenda(ParametrosEncomendas PparametrosEncomendas)
+    {
 
         gameController.HaEncomenda = true;
         gameController.gangues[6] -= PparametrosEncomendas.custo;
@@ -123,6 +124,10 @@ public class Inventario : MonoBehaviour
         itensRecebidos.Add(PparametrosEncomendas.parametrosItem);
         GameObject textoEncomendaRealizada = Instantiate(encomendaRealizadaText, inventarioAba.transform);
         Destroy(textoEncomendaRealizada, 0.75f);
+        string dinheiroGastoTexto = "-" + PparametrosEncomendas.custo.ToString();
+        dinheiroGasto.GetComponent<TMP_Text>().text = dinheiroGastoTexto;
+        GameObject textoDinheiroGasto = Instantiate(dinheiroGasto, gameController.dinheiroText3.transform);
+        Destroy(textoDinheiroGasto, 0.75f);
 
     }
 

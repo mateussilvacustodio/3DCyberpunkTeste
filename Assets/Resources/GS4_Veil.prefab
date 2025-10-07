@@ -206,10 +206,11 @@ MonoBehaviour:
   ramifica: 0
   personagemRamificacao1: {fileID: 0}
   personagemRamificacao2: {fileID: 0}
-  opcao1: "Se o Setor Zero tem um pre\xE7o, eu encontro. Mas vai sair caro, e vai
-    exigir um pouco de finesse. Se est\xE3o dispostos a bancar, deixem o resto comigo."
-  opcao2: Esse tipo de jogo atrai os piores olhares, e com o Setor Zero no meio,
-    o risco dobra. Prefiro ficar fora dessa.
+  opcao1: "Se o <color=#6FFF00>Setor Zero</color> tem um pre\xE7o, eu encontro. Mas
+    vai sair caro, e vai exigir um pouco de finesse. Se est\xE3o dispostos a bancar,
+    deixem o resto comigo."
+  opcao2: Esse tipo de jogo atrai os piores olhares, e com o <color=#6FFF00>Setor
+    Zero</color> no meio, o risco dobra. Prefiro ficar fora dessa.
   corGangue: {r: 1, g: 0.14901961, b: 0.7137255, a: 1}
   mercador: 0
   recursos: 00000101010000

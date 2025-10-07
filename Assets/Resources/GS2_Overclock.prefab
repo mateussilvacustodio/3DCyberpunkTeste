@@ -196,10 +196,11 @@ MonoBehaviour:
   personagemRamificacao1: {fileID: 0}
   personagemRamificacao2: {fileID: 0}
   opcao1: "Se o pagamento cobre o risco, posso contratar algu\xE9m para criar o desvio
-    que precisam. Mas estejam prontos \u2013 desviar a aten\xE7\xE3o da pol\xEDcia
+    que precisam. Mas estejam prontos \u2013 desviar a aten\xE7\xE3o da <color=#2D1AFF>Pol\xEDcia</color>
     sempre tem consequ\xEAncias."
-  opcao2: "Distrair a pol\xEDcia j\xE1 \xE9 arriscado, mas jogar os Nano Blades na
-    linha de fogo? N\xE3o me meto nesse tipo de armadilha."
+  opcao2: "Distrair a <color=#2D1AFF>Pol\xEDcia</color> j\xE1 \xE9 arriscado, mas
+    jogar os <color=#F5D000>Nano Blades</color> na linha de fogo? N\xE3o me meto
+    nesse tipo de armadilha."
   corGangue: {r: 1, g: 0.14901961, b: 0.7137255, a: 1}
   mercador: 0
   recursos: 01000100000101

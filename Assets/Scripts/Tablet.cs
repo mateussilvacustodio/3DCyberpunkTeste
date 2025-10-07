@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,7 +14,8 @@ public class Tablet : MonoBehaviour
     [SerializeField] Animator tabletAnim;
     [SerializeField] GameObject contornoTablet;
     [SerializeField] GameObject contornoChip1;
-    
+    [SerializeField] GameObject contornoChip2;
+    [SerializeField] GameObject contornoCiberOlho;
 
     [Header("Aplicativos")]
     [SerializeField] GameObject menuInicial;
@@ -97,10 +99,34 @@ public class Tablet : MonoBehaviour
 
     public void SumirContornoChip1()
     {
-
-        //tabletAnim.SetBool("Crescer", false);
         contornoChip1.SetActive(false);
+    }
 
+    public void AparecerContornoChip2()
+    {
+        contornoChip2.SetActive(true);
+    }
+
+    public void SumirContornoChip2()
+    {
+        contornoChip2.SetActive(false);
+    }
+
+    public void AparecerContornoOlho(Button pButton)
+    {
+        if (pButton.interactable)
+        {
+            contornoCiberOlho.SetActive(true);    
+        }
+    }
+
+    public void SumirContornoOlho(Button pButton)
+    {
+        if (pButton.interactable)
+        {
+            contornoCiberOlho.SetActive(false);
+        }
+        
     }
 
     public void AbrirReputacao()

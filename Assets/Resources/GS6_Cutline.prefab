@@ -607,7 +607,8 @@ MonoBehaviour:
   personagemRamificacao2: {fileID: 0}
   opcao1: "Consigo sim. Mas lembra, cada corte que voc\xEA der com isso pode acabar
     voltando pra mim."
-  opcao2: "Hoje n\xE3o, Cutline. Se a Redline descobrir, sou eu quem me fodo."
+  opcao2: "Hoje n\xE3o, Cutline. Se a <color=#FF0000>Redline</color> descobrir, sou
+    eu quem me fodo."
   corGangue: {r: 1, g: 0.14901961, b: 0.7137255, a: 1}
   mercador: 0
   recursos: 00010100000001

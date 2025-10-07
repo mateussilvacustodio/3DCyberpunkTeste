@@ -605,8 +605,8 @@ MonoBehaviour:
   personagemRamificacao1: {fileID: 0}
   personagemRamificacao2: {fileID: 0}
   opcao1: "E tem como recusar uma oferta dessas? Passa pra c\xE1."
-  opcao2: "N\xE3o quero me envolver com isso. Se a pol\xEDcia descobrir que eu t\xF4
-    com isso, eu me fodo."
+  opcao2: "N\xE3o quero me envolver com isso. Se a <color=#2D1AFF>Pol\xEDcia</color>
+    descobrir que eu t\xF4 com isso, eu me fodo."
   corGangue: {r: 1, g: 0, b: 0, a: 1}
   mercador: 0
   recursos: 00010000000101

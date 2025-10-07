@@ -314,6 +314,7 @@ MonoBehaviour:
   valorAfetada: 15
   valorAfetada2: 0
   gameController: {fileID: 0}
+  reputacaoAtualizada: {fileID: 1838543244040051375, guid: 624ad5f1ad1bcba41ae61d3c2ff7885a, type: 3}
 --- !u!1 &4458995426582413367
 GameObject:
   m_ObjectHideFlags: 0

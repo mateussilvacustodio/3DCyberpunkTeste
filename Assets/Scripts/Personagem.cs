@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 using TMPro;
-using TMPro.EditorUtilities;
+//using TMPro.EditorUtilities;
 
 public enum tipoPedido {inventario, mercenario, nenhum}
 
@@ -104,7 +104,7 @@ public class Personagem : MonoBehaviour
         if (mudadoresSim[6] != 0)
         {
             gameController.gangueOlho1Dinheiro.GameObject().SetActive(true);
-            gameController.gangueOlho1Dinheiro.text = mudadoresSim[6].ToString();
+            gameController.gangueOlho1Dinheiro.text = mudadoresSim[6].ToString("+0;-0;0");
         }
         else
         {

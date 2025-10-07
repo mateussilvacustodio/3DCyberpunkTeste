@@ -536,10 +536,10 @@ MonoBehaviour:
   personagemRamificacao1: {fileID: 0}
   personagemRamificacao2: {fileID: 0}
   opcao1: "Posso confirmar a informa\xE7\xE3o, mas isso vai te custar. Se for pra
-    mexer com a Redline Rebels, preciso de uma boa remunera\xE7\xE3o."
+    mexer com a <color=#FF0000>Redline Rebels</color>, preciso de uma boa remunera\xE7\xE3o."
   opcao2: "Confirmar uma hist\xF3ria dessas \xE9 um tiro no p\xE9, principalmente
-    se tratando dos Redline Rebels. N\xE3o quero chamar aten\xE7\xE3o pro meu lado.
-    Procure outro."
+    se tratando dos <color=#FF0000>Redline Rebels</color>. N\xE3o quero chamar aten\xE7\xE3o
+    pro meu lado. Procure outro."
   corGangue: {r: 0.43529412, g: 1, b: 0, a: 1}
   mercador: 0
   recursos: 00010001000001

@@ -528,7 +528,8 @@ MonoBehaviour:
   ramifica: 1
   personagemRamificacao1: {fileID: 4913885533541390741, guid: 5f78147731e4c2c4baf20bceddf4830a, type: 3}
   personagemRamificacao2: {fileID: 863955354863743417, guid: 0f67d394aec122b43b2c43a13d3c54c1, type: 3}
-  opcao1: "Se isso me mant\xE9m longe da mira da pol\xEDcia, estou dentro."
+  opcao1: "Se isso me mant\xE9m longe da mira da <color=#2D1AFF>Pol\xEDcia</color>,
+    estou dentro."
   opcao2: "J\xE1 fiz minha parte, agora \xE9 com voc\xEAs."
   corGangue: {r: 0.43529412, g: 1, b: 0, a: 1}
   mercador: 0

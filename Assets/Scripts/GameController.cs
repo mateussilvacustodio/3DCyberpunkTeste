@@ -29,8 +29,8 @@ public class GameController : MonoBehaviour
     [SerializeField] Text[] barrasGanguesPCT2;
     [SerializeField] Text[] dinheiroText;
     [SerializeField] Text dinheiroText2;
-    [SerializeField] Text dinheiroText3;
-    [SerializeField] Text dinheiroText4;
+    public Text dinheiroText3;
+    public Text dinheiroText4;
     [SerializeField] Text dinheiroTextFimDoDia;
     [SerializeField] List<EventosFimDeDia> ListaDeEventosFimDeDia = new List<EventosFimDeDia>();
     [SerializeField] List<EventosFimDeDia> ListaDeEventosBackup = new List<EventosFimDeDia>();
@@ -47,7 +47,7 @@ public class GameController : MonoBehaviour
     [SerializeField] Button botaoSim;
     [SerializeField] Button botaoNao;
     public Button botaoTablet;
-    [SerializeField] Tablet tabletScript;
+    public Tablet tabletScript;
     [SerializeField] GameObject menu;
     public TVEffect tVEffectScript;
     public GameObject botaoFimDoDia;

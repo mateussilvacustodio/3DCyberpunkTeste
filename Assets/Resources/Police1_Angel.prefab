@@ -190,7 +190,8 @@ MonoBehaviour:
   personagemRamificacao1: {fileID: 0}
   personagemRamificacao2: {fileID: 0}
   opcao1: "Eu posso te dar o que voc\xEA quer, mas preciso de algo em troca. Quem
-    sabe uma garantia de que a pol\xEDcia n\xE3o vai atrapalhar meus neg\xF3cios?"
+    sabe uma garantia de que a <color=#2D1AFF>Pol\xEDcia</color> n\xE3o vai atrapalhar
+    meus neg\xF3cios?"
   opcao2: "Informa\xE7\xE3o \xE9 poder e eu n\xE3o dou poder de gra\xE7a. V\xE1 procurar
     em outro lugar."
   corGangue: {r: 0.1764706, g: 0.101960786, b: 1, a: 1}

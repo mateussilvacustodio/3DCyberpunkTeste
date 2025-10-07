@@ -19,6 +19,7 @@ public class Chip : MonoBehaviour
     public float valorAfetada2;
 
     [SerializeField] GameController gameController;
+    [SerializeField] GameObject reputacaoAtualizada;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +37,9 @@ public class Chip : MonoBehaviour
 
     public void UsarChip()
     {
+        reputacaoAtualizada.GetComponent<TMP_Text>().text = "Reputação atualizada";
+        GameObject reputacaoAtualizadaInstancia = Instantiate(reputacaoAtualizada, gameController.tabletScript.transform);
+        Destroy(reputacaoAtualizadaInstancia, 0.75f);
         gameController.gangues[gangueAfetada] += valorAfetada;
         gameController.gangues[gangueAfetada2] += valorAfetada2;
         gameController.AtualizarGangues();
