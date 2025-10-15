@@ -117,7 +117,7 @@ public class Inventario : MonoBehaviour
 
     public void AvisoEncomenda(ParametrosEncomendas PparametrosEncomendas)
     {
-
+        gameController.SFXDinheiroGasto.Play();
         gameController.HaEncomenda = true;
         gameController.gangues[6] -= PparametrosEncomendas.custo;
         //gameController.itensEncomendados.Add(PparametrosEncomendas.parametrosItem);

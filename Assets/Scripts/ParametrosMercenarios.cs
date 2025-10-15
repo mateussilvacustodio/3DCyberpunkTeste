@@ -36,6 +36,7 @@ public class ParametrosMercenarios : MonoBehaviour
     public void EscolherMercenario()
     {
 
+        gameController.SFXDinheiroGasto.Play();
         mercenarioScript.destruirMissaoAtual(forcaMercenario, inteligenciaMercenario, stealhMercenario, nomeMercenario);
         gameController.gangues[6] -= precoMercenario;
 

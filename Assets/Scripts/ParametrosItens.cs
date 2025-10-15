@@ -24,6 +24,7 @@ public class ParametrosItens : MonoBehaviour
     public int aleatCor;
     public int aleatCor2;
     public GameObject chipPrefab;
+    public int indexEsgotadoGameController;
 
     void Start()
     {

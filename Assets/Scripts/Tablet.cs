@@ -34,7 +34,7 @@ public class Tablet : MonoBehaviour
     //int indexSeta;
     void Update() {
 
-        diaAtual.text = "Dia " + gameController.dia;
+        diaAtual.text = "Dia atual: " + gameController.dia;
 
     }
     

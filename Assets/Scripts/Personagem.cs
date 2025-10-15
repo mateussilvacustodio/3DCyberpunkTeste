@@ -233,6 +233,7 @@ public class Personagem : MonoBehaviour
         if (mudadoresSim[6] != 0)
         {
 
+            gameController.SFXDinheiroPedido.Play();
             string textoDinheiroExibir = mudadoresSim[6].ToString("+0;-0;0");
             textoDinheiroGanhoGasto.GetComponent<TMP_Text>().text = textoDinheiroExibir;
             GameObject instanciaDinheiro = Instantiate(textoDinheiroGanhoGasto, canvas.transform);

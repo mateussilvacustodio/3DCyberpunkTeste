@@ -91,6 +91,9 @@ public class GameController : MonoBehaviour
     [SerializeField] AudioSource audioSource;
     public AudioSource SFXPassos;
     public AudioSource SFXBotao;
+    public AudioSource SFXVoz;
+    public AudioSource SFXDinheiroGasto;
+    public AudioSource SFXDinheiroPedido;
     [SerializeField] AudioClip musicaJogo;
     [SerializeField] Slider sliderVolume;
     public Slider sliderSFX;
@@ -99,6 +102,7 @@ public class GameController : MonoBehaviour
     [Header("Cheat")]
     public bool cheatDavid;
     [Header("Itens")]
+    public GameObject[] itemEsgotado;
     [Header("Ciberolho")]
     public float quantidadeCiberOlho;
     public Button botaoCiberOlho;
@@ -173,6 +177,9 @@ public class GameController : MonoBehaviour
                 volumeMusicaTexto.text = (sliderVolume.value * 100).ToString("F0");
                 SFXPassos.volume = sliderSFX.value;
                 SFXBotao.volume = sliderSFX.value / 4;
+                SFXVoz.volume = sliderSFX.value;
+                SFXDinheiroGasto.volume = sliderSFX.value;
+                SFXDinheiroPedido.volume = sliderSFX.value;
                 volumeSFXTexto.text = (sliderSFX.value * 100).ToString("F0");
 
             }
@@ -322,7 +329,7 @@ public class GameController : MonoBehaviour
 
     public void FimDoDia()
     {
-
+        SFXBotao.Play();
         painelFimDeDia.SetActive(true);
         numNotificacao = 0;
 
@@ -422,6 +429,7 @@ public class GameController : MonoBehaviour
     public void ProximoDia()
     {
 
+        SFXBotao.Play();
         inventario.textoEncomendaFimDoDia.text = "";
         inventario.textoEntreguesFimDoDia.text = "";
         inventario.textoDevidosFimDoDia.text = "";
@@ -459,6 +467,10 @@ public class GameController : MonoBehaviour
                         break;
                     }
                 }
+                foreach (var item in itemEsgotado)
+                {
+                    item.SetActive(false);
+                }
                 PreencherListaDoDiaAtual();
                 Invoke("CriarPersonagem2", 0.75f);
             }
@@ -487,6 +499,7 @@ public class GameController : MonoBehaviour
     public void IniciarJogo()
     {
 
+        SFXBotao.Play();
         menu.SetActive(false);
         botaoTablet.gameObject.SetActive(true);
         PreencherListaDoDiaAtual();

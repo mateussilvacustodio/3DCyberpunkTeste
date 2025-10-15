@@ -42,6 +42,7 @@ public class Balao : MonoBehaviour
 
                 gameController.personagemInstancia.GetComponent<Personagem>().botaoSim.interactable = true;
                 gameController.personagemInstancia.GetComponent<Personagem>().botaoNao.interactable = true;
+                gameController.SFXVoz.Stop();
 
                 gameController.ciberOlhoUsadoNessePedido = false;
                 if (!gameController.ciberOlhoUsado)
@@ -63,7 +64,9 @@ public class Balao : MonoBehaviour
             nome.SetActive(true);
             nomeTexto.text = gameController.personagemInstancia.GetComponent<Personagem>().nome;
             nomeTexto.color = gameController.personagemInstancia.GetComponent<Personagem>().corGangue;
+            gameController.SFXVoz.Play();
             corrotinaDigitar = StartCoroutine(Digitar());
+            
 
         } else {
 

@@ -20,11 +20,6 @@ public class PersonagemMercador : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-
-    }
-
     public void AbrirMercador()
     {
 

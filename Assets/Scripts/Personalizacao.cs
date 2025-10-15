@@ -168,8 +168,9 @@ public class Personalizacao : MonoBehaviour, IPointerDownHandler, IDragHandler
 
     public void ComprarItem(ParametrosItens pParametrosItem)
     {
-
+        gameController.SFXDinheiroGasto.Play();
         gameController.gangues[6] -= pParametrosItem.valor;
+        gameController.itemEsgotado[pParametrosItem.indexEsgotadoGameController].SetActive(true);
         string dinheiroGastoTexto = "-" + pParametrosItem.valor.ToString();
         dinheiroGasto.GetComponent<TMP_Text>().text = dinheiroGastoTexto;
         GameObject dinheiroGastoInstancia = Instantiate(dinheiroGasto, scrollviewAba.transform);
@@ -264,6 +265,7 @@ public class Personalizacao : MonoBehaviour, IPointerDownHandler, IDragHandler
 
         if (!pParametrosPersonalizacao.comprado)
         {
+            gameController.SFXDinheiroGasto.Play();
             gameController.gangues[6] += pParametrosPersonalizacao.preco;
             string textoDinheiroExibir = pParametrosPersonalizacao.preco.ToString("+0;-0;0");
             dinheiroGastoGanho.GetComponent<TMP_Text>().text = textoDinheiroExibir;
