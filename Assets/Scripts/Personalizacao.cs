@@ -42,6 +42,8 @@ public class Personalizacao : MonoBehaviour, IPointerDownHandler, IDragHandler
     [SerializeField] GameObject[] cofres;
     [SerializeField] Image props1;
     [SerializeField] Sprite[] grade1;
+    [SerializeField] Image props2;
+    [SerializeField] Sprite[] grade2;
     [SerializeField] Image props3;
     [SerializeField] Sprite[] grade3;
 
@@ -299,6 +301,9 @@ public class Personalizacao : MonoBehaviour, IPointerDownHandler, IDragHandler
                 break;
             case "Grade1":
                 props1.sprite = grade1[pParametrosPersonalizacao.indexArray];
+                break;
+            case "Grade2":
+                props2.sprite = grade2[pParametrosPersonalizacao.indexArray];
                 break;
             case "Grade3":
                 props3.sprite = grade3[pParametrosPersonalizacao.indexArray];
