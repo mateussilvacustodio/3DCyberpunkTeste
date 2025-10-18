@@ -48,14 +48,14 @@ public class Mercenarios : MonoBehaviour
 
         if (forcaMercenarioAtual >= forcaNecessariaMissaoAtual && inteligenciaMercenarioAtual >= inteligenciaNecessariaMissaoAtual && stealhMercenarioAtual >= stealhNecessarioMissaoAtual)
         {
-            textoFimDoDia.text += "- O mercenario " + nomeMercenarioAtual + " cumpriu a missão \n";
+            textoFimDoDia.text += "- O mercenário " + nomeMercenarioAtual + " cumpriu a missão \n";
             notificacaoMerc.SetActive(true);
 
         }
         else
         {
 
-            textoFimDoDia.text += "- O mercenario " + nomeMercenarioAtual + " não cumpriu a missão - $ " + (missaoAtual.GetComponent<MissoesMercenario>().mudadoresMercenarios[6] * 2).ToString() + "\n";
+            textoFimDoDia.text += "- O mercenário " + nomeMercenarioAtual + " não cumpriu a missão - $ " + (missaoAtual.GetComponent<MissoesMercenario>().mudadoresMercenarios[6] * 2).ToString() + "\n";
             GameObject clone = Instantiate(missaoAtual);
             clone.SetActive(false);
             pedidosFalhos.Add(clone);

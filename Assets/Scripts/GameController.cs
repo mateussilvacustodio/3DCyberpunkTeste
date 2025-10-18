@@ -186,34 +186,43 @@ public class GameController : MonoBehaviour
 
         }
 
-        if (quantidadeCiberOlho < 1)
+        if (botaoCiberOlho != null)
         {
-            botaoCiberOlho.GameObject().SetActive(false);
-        }
-        else
-        {
-            botaoCiberOlho.GameObject().SetActive(true);
-            textoQuantidadeCiberOlho.text = quantidadeCiberOlho.ToString();
-        }
-
-        if (quantidadeChips < 1)
-        {
-            botaoChip.GameObject().SetActive(false);
-        }
-        else
-        {
-            botaoChip.GameObject().SetActive(true);
-            textoQuantidadeChip.text = quantidadeChips.ToString();
+            if (quantidadeCiberOlho < 1)
+            {
+                botaoCiberOlho.GameObject().SetActive(false);
+            }
+            else
+            {
+                botaoCiberOlho.GameObject().SetActive(true);
+                textoQuantidadeCiberOlho.text = quantidadeCiberOlho.ToString();
+            }
         }
 
-        if (quantidadeMultichips < 1)
+        if (botaoChip != null)
         {
-            botaoMultichip.GameObject().SetActive(false);
+            if (quantidadeChips < 1)
+            {
+                botaoChip.GameObject().SetActive(false);
+            }
+            else
+            {
+                botaoChip.GameObject().SetActive(true);
+                textoQuantidadeChip.text = quantidadeChips.ToString();
+            }
         }
-        else
+
+        if (botaoMultichip != null)
         {
-            botaoMultichip.GameObject().SetActive(true);
-            textoQuantidadeMultichip.text = quantidadeMultichips.ToString();
+            if (quantidadeMultichips < 1)
+            {
+                botaoMultichip.GameObject().SetActive(false);
+            }
+            else
+            {
+                botaoMultichip.GameObject().SetActive(true);
+                textoQuantidadeMultichip.text = quantidadeMultichips.ToString();
+            }
         }
 
     }

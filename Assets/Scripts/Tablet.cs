@@ -52,8 +52,12 @@ public class Tablet : MonoBehaviour
         menuMercenarios.SetActive(false);
         listaMercenarios.SetActive(false);
         menuConfiguracoes.SetActive(false);
-        menuCheats.GetComponent<Cheats>().codigoDigitado.text = "";
-        menuCheats.SetActive(false); //no tutorial está ligado o menu de config, para n precisar passar os cheats, ja que o jogador nem tem acesso a eles no tutorial
+        if (menuCheats != null)
+        {
+            menuCheats.GetComponent<Cheats>().codigoDigitado.text = "";
+            menuCheats.SetActive(false);
+        }
+        
         if (setas.Length > 0)
         {
 
@@ -176,8 +180,11 @@ public class Tablet : MonoBehaviour
         menuInventario.SetActive(false);
         menuMercenarios.SetActive(false);
         menuConfiguracoes.SetActive(false);
-        menuCheats.GetComponent<Cheats>().codigoDigitado.text = "";
-        menuCheats.SetActive(false);
+        if (menuCheats != null)
+        {
+            menuCheats.GetComponent<Cheats>().codigoDigitado.text = "";
+            menuCheats.SetActive(false);
+        }
 
     }
 

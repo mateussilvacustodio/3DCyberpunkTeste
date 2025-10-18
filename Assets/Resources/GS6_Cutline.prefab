@@ -589,7 +589,7 @@ MonoBehaviour:
     Preciso de um bra\xE7o novo. Voc\xEA consegue?"
   tipoPedido: 0
   itemDoNPC:
-    nome: "Lamina de bra\xE7o"
+    nome: "L\xE2mina de bra\xE7o"
     quant: -1
     sprite: {fileID: 21300000, guid: 08212c86e2edc754ea9be70c21d03ad3, type: 3}
     modificadores:

@@ -75,6 +75,7 @@ public class Tutorial : MonoBehaviour
             botaoNaoTexto.text = textosOpcao2Tutorial[etapasTutorial];
             botaoSim.interactable = true;
             botaoNao.interactable = true;
+            gameController.SFXVoz.Stop();
             corrotinaDigitar = null;
 
             switch (etapasTutorial)
@@ -144,6 +145,7 @@ public class Tutorial : MonoBehaviour
         //nomeBalaoTutorialTexto.color = personagemTutorialInstancia.GetComponent<Personagem>().corGangue;
         nomeBalaoTutorialTexto.text = textoNomeTutorial[etapasTutorial];
         nomeBalaoTutorialTexto.color = corNomeTutorial[etapasTutorial];
+        gameController.SFXVoz.Play();
         corrotinaDigitar = StartCoroutine(DigitarTutorial());
 
 

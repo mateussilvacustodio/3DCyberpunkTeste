@@ -94,23 +94,26 @@ public class Personagem : MonoBehaviour
                     gameController.gangueOlho1[i].transform.Find("SetaCima")?.gameObject.SetActive(false);
                     gameController.gangueOlho1[i].transform.Find("SetaBaixo")?.gameObject.SetActive(true);
                 }
-    
+
             }
             else
             {
                 gameController.gangueOlho1[i].SetActive(false);
             }
         }
-        if (mudadoresSim[6] != 0)
+        
+        if (gameController.gangueOlho1Dinheiro != null)
         {
-            gameController.gangueOlho1Dinheiro.GameObject().SetActive(true);
-            gameController.gangueOlho1Dinheiro.text = mudadoresSim[6].ToString("+0;-0;0");
+            if (mudadoresSim[6] != 0)
+            {
+                gameController.gangueOlho1Dinheiro.GameObject().SetActive(true);
+                gameController.gangueOlho1Dinheiro.text = mudadoresSim[6].ToString("+0;-0;0");
+            }
+            else
+            {
+                gameController.gangueOlho1Dinheiro.GameObject().SetActive(false);
+            }
         }
-        else
-        {
-            gameController.gangueOlho1Dinheiro.GameObject().SetActive(false);
-        }
-
 
         for (int i = 0; i < gameController.gangueOlho2.Length; i++)
         {
@@ -133,14 +136,18 @@ public class Personagem : MonoBehaviour
                 gameController.gangueOlho2[i].SetActive(false);
             }
         }
-        if (mudadoresNao[6] != 0)
+        
+        if (gameController.gangueOlho2Dinheiro != null)
         {
-            gameController.gangueOlho2Dinheiro.GameObject().SetActive(true);
-            gameController.gangueOlho2Dinheiro.text = mudadoresNao[6].ToString();
-        }
-        else
-        {
-            gameController.gangueOlho2Dinheiro.GameObject().SetActive(false);
+            if (mudadoresNao[6] != 0)
+            {
+                gameController.gangueOlho2Dinheiro.GameObject().SetActive(true);
+                gameController.gangueOlho2Dinheiro.text = mudadoresNao[6].ToString();
+            }
+            else
+            {
+                gameController.gangueOlho2Dinheiro.GameObject().SetActive(false);
+            }
         }
 
         if (missaoMercenario != null)
@@ -150,10 +157,6 @@ public class Personagem : MonoBehaviour
             missaoMercenario.GetComponent<MissoesMercenario>().mudadoresMercenarios = mudadoresSim;
 
         }
-
-        //botaoFimDoDia = Resources.FindObjectsOfTypeAll<GameObject>().FirstOrDefault(b => b.gameObject.name == "BotaoFimDoDia");
-        //botaoFimDoDia.SetActive(false);
-
 
     }
     void Update()
@@ -247,7 +250,10 @@ public class Personagem : MonoBehaviour
             botaoSim.interactable = false;
             botaoNao.gameObject.SetActive(true); //para o tutorial
             botaoNao.interactable = false;
-            gameController.botaoCiberOlho.interactable = false;
+            if (gameController.botaoCiberOlho != null)
+            {
+                gameController.botaoCiberOlho.interactable = false;
+            }
             if (gameController.ciberOlhoUsadoNessePedido)
             {
                 gameController.quantidadeCiberOlho -= 1;
@@ -305,7 +311,10 @@ public class Personagem : MonoBehaviour
 
         botaoSim.interactable = false;
         botaoNao.interactable = false;
-        gameController.botaoCiberOlho.interactable = false;
+        if (gameController.botaoCiberOlho != null)
+        {
+            gameController.botaoCiberOlho.interactable = false;
+        }
         if (gameController.ciberOlhoUsadoNessePedido)
         {
             gameController.quantidadeCiberOlho -= 1;
