@@ -20712,7 +20712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itensPossuidos:
-  - nome: "Lamina de bra\xE7o"
+  - nome: "L\xE2mina de bra\xE7o"
     quant: 0
     sprite: {fileID: 21300000, guid: 08212c86e2edc754ea9be70c21d03ad3, type: 3}
     modificadores: []
@@ -60692,7 +60692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parametrosItem:
-    nome: "Lamina de bra\xE7o"
+    nome: "L\xE2mina de bra\xE7o"
     quant: 1
     sprite: {fileID: 21300000, guid: 08212c86e2edc754ea9be70c21d03ad3, type: 3}
     modificadores: []
@@ -64408,7 +64408,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: d5d695bf51cf56f429c87a8fa4dbbf6c, type: 3}
     m_FontSize: 24
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
@@ -64442,7 +64442,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: d5d695bf51cf56f429c87a8fa4dbbf6c, type: 3}
     m_FontSize: 24
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 241
