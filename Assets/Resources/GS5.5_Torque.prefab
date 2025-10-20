@@ -175,8 +175,8 @@ MonoBehaviour:
   pedido: "Ent\xE3o \xE9 assim, James? Voc\xEA prefere ficar do lado deles? Certo.
     Mas se n\xE3o est\xE1 conosco, n\xE3o temos porque confiar em voc\xEA. Temos
     um \xFAltimo teste para decidir seu futuro conosco: queremos que voc\xEA entregue
-    um pacote para um de nossos clientes mais importantes. S\xF3 assim podemos esquecer
-    essa hist\xF3ria."
+    um pacote para um de nossos clientes mais importantes e de gra\xE7a. S\xF3 assim
+    podemos esquecer essa hist\xF3ria."
   tipoPedido: 2
   itemDoNPC:
     nome: 

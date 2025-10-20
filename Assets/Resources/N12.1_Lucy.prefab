@@ -2576,9 +2576,9 @@ MonoBehaviour:
   nome: Lucy
   pedido: "James? Meu nome \xE9 Lucy. O David fechou aquele neg\xF3cio com voc\xEA,
     mas agora os corpes rastrearam o comprador. Ele t\xE1 cercado, e adivinha quem
-    vai ser o pr\xF3ximo da lista? O David. Preciso que voc\xEA consiga um hacker
-    pra apagar todos os registros do carregamento, antes que a <color=#2D1AFF>Pol\xEDcia</color>
-    ou as corpora\xE7\xF5es liguem o rastro at\xE9 ele. Vai ajudar?"
+    vai ser o pr\xF3ximo da lista? O David. Preciso que voc\xEA apague todos os registros
+    do carregamento antes que a <color=#2D1AFF>Pol\xEDcia</color> ou as corpora\xE7\xF5es
+    liguem o rastro at\xE9 ele. Vai ajudar?"
   tipoPedido: 2
   itemDoNPC:
     nome: 
@@ -2602,7 +2602,7 @@ MonoBehaviour:
   - 10
   - 10
   - 10
-  - -15
+  - 0
   - 0
   mudadoresNao:
   - -10

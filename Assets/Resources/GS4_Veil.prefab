@@ -184,10 +184,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: Veil
   pedido: "James, o <color=#00FCFF>Nexos</color> t\xE1 se metendo onde n\xE3o deve
-    e soltando informa\xE7\xF5es sobre nossa opera\xE7\xE3o de implantes. Precisamos
-    de material sobre eles, algo que possa comprometer. Ou, quem sabe, voc\xEA poderia
-    negociar com o <color=#6FFF00>Setor Zero</color> e comprar o sil\xEAncio. Quanto
-    custa essa conveni\xEAncia?"
+    e soltando informa\xE7\xF5es sobre nossa opera\xE7\xE3o de implantes para o <color=#6FFF00>Setor
+    Zero</color>. Precisamos de material sobre o <color=#00FCFF>Nexos</color> para
+    chantage\xE1-los. Ou, quem sabe, voc\xEA poderia negociar com o <color=#6FFF00>Setor
+    Zero</color> e comprar o sil\xEAncio deles. O que acha melhor?"
   tipoPedido: 2
   itemDoNPC:
     nome: 
@@ -207,27 +207,28 @@ MonoBehaviour:
   personagemRamificacao1: {fileID: 0}
   personagemRamificacao2: {fileID: 0}
   opcao1: "Se o <color=#6FFF00>Setor Zero</color> tem um pre\xE7o, eu encontro. Mas
-    vai sair caro, e vai exigir um pouco de finesse. Se est\xE3o dispostos a bancar,
-    deixem o resto comigo."
-  opcao2: Esse tipo de jogo atrai os piores olhares, e com o <color=#6FFF00>Setor
-    Zero</color> no meio, o risco dobra. Prefiro ficar fora dessa.
+    vai sair caro, e exigir\xE1 um pouco de sutileza. Al\xE9m disso, tenho certeza
+    que eles n\xE3o v\xE3o gostar de mexer com a <color=#00FCFF>Nexos</color>."
+  opcao2: "Esse tipo de jogo atrai os piores olhares, mas se for para manter uma
+    boa rela\xE7\xE3o entre a gente eu te dou as informa\xE7\xF5es sobre o <color=#00FCFF>Nexos</color>
+    de gra\xE7a."
   corGangue: {r: 1, g: 0.14901961, b: 0.7137255, a: 1}
   mercador: 0
   recursos: 00000101010000
   mudadoresSim:
   - 0
   - 0
-  - 15
-  - 10
-  - 10
+  - 5
+  - -5
   - 0
   - 0
+  - 700
   mudadoresNao:
   - 0
   - 0
-  - -15
+  - 15
   - 0
-  - 0
+  - -10
   - 0
   - 0
   textoDinheiroGanhoGasto: {fileID: 7502805927975152675, guid: 9725cd254ebfc4b41b051f085ac6a584, type: 3}

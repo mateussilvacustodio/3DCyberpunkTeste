@@ -192,9 +192,9 @@ MonoBehaviour:
   personagemRamificacao1: {fileID: 0}
   personagemRamificacao2: {fileID: 0}
   opcao1: "Se o pagamento t\xE1 garantido, eu arranjo um mercen\xE1rio pro trabalho.
-    Mas depois, vou precisar ficar fora do radar por um tempo. Esse tipo de servi\xE7o
-    sempre volta pra cobrar."
-  opcao2: Roubar drogas no meio da troca deles? Muito risco e pouca vantagem. Encontrem
+    Mas vai sair caro. Contratar um hacker para mexer nos sistemas deles n\xE3o \xE9
+    uma tarefa f\xE1cil."
+  opcao2: Mexer na entrega de drogas deles? Muito risco e pouca vantagem. Encontrem
     outra forma de chegar neles. Dessa vez, eu passo.
   corGangue: {r: 0.9607843, g: 0.8156863, b: 0, a: 1}
   mercador: 0
@@ -209,8 +209,8 @@ MonoBehaviour:
   - 500
   mudadoresNao:
   - -20
-  - 0
-  - 0
+  - 5
+  - 10
   - 0
   - 0
   - 0

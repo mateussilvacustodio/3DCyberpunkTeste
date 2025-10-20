@@ -1789,8 +1789,8 @@ MonoBehaviour:
   indexArray: 2
   textoBotao: {fileID: 116794283}
   textoOutrosBotoes:
+  - {fileID: 379412119}
   - {fileID: 1760890975}
-  - {fileID: 44222365}
 --- !u!1 &51218908
 GameObject:
   m_ObjectHideFlags: 0
@@ -7791,7 +7791,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conjunto: Grade1
   comprado: 0
-  preco: -750
+  preco: -600
   indexArray: 2
   textoBotao: {fileID: 635964231}
   textoOutrosBotoes:
@@ -14238,7 +14238,7 @@ MonoBehaviour:
   nome: Ciber olho
   nomeMostrar: Ciber olho
   campoValor: {fileID: 1781606634}
-  valor: 1000
+  valor: 500
   campoDescricao: {fileID: 1368741650}
   descricao: "Um implante cibern\xE9tico de \xFAltima gera\xE7\xE3o que permite ver
     a verdade. Revela as consequ\xEAncias de cada escolha feita."
@@ -19221,7 +19221,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $750
+  m_text: $600
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edf39b0e5daeaa74587abfd43c14758d, type: 2}
   m_sharedMaterial: {fileID: -4449942495030054907, guid: edf39b0e5daeaa74587abfd43c14758d, type: 2}
@@ -20572,7 +20572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conjunto: Grade1
   comprado: 0
-  preco: -250
+  preco: -300
   indexArray: 1
   textoBotao: {fileID: 1779030154}
   textoOutrosBotoes:
@@ -22628,7 +22628,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conjunto: Cofrinho
   comprado: 0
-  preco: -1000
+  preco: -750
   indexArray: 2
   textoBotao: {fileID: 1392452680}
   textoOutrosBotoes:
@@ -28069,7 +28069,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $500
+  m_text: $100
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edf39b0e5daeaa74587abfd43c14758d, type: 2}
   m_sharedMaterial: {fileID: -4449942495030054907, guid: edf39b0e5daeaa74587abfd43c14758d, type: 2}
@@ -36467,7 +36467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conjunto: Cofrinho
   comprado: 0
-  preco: -500
+  preco: -100
   indexArray: 1
   textoBotao: {fileID: 897308168}
   textoOutrosBotoes:
@@ -38768,7 +38768,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $ 500
+  m_text: $250
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edf39b0e5daeaa74587abfd43c14758d, type: 2}
   m_sharedMaterial: {fileID: -4449942495030054907, guid: edf39b0e5daeaa74587abfd43c14758d, type: 2}
@@ -42062,7 +42062,7 @@ MonoBehaviour:
   nome: Chip
   nomeMostrar: Chip RR
   campoValor: {fileID: 554860457}
-  valor: 300
+  valor: 150
   campoDescricao: {fileID: 1368741650}
   descricao: "Um chip contendo informa\xE7\xF5es sobre a gangue Redline Rebels. Pode
     ser usado para chantagea-los aumentando sua reputa\xE7\xE3o."
@@ -42783,7 +42783,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -22.496948, y: 11.0529785}
+  m_AnchoredPosition: {x: -22.496826, y: 11.0529785}
   m_SizeDelta: {x: 45, y: 21.900024}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1339730311
@@ -43983,7 +43983,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $1000
+  m_text: $750
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edf39b0e5daeaa74587abfd43c14758d, type: 2}
   m_sharedMaterial: {fileID: -4449942495030054907, guid: edf39b0e5daeaa74587abfd43c14758d, type: 2}
@@ -45094,7 +45094,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conjunto: Grade2
   comprado: 0
-  preco: -500
+  preco: -250
   indexArray: 1
   textoBotao: {fileID: 1218492010}
   textoOutrosBotoes:
@@ -54822,7 +54822,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $250
+  m_text: $300
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edf39b0e5daeaa74587abfd43c14758d, type: 2}
   m_sharedMaterial: {fileID: -4449942495030054907, guid: edf39b0e5daeaa74587abfd43c14758d, type: 2}
@@ -56649,7 +56649,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $ 1000
+  m_text: $500
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edf39b0e5daeaa74587abfd43c14758d, type: 2}
   m_sharedMaterial: {fileID: -4449942495030054907, guid: edf39b0e5daeaa74587abfd43c14758d, type: 2}
@@ -61285,7 +61285,7 @@ MonoBehaviour:
   nome: Multichip
   nomeMostrar: Chip RR
   campoValor: {fileID: 1168774963}
-  valor: 500
+  valor: 250
   campoDescricao: {fileID: 1368741650}
   descricao: "Um chip contendo informa\xE7\xF5es sobre as gangues Redline Rebels
     e Ghost Circuit. Pode ser usado para chantagea-los aumentando sua reputa\xE7\xE3o."
@@ -61806,7 +61806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conjunto: Grade2
   comprado: 0
-  preco: -1000
+  preco: -500
   indexArray: 2
   textoBotao: {fileID: 1865523586}
   textoOutrosBotoes:

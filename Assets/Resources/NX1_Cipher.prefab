@@ -202,14 +202,14 @@ MonoBehaviour:
   - 0
   - 5
   - -20
-  - 400
+  - 700
   mudadoresNao:
   - 0
   - 0
   - 0
   - 0
   - -10
-  - 0
+  - 5
   - 0
   textoDinheiroGanhoGasto: {fileID: 7502805927975152675, guid: 9725cd254ebfc4b41b051f085ac6a584, type: 3}
   inventarioScript: {fileID: 0}

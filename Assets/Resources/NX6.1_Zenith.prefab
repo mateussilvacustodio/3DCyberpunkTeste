@@ -188,7 +188,8 @@ MonoBehaviour:
   ramifica: 0
   personagemRamificacao1: {fileID: 0}
   personagemRamificacao2: {fileID: 0}
-  opcao1: "Beleza, vou conseguir esse c\xF3digo. Mas depois disso, estamos quites."
+  opcao1: "Beleza, vou conseguir esse c\xF3digo. Mas por um pre\xE7o, e depois disso,
+    estamos quites."
   opcao2: "Eu n\xE3o devo nada a voc\xEAs."
   corGangue: {r: 0, g: 0.9882353, b: 1, a: 1}
   mercador: 0
@@ -200,7 +201,7 @@ MonoBehaviour:
   - 0
   - 15
   - 0
-  - 100
+  - 400
   mudadoresNao:
   - 0
   - 0

@@ -196,18 +196,18 @@ MonoBehaviour:
   mercador: 0
   recursos: 01000001000001
   mudadoresSim:
-  - -5
+  - -10
   - 0
   - 0
   - 5
   - 0
   - 0
-  - 200
+  - 700
   mudadoresNao:
   - 5
   - 0
   - 0
-  - -5
+  - -10
   - 0
   - 0
   - 0
