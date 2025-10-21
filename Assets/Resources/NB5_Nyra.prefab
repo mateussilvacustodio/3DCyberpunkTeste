@@ -525,7 +525,7 @@ MonoBehaviour:
     - 0
     - 0
     - 0
-    - -500
+    - -600
   missaoMercenario: {fileID: 0}
   contentMercenario: {fileID: 0}
   ramifica: 0
@@ -565,6 +565,7 @@ MonoBehaviour:
   botaoNao: {fileID: 0}
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
+  tamanhoFonte: 27
   gameController: {fileID: 0}
   tutorial: 0
   tutorialScript: {fileID: 0}

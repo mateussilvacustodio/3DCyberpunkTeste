@@ -466,7 +466,7 @@ MonoBehaviour:
   - 0
   - 0
   - 0
-  - 300
+  - 400
   painelListaDeMercenarios: {fileID: 0}
   scrollRectMercenario: {fileID: 0}
   scrollbarMercenario: {fileID: 0}

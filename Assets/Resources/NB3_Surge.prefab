@@ -192,8 +192,8 @@ MonoBehaviour:
   ramifica: 0
   personagemRamificacao1: {fileID: 0}
   personagemRamificacao2: {fileID: 0}
-  opcao1: "Se o pagamento compensar o risco, eu posso arranjar algu\xE9m para fazer
-    isso. Mas saibam que vai custar um favor pesado com os tiras."
+  opcao1: "Se o pagamento compensa o risco, eu posso contratar algu\xE9m para isso.
+    Mas saibam que vai custar um favor pesado com os tiras."
   opcao2: "Esse tipo de informa\xE7\xE3o mexe com muita gente perigosa. Dessa vez,
     prefiro ficar fora. Boa sorte com o resto."
   corGangue: {r: 0.9607843, g: 0.8156863, b: 0, a: 1}
@@ -228,6 +228,7 @@ MonoBehaviour:
   botaoNao: {fileID: 0}
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
+  tamanhoFonte: 26.05
   gameController: {fileID: 0}
   tutorial: 0
   tutorialScript: {fileID: 0}

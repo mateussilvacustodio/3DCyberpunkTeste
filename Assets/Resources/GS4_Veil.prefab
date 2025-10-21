@@ -207,11 +207,9 @@ MonoBehaviour:
   personagemRamificacao1: {fileID: 0}
   personagemRamificacao2: {fileID: 0}
   opcao1: "Se o <color=#6FFF00>Setor Zero</color> tem um pre\xE7o, eu encontro. Mas
-    vai sair caro, e exigir\xE1 um pouco de sutileza. Al\xE9m disso, tenho certeza
-    que eles n\xE3o v\xE3o gostar de mexer com a <color=#00FCFF>Nexos</color>."
-  opcao2: "Esse tipo de jogo atrai os piores olhares, mas se for para manter uma
-    boa rela\xE7\xE3o entre a gente eu te dou as informa\xE7\xF5es sobre o <color=#00FCFF>Nexos</color>
-    de gra\xE7a."
+    vai sair caro e tenho certeza que eles n\xE3o v\xE3o gostar de mexer com a <color=#00FCFF>Nexos</color>."
+  opcao2: "Esse jogo atrai os piores olhares, mas para manter uma boa rela\xE7\xE3o
+    entre a gente eu te passo os dados do <color=#00FCFF>Nexos</color> de gra\xE7a."
   corGangue: {r: 1, g: 0.14901961, b: 0.7137255, a: 1}
   mercador: 0
   recursos: 00000101010000
@@ -244,6 +242,7 @@ MonoBehaviour:
   botaoNao: {fileID: 0}
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
+  tamanhoFonte: 23.7
   gameController: {fileID: 0}
   tutorial: 0
   tutorialScript: {fileID: 0}

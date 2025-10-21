@@ -25116,9 +25116,9 @@ MonoBehaviour:
   m_fontSize: 35
   m_fontSizeBase: 35
   m_fontWeight: 400
-  m_enableAutoSizing: 1
-  m_fontSizeMin: 23
-  m_fontSizeMax: 28
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 22
+  m_fontSizeMax: 27
   m_fontStyle: 0
   m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
@@ -29615,7 +29615,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.9999695, y: 114}
+  m_AnchoredPosition: {x: 8.799988, y: 104.73}
   m_SizeDelta: {x: 944.2, y: 71.423}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1607751041
@@ -29640,10 +29640,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: d5d695bf51cf56f429c87a8fa4dbbf6c, type: 3}
-    m_FontSize: 40
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 4
+    m_MinSize: 3
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -38757,7 +38757,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 134, y: -77}
+  m_AnchoredPosition: {x: 168.11896, y: -90}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &7620076168266197729
@@ -38815,6 +38815,16 @@ MonoBehaviour:
     isso e tente n\xE3o falir ou ficar sem reputa\xE7\xE3o com as gangues da cidade.
     Boa sorte, voc\xEA vai precisar."
   - ---
+  tamanhoTextosTutorial:
+  - 23.7
+  - 27
+  - 27
+  - 27
+  - 27
+  - 27
+  - 23.7
+  - 23.15
+  - 27
   textosOpcao1Tutorial:
   - Certo
   - "Vou te enviar a localiza\xE7\xE3o dele. Espero que eu seja bem remunerado por

@@ -4714,6 +4714,7 @@ MonoBehaviour:
   botaoNao: {fileID: 0}
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
+  tamanhoFonte: 0
   gameController: {fileID: 0}
   tutorial: 0
   tutorialScript: {fileID: 0}
@@ -43842,7 +43843,7 @@ MonoBehaviour:
   m_fontSize: 35
   m_fontSizeBase: 35
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 22
   m_fontSizeMax: 27
   m_fontStyle: 0

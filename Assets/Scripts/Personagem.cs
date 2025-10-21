@@ -27,7 +27,6 @@ public class Personagem : MonoBehaviour
     public string opcao2;
     public Color corGangue;
     [SerializeField] bool mercador;
-    //
     [Header("Recursos")]
     [Tooltip("NB, RR, GS, SZ, NX, Policia, dinheiro")]
     public bool[] recursos;
@@ -37,14 +36,11 @@ public class Personagem : MonoBehaviour
     public float[] mudadoresNao;
     [SerializeField] GameObject textoDinheiroGanhoGasto;
     [SerializeField] Inventario inventarioScript;
-    //[SerializeField] GameObject textoItemRecebido;
     [SerializeField] Mercenarios mercenarioScript;
     [Header("Movimento")]
     [SerializeField] float velocidadeMover;
     [SerializeField] bool podeMover;
     [SerializeField] Animator personagemAnim;
-    //[SerializeField] AnimacaoDosPersonagens animacaoDosPersonagensScript;
-    //[SerializeField] float velocidadeRodar;
     [SerializeField] bool podeRodar;
     Quaternion rotacaoAlvo = Quaternion.Euler(0, 180, 0);
     [SerializeField] bool irEmbora;
@@ -54,6 +50,7 @@ public class Personagem : MonoBehaviour
     public Button botaoNao;
     public Animator balaoAnim;
     [SerializeField] Balao balao;
+    public float tamanhoFonte;
     [Header("GameController")]
     [SerializeField] GameController gameController;
     [SerializeField] bool tutorial;
@@ -296,6 +293,12 @@ public class Personagem : MonoBehaviour
         {
 
             gameController.personagensDiaSeguinte.Add(personagemRamificacao2);
+            if (nome == "David")
+            {
+
+                gameController.cheatDavid = true;
+
+            }
 
         }
 

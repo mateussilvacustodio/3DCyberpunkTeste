@@ -185,7 +185,7 @@ MonoBehaviour:
     quant: 2
     sprite: {fileID: 21300000, guid: 4f10fafde3739b74680fb46e72c59200, type: 3}
     modificadores:
-    - -30
+    - 0
     - 0
     - 0
     - 0
@@ -231,6 +231,7 @@ MonoBehaviour:
   botaoNao: {fileID: 0}
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
+  tamanhoFonte: 27
   gameController: {fileID: 0}
   tutorial: 0
   tutorialScript: {fileID: 0}

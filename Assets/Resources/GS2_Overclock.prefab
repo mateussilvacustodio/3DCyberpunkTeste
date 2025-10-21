@@ -195,9 +195,9 @@ MonoBehaviour:
   ramifica: 0
   personagemRamificacao1: {fileID: 0}
   personagemRamificacao2: {fileID: 0}
-  opcao1: "Se o pagamento cobre o risco, posso contratar algu\xE9m para criar o desvio
-    que precisam. Mas estejam prontos \u2013 desviar a aten\xE7\xE3o da <color=#2D1AFF>Pol\xEDcia</color>
-    sempre tem consequ\xEAncias."
+  opcao1: "Se o pagamento cobre o risco, posso contratar algu\xE9m para o trabalho.
+    Mas saiba que desviar a aten\xE7\xE3o da <color=#2D1AFF>Pol\xEDcia</color> sempre
+    tem consequ\xEAncias."
   opcao2: "Distrair a <color=#2D1AFF>Pol\xEDcia</color> j\xE1 \xE9 arriscado, mas
     jogar os <color=#F5D000>Nano Blades</color> na linha de fogo? N\xE3o me meto
     nesse tipo de armadilha."
@@ -233,6 +233,7 @@ MonoBehaviour:
   botaoNao: {fileID: 0}
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
+  tamanhoFonte: 24.05
   gameController: {fileID: 0}
   tutorial: 0
   tutorialScript: {fileID: 0}

@@ -191,7 +191,7 @@ MonoBehaviour:
   personagemRamificacao1: {fileID: 0}
   personagemRamificacao2: {fileID: 0}
   opcao1: "Interessante. Se o que voc\xEA encontrou \xE9 realmente valioso, eu posso
-    garantir que eles n\xE3o venham atr\xE1s de ti. Por um pre\xE7o, \xE9 claro."
+    garantir que eles n\xE3o venham atr\xE1s de voc\xEA. Por um pre\xE7o..."
   opcao2: "N\xE3o estou disposto a arriscar minha reputa\xE7\xE3o por algo que pode
     me trazer problemas. Vou ter que recusar."
   corGangue: {r: 0, g: 0.9882353, b: 1, a: 1}
@@ -226,6 +226,7 @@ MonoBehaviour:
   botaoNao: {fileID: 0}
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
+  tamanhoFonte: 27
   gameController: {fileID: 0}
   tutorial: 0
   tutorialScript: {fileID: 0}

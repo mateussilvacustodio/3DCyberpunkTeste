@@ -188,12 +188,12 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 2452b80ea4a6d4f499dcef94e365e85c, type: 3}
     modificadores:
     - 0
-    - -10
+    - -20
     - 0
     - 0
     - 0
     - 0
-    - -350
+    - -700
   missaoMercenario: {fileID: 0}
   contentMercenario: {fileID: 0}
   ramifica: 0
@@ -233,6 +233,7 @@ MonoBehaviour:
   botaoNao: {fileID: 0}
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
+  tamanhoFonte: 27
   gameController: {fileID: 0}
   tutorial: 0
   tutorialScript: {fileID: 0}

@@ -122,6 +122,8 @@ public class Inventario : MonoBehaviour
         gameController.gangues[6] -= PparametrosEncomendas.custo;
         //gameController.itensEncomendados.Add(PparametrosEncomendas.parametrosItem);
         itensRecebidos.Add(PparametrosEncomendas.parametrosItem);
+        string encomendaRealizadaString = "Encomenda realizada";
+        encomendaRealizadaText.GetComponent<TMP_Text>().text = encomendaRealizadaString;
         GameObject textoEncomendaRealizada = Instantiate(encomendaRealizadaText, inventarioAba.transform);
         Destroy(textoEncomendaRealizada, 0.75f);
         string dinheiroGastoTexto = "-" + PparametrosEncomendas.custo.ToString();
@@ -175,7 +177,7 @@ public class Inventario : MonoBehaviour
                 {
                     gameController.gangues[j] += itensDevidos[i].modificadores[j];
                 }
-                textoDevidosFimDoDia.text += "- " + itensDevidos[i].nome + " - $ " + itensDevidos[i].modificadores[6] + "\n";
+                textoDevidosFimDoDia.text += "- " + itensDevidos[i].nome + " $" + itensDevidos[i].modificadores[6] + "\n";
                 notificacaoInvent.SetActive(true);
             }
             

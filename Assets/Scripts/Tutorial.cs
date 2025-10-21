@@ -27,6 +27,7 @@ public class Tutorial : MonoBehaviour
     Coroutine corrotinaDigitar;
     [SerializeField] Animator balaoAnim;
     [SerializeField] string[] textosTutorial;
+    [SerializeField] float[] tamanhoTextosTutorial;
     [SerializeField] string[] textosOpcao1Tutorial;
     [SerializeField] string[] textosOpcao2Tutorial;
     [SerializeField] string[] textoNomeTutorial;
@@ -141,13 +142,11 @@ public class Tutorial : MonoBehaviour
 
         pedidoBalaoTutorial.SetActive(true);
         nomeBalaoTutorial.SetActive(true);
-        //nomeBalaoTutorialTexto.text = personagemTutorialInstancia.GetComponent<Personagem>().nome;
-        //nomeBalaoTutorialTexto.color = personagemTutorialInstancia.GetComponent<Personagem>().corGangue;
         nomeBalaoTutorialTexto.text = textoNomeTutorial[etapasTutorial];
         nomeBalaoTutorialTexto.color = corNomeTutorial[etapasTutorial];
         gameController.SFXVoz.Play();
+        pedidoBalaoTutorialTexto.fontSize = tamanhoTextosTutorial[etapasTutorial];
         corrotinaDigitar = StartCoroutine(DigitarTutorial());
-
 
     }
 

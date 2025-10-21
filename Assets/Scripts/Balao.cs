@@ -65,6 +65,7 @@ public class Balao : MonoBehaviour
             nomeTexto.text = gameController.personagemInstancia.GetComponent<Personagem>().nome;
             nomeTexto.color = gameController.personagemInstancia.GetComponent<Personagem>().corGangue;
             gameController.SFXVoz.Play();
+            balaoTexto.fontSize = gameController.personagemInstancia.GetComponent<Personagem>().tamanhoFonte;
             corrotinaDigitar = StartCoroutine(Digitar());
             
 

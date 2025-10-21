@@ -222,6 +222,7 @@ MonoBehaviour:
   botaoNao: {fileID: 0}
   balaoAnim: {fileID: 0}
   balao: {fileID: 0}
+  tamanhoFonte: 23.55
   gameController: {fileID: 0}
   tutorial: 0
   tutorialScript: {fileID: 0}
