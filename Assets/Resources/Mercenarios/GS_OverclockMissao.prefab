@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.000061035156, y: -0.00016403198}
-  m_SizeDelta: {x: 508, y: 320.29}
+  m_SizeDelta: {x: 508, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7534399118814704879
 CanvasRenderer:
@@ -65,10 +65,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Fala James, tranquilo? A pol\xEDcia t\xE1 pra interceptar nosso pr\xF3ximo
-    carregamento de implantes. Precisamos que alg\xFAem invada o sistema deles e
-    mexa nas pistas. Talvez mudar o alvo para os Nano Blades. O pagamento \xE9 bom,
-    mas a situa\xE7\xE3o pede precis\xE3o. Topa?"
+  m_text: "De <color=#FF26B6>Overclock</color>:\nFala James, tranquilo? A <color=#2D1AFF>Pol\xEDcia</color>
+    t\xE1 pra interceptar nosso pr\xF3ximo carregamento de implantes. Precisamos
+    que algu\xE9m invada o sistema deles e mexa nas pistas. Talvez mudar o alvo para
+    os <color=#F5D000>Nano Blades</color>. O pagamento \xE9 bom, mas a situa\xE7\xE3o
+    pede precis\xE3o. Topa?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edf39b0e5daeaa74587abfd43c14758d, type: 2}
   m_sharedMaterial: {fileID: -4449942495030054907, guid: edf39b0e5daeaa74587abfd43c14758d, type: 2}

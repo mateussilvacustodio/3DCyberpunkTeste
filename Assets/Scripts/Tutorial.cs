@@ -152,10 +152,38 @@ public class Tutorial : MonoBehaviour
 
     IEnumerator DigitarTutorial() {
 
+        // foreach (char letter in textosTutorial[etapasTutorial])
+        // {
+
+        //     pedidoBalaoTutorialTexto.text += letter;
+        //     yield return new WaitForSeconds(typeSpeed);
+
+        // }
+
+        bool dentroDaTag = false;
+        
         foreach (char letter in textosTutorial[etapasTutorial]) {
 
+            if(letter == '<') {
+
+                dentroDaTag = true;
+
+            }
+            
             pedidoBalaoTutorialTexto.text += letter;
-            yield return new WaitForSeconds(typeSpeed);
+
+            if(letter == '>') {
+
+                dentroDaTag = false;
+
+            }
+
+            if(!dentroDaTag) {
+
+                yield return new WaitForSeconds(typeSpeed);
+
+            }
+            
 
         }
 

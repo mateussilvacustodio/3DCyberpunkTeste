@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.000061035156, y: -0.00016403198}
-  m_SizeDelta: {x: 508, y: 320.29}
+  m_SizeDelta: {x: 508, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7534399118814704879
 CanvasRenderer:
@@ -65,9 +65,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "James, ouvimos que o Nexos tem dados confidenciais da \xFAltima opera\xE7\xE3o
-    da pol\xEDcia. Preciso que voc\xEA consiga essas informa\xE7\xF5es para n\xF3s
-    antes que eles liberem tudo. Sei que o Setor Zero t\xE1 de olho, ent\xE3o discri\xE7\xE3o
+  m_text: "De <color=#F5D000>Surge</color>:\nJames, ouvimos que o <color=#00FCFF>Nexos</color>
+    tem dados confidenciais da \xFAltima opera\xE7\xE3o da <color=#2D1AFF>Pol\xEDcia</color>.
+    Preciso que voc\xEA consiga essas informa\xE7\xF5es para n\xF3s antes que eles
+    liberem tudo. A <color=#2D1AFF>Pol\xEDcia</color> t\xE1 de olho, ent\xE3o discri\xE7\xE3o
     \xE9 essencial. Vai nessa?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edf39b0e5daeaa74587abfd43c14758d, type: 2}

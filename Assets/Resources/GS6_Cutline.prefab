@@ -614,7 +614,7 @@ MonoBehaviour:
   recursos: 00010100000001
   mudadoresSim:
   - 0
-  - -15
+  - -10
   - 10
   - 0
   - 0

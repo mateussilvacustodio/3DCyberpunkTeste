@@ -20372,7 +20372,7 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 130
+    m_Top: 160
     m_Bottom: 130
   m_ChildAlignment: 1
   m_StartCorner: 0
@@ -38482,7 +38482,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: d5d695bf51cf56f429c87a8fa4dbbf6c, type: 3}
-    m_FontSize: 25
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -38516,7 +38516,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: d5d695bf51cf56f429c87a8fa4dbbf6c, type: 3}
-    m_FontSize: 25
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -38793,8 +38793,8 @@ MonoBehaviour:
     boa reputa\xE7\xE3o com eles. Utilize os bot\xF5es na tela para responder aos
     pedidos, mas pense bem, pois cada escolha tem uma consequ\xEAncia."
   - "Voc\xEA \xE9 o James n\xE9? Fiquei sabendo que voc\xEA vende informa\xE7\xF5es.
-    T\xF4 precisando encontrar o chefe da Ghost Circuit. O motivo? N\xE3o \xE9 da
-    sua conta."
+    T\xF4 precisando encontrar o chefe da <color=#FF26B6>Ghost Circuit</color>. O
+    motivo? N\xE3o \xE9 da sua conta."
   - "Sua reputa\xE7\xE3o tamb\xE9m \xE9 uma moeda. Monitore sua reputa\xE7\xE3o com
     as gangues da cidade atrav\xE9s de seu tablet, no aplicativo \u201CReputa\xE7\xE3o\u201D.
     A cor do nome de cada personagem mostra a qual grupo ele pertence."

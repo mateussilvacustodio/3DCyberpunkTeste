@@ -177,7 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: Cipher
   pedido: "Preciso de um favor. Tenho uma informa\xE7\xE3o crucial sobre a <color=#2D1AFF>Pol\xEDcia</color>,
-    mas para libera-la para voc\xEA, preciso de ajuda pra invadir o sistema deles.
+    mas para liber\xE1-la para voc\xEA, preciso de ajuda pra invadir o sistema deles.
     Topa ajudar?"
   tipoPedido: 2
   itemDoNPC:
@@ -201,7 +201,7 @@ MonoBehaviour:
   - 0
   - 0
   - 5
-  - -20
+  - -15
   - 700
   mudadoresNao:
   - 0

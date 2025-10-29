@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.000061035156, y: -0.00016403198}
-  m_SizeDelta: {x: 508, y: 320.29}
+  m_SizeDelta: {x: 508, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7534399118814704879
 CanvasRenderer:
@@ -65,9 +65,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "James, precisamos que voc\xEA atrase uma entrega dos Ghost Circuit para
-    a Redline Rebels. S\xF3 o suficiente pra ganhar vantagem. Os Rebels v\xE3o culpar
-    os Circuit e a gente se mant\xE9m fora do radar. Pago bem se conseguir."
+  m_text: "De <color=#F5D000>Fang</color>:\nJames, precisamos que voc\xEA atrase
+    uma entrega dos <color=#FF26B6>Ghost Circuit</color> para a <color=#FF0000>Redline
+    Rebels</color>. S\xF3 o suficiente pra ganhar vantagem. Os <color=#FF0000>Rebels</color>
+    v\xE3o culpar os <color=#FF26B6>Circuit</color> e a gente se mant\xE9m fora do
+    radar. Pago bem se conseguir."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edf39b0e5daeaa74587abfd43c14758d, type: 2}
   m_sharedMaterial: {fileID: -4449942495030054907, guid: edf39b0e5daeaa74587abfd43c14758d, type: 2}

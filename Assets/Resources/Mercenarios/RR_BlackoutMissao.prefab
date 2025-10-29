@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.000061035156, y: -0.00016403198}
-  m_SizeDelta: {x: 508, y: 320.29}
+  m_SizeDelta: {x: 508, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6107110879418328182
 CanvasRenderer:
@@ -65,9 +65,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "De: Blackout\nJames, tem um contato de algum trilha redes dos bons? Preciso
-    invadir o sistema do ot\xE1rio que comeu minha mulher e fuder todo o neg\xF3cio
-    dele. "
+  m_text: "De: <color=#FF0000>Blackout</color>\nJames, tem um contato de algum trilha
+    redes dos bons? Preciso invadir o sistema do ot\xE1rio que comeu minha mulher
+    e fuder todo o neg\xF3cio dele. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edf39b0e5daeaa74587abfd43c14758d, type: 2}
   m_sharedMaterial: {fileID: -4449942495030054907, guid: edf39b0e5daeaa74587abfd43c14758d, type: 2}

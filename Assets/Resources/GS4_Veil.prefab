@@ -193,14 +193,7 @@ MonoBehaviour:
     nome: 
     quant: 0
     sprite: {fileID: 0}
-    modificadores:
-    - 0
-    - 0
-    - -10
-    - 0
-    - 0
-    - 0
-    - -200
+    modificadores: []
   missaoMercenario: {fileID: 0}
   contentMercenario: {fileID: 0}
   ramifica: 0
