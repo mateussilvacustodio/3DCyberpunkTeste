@@ -13,6 +13,7 @@ public class Cheats : MonoBehaviour
     [SerializeField] GameObject codigoIncorretoText;
     [SerializeField] GameObject cheatsAba;
     [SerializeField] GameObject david;
+    [SerializeField] GameObject enzo;
 
     [Header("GameController")]
     [SerializeField] GameController gameController;
@@ -36,7 +37,10 @@ public class Cheats : MonoBehaviour
             switch (codigoDigitado.text)
             {
                 case "Ali":
-                    Debug.Log("Ali");
+                    gameController.gangues[0] += 50;
+                    gameController.gangues[1] += 50;
+                    gameController.gangues[2] += 50;
+                    gameController.AtualizarGangues();
                     break;
                 case "Bruna":
                     gameController.gangues[6] += 7500;
@@ -49,18 +53,31 @@ public class Cheats : MonoBehaviour
                     }
                     else
                     {
-                        print("O botao esta ativado");
                         gameController.personagensDiaSeguinte.Add(david);
                         gameController.quantidadeDePedidosPorDia++;
                     }
                     
                     break;
                 case "Leonardo":
-                    Debug.Log("Leonardo");
+                    gameController.gangues[3] += 50;
+                    gameController.gangues[4] += 50;
+                    gameController.gangues[5] += 50;
+                    gameController.AtualizarGangues();
                     break;
                 case "Mateus":
-                    Debug.Log("Mateus");
+                    if (!gameController.botaoFimDoDia.activeSelf)
+                    {
+                        gameController.personagensDoDia.Add(enzo);
+                        gameController.quantidadeDePedidosPorDia++;
+                    }
+                    else
+                    {
+                        gameController.personagensDiaSeguinte.Add(enzo);
+                        gameController.quantidadeDePedidosPorDia++;
+                    }
+                    
                     break;
+
             }
             GameObject textoCheatConfirmado = Instantiate(cheatConfirmadoText, cheatsAba.transform);
             Destroy(textoCheatConfirmado, 0.75f);

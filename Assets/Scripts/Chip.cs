@@ -17,6 +17,7 @@ public class Chip : MonoBehaviour
     public int gangueAfetada2;
     public float valorAfetada;
     public float valorAfetada2;
+    public string descricao;
 
     [SerializeField] GameController gameController;
     [SerializeField] GameObject reputacaoAtualizada;
@@ -25,14 +26,15 @@ public class Chip : MonoBehaviour
     void Start()
     {
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
+        ladoA.color = corAChip;
+        ladoB.color = corBChip;
+        nomeCampo.text = nome;
     }
 
     // Update is called once per frame
     void Update()
     {
-        ladoA.color = corAChip;
-        ladoB.color = corBChip;
-        nomeCampo.text = nome;
+        
     }
 
     public void UsarChip()
@@ -51,7 +53,22 @@ public class Chip : MonoBehaviour
         {
             gameController.quantidadeMultichips -= 1;
         }
-        
+
         Destroy(this.GameObject());
+    }
+
+    public void MostrarExplicacaoChip()
+    {
+
+        gameController.objDescricaoItem.SetActive(true);
+        gameController.campoDescricaoItem.text = descricao;
+
+    }
+    
+    public void SumirExplicacaoChip()
+    {
+        
+        gameController.objDescricaoItem.SetActive(false);
+
     }
 }

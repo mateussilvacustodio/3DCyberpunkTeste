@@ -191,6 +191,7 @@ public class Personalizacao : MonoBehaviour, IPointerDownHandler, IDragHandler
                 instanciaChip.GetComponent<Chip>().gangueAfetada2 = pParametrosItem.aleatCor2;
                 instanciaChip.GetComponent<Chip>().valorAfetada = 15;
                 instanciaChip.GetComponent<Chip>().valorAfetada2 = 0;
+                instanciaChip.GetComponent<Chip>().descricao = pParametrosItem.descricao;
                 gameController.quantidadeChips += 1;
                 break;
 
@@ -203,6 +204,7 @@ public class Personalizacao : MonoBehaviour, IPointerDownHandler, IDragHandler
                 instanciaChip.GetComponent<Chip>().gangueAfetada2 = pParametrosItem.aleatCor2;
                 instanciaChip.GetComponent<Chip>().valorAfetada = 10;
                 instanciaChip.GetComponent<Chip>().valorAfetada2 = 10;
+                instanciaChip.GetComponent<Chip>().descricao = pParametrosItem.descricao;
                 gameController.quantidadeMultichips += 1;
                 break;
 

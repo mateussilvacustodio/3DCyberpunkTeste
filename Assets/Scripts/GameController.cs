@@ -63,6 +63,8 @@ public class GameController : MonoBehaviour
     public GameObject painelFimDeDia;
     [SerializeField] Text textoFimDoDia;
     [SerializeField] Text textoEventoFimDoDia;
+    [SerializeField] List<string> dicas = new List<string>();
+    [SerializeField] TMP_Text textoDica;
     [SerializeField] GameObject painelFimDeJogo;
     [SerializeField] Text fimDeJogo;
     [SerializeField] Text textoFimDeJogo;
@@ -100,9 +102,12 @@ public class GameController : MonoBehaviour
     [SerializeField] TMP_Text volumeSFXTexto;
     [SerializeField] TMP_Text volumeMusicaTexto;
     [Header("Cheat")]
-    public bool cheatDavid;
+    //public bool cheatDavid;
+    public float quantidadeCheats;
     [Header("Itens")]
     public GameObject[] itemEsgotado;
+    public GameObject objDescricaoItem;
+    public TMP_Text campoDescricaoItem;
     [Header("Ciberolho")]
     public float quantidadeCiberOlho;
     public Button botaoCiberOlho;
@@ -149,6 +154,15 @@ public class GameController : MonoBehaviour
         dinheiroText3.text = dinheiroText[0].text;
         dinheiroText4.text = dinheiroText[0].text;
         dinheiroTextFimDoDia.text = "Dinheiro atual: " + dinheiroText[0].text;
+
+        for (int i = 0; i < 6; i++)
+        {
+            if (gangues[i] > 100)
+            {
+                gangues[i] = 100;
+                AtualizarGangues();
+            }
+        }
 
         if (numNotificacao > 0)
         {
@@ -339,6 +353,13 @@ public class GameController : MonoBehaviour
     public void FimDoDia()
     {
         SFXBotao.Play();
+        if (textoDica != null)
+        {
+            int dicaAleatoria = Random.Range(0, dicas.Count);
+            textoDica.text = "Dica: " + dicas[dicaAleatoria];
+            dicas.RemoveAt(dicaAleatoria);
+        }
+        
         painelFimDeDia.SetActive(true);
         numNotificacao = 0;
 
@@ -385,13 +406,8 @@ public class GameController : MonoBehaviour
 
         mercenarioScript.pedidosFalhos.Clear();
 
-        if (cheatDavid)
-        {
-
-            quantidadeDePedidosPorDia--;
-            cheatDavid = false;
-
-        }
+        quantidadeDePedidosPorDia -= quantidadeCheats;
+        quantidadeCheats = 0;
 
         botaoTablet.interactable = false;
         tabletScript.FecharTablet();

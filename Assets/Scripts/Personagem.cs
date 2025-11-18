@@ -193,12 +193,6 @@ public class Personagem : MonoBehaviour
         {
 
             gameController.personagensDiaSeguinte.Add(personagemRamificacao1);
-            if (nome == "David")
-            {
-
-                gameController.cheatDavid = true;
-
-            }
 
         }
 
@@ -212,11 +206,17 @@ public class Personagem : MonoBehaviour
         if (tipoPedido.ToString() == "mercenario")
         {
 
-            //print("Voce aceitou o pedido que requer um mercenario");
             GameObject novaMissao = Instantiate(missaoMercenario, contentMercenario);
             mercenarioScript.pedidosAceitos.Add(novaMissao);
             novaMissao.GetComponent<MissoesMercenario>().index = mercenarioScript.pedidosAceitos.Count - 1;
             gameController.numNotificacao++;
+
+        }
+
+        if (nome == "David" || nome == "Enzo")
+        {
+
+            gameController.quantidadeCheats++;
 
         }
 
@@ -293,12 +293,7 @@ public class Personagem : MonoBehaviour
         {
 
             gameController.personagensDiaSeguinte.Add(personagemRamificacao2);
-            if (nome == "David")
-            {
-
-                gameController.cheatDavid = true;
-
-            }
+            
 
         }
 
@@ -310,6 +305,13 @@ public class Personagem : MonoBehaviour
                 gameController.gangues[i] += mudadoresNao[i];
 
             }
+        }
+
+        if (nome == "David" || nome == "Enzo")
+        {
+
+            gameController.quantidadeCheats++;
+
         }
 
         botaoSim.interactable = false;

@@ -13,7 +13,7 @@ public class ParametrosItens : MonoBehaviour
     [SerializeField] TMP_Text campoValor;
     public float valor;
     [SerializeField] TMP_Text campoDescricao;
-    [SerializeField] string descricao;
+    public string descricao;
     [SerializeField] Image ladoA;
     [SerializeField] Image ladoB;
     public Color corA;
